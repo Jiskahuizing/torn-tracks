@@ -1,0 +1,63 @@
+<%= link_to("<< Back to List", tracks_path, :class => 'back-link') %>
+
+<div class="tracks show">
+  <h2>Show Track</h2>
+
+  <table summary="Track detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @track.name %></td>
+    </tr>
+
+    <tr>
+      <th>Date</th>
+      <td><%= @track.date_finished %></td>
+    </tr>
+
+    <tr>
+      <th>Location</th>
+      <td><%= @track.location_finished %></td>
+    </tr>
+
+    <tr>
+      <th>Latitude</th>
+      <td><%= @track.latitude %></td>
+    </tr>
+
+    <tr>
+      <th>Longitude</th>
+      <td><%= @track.longitude %></td>
+    </tr>
+
+    <tr>
+      <th>Pitch</th>
+      <td><%= @track.pitch %></td>
+    </tr>
+
+    <tr>
+      <th>Length</th>
+      <td><%= @track.length %></td>
+    </tr>
+
+    <tr>
+      <th>Permalink</th>
+      <td><%= @track.permalink %></td>
+    </tr>
+
+    <tr>
+      <th>Visible</th>
+      <td><%= @track.visible ? 'Yes' : 'No' %></td>
+    </tr>
+
+    <tr>
+      <th>Created</th>
+      <td><%= @track.created_at %></td>
+    </tr>
+
+    <tr>
+      <th>Updated</th>
+      <td><%= @track.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

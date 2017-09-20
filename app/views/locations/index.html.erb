@@ -1,0 +1,38 @@
+<% @page_title = "All Tracks" %>
+
+<%= link_to("<< Back to Admin Overview", admin_path, :class => 'back-link') %>
+
+<div class="tracks index">
+  <h1>Location Tracks</h1>
+
+  <p>&nbsp;</p>
+
+  <table class="listing" summary="Track list"
+
+    <tr class="header">
+      <th>Track</th>
+      <th>Location</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+    </tr>
+
+    <% @tracks.each do |track| %>
+    <tr>
+      <td><%= track.name %></td>
+      <td><%= track.location_finished %></td>
+      <td class="center"><%= track.latitude %></td>
+      <td class="center"><%= track.longitude %></td>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+
+  <div style='width: 800px;'>
+    <div id="map" style='width: 800px; height: 400px;'></div>
+  </div>
+
+  <script>
+      markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  </script>
+
+</div>

@@ -1,0 +1,48 @@
+
+    <table summary="Summary from fields">
+      <tr>
+        <th>Track</th>
+        <td><%= f.text_field(:name) %></td>
+      </tr>
+
+      <tr>
+        <th>Length</th>
+        <td><%= f.time_select(:length, :include_seconds => true, :order => [:hour, :minute, :second]) %></td>
+      </tr>
+
+      <tr>
+        <th>Date</th>
+        <td><%= f.date_select(:date_finished, :order => [:day, :month, :year]) %></td>
+      </tr>
+
+      <tr>
+        <th>Location</th>
+        <td><%= f.text_field(:location_finished) %></td>
+      </tr>
+
+      <tr>
+        <th>Latitude</th>
+        <td><%= f.text_field(:latitude) %></td>
+      </tr>
+
+      <tr>
+        <th>Longitude</th>
+        <td><%= f.text_field(:longitude) %></td>
+      </tr>
+
+      <tr>
+        <th>Pitch</th>
+        <td><%= f.text_field(:pitch) %></td>
+      </tr>
+
+      <tr>
+        <th>Permalink</th>
+        <td><%= f.text_field(:permalink) %></td>
+      </tr>
+
+      <tr>
+        <th>Visible</th>
+      <td><%= f.check_box(:visible) %></td>
+      </tr>
+
+    </table>

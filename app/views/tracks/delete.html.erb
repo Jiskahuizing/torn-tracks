@@ -1,0 +1,17 @@
+<%= link_to("<< Back to List", tracks_path, :class => 'back-link') %>
+
+<div class="tracks delete">
+  <h2>Delete Track</h2>
+
+  <%= form_for(@track, :method => 'delete') do |f| %>
+
+    <p>Are you sure you want to permanently delete this track?</p>
+
+    <p class="reference-name"><%= f.object.name %></p>
+
+    <div class="form-buttons">
+      <%= f.submit("Delete Track") %>
+    </div>
+
+    <% end %>
+  </div>

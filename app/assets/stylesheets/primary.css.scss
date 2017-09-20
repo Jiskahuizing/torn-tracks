@@ -1,0 +1,117 @@
+/* Primary stylesheet */
+
+/* Colors */
+$red: #993120;
+$green: #94B26F;
+$light_green: #B6D491;
+$yellow: #F2DC87;
+$dark_brown: #332318;
+$light_brown: #4C2516;
+$white: #FFFFFF;
+$black: #000000;
+
+$sans_serif: Verdana,Lucida,Arial,Helvetica,sans-serif;
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  min-width: 980px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font: 14px $sans_serif;
+  color: $black;
+}
+
+p, td, ul, ol, li, dl, dt, dd {
+  font-family: $sans-serif;
+}
+
+img { border: none; }
+table { border-collapse: collapse; }
+
+table tr th, table tr td {
+  vertical-align: top;
+  text-align: left;
+  padding: 5px;
+}
+a, a:visited {color: $red; }
+a:hover {}
+
+.clear { clear: both; }
+.center { text-align: center; }
+
+/* Structure */
+#header {
+  height: 3cm;
+  padding-top: 1.5cm;
+  text-align: center;
+  background: $red image-url('DSC00462.png');
+  color: $white;
+
+  h1 { margin: 0; padding: 0; }
+}
+
+#main {
+  min-height: 700px;
+  background: $white;
+}
+
+#navigation {
+  float: left;
+  width: 180px;
+  min-height: 480px;
+  padding: 10px;
+  background: $light_green;
+  color: $red;
+}
+
+#content { padding: 10px; }
+
+#footer {
+  clear: both;
+  height: 2.5em;
+  text-align: left;
+  background: $dark_brown;
+  color: $white;
+
+  p {
+    margin: 0;
+    padding: 0.5em 1em;
+  }
+}
+
+/* Navigation */
+#navigation {
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-bottom: 0.5em;
+    }
+    ul {
+      margin: 0.5em 0 0 1em;
+      font-size: 0.9em;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    padding: 1px 3px;
+    &:hover {
+      background: $white;
+    }
+  }
+
+}
+
+/* Content */
+#content h2 {
+  color: $light_brown;
+}

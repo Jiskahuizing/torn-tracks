@@ -1,0 +1,15 @@
+<%= link_to("<< Back to List", tracks_path, :class => 'back-link') %>
+
+<div class="tracks new">
+
+  <h2>Create Track</h2>
+
+  <%= form_for(@track) do |f| %>
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form_buttons">
+      <%= f.submit("Create Track") %>
+    </div>
+  <% end %>
+
+</div>

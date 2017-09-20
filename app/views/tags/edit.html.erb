@@ -1,0 +1,14 @@
+<%= link_to("<< Back to List", tags_path, :class => 'back-link') %>
+
+<div class="tags edit">
+  <h2>Update Tag</h2>
+
+  <%= form_for(@tag) do |f| %>
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form_buttons">
+      <%= f.submit("Update Tag") %>
+    </div>
+  <% end %>
+
+</div>

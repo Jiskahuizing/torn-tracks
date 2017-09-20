@@ -1,0 +1,35 @@
+<div class="tags index">
+  <h1>Tags</h1>
+
+  <%= link_to("Add New Tag", new_tag_path, :class => 'action new') %>
+
+  <p>&nbsp;</p>
+
+  <table class="listing" summary="Tag list"
+
+    <tr class="header">
+      <th>#</th>
+      <th>Tag</th>
+      <th>Permalink</th>
+      <th>Visible</th>
+      <th>Created</th>
+      <th>Updated</th>
+    </tr>
+
+    <% @tags.each do |tag| %>
+    <tr>
+      <td><%= tag.id %></td>
+            <td><%= tag.name %></td>
+            <td class="center"><%= tag.permalink %></td>
+            <td class="center"><%= status_tag(tag.visible) %></td>
+            <td class="center"><%= tag.created_at %></td>
+            <td class="center"><%= tag.updated_at %></td>
+      <td class="actions">
+        <%= link_to("Show", tag_path(tag.id), :class => 'action show') %>
+        <%= link_to("Edit", edit_tag_path(tag), :class => 'action edit') %>
+        <%= link_to("Delete", delete_tag_path(tag), :class => 'action delete') %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+</div>

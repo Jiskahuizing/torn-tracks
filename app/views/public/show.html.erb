@@ -1,0 +1,14 @@
+<% @track_title = @track.name %>
+
+<h2><%= @track.name %></h2>
+
+<% @track.tags.visible.sorted.each do |tags| %>
+  <div class="tag">
+    <% case tag.content_type %>
+    <% when 'HTML' %>
+      <%= raw(sanatize(tag.content, :tags => ['strong', 'em', 'a'])) %>
+    <% when 'text' %>
+      <%= simple_format(tag.content) %>
+    <% end %>
+  </div>
+<% end %>

@@ -1,0 +1,32 @@
+<%= link_to("<< Back to List", tags_path, :class => 'back-link') %>
+
+<div class="tags show">
+  <h2>Show Tag</h2>
+
+  <table summary="Tag detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @tag.name %></td>
+    </tr>
+    <tr>
+      <th>Permalink</th>
+      <td><%= @tag.permalink %></td>
+    </tr>
+
+    <tr>
+      <th>Visible</th>
+    <td><%= @tag.visible %></td>
+    </tr>
+
+    <tr>
+      <th>Created</th>
+      <td><%= @tag.created_at %></td>
+    </tr>
+
+    <tr>
+      <th>Updated</th>
+      <td><%= @tag.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

@@ -1,0 +1,35 @@
+<% @page_title = "All Admin Users" %>
+
+<%= link_to("<< Back to Admin Overview", admin_path, :class => 'back-link') %>
+
+<div class="admin-users index">
+  <h1>Admin Users</h1>
+
+  <%= link_to("Add New Admin User", new_admin_user_path, :class => 'action new') %>
+  <p>&nbsp;</p>
+  <div><%= pluralize(@admin_user.size, 'admin user') %> found</div>
+  <p>&nbsp;</p>
+  <table class="listing" summary="Admin User list">
+    <tr>
+      <th>Username</th>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+
+    <% @admin_user.each do |admin_user| %>
+
+    <tr>
+      <td><%= admin_user.username %></td>
+      <td><%= admin_user.last_name %></td>
+      <td><%= admin_user.first_name %></td>
+      <td><%= mail_to(admin_user.email) %></td>
+      <td class="actions">
+        <%= link_to("Edit", edit_admin_user_path(admin_user), :class => 'action edit') %>
+        <%= link_to("Delete", delete_admin_user_path(admin_user), :class => 'action delete') %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+</div>

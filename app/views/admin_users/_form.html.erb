@@ -1,0 +1,30 @@
+
+
+<table summary="Summary from fields">
+
+  <tr>
+    <th><%= f.label(:first_name) %></th>
+    <td><%= f.text_field(:first_name, :limit => 25) %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:last_name) %></th>
+    <td><%= f.text_field(:last_name, :limit => 50) %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:email) %></th>
+    <td><%= f.text_field(:email, :limit => 100, :default => "") %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:username) %></th>
+    <td><%= f.text_field(:username, :limit => 25) %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:password) %></th>
+    <td><%= f.password_field(:password, :limit => 25) %></td>
+  </tr>
+
+</table>
