@@ -7,7 +7,7 @@ class Track < ApplicationRecord
   scope :invisible, lambda { where(:visible => false) }
   scope :sorted, lambda { order("name ASC") }
 
-  #validates_attachment_content_type :sound, content_type: { content_type: [ 'audio/wav', 'audio/mp3' ] }
   do_not_validate_attachment_file_type :sound
+  #validates_attachment :sound, content_type: { content_type: "audio/mp3", "audio/wav", "audio/mpeg" }
 
 end
