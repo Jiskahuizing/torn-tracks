@@ -21,6 +21,7 @@ class TracksController < ApplicationController
     if @track.save
       # If save succeeds: redirect to the index action
       redirect_to(tracks_path)
+      flash[:notice] = "Track '#{@track.name}' saved succesfully."
     else
       # If save fails: redisplay the form so user can fix problems
       render('new')
@@ -37,7 +38,7 @@ class TracksController < ApplicationController
       redirect_to(track_path(@track))
       flash[:notice] = "Track '#{@track.name}' updated succesfully."
     else
-      render('new')
+      render('edit')
     end
   end
 
@@ -55,7 +56,10 @@ class TracksController < ApplicationController
   private
 
   def track_params
-    params.require(:track).permit(:name, :date_finished, :location_finished, :latitude, :longitude, :pitch, :length, :permalink, :visible)
+    params.require(:track).permit(
+      :name, :date_finished, :location_finished,
+      :latitude, :longitude, :pitch, :length,
+      :permalink, :visible, :sound)
   end
 
 end

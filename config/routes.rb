@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   #Root route:
   root :to => 'public#index'
 
-  get 'locations/index'
-
   get 'show/:permalink', :to => 'public#show', :as => 'public_show'
 
   get 'admin', :to => 'access#menu'
@@ -30,6 +28,8 @@ Rails.application.routes.draw do
       get :delete
     end
   end
+
+  get 'locations/index'
 
   get 'demo/index'
 

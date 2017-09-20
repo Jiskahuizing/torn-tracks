@@ -12587,3 +12587,1921 @@ To silence this deprecation warning, add the following:
 Completed 200 OK in 440ms (Views: 385.1ms | ActiveRecord: 25.7ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT GET_LOCK('5324607525907390770', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddAttachmentToTracks (20170920112853)
+  [1m[35m (6.7ms)[0m  [1m[35mALTER TABLE `tracks` ADD `attachment` sound[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5324607525907390770')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('5324607525907390770', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddAttachmentToTracks (20170920112853)
+  [1m[35m (134.7ms)[0m  [1m[35mALTER TABLE `tracks` ADD `sound_file_name` varchar(255)[0m
+  [1m[35m (124.3ms)[0m  [1m[35mALTER TABLE `tracks` ADD `sound_content_type` varchar(255)[0m
+  [1m[35m (123.4ms)[0m  [1m[35mALTER TABLE `tracks` ADD `sound_file_size` int[0m
+  [1m[35m (123.4ms)[0m  [1m[35mALTER TABLE `tracks` ADD `sound_updated_at` datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170920112853')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('5324607525907390770')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW CREATE TABLE `admin_users`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'admin_users'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `tags`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tags'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `tags_tracks`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `tracks`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tracks'[0m
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-20 13:46:18 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by LocationsController#index as HTML
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `merge' for "sound/wav":String):
+  
+app/models/track.rb:10:in `<class:Track>'
+app/models/track.rb:1:in `<top (required)>'
+app/controllers/locations_controller.rb:6:in `index'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.1ms)
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-20 13:46:26 +0200
+Processing by LocationsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/models/track.rb:11: syntax error, unexpected '}', expecting =>
+ => "sound/wav", "sound/mp3" }
+                              ^):
+  
+app/models/track.rb:11: syntax error, unexpected '}', expecting =>
+app/controllers/locations_controller.rb:6:in `index'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.4ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.8ms)
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-20 13:46:56 +0200
+Processing by LocationsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/models/track.rb:10: syntax error, unexpected '\n', expecting =>):
+  
+app/models/track.rb:10: syntax error, unexpected '\n', expecting =>
+app/controllers/locations_controller.rb:6:in `index'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.5ms)
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-20 13:47:28 +0200
+Processing by LocationsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/models/track.rb:10: syntax error, unexpected '\n', expecting =>):
+  
+app/models/track.rb:10: syntax error, unexpected '\n', expecting =>
+app/controllers/locations_controller.rb:6:in `index'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.4ms)
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-20 13:47:37 +0200
+Processing by LocationsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/models/track.rb:10: syntax error, unexpected '\n', expecting =>):
+  
+app/models/track.rb:10: syntax error, unexpected '\n', expecting =>
+app/controllers/locations_controller.rb:6:in `index'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.0ms)
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-20 13:48:27 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/locations_controller.rb:7)
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 380ms (Views: 353.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-09-20 13:48:40 +0200
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/admin
+  Rendered access/menu.html.erb within layouts/admin (0.8ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 13:48:41 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb___3009538889922401506_70245546504740 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:28)
+  Rendered tracks/index.html.erb within layouts/admin (34.0ms)
+Completed 200 OK in 66ms (Views: 41.2ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/tracks/1" for 127.0.0.1 at 2017-09-20 13:49:07 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.5ms)
+Completed 200 OK in 20ms (Views: 12.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 13:49:09 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (3.7ms)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 13:49:10 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (35.2ms)
+  Rendered tracks/edit.html.erb within layouts/admin (38.9ms)
+Completed 200 OK in 50ms (Views: 46.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 13:49:14 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (2.5ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 13:50:11 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (11.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `attachment' for #<Track:0x007fc6a49881c8>):
+    37:       <td class="center"><%= track.length %></td>
+    38:       <td class="center"><%= track.permalink %></td>
+    39:       <td class="center"><%= status_tag(track.visible) %></td>
+    40:       <td class="center"><%= track.attachment %></td>
+    41:       <td class="center"><%= track.created_at %></td>
+    42:       <td class="center"><%= track.updated_at %></td>
+    43:       <td class="actions">
+  
+app/views/tracks/index.html.erb:40:in `block in _app_views_tracks_index_html_erb___3009538889922401506_70245570923280'
+app/views/tracks/index.html.erb:29:in `_app_views_tracks_index_html_erb___3009538889922401506_70245570923280'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.8ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 13:51:54 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (12.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `attached_file' for #<Track:0x007fc69f648c38>):
+    37:       <td class="center"><%= track.length %></td>
+    38:       <td class="center"><%= track.permalink %></td>
+    39:       <td class="center"><%= status_tag(track.visible) %></td>
+    40:       <td class="center"><%= track.attached_file %></td>
+    41:       <td class="center"><%= track.created_at %></td>
+    42:       <td class="center"><%= track.updated_at %></td>
+    43:       <td class="actions">
+  
+app/views/tracks/index.html.erb:40:in `block in _app_views_tracks_index_html_erb___3009538889922401506_70245527393760'
+app/views/tracks/index.html.erb:29:in `_app_views_tracks_index_html_erb___3009538889922401506_70245527393760'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.9ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 13:52:42 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (10.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `sound_tag' for #<Track:0x007fc6a5059b28>
+Did you mean?  sound):
+    37:       <td class="center"><%= track.length %></td>
+    38:       <td class="center"><%= track.permalink %></td>
+    39:       <td class="center"><%= status_tag(track.visible) %></td>
+    40:       <td class="center"><%= track.sound_tag %></td>
+    41:       <td class="center"><%= track.created_at %></td>
+    42:       <td class="center"><%= track.updated_at %></td>
+    43:       <td class="actions">
+  
+app/views/tracks/index.html.erb:40:in `block in _app_views_tracks_index_html_erb___3009538889922401506_70245548055640'
+app/views/tracks/index.html.erb:29:in `_app_views_tracks_index_html_erb___3009538889922401506_70245548055640'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.4ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 13:55:03 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (13.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `attachment_tag' for #<Track:0x007fc6a5343aa0>):
+    37:       <td class="center"><%= track.length %></td>
+    38:       <td class="center"><%= track.permalink %></td>
+    39:       <td class="center"><%= status_tag(track.visible) %></td>
+    40:       <td class="center"><%= track.attachment_tag %></td>
+    41:       <td class="center"><%= track.created_at %></td>
+    42:       <td class="center"><%= track.updated_at %></td>
+    43:       <td class="actions">
+  
+app/views/tracks/index.html.erb:40:in `block in _app_views_tracks_index_html_erb___3009538889922401506_70245547123540'
+app/views/tracks/index.html.erb:29:in `_app_views_tracks_index_html_erb___3009538889922401506_70245547123540'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.5ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 13:56:18 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb___3009538889922401506_70245579546060 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:29)
+  Rendered tracks/index.html.erb within layouts/admin (24.3ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `attachment_tag' for #<Track:0x007fc69d6f34f0>):
+    37:       <td class="center"><%= track.length %></td>
+    38:       <td class="center"><%= track.permalink %></td>
+    39:       <td class="center"><%= status_tag(track.visible) %></td>
+    40:       <td class="center"><%= track.attachment_tag %></td>
+    41:       <td class="center"><%= track.created_at %></td>
+    42:       <td class="center"><%= track.updated_at %></td>
+    43:       <td class="actions">
+  
+app/views/tracks/index.html.erb:40:in `block in _app_views_tracks_index_html_erb___3009538889922401506_70245579546060'
+app/views/tracks/index.html.erb:29:in `_app_views_tracks_index_html_erb___3009538889922401506_70245579546060'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.2ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 13:56:30 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb___3009538889922401506_70245505587620 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:29)
+  Rendered tracks/index.html.erb within layouts/admin (30.0ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `sound_tag' for #<Track:0x007fc6a53f2898>
+Did you mean?  sound):
+    37:       <td class="center"><%= track.length %></td>
+    38:       <td class="center"><%= track.permalink %></td>
+    39:       <td class="center"><%= status_tag(track.visible) %></td>
+    40:       <td class="center"><%= track.sound_tag %></td>
+    41:       <td class="center"><%= track.created_at %></td>
+    42:       <td class="center"><%= track.updated_at %></td>
+    43:       <td class="actions">
+  
+app/views/tracks/index.html.erb:40:in `block in _app_views_tracks_index_html_erb___3009538889922401506_70245505587620'
+app/views/tracks/index.html.erb:29:in `_app_views_tracks_index_html_erb___3009538889922401506_70245505587620'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.0ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 14:11:28 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb___3009538889922401506_70245571383320 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:29)
+  Rendered tracks/index.html.erb within layouts/admin (19.2ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `sound_tag' for #<Track:0x007fc6a50a3110>
+Did you mean?  sound):
+    37:       <td class="center"><%= track.length %></td>
+    38:       <td class="center"><%= track.permalink %></td>
+    39:       <td class="center"><%= status_tag(track.visible) %></td>
+    40:       <td class="center"><%= track.sound_tag %></td>
+    41:       <td class="center"><%= track.created_at %></td>
+    42:       <td class="center"><%= track.updated_at %></td>
+    43:       <td class="actions">
+  
+app/views/tracks/index.html.erb:40:in `block in _app_views_tracks_index_html_erb___3009538889922401506_70245571383320'
+app/views/tracks/index.html.erb:29:in `_app_views_tracks_index_html_erb___3009538889922401506_70245571383320'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.0ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 14:18:14 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (10.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `sound_tag' for #<Track:0x007fc6a6847a28>
+Did you mean?  sound):
+    37:       <td class="center"><%= track.length %></td>
+    38:       <td class="center"><%= track.permalink %></td>
+    39:       <td class="center"><%= status_tag(track.visible) %></td>
+    40:       <td class="center"><%= track.sound_tag %></td>
+    41:       <td class="center"><%= track.created_at %></td>
+    42:       <td class="center"><%= track.updated_at %></td>
+    43:       <td class="actions">
+  
+app/views/tracks/index.html.erb:40:in `block in _app_views_tracks_index_html_erb___3009538889922401506_70245587034680'
+app/views/tracks/index.html.erb:29:in `_app_views_tracks_index_html_erb___3009538889922401506_70245587034680'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.6ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 14:18:53 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (2.9ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 14:19:02 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (3.1ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.3ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 14:19:42 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mEPgKsYHxSdnjjA1YGZauB0l3EPQlJ5fjCoWWJXOqVtdsk+x480af7ak4AVZq5w+mZy3KoX0lWLGq1WsO8a+6Q==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007fc6a68dcbc8 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17092-dljpap.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-a8mb0u.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-m2jj4m.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/new.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (5.5ms)
+  Rendered tracks/new.html.erb within layouts/admin (8.6ms)
+Completed 200 OK in 76ms (Views: 21.7ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 14:19:53 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rp6mAl+0WjrdMBRetAH60Ka62EAKI/Jor2G9WakSsMGDbwmZen6FYgwaxG6NzDxWIgOzKV9D+VXl4P6tBxqncw==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007fc6a1931ee8 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17092-y623nu.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Create Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-1p6y2ap.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-15ijnw6.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/new.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (2.9ms)
+  Rendered tracks/new.html.erb within layouts/admin (5.2ms)
+Completed 200 OK in 54ms (Views: 12.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 14:19:57 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (3.8ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks/1" for 127.0.0.1 at 2017-09-20 14:20:06 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (13.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `attachment' for #<Track:0x007fc6a504aa10>):
+    51: 
+    52:     <tr>
+    53:       <th>Attachment</th>
+    54:       <td><%= @track.attachment %></td>
+    55:     </tr>
+    56: 
+    57:     <tr>
+  
+app/views/tracks/show.html.erb:54:in `_app_views_tracks_show_html_erb__2211944683841512520_70245574450400'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.4ms)
+Started GET "/tracks/1" for 127.0.0.1 at 2017-09-20 14:20:22 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (2.3ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 14:20:25 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (4.3ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 14:21:04 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.0ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.7ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 14:21:09 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"smX4H/NTNHFNB0yNlhI7ti8HnVIoSpSy01joNGHm5S53lFeE1pnrKZwtnL2v3/0wq772O30qn4+Z2avAz+7ynA==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007fc69d1aae58 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17092-3jvkst.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-wgv3kw.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-lw6pi0.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/new.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (3.2ms)
+  Rendered tracks/new.html.erb within layouts/admin (6.0ms)
+Completed 200 OK in 55ms (Views: 13.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 14:21:15 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (2.9ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 14:21:16 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (3.5ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.3ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 14:21:24 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zbTuN7BZvfdSAcXawvSM5YxtHWiSfDrpDsoyLTKLE34IRUGslZNir4MrFer7OUpjCNR2AcccMdRES3HZnIMEzA==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007fc6a6916080 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17092-19xghlg.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-cnw7il.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-9nsp42.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/new.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (3.0ms)
+  Rendered tracks/new.html.erb within layouts/admin (5.7ms)
+Completed 200 OK in 53ms (Views: 13.0ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 14:22:58 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AlFwvayyJ5G3unT55H8HNvZ6pxWaHd9riVcxk6WHJfPHoN8miXj4yWaQpMndssGwcsPMfM991FbD1nJnC48yQQ==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007fc6a6816d60 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17092-nwyavz.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Create Track", "id"=>"1"}
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from update at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/tracks_controller.rb:36)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-10wehwc.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-14ilrqc.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (3.6ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.4ms)
+Completed 200 OK in 77ms (Views: 14.7ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 14:23:05 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6jz3LZYIFHqvr0I7i4OmVtYvCst3Yj0WxM3Kd6vcNewvzVi2s8LLIn6FkguyTmDQUpZhoiICNiuOTImDBdQiXg==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007fc69cb83c28 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17092-1hxkcdv.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-1dfl56e.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-4928q.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.2ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.8ms)
+Completed 200 OK in 56ms (Views: 15.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 14:27:04 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (2.9ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 14:27:07 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (2.7ms)
+  Rendered tracks/edit.html.erb within layouts/admin (114.5ms)
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `upload' for #<ActionView::Helpers::FormBuilder:0x007fc6a4919818>):
+     7:     <%= render(:partial => 'form', :locals => {:f => f}) %>
+     8: 
+     9:     <div class="form_buttons">
+    10:       <%= f.upload("Upload Sound") %>
+    11:     </div>
+    12: 
+    13:     <div class="form_buttons">
+  
+app/views/tracks/edit.html.erb:10:in `block in _app_views_tracks_edit_html_erb__3723775878313222571_70245570434780'
+app/views/tracks/edit.html.erb:6:in `_app_views_tracks_edit_html_erb__3723775878313222571_70245570434780'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.0ms)
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 14:28:07 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (2.7ms)
+  Rendered tracks/edit.html.erb within layouts/admin (4.9ms)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 14:28:18 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F0cBhRSIA0huUnCf5cZrXifvdehnl4e0/WHOMsxbb/nStq4eMULcEL94oK/cC63Yo1YegTL3jIm34I3GYlN4Sw==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007fc6a6915fe0 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17092-1ogyhmu.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Upload + Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-mnfumo.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-1hnge78.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (3.3ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.3ms)
+Completed 200 OK in 55ms (Views: 14.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 14:39:25 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (3.5ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 14:39:27 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (2.7ms)
+  Rendered tracks/edit.html.erb within layouts/admin (5.0ms)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 14:39:29 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (4.1ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tracks/1" for 127.0.0.1 at 2017-09-20 14:39:30 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 14:39:32 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (3.2ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 14:41:17 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (3.2ms)
+  Rendered tracks/edit.html.erb within layouts/admin (5.2ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 14:41:22 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"75HycvF7pQ2Yb3u0xNqWMYZ8kZlA1TsLyr6OnQBV3e0qYF3p1LF6VUlFq4T9F1C3AsX68BW1MDaAP81prl3KXw==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007fc6a68fdb70 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17092-pnfknn.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-4awai5.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-tbj6m.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (7.9ms)
+  Rendered tracks/edit.html.erb within layouts/admin (11.0ms)
+Completed 200 OK in 68ms (Views: 21.5ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 14:41:41 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CsnGqT5tzfmVHRzCkaUX+ZIaYwuUBRZyYmHO5K7LBnnPOGkyG6cSoUQ3zPKoaNF/FqMIYsFlHU8o4I0QAMMRyw==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007fc69d936e38 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17092-vsk4kt.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-1nfjgvq.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-7feyrw.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (3.7ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.4ms)
+Completed 200 OK in 56ms (Views: 14.2ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 14:42:04 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kbidPdn7z4nW3jjlq9EzaXP72mSSzISoPmNtVwKNalhUSTKm/DEQ0Qf06NWSHPXv90KxDcesj5V04i6jrIV96g==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007fc69f700bd0 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17092-dkqd6l.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-1fphliv.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17092-1uo8zgn.mp3'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (2.8ms)
+  Rendered tracks/edit.html.erb within layouts/admin (5.3ms)
+Completed 200 OK in 52ms (Views: 12.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 14:43:12 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (2.9ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 14:51:17 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb__4118515448158050700_70318924254460 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:29)
+  Rendered tracks/index.html.erb within layouts/admin (17.9ms)
+Completed 200 OK in 194ms (Views: 169.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 14:51:19 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (16.4ms)
+  Rendered tracks/edit.html.erb within layouts/admin (18.8ms)
+Completed 200 OK in 31ms (Views: 25.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 14:51:24 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFZkTJoMTbum1CbWmOjPzltpbnHQ6dQRrQC0dTAjw9JJp8vXv8aS43f+9uahJQlI39AFGIWJ3yzngfeBnivUYA==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007fe8d0265af0 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17396-evcfz5.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17396-1d57r7d.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17396-1d42363.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.1ms)
+  Rendered tracks/edit.html.erb within layouts/admin (7.1ms)
+Completed 200 OK in 59ms (Views: 15.7ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5324607525907390770', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5324607525907390770')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `admin_users`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'admin_users'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `tags`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tags'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `tags_tracks`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `tracks`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tracks'[0m
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:01:29 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb__3582901300310635087_70355855232720 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:29)
+  Rendered tracks/index.html.erb within layouts/admin (17.3ms)
+Completed 200 OK in 199ms (Views: 168.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 15:01:32 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (13.4ms)
+  Rendered tracks/edit.html.erb within layouts/admin (16.1ms)
+Completed 200 OK in 28ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 15:01:37 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VAE8U7NG7pqglAnz78wHfXYJPeRH01a27tjQZ2B9MjaR8JPIlowxwnG+2cPWAcH78rBWjRKzXYukWZOTznUlhA==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007ffa021825f0 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17460-80o3nj.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17460-6ujyl0.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17460-1wnpwvf.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.3ms)
+  Rendered tracks/edit.html.erb within layouts/admin (7.3ms)
+Completed 200 OK in 65ms (Views: 17.7ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 15:04:32 +0200
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:04:42 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VAE8U7NG7pqglAnz78wHfXYJPeRH01a27tjQZ2B9MjaR8JPIlowxwnG+2cPWAcH78rBWjRKzXYukWZOTznUlhA==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007ff9ffd541b0 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17460-o4yaey.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from update at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/tracks_controller.rb:36)
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17460-pd03jz.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17460-1qdm09q.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (8.5ms)
+  Rendered tracks/edit.html.erb within layouts/admin (12.7ms)
+Completed 200 OK in 107ms (Views: 27.3ms | ActiveRecord: 0.7ms)
+
+
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb__3582901300310635087_70355850918480 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:29)
+  Rendered tracks/index.html.erb within layouts/admin (30.1ms)
+Completed 200 OK in 55ms (Views: 39.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 15:04:44 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (3.1ms)
+  Rendered tracks/edit.html.erb within layouts/admin (5.8ms)
+Completed 200 OK in 20ms (Views: 16.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 15:04:49 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RerJ2US4/SuL6JaorCqafW2uJQwG5MRmb9pO00FvUOSAG2ZCYXIic1rCRpiV51z76RdOZVOEz1slWw0n72dHVg==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007ff9ffd6c238 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17460-1c05x0b.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17460-1m35dta.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17460-1yeoj2j.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (6.2ms)
+  Rendered tracks/edit.html.erb within layouts/admin (9.4ms)
+Completed 200 OK in 64ms (Views: 22.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:04:58 +0200
+Processing by TracksController#index as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from to_str at /Users/jiskahuizing/.rvm/gems/ruby-2.4.0@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `before_audio_post_process' for #<Class:0x007ff9fb3c8d70>
+Did you mean?  before_post_process
+               before_sound_post_process):
+  
+app/models/track.rb:12:in `<class:Track>'
+app/models/track.rb:1:in `<top (required)>'
+app/controllers/tracks_controller.rb:6:in `index'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (18.1ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.3ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.4ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:05:56 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb__3582901300310635087_70355814965560 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:29)
+  Rendered tracks/index.html.erb within layouts/admin (21.6ms)
+Completed 200 OK in 43ms (Views: 30.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 15:05:57 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (2.8ms)
+  Rendered tracks/edit.html.erb within layouts/admin (5.2ms)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 15:06:01 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iFVtqcrCkVRfiT3zy/hPSfh2H8u6SyJJM6ML5HMIzA9NpMIy7whODI6j7cPyNYnPfM90ou8rKXR5IkgQ3QDbvQ==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007ff9fc1a3fa8 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17460-1ggf00n.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17460-1p2w1il.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17460-q2y07k.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (3.4ms)
+  Rendered tracks/edit.html.erb within layouts/admin (5.9ms)
+Completed 200 OK in 55ms (Views: 15.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:06:49 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb__3582901300310635087_70355884606740 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:29)
+  Rendered tracks/index.html.erb within layouts/admin (15.1ms)
+Completed 200 OK in 35ms (Views: 22.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:08:13 +0200
+Processing by TracksController#index as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from to_str at /Users/jiskahuizing/.rvm/gems/ruby-2.4.0@global/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `validates_sound_content_type' for #<Class:0x007ff9ffc07d48>
+Did you mean?  validates_absence_of):
+  
+app/models/track.rb:10:in `<class:Track>'
+app/models/track.rb:1:in `<top (required)>'
+app/controllers/tracks_controller.rb:6:in `index'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.8ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.6ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:08:35 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb__3582901300310635087_70355820737240 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:29)
+  Rendered tracks/index.html.erb within layouts/admin (9.7ms)
+Completed 200 OK in 25ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 15:08:36 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (3.0ms)
+  Rendered tracks/edit.html.erb within layouts/admin (5.5ms)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 15:09:09 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RLjiigAhDQA10D0IOjZGJ0Fr3LvX/2/kLh+uSXsTyOeBSU0RJevSWOT67TgD+4ChxdK30oKfZNlknu291RvfVQ==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007ffa05d02378 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17460-147byt7.wav>, @original_filename="Torn Track #12 (Live at Lydgalleriet).wav", @content_type="audio/wav", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Track #12 (Live at Lydgalleriet).wav\"\r\nContent-Type: audio/wav\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/b1ad6bfc35c25237f63eea804199019320170920-17460-1o8kxke.wav'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/b1ad6bfc35c25237f63eea804199019320170920-17460-h6e6z5.wav'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (2.7ms)
+  Rendered tracks/edit.html.erb within layouts/admin (5.0ms)
+Completed 200 OK in 284ms (Views: 11.4ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 15:09:39 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/4t/Za3r6Cpts7Jl2tHz91+e8+ka9HZiu/0+LZdvkMs6etD+iCE3cryZYlXjHDVx2yeYgE+UfV/xfH3ZOWeHeQ==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007ff9fc2fda48 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17460-mhlmpr.mp3>, @original_filename="Torn Tracks nr1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks nr1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/6d0c9f15e0024455d44daee76319287120170920-17460-te1zyc.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/6d0c9f15e0024455d44daee76319287120170920-17460-f6lzq1.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.7ms)
+  Rendered tracks/edit.html.erb within layouts/admin (7.3ms)
+Completed 200 OK in 60ms (Views: 17.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:09:54 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (3.2ms)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:15:13 +0200
+Processing by TracksController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/models/track.rb:11: syntax error, unexpected '}', expecting =>
+pe: "audio/mp3", "audio/wav" }
+                              ^):
+  
+app/models/track.rb:11: syntax error, unexpected '}', expecting =>
+app/controllers/tracks_controller.rb:6:in `index'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.2ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (24.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.0ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:15:43 +0200
+Processing by TracksController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/models/track.rb:11: syntax error, unexpected =>
+hment :sound, content_type: => { content_type: "audio/mp3", 
+                              ^
+/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/models/track.rb:11: syntax error, unexpected '}', expecting =>
+pe: "audio/mp3", "audio/wav" }
+                              ^):
+  
+app/models/track.rb:11: syntax error, unexpected =>
+app/models/track.rb:11: syntax error, unexpected '}', expecting =>
+app/controllers/tracks_controller.rb:6:in `index'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.5ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:15:55 +0200
+Processing by TracksController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/models/track.rb:11: syntax error, unexpected '}', expecting =>
+pe: "audio/mp3", "audio/wav" }
+                              ^):
+  
+app/models/track.rb:11: syntax error, unexpected '}', expecting =>
+app/controllers/tracks_controller.rb:6:in `index'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.9ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:16:19 +0200
+Processing by TracksController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/models/track.rb:11: syntax error, unexpected '}', expecting =>
+ => "audio/mp3", "audio/wav" }
+                              ^):
+  
+app/models/track.rb:11: syntax error, unexpected '}', expecting =>
+app/controllers/tracks_controller.rb:6:in `index'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.4ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:17:00 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb__3582901300310635087_70355857274680 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:29)
+  Rendered tracks/index.html.erb within layouts/admin (11.9ms)
+Completed 200 OK in 30ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:30:08 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb__3582901300310635087_70355821249820 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:29)
+  Rendered tracks/index.html.erb within layouts/admin (13.3ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+    37:       <td class="center"><%= track.length %></td>
+    38:       <td class="center"><%= track.permalink %></td>
+    39:       <td class="center"><%= status_tag(track.visible) %></td>
+    40:       <td class="center"><%= track.sound %></td>
+    41:       <td class="center"><%= track.created_at %></td>
+    42:       <td class="center"><%= track.updated_at %></td>
+    43:       <td class="actions">
+  
+app/views/tracks/index.html.erb:40:in `block in _app_views_tracks_index_html_erb__3582901300310635087_70355821249820'
+app/views/tracks/index.html.erb:29:in `_app_views_tracks_index_html_erb__3582901300310635087_70355821249820'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (68.7ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:30:21 +0200
+Processing by TracksController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/models/track.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  scope :visible, lambda { where(:visib
+         ^):
+  
+app/models/track.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/controllers/tracks_controller.rb:6:in `index'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.3ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:30:48 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb__3582901300310635087_70355907510620 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:29)
+  Rendered tracks/index.html.erb within layouts/admin (11.9ms)
+Completed 200 OK in 29ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 15:32:41 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (2.9ms)
+  Rendered tracks/edit.html.erb within layouts/admin (5.5ms)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 15:32:47 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dseXGUtAzLYespQXPE4ZvUcFP5i1r0mRDvZibHRIHTezNjiCbooT7s+YRCcFg987w7xU8eDPQqxEdyGY2kAKhQ==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007ff9fc1c0f68 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17460-1xunuif.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17460-bz8th7.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17460-1yvxhmj.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.1ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.9ms)
+Completed 200 OK in 56ms (Views: 15.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:34:37 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (2.9ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:34:39 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (3.3ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:36:25 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb___4014573407476968664_70337741961020 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:29)
+  Rendered tracks/index.html.erb within layouts/admin (17.7ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+    37:       <td class="center"><%= track.length %></td>
+    38:       <td class="center"><%= track.permalink %></td>
+    39:       <td class="center"><%= status_tag(track.visible) %></td>
+    40:       <td class="center"><%= track.sound %></td>
+    41:       <td class="center"><%= track.created_at %></td>
+    42:       <td class="center"><%= track.updated_at %></td>
+    43:       <td class="actions">
+  
+app/views/tracks/index.html.erb:40:in `block in _app_views_tracks_index_html_erb___4014573407476968664_70337741961020'
+app/views/tracks/index.html.erb:29:in `_app_views_tracks_index_html_erb___4014573407476968664_70337741961020'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.7ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:39:10 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (4.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+    37:       <td class="center"><%= track.length %></td>
+    38:       <td class="center"><%= track.permalink %></td>
+    39:       <td class="center"><%= status_tag(track.visible) %></td>
+    40:       <td class="center"><%= track.sound %></td>
+    41:       <td class="center"><%= track.created_at %></td>
+    42:       <td class="center"><%= track.updated_at %></td>
+    43:       <td class="actions">
+  
+app/views/tracks/index.html.erb:40:in `block in _app_views_tracks_index_html_erb___4014573407476968664_70337741035340'
+app/views/tracks/index.html.erb:29:in `_app_views_tracks_index_html_erb___4014573407476968664_70337741035340'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.4ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:39:21 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb__3925334649301119127_70329474797100 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:29)
+  Rendered tracks/index.html.erb within layouts/admin (15.8ms)
+Completed 200 OK in 233ms (Views: 205.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 15:39:47 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (13.1ms)
+  Rendered tracks/edit.html.erb within layouts/admin (15.9ms)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 15:39:54 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z/SnzmVEW24TwnHOBB+Uv5rAaXHqE0/jDofyDCeXtjGiBQhVQI6ENsLoof490lI5HnkCGL9zRN5EBrH4iZ+hgw==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007fedbdc77da8 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17722-9ehgeo.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17722-uc1ztk.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17722-1hvve54.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (3.9ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.6ms)
+Completed 200 OK in 57ms (Views: 14.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:41:54 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb__464051256887604066_70317319045060 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:29)
+  Rendered tracks/index.html.erb within layouts/admin (17.0ms)
+Completed 200 OK in 230ms (Views: 208.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 15:41:56 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/edit.html.erb within layouts/admin (0.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/edit.html.erb:8: syntax error, unexpected **arg
+url => track_path, :html => **{ :multipart => true }**) do |
+                              ^
+/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/edit.html.erb:8: syntax error, unexpected ')'
+=> **{ :multipart => true }**) do |f| @output_buffer.safe_ap
+                              ^):
+  
+app/views/tracks/edit.html.erb:8: syntax error, unexpected **arg
+app/views/tracks/edit.html.erb:8: syntax error, unexpected ')'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.7ms)
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 15:42:25 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/edit.html.erb within layouts/admin (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/edit.html.erb:19: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/tracks/edit.html.erb:19: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.9ms)
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 15:43:32 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (18.1ms)
+  Rendered tracks/edit.html.erb within layouts/admin (20.8ms)
+Completed 200 OK in 31ms (Views: 27.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 15:45:43 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (2.9ms)
+  Rendered tracks/edit.html.erb within layouts/admin (5.1ms)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 15:45:47 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gMFAQyvIHygT+8dj+kNOgIXaOJv6LEz25rOSf15FXetFMO/YDgLAcMLRF1PDjogGAWNT8q9MR8usMtGL8E1KWQ==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007fe80f27aae8 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17800-1e9wv4q.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17800-1bl90xe.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17800-lni587.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.1ms)
+  Rendered tracks/edit.html.erb within layouts/admin (7.2ms)
+Completed 200 OK in 59ms (Views: 16.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:45:49 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (3.0ms)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 15:45:51 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (3.2ms)
+  Rendered tracks/edit.html.erb within layouts/admin (5.5ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 15:45:57 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qE00r6sd+y62tOKVcPx0CQo2vvWgUqDSoXRmnIjmPUVtvJs0jtckdmeeMqVJMbKPjo/VnPUyq+/r9SVoJu4q9w==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007fe8094a1368 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17800-l6vqwf.mp3>, @original_filename="Torn Tracks #3.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #3.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/d016d9ea6f2815170eade7abdefc556d20170920-17800-g0hu1b.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/d016d9ea6f2815170eade7abdefc556d20170920-17800-63pmyl.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (3.0ms)
+  Rendered tracks/edit.html.erb within layouts/admin (5.3ms)
+Completed 200 OK in 60ms (Views: 22.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:48:43 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (5.2ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:48:48 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (139.4ms)
+Completed 500 Internal Server Error in 143ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `sound_tag' for #<#<Class:0x007fe80da564a8>:0x007fe808e77708>):
+    38:       <td class="center"><%= track.permalink %></td>
+    39:       <td class="center"><%= status_tag(track.visible) %></td>
+    40:       <td class="center"><%= track.sound %></td>
+    41:       <td class="center"><%= sound_tag track.sound.url %></td>
+    42:       <td class="center"><%= track.created_at %></td>
+    43:       <td class="center"><%= track.updated_at %></td>
+    44:       <td class="actions">
+  
+app/views/tracks/index.html.erb:41:in `block in _app_views_tracks_index_html_erb__464051256887604066_70317279291180'
+app/views/tracks/index.html.erb:29:in `_app_views_tracks_index_html_erb__464051256887604066_70317279291180'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (19.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.9ms)
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:48:59 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (2.5ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 15:50:29 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.0ms)
+  Rendered tracks/edit.html.erb within layouts/admin (7.0ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 15:50:33 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wHZUpLA3kl1evPoM94dYl0aZ8r1YBLBFr1aXCSTFHM4Fh/s/lf1NBY+WKjzOSp4RwiCZ1A1ku3jl19T9is0LfA==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007fe807afc750 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17800-1o6o068.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17800-3r3w0p.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17800-1ta49mp.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.3ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.9ms)
+Completed 200 OK in 54ms (Views: 14.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:50:34 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (3.3ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 15:53:06 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from edit at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/tracks_controller.rb:32)
+  [1m[36mTrack Load (1.7ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (12.0ms)
+  Rendered tracks/edit.html.erb within layouts/admin (14.6ms)
+Completed 200 OK in 47ms (Views: 22.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:53:07 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (2.8ms)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:53:16 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb__867515408355215091_70102612214680 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:29)
+  Rendered tracks/index.html.erb within layouts/admin (16.0ms)
+Completed 200 OK in 245ms (Views: 219.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 15:53:17 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (13.8ms)
+  Rendered tracks/edit.html.erb within layouts/admin (16.4ms)
+Completed 200 OK in 27ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 15:53:21 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pwhNJxZmtoKj59IMJGmXrtuHW5jsFkGGMIS6Jf4eS6hi+eK8M6xp2nLNAjwdpFEoXz4w8bl2Srt6BfnRUBZcGg==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007f841544d0b8 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17897-1gthlwb.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17897-rzm0p1.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17897-1d3tn3a.mp3'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `image' for #<Track:0x007f841601e388>):
+  
+app/controllers/tracks_controller.rb:37:in `update'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.2ms)
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 15:53:50 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pwhNJxZmtoKj59IMJGmXrtuHW5jsFkGGMIS6Jf4eS6hi+eK8M6xp2nLNAjwdpFEoXz4w8bl2Srt6BfnRUBZcGg==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007f840e091ea8 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17897-1y0q27v.mp3>, @original_filename="Torn Tracks #1.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #1.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from update at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/tracks_controller.rb:36)
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17897-11rhq8x.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/961590d6fff60d6b28dc385f376d75b720170920-17897-d9wcm3.mp3'
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE `tracks` SET `sound_file_name` = 'Torn_Tracks__1.mp3', `sound_content_type` = 'audio/mpeg', `sound_file_size` = 6361827, `sound_updated_at` = '2017-09-20 13:53:50', `updated_at` = '2017-09-20 13:53:50' WHERE `tracks`.`id` = 1[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/1
+Completed 302 Found in 74ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/tracks/1" for 127.0.0.1 at 2017-09-20 15:53:50 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.5ms)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:54:11 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (3.4ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-20 15:54:15 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (10.9ms)
+  Rendered tracks/edit.html.erb within layouts/admin (15.3ms)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-20 15:54:20 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hr1+NPRwZNXt+HWCz65ommr/1+uGODVVs86zuDJKce3bTNGv0bq7jTzSpbL2Y64c7ka8gtNYPmj5T/BMnEJmXw==", "track"=>{"name"=>"Track #1", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"21", "date_finished(3i)"=>"8", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2017", "location_finished"=>"Bergen", "latitude"=>"29.9522", "longitude"=>"-74.006", "pitch"=>"10.000 Hz", "permalink"=>"frog", "visible"=>"1", "sound"=>#<ActionDispatch::Http::UploadedFile:0x007f840f6c59b8 @tempfile=#<Tempfile:/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/RackMultipart20170920-17897-qv8748.mp3>, @original_filename="Torn Tracks #3.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"track[sound]\"; filename=\"Torn Tracks #3.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/d016d9ea6f2815170eade7abdefc556d20170920-17897-1krphjg.mp3'
+Command :: file -b --mime '/var/folders/wp/vdf6yks91cz8tk_6rgnbxp1h0000gn/T/d016d9ea6f2815170eade7abdefc556d20170920-17897-u7nscf.mp3'
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `tracks` SET `sound_file_name` = 'Torn_Tracks__3.mp3', `sound_file_size` = 5920200, `sound_updated_at` = '2017-09-20 13:54:20', `updated_at` = '2017-09-20 13:54:20' WHERE `tracks`.`id` = 1[0m
+[paperclip] deleting /Users/jiskahuizing/Sites/GitHub/torn-tracks/public/system/tracks/sounds/000/000/001/original/Torn_Tracks__1.mp3
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/1
+Completed 302 Found in 54ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/tracks/1" for 127.0.0.1 at 2017-09-20 15:54:20 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.3ms)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-20 15:54:22 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (3.1ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.3ms)
+
+
