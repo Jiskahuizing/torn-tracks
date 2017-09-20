@@ -37,7 +37,7 @@ class TagsController < ApplicationController
       redirect_to(tag_path(@tag))
       flash[:notice] = "Tage '#{@tag.name}' updated succesfully."
     else
-      render('new')
+      render('edit')
     end
   end
 

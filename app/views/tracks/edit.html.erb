@@ -3,7 +3,8 @@
 <div class="tracks edit">
   <h2>Update Track</h2>
 
-  <%= form_for(@track, :url => track_path) do |f| %>
+  <%= form_for(@track, :url => track_path, :html => { :multipart => true }) do |f| %>
+
     <%= render(:partial => 'form', :locals => {:f => f}) %>
 
     <div class="form_buttons">

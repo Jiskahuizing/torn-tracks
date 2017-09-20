@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170918111828) do
+ActiveRecord::Schema.define(version: 20170920112853) do
 
   create_table "admin_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "first_name",      limit: 25
@@ -46,11 +46,15 @@ ActiveRecord::Schema.define(version: 20170918111828) do
     t.string   "pitch"
     t.time     "length"
     t.string   "permalink"
-    t.boolean  "visible",                      default: false
-    t.datetime "created_at",                                   null: false
-    t.datetime "updated_at",                                   null: false
-    t.float    "latitude",          limit: 24
-    t.float    "longitude",         limit: 24
+    t.boolean  "visible",                       default: false
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
+    t.float    "latitude",           limit: 24
+    t.float    "longitude",          limit: 24
+    t.string   "sound_file_name"
+    t.string   "sound_content_type"
+    t.integer  "sound_file_size"
+    t.datetime "sound_updated_at"
     t.index ["name"], name: "index_tracks_on_name", using: :btree
     t.index ["permalink"], name: "index_tracks_on_permalink", using: :btree
   end
