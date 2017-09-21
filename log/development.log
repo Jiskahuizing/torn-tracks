@@ -14507,8 +14507,13 @@ Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.3ms)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2017-09-21 13:40:33 +0200
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+=======
+Started GET "/" for 127.0.0.1 at 2017-09-21 11:57:39 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (33.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+>>>>>>> master
 =======
 Started GET "/" for 127.0.0.1 at 2017-09-21 11:57:39 +0200
   [1m[36mActiveRecord::SchemaMigration Load (33.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
@@ -14531,6 +14536,7 @@ To silence this deprecation warning, add the following:
     config.active_record.time_zone_aware_types = [:datetime, :time]
  (called from block in <class:Track> at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/models/track.rb:6)
   Rendering public/index.html.erb within layouts/public
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Rendered public/index.html.erb within layouts/public (1.0ms)
@@ -17441,6 +17447,8 @@ Processing by TracksController#index as HTML
 Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.4ms)
 =======
 =======
+=======
+>>>>>>> master
   Rendered public/index.html.erb within layouts/public (1.1ms)
   [1m[36mTrack Load (6.0ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
   Rendered layouts/_navigation.html.erb (282.9ms)
@@ -17678,6 +17686,9 @@ Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.0ms)
 
 
   
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 ActionView::Template::Error (No route matches {:action=>"show", :controller=>"public"} missing required keys: [:permalink]):
     1: 
@@ -18516,6 +18527,9 @@ Processing by LocationsController#index as HTML
   Rendered layouts/_navigation.html.erb (2.5ms)
 Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 0.8ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
