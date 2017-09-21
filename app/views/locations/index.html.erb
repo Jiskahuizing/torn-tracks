@@ -1,6 +1,6 @@
 <% @page_title = "Locations" %>
 
-<%= link_to("<< Back to Index", root_path, :class => 'back-link') %>
+<%= link_to("<< Back to Index", root_path) %>
 
 <div class="tracks index">
   <h1>Location Tracks</h1>
@@ -33,6 +33,8 @@
 
   <script>
       markers = handler.addMarkers(<%=raw @hash.to_json %>);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
   </script>
 
 </div>

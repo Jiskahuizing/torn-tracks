@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Torn Tracks: <%= @track_title || "Main Area" %></title>
+    <%= stylesheet_link_tag('application', :media => 'all') %>
+    <%= javascript_include_tag('application') %>
+  </head>
+  <body>
+
+    <div id="header">
+      <h1>Torn Tracks</h1><h3>Main Layout</h3>
+    </div>
+
+    <div id="main">
+
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div></div>
+
+    <div id="footer">
+      <p id="copyright">&copy; Jiska Huizing</p>
+    </div>
+
+  </body>
+</html>

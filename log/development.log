@@ -14505,8 +14505,13 @@ Processing by TracksController#index as HTML
 Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.3ms)
 
 
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2017-09-21 13:40:33 +0200
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+=======
+Started GET "/" for 127.0.0.1 at 2017-09-21 11:57:39 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (33.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+>>>>>>> master
 Processing by PublicController#index as HTML
 DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
 still causes `String`s to be parsed as if they were in `Time.zone`,
@@ -14521,6 +14526,7 @@ To silence this deprecation warning, add the following:
     config.active_record.time_zone_aware_types = [:datetime, :time]
  (called from block in <class:Track> at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/models/track.rb:6)
   Rendering public/index.html.erb within layouts/public
+<<<<<<< HEAD
   Rendered public/index.html.erb within layouts/public (1.0ms)
   Rendered layouts/_navigation.html.erb (0.6ms)
 Completed 200 OK in 421ms (Views: 397.9ms | ActiveRecord: 0.6ms)
@@ -16541,10 +16547,246 @@ Processing by PublicController#index as HTML
   Rendering public/index.html.erb within layouts/public
   Rendered public/index.html.erb within layouts/public (0.4ms)
   Rendered layouts/_navigation.html.erb (3.1ms)
+=======
+  Rendered public/index.html.erb within layouts/public (1.1ms)
+  [1m[36mTrack Load (6.0ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (282.9ms)
+Completed 500 Internal Server Error in 556ms (ActiveRecord: 7.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `track' for #<#<Class:0x007fff223747d0>:0x007fff231585b8>
+Did you mean?  tracks
+               @tracks
+               trap):
+    2: <ul>
+    3:   <% tracks.each do |subject| %>
+    4:     <li>
+    5:       <%= track.name %>
+    6:       <ul>
+    7:       <% track.tags.visible.sorted.each do |page| %>
+    8:         <li><%= link_to_unless_current(track.name, public_show_path(track.permalink)) %></li>
+  
+app/views/layouts/_navigation.html.erb:5:in `block in _app_views_layouts__navigation_html_erb___265781164062872647_70366838623780'
+app/views/layouts/_navigation.html.erb:3:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366838623780'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366891053680'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.6ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 11:59:30 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.5ms)
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (5.3ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    2: <ul>
+    3:   <% tracks.each do |subject| %>
+    4:     <li>
+    5:       <%= @track.name %>
+    6:       <ul>
+    7:       <% track.tags.visible.sorted.each do |page| %>
+    8:         <li><%= link_to_unless_current(track.name, public_show_path(track.permalink)) %></li>
+  
+app/views/layouts/_navigation.html.erb:5:in `block in _app_views_layouts__navigation_html_erb___265781164062872647_70366842349560'
+app/views/layouts/_navigation.html.erb:3:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366842349560'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366892294720'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.7ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:00:41 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  [1m[36mTag Load (11.6ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `tags_tracks` ON `tags`.`id` = `tags_tracks`.`tag_id` WHERE `tags_tracks`.`track_id` = 1 AND `tags`.`visible` = 1 ORDER BY name ASC[0m
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `tags_tracks` ON `tags`.`id` = `tags_tracks`.`tag_id` WHERE `tags_tracks`.`track_id` = 2 AND `tags`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (55.3ms)
+Completed 200 OK in 110ms (Views: 88.7ms | ActiveRecord: 19.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:01:02 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `tags_tracks` ON `tags`.`id` = `tags_tracks`.`tag_id` WHERE `tags_tracks`.`track_id` = 1 AND `tags`.`visible` = 1 ORDER BY name ASC[0m
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `tags_tracks` ON `tags`.`id` = `tags_tracks`.`tag_id` WHERE `tags_tracks`.`track_id` = 2 AND `tags`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (5.5ms)
+Completed 200 OK in 57ms (Views: 53.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:01:22 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (115.9ms)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `track_show_path' for #<#<Class:0x007fff223747d0>:0x007fff1d6de4e8>
+Did you mean?  tracks_path):
+     5:       <%= track.name %>
+     6:       <ul>
+     7:       <% tracks.visible.sorted.each do |track| %>
+     8:         <li><%= link_to_unless_current(track.name, track_show_path(track.permalink)) %></li>
+     9:       <% end %>
+    10:     </ul>
+    11:   </li>
+  
+app/views/layouts/_navigation.html.erb:8:in `block (2 levels) in _app_views_layouts__navigation_html_erb___265781164062872647_70366849602020'
+app/views/layouts/_navigation.html.erb:7:in `block in _app_views_layouts__navigation_html_erb___265781164062872647_70366849602020'
+app/views/layouts/_navigation.html.erb:3:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366849602020'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366843543640'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.8ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:02:43 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m  [["visible", 1], ["visible", 1]]
+  Rendered layouts/_navigation.html.erb (3.5ms)
+Completed 200 OK in 51ms (Views: 48.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:03:32 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m  [["visible", 1], ["visible", 1]]
+  Rendered layouts/_navigation.html.erb (4.0ms)
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:03:50 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/layouts/_navigation.html.erb:14: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/layouts/_navigation.html.erb:14: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366903907100'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.2ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:04:08 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/layouts/_navigation.html.erb:13: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/layouts/_navigation.html.erb:13: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366892519640'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.1ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:04:53 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (1.8ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/show/frog" for 127.0.0.1 at 2017-09-21 12:04:55 +0200
+Processing by PublicController#show as HTML
+  Parameters: {"permalink"=>"frog"}
+  [1m[36mTrack Load (2.8ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`permalink` = 'frog' ORDER BY `tracks`.`id` ASC LIMIT 1[0m
+  Rendering public/show.html.erb within layouts/public
+  [1m[36mTag Load (1.8ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `tags_tracks` ON `tags`.`id` = `tags_tracks`.`tag_id` WHERE `tags_tracks`.`track_id` = 1 AND `tags`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered public/show.html.erb within layouts/public (4.2ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.2ms)
+Completed 200 OK in 76ms (Views: 68.6ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/show/123" for 127.0.0.1 at 2017-09-21 12:04:57 +0200
+Processing by PublicController#show as HTML
+  Parameters: {"permalink"=>"123"}
+  [1m[36mTrack Load (1.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`permalink` = '123' ORDER BY `tracks`.`id` ASC LIMIT 1[0m
+  Rendering public/show.html.erb within layouts/public
+  [1m[36mTag Load (1.8ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `tags_tracks` ON `tags`.`id` = `tags_tracks`.`tag_id` WHERE `tags_tracks`.`track_id` = 2 AND `tags`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered public/show.html.erb within layouts/public (4.9ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (3.4ms)
+Completed 200 OK in 97ms (Views: 90.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/show/frog" for 127.0.0.1 at 2017-09-21 12:04:58 +0200
+Processing by PublicController#show as HTML
+  Parameters: {"permalink"=>"frog"}
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`permalink` = 'frog' ORDER BY `tracks`.`id` ASC LIMIT 1[0m
+  Rendering public/show.html.erb within layouts/public
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `tags_tracks` ON `tags`.`id` = `tags_tracks`.`tag_id` WHERE `tags_tracks`.`track_id` = 1 AND `tags`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered public/show.html.erb within layouts/public (3.9ms)
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.3ms)
+Completed 200 OK in 101ms (Views: 95.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:07:19 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+>>>>>>> master
 Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.0ms)
 
 
   
+<<<<<<< HEAD
 ActionView::Template::Error (No route matches {:action=>"public", :controller=>"public"}):
     11:   <li><%= link_to_unless_current("Pitch", pitches_path) %></li>
     12:   <li><%= link_to_unless_current("Tags", root_path) %></li>
@@ -17191,5 +17433,843 @@ Processing by TracksController#index as HTML
   [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
   Rendered tracks/index.html.erb within layouts/admin (4.1ms)
 Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.4ms)
+=======
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"public"} missing required keys: [:permalink]):
+    1: 
+    2:   <% link_to("Overview", public_show_path) %>
+    3: 
+    4: <% tracks ||= [] %>
+    5:   <ul>
+  
+app/views/layouts/_navigation.html.erb:2:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366841388780'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366849338780'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.8ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:07:23 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"public"} missing required keys: [:permalink]):
+    1: <% "Overview" %>
+    2:   <% link_to("Overview", public_show_path) %>
+    3: 
+    4: <% tracks ||= [] %>
+    5:   <ul>
+  
+app/views/layouts/_navigation.html.erb:2:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366842908680'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366904009760'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.4ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.0ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:07:40 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"public"} missing required keys: [:permalink]):
+    1: <% "Overview" %>
+    2:   <li><% link_to("Overview", public_show_path) %></li>
+    3: 
+    4: <% tracks ||= [] %>
+    5:   <ul>
+  
+app/views/layouts/_navigation.html.erb:2:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366843662700'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366904140820'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.5ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:07:51 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.9ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:08:24 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"public"} missing required keys: [:permalink]):
+    1: <% "Overview" %>
+    2:   <ul>
+    3:     <li><% link_to("Overview", public_show_path) %></li>
+    4:   </u>
+    5: 
+    6: <% tracks ||= [] %>
+  
+app/views/layouts/_navigation.html.erb:3:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366841875860'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366909953520'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.7ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:09:22 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"public"} missing required keys: [:permalink]):
+    1: 
+    2: <%= link_to("Overview", public_show_path) %>
+    3: 
+    4: <% tracks ||= [] %>
+    5:   <ul>
+  
+app/views/layouts/_navigation.html.erb:2:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366908469880'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366909628020'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.0ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.3ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:09:55 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (221.0ms)
+Completed 500 Internal Server Error in 271ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `public_path' for #<#<Class:0x007fff223747d0>:0x007fff24cae948>
+Did you mean?  public_method):
+    1: 
+    2: <%= link_to("Overview", public_path) %>
+    3: 
+    4: <% tracks ||= [] %>
+    5:   <ul>
+  
+app/views/layouts/_navigation.html.erb:2:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366849893520'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366905327800'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.9ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:10:50 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (227.0ms)
+Completed 500 Internal Server Error in 292ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `public_index_path' for #<#<Class:0x007fff223747d0>:0x007fff2500e660>
+Did you mean?  public_show_path):
+    1: 
+    2: <%= link_to("Overview", public_index_path) %>
+    3: 
+    4: <% tracks ||= [] %>
+    5:   <ul>
+  
+app/views/layouts/_navigation.html.erb:2:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366849834900'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366907252500'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.6ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:10:56 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (216.7ms)
+Completed 500 Internal Server Error in 278ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `public_index' for #<#<Class:0x007fff223747d0>:0x007fff2499eeb0>
+Did you mean?  public_send):
+    1: 
+    2: <%= link_to("Overview", public_index) %>
+    3: 
+    4: <% tracks ||= [] %>
+    5:   <ul>
+  
+app/views/layouts/_navigation.html.erb:2:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366905170540'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366903722560'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.7ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:13:15 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (189.5ms)
+Completed 500 Internal Server Error in 245ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `index_path' for #<#<Class:0x007fff223747d0>:0x007fff1d3f7540>
+Did you mean?  video_path):
+    1: 
+    2: <td><%= link_to("Index", index_path) %></td>
+    3: 
+    4: <% tracks ||= [] %>
+    5:   <ul>
+  
+app/views/layouts/_navigation.html.erb:2:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366850527720'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366842021340'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.0ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:13:25 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (204.0ms)
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `public_index_path' for #<#<Class:0x007fff223747d0>:0x007fff22039598>
+Did you mean?  public_show_path):
+    1: 
+    2: <td><%= link_to("Index", public_index_path) %></td>
+    3: 
+    4: <% tracks ||= [] %>
+    5:   <ul>
+  
+app/views/layouts/_navigation.html.erb:2:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366893105800'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366881914060'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.9ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:13:44 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (207.4ms)
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `public_index_path' for #<#<Class:0x007fff223747d0>:0x007fff1e37d118>
+Did you mean?  public_show_path):
+    1: 
+    2: <li><%= link_to("Index", public_index_path) %></li>
+    3: 
+    4: <% tracks ||= [] %>
+    5:   <ul>
+  
+app/views/layouts/_navigation.html.erb:2:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366909541740'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366850167380'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.6ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:14:59 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (205.4ms)
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `public_path' for #<#<Class:0x007fff223747d0>:0x007fff254ee6f8>
+Did you mean?  public_method):
+    1: 
+    2: 
+    3: <%= link_to("<< Index", public_path, :class => 'back-link') %>
+    4: 
+    5: <% tracks ||= [] %>
+    6:   <ul>
+  
+app/views/layouts/_navigation.html.erb:3:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366908256760'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366909643120'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.0ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:15:07 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (197.3ms)
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `public_path' for #<#<Class:0x007fff223747d0>:0x007fff251567e8>
+Did you mean?  public_method):
+    1: 
+    2: 
+    3: <%= link_to("<< Index", public_path) %>
+    4: 
+    5: <% tracks ||= [] %>
+    6:   <ul>
+  
+app/views/layouts/_navigation.html.erb:3:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366852565080'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366907760060'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.4ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:15:30 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (208.1ms)
+Completed 500 Internal Server Error in 260ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `public_index_path' for #<#<Class:0x007fff223747d0>:0x007fff23437ec8>
+Did you mean?  public_show_path):
+    1: 
+    2: <li><%= link_to("Index", public_index_path) %></li>
+    3: <%= link_to("<< Index", public_show_path, :class => 'back-link') %>
+    4: 
+    5: <% tracks ||= [] %>
+  
+app/views/layouts/_navigation.html.erb:2:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366841585140'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366892500000'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.9ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:15:39 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  Rendered layouts/_navigation.html.erb (5.2ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"public"} missing required keys: [:permalink]):
+    1: 
+    2: <%= link_to("<< Index", public_show_path, :class => 'back-link') %>
+    3: 
+    4: <% tracks ||= [] %>
+    5:   <ul>
+  
+app/views/layouts/_navigation.html.erb:2:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366850528760'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366903964460'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.6ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:15:49 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"public"} missing required keys: [:permalink]):
+    1: 
+    2: <%= link_to("<< Index", public_show_path) %>
+    3: 
+    4: <% tracks ||= [] %>
+    5:   <ul>
+  
+app/views/layouts/_navigation.html.erb:2:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366841731720'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366892631040'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.4ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.1ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:16:44 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.1ms)
+Completed 200 OK in 53ms (Views: 50.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:16:46 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.6ms)
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/show/frog" for 127.0.0.1 at 2017-09-21 12:16:47 +0200
+Processing by PublicController#show as HTML
+  Parameters: {"permalink"=>"frog"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`permalink` = 'frog' ORDER BY `tracks`.`id` ASC LIMIT 1[0m
+  Rendering public/show.html.erb within layouts/public
+  [1m[36mTag Load (1.8ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` INNER JOIN `tags_tracks` ON `tags`.`id` = `tags_tracks`.`tag_id` WHERE `tags_tracks`.`track_id` = 1 AND `tags`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered public/show.html.erb within layouts/public (4.0ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.6ms)
+Completed 200 OK in 74ms (Views: 68.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:16:48 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.7ms)
+Completed 200 OK in 74ms (Views: 70.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:18:43 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.5ms)
+Completed 200 OK in 46ms (Views: 43.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:18:56 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (1.8ms)
+Completed 200 OK in 52ms (Views: 49.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:19:02 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.1ms)
+Completed 200 OK in 61ms (Views: 58.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:19:10 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.2ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:20:35 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (215.2ms)
+Completed 500 Internal Server Error in 263ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `locations_path' for #<#<Class:0x007fff223747d0>:0x007fff24b34ec8>
+Did you mean?  locations_index_path):
+    12: 
+    13: <p>&nbsp;</p>
+    14: 
+    15: <%= link_to_unless_current("Locations", locations_path) %>
+  
+app/views/layouts/_navigation.html.erb:15:in `_app_views_layouts__navigation_html_erb___265781164062872647_70366907705640'
+app/views/layouts/public.html.erb:20:in `_app_views_layouts_public_html_erb__3864822335404250823_70366904545280'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.6ms)
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:20:51 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.5ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:20:52 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.3ms)
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.2ms)
+Completed 200 OK in 75ms (Views: 70.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:22:54 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.7ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (3.1ms)
+Completed 200 OK in 53ms (Views: 49.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:23:36 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.7ms)
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (3.0ms)
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:23:46 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.8ms)
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (3.1ms)
+Completed 200 OK in 58ms (Views: 54.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:23:59 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.8ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.4ms)
+Completed 200 OK in 63ms (Views: 59.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:26:32 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.8ms)
+  [1m[36mTrack Load (1.7ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (4.5ms)
+Completed 200 OK in 55ms (Views: 50.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:28:04 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.9ms)
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.7ms)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:28:31 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.0ms)
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.1ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:28:56 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.1ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.9ms)
+Completed 200 OK in 63ms (Views: 59.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:30:04 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.8ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.3ms)
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:30:24 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.8ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.6ms)
+Completed 200 OK in 57ms (Views: 53.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:30:43 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.4ms)
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:30:44 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.9ms)
+  [1m[36mTrack Load (0.7ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (3.0ms)
+Completed 200 OK in 74ms (Views: 69.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:33:27 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (4.3ms)
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:33:28 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.8ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.5ms)
+Completed 200 OK in 69ms (Views: 65.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:36:02 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.8ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.8ms)
+Completed 200 OK in 50ms (Views: 46.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 12:36:04 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.5ms)
+Completed 200 OK in 72ms (Views: 68.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:36:06 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.9ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.5ms)
+Completed 200 OK in 66ms (Views: 62.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:40:09 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.8ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.0ms)
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:40:23 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.7ms)
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.1ms)
+Completed 200 OK in 52ms (Views: 49.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 12:41:13 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.7ms)
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.6ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 13:05:13 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.9ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.5ms)
+Completed 200 OK in 57ms (Views: 53.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 13:05:38 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/locations_controller.rb:7)
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (6.6ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (4.0ms)
+Completed 200 OK in 274ms (Views: 236.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 13:05:40 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 AND `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (4.4ms)
+Completed 200 OK in 82ms (Views: 79.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 13:05:41 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.1ms)
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.3ms)
+Completed 200 OK in 110ms (Views: 105.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 13:09:51 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (0.7ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.2ms)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 13:11:39 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.0ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.1ms)
+Completed 200 OK in 56ms (Views: 53.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/locations/index" for 127.0.0.1 at 2017-09-21 13:21:42 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.1ms)
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE `tracks`.`visible` = 1 ORDER BY name ASC[0m
+  Rendered layouts/_navigation.html.erb (2.5ms)
+Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 0.8ms)
+>>>>>>> master
 
 
