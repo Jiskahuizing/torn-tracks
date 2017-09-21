@@ -18,7 +18,7 @@ class PublicController < ApplicationController
   end
 
   def setup_navigation
-  @tracks = Track.visible.sorted
+
   end
 
 end

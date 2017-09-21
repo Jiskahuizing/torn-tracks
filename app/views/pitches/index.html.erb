@@ -1,0 +1,26 @@
+<% @page_title = "Pitches" %>
+
+<%= link_to("<< Back to Index", root_path) %>
+
+<div class="tracks index">
+  <h1>The Tracks Sorted on Pitch</h1>
+
+  <p>&nbsp;</p>
+
+  <table class="listing" summary="Track list"
+
+    <tr class="header">
+      <th>Track</th>
+      <th>Pitch</th>
+    </tr>
+
+    <% @tracks.each do |track| %>
+    <tr>
+      <td><%= track.name %></td>
+      <td><%= track.pitch %></td>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+
+</div>

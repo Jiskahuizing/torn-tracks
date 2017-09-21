@@ -1,0 +1,23 @@
+<% @page_title = "Names (Bird Guide Index)" %>
+
+<div class="tracks index">
+  <h1>Tracks sorted on Name (Field guide)</h1>
+
+  <p>&nbsp;</p>
+
+  <table class="listing" summary="Track list"
+
+    <tr class="header">
+      <th>Index</th>
+    </tr>
+
+    <% @tracks.each do |track| %>
+    <tr>
+      <td><%= track.name %></td>
+
+      </td>
+    </tr>
+  <% end %>
+  </table>
+
+</div>

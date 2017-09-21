@@ -1,13 +1,12 @@
-<% subjects ||= [] %>
+<%= link_to_unless_current("Index", root_path) %>
+
+<p>&nbsp;</p>
+
 <ul>
-  <% subjects.each do |subject| %>
-    <li>
-      <%= subject.name %>
-      <ul>
-      <% subject.pages.visible.sorted.each do |page| %>
-        <li><%= link_to_unless_current(page.name, public_show_path(page.permalink)) %></li>
-      <% end %>
-    </ul>
-  </li>
-  <% end %>
+  <li><%= link_to_unless_current("Name", names_path) %></li>
+  <li><%= link_to_unless_current("Chronology", finished_dates_path) %></li>
+  <li><%= link_to_unless_current("Locations", locations_path) %></li>
+  <li><%= link_to_unless_current("Pitch", pitches_path) %></li>
+  <li><%= link_to_unless_current("Tags", root_path) %></li>
+
 </ul>

@@ -29,8 +29,28 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'locations/index'
+  resources :locations do
+    member do
+      get :delete
+    end
+  end
 
-  get 'demo/index'
+  resources :names do
+    member do
+      get :delete
+    end
+  end
+
+  resources :finished_dates do
+    member do
+      get :delete
+    end
+  end
+
+  resources :pitches do
+    member do
+      get :delete
+    end
+  end
 
 end
