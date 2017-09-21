@@ -7,6 +7,7 @@
     <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
     <%= stylesheet_link_tag('application', :media => 'all') %>
     <%= javascript_include_tag('application') %>
+
   </head>
   <body>
 
@@ -16,14 +17,14 @@
 
     <div id="main">
 
-      <div id ="navigation">
-        <%= render(:partial => 'layouts/navigation', :locals => { :tracks => @tracks}) %>
-      </div>
+    <div id ="navigation">
+      <%= render(:partial => 'layouts/navigation', :locals => { :tracks => @tracks}) %>
+    </div>
 
-      <div id="content">
-        <%= yield %>
-      </div>
-      <div class="clear"></div>
+    <div id="content">
+      <%= yield %>
+    </div>
+    <div class="clear"></div>
 
     </div>
 

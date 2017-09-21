@@ -5,18 +5,21 @@
 
   <p>&nbsp;</p>
 
+  <h2>Index</h2>
+
   <table class="listing" summary="Track list"
 
     <tr class="header">
-      <th>Index</th>
+      <th>Track</th>
+      <th>Version</th>
     </tr>
-
     <% @tracks.each do |track| %>
+
     <tr>
       <td><%= track.name %></td>
-
-      </td>
+      <td><%= track.track_version %></td>
     </tr>
+
   <% end %>
   </table>
 

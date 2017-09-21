@@ -6,6 +6,11 @@
       </tr>
 
       <tr>
+        <th>Version</th>
+        <td><%= f.text_field(:track_version) %></td>
+      </tr>
+
+      <tr>
         <th>Length</th>
         <td><%= f.time_select(:length, :include_seconds => true, :order => [:hour, :minute, :second]) %></td>
       </tr>
