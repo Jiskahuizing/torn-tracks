@@ -10,14 +10,17 @@
   <table class="listing" summary="Track list"
 
     <tr class="header">
-      <th>Track</th>
       <th>Date finished</th>
+      <th>Track</th>
+      <th>Version</th>
     </tr>
 
     <% @tracks.each do |track| %>
     <tr>
-      <td><%= track.name %></td>
       <td><%= track.date_finished %></td>
+      <td><%= track.name %></td>
+      <td><%= track.track_version %></td>
+
 
       </td>
     </tr>
