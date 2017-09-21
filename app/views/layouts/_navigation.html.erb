@@ -1,18 +1,13 @@
-
 <%= link_to_unless_current("Index", root_path) %>
-
 <p>&nbsp;</p>
-
 <ul>
-  <li><%= link_to_unless_current("Name", root_path) %></li>
-  <li><%= link_to_unless_current("Chronologically", root_path) %></li>
-  <li><%= link_to_unless_current("Locations", locations_index_path) %></li>
-  <li><%= link_to_unless_current("Pitch", root_path) %></li>
+  <li><%= link_to_unless_current("Name", names_path) %></li>
+  <li><%= link_to_unless_current("Chronology", finished_dates_path) %></li>
+  <li><%= link_to_unless_current("Locations", locations_path) %></li>
+  <li><%= link_to_unless_current("Pitch", pitches_path) %></li>
   <li><%= link_to_unless_current("Tags", root_path) %></li>
-
-<p>&nbsp;</p>
-
-  <%= link_to_unless_current("About", root_path) %>
+  <p>&nbsp;</p>
+  <li><%= link_to_unless_current("About", root_path) %></li>
 </ul>
 
 

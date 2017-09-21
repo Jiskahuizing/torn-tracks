@@ -1,0 +1,30 @@
+<% @page_title = "Chronology" %>
+
+<%= link_to("<< Back to Index", root_path) %>
+
+<div class="tracks index">
+  <h1>The Tracks Chronologically</h1>
+
+  <p>&nbsp;</p>
+
+  <table class="listing" summary="Track list"
+
+    <tr class="header">
+      <th>Date finished</th>
+      <th>Track</th>
+      <th>Version</th>
+    </tr>
+
+    <% @tracks.each do |track| %>
+    <tr>
+      <td><%= track.date_finished %></td>
+      <td><%= track.name %></td>
+      <td><%= track.track_version %></td>
+
+
+      </td>
+    </tr>
+  <% end %>
+  </table>
+
+</div>

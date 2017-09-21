@@ -13,6 +13,7 @@
 
     <tr class="header">
       <th>Track</th>
+      <th>Version</th>
       <th>Date</th>
       <th>Location</th>
       <th>Latitude</th>
@@ -29,6 +30,7 @@
     <% @tracks.each do |track| %>
     <tr>
       <td><%= track.name %></td>
+      <td><%= track.track_version %></td>
       <td class="center"><%= track.date_finished %></td>
       <td class="center"><%= track.location_finished %></td>
       <td class="center"><%= track.latitude %></td>
