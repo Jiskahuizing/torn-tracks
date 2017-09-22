@@ -19662,3 +19662,1182 @@ Processing by FinishedDatesController#index as HTML
 Completed 200 OK in 68ms (Views: 65.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/finished_dates" for 127.0.0.1 at 2017-09-22 15:18:46 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.3) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.3) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.3) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.3) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.3) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.3) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.3) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.7ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.3ms)
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('5324607525907390770', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddTrackNumberToTracks (20170922131705)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5324607525907390770')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5324607525907390770', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddTrackNumberToTracks (20170922134241)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5324607525907390770')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5324607525907390770', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5324607525907390770')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW CREATE TABLE `admin_users`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'admin_users'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `chronological_times`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `finished_dates`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'finished_dates'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `names`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `pitches`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `tags`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tags'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `tags_tracks`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `tracks`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tracks'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5324607525907390770', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddTrackNumberToTracks (20170922134241)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('5324607525907390770')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('5324607525907390770', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddTrackNumberToTracks (20170922134241)
+  [1m[35m (156.3ms)[0m  [1m[35mALTER TABLE `tracks` ADD `track_number` int[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170922134241')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('5324607525907390770')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `admin_users`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'admin_users'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `chronological_times`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `finished_dates`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'finished_dates'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `names`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `pitches`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `tags`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tags'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `tags_tracks`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `tracks`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tracks'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('5324607525907390770', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddTrackNumberToTracks (20170922134241)
+  [1m[35m (120.0ms)[0m  [1m[35mALTER TABLE `tracks` DROP `track_number`[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20170922134241'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5324607525907390770')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `admin_users`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'admin_users'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `chronological_times`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `finished_dates`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'finished_dates'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `names`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `pitches`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `tags`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tags'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `tags_tracks`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `tracks`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tracks'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5324607525907390770', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddTrackNumberToTracks (20170922134241)
+  [1m[35m (123.2ms)[0m  [1m[35mALTER TABLE `tracks` ADD `track_number` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170922134241')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5324607525907390770')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `admin_users`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'admin_users'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `chronological_times`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `finished_dates`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'finished_dates'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `names`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `pitches`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `tags`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tags'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `tags_tracks`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `tracks`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tracks'[0m
+Started GET "/finished_dates" for 127.0.0.1 at 2017-09-22 15:53:16 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_finished_dates_index_html_erb___3146747597677634389_70194835862780 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/finished_dates/index.html.erb:19)
+  Rendered finished_dates/index.html.erb within layouts/public (15.0ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 460ms (Views: 425.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-09-22 15:53:21 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
+  Rendered names/index.html.erb within layouts/public (205.6ms)
+Completed 500 Internal Server Error in 211ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `track_number' for #<#<Class:0x007faf0ae11700>:0x007faf0ae10440>
+Did you mean?  track_url):
+    18: 
+    19:     <tr>
+    20:       <td><%= track.name %></td>
+    21:       <td><%= track_number %></td>
+    22:       <td><%= track.track_version %></td>
+    23:     </tr>
+    24: 
+  
+app/views/names/index.html.erb:21:in `block in _app_views_names_index_html_erb___3724291102286549090_70194889265120'
+app/views/names/index.html.erb:17:in `_app_views_names_index_html_erb___3724291102286549090_70194889265120'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.6ms)
+Started GET "/names" for 127.0.0.1 at 2017-09-22 15:53:44 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
+  Rendered names/index.html.erb within layouts/public (2.1ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 66ms (Views: 63.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-09-22 15:54:18 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_names_index_html_erb___3724291102286549090_70194887707640 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/names/index.html.erb:17)
+  Rendered names/index.html.erb within layouts/public (17.9ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 101ms (Views: 88.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-09-22 15:54:29 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC[0m
+  Rendered names/index.html.erb within layouts/public (2.1ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 81ms (Views: 78.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-09-22 15:55:11 +0200
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/admin
+  Rendered access/menu.html.erb within layouts/admin (0.6ms)
+Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 15:55:13 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.7ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (8.7ms)
+Completed 200 OK in 65ms (Views: 62.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-22 15:55:15 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (20.4ms)
+  Rendered tracks/edit.html.erb within layouts/admin (23.9ms)
+Completed 200 OK in 85ms (Views: 80.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 15:55:19 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (9.4ms)
+Completed 200 OK in 81ms (Views: 77.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 15:56:37 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (6.5ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-22 15:56:39 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (5.3ms)
+  Rendered tracks/edit.html.erb within layouts/admin (7.6ms)
+Completed 200 OK in 64ms (Views: 61.4ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-22 15:56:47 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a86T7S/ZCqmaSrogHe/k1AENntPYgEKadAUfquWEN8KuPzx2ChPV8UtgahAkIiJShbT1uo3gSac+hFxeS4wgcA==", "track"=>{"name"=>"Track #", "track_number"=>"1", "track_version"=>"Studio version", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"06", "length(6i)"=>"19", "date_finished(3i)"=>"4", "date_finished(2i)"=>"1", "date_finished(1i)"=>"2015", "location_finished"=>"Wildervank (NL)", "latitude"=>"53.0646", "longitude"=>"6.85804", "pitch"=>"Hz", "permalink"=>"01", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+Unpermitted parameter: track_number
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `tracks` SET `name` = 'Track #', `updated_at` = '2017-09-22 13:56:47' WHERE `tracks`.`id` = 1[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/1
+Completed 302 Found in 12ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/tracks/1" for 127.0.0.1 at 2017-09-22 15:56:48 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 15:56:52 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (8.2ms)
+Completed 200 OK in 78ms (Views: 75.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-22 15:56:55 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.5ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.8ms)
+Completed 200 OK in 67ms (Views: 63.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-22 15:57:05 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6u00zxPX6Y9oihOtJ41H0QUYCMMkrUcUSlh2G5TqDhwvHJtUNh0217mgw50eQIFXgaFjqnHNTCkA2TXvOuIZrg==", "track"=>{"name"=>"Track", "track_number"=>"1", "track_version"=>"Studio version", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"06", "length(6i)"=>"19", "date_finished(3i)"=>"4", "date_finished(2i)"=>"1", "date_finished(1i)"=>"2015", "location_finished"=>"Wildervank (NL)", "latitude"=>"53.0646", "longitude"=>"6.85804", "pitch"=>"Hz", "permalink"=>"01", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+Unpermitted parameter: track_number
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `tracks` SET `name` = 'Track', `updated_at` = '2017-09-22 13:57:05' WHERE `tracks`.`id` = 1[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/1
+Completed 302 Found in 11ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/tracks/1" for 127.0.0.1 at 2017-09-22 15:57:05 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 15:57:08 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (8.9ms)
+Completed 200 OK in 70ms (Views: 67.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-22 15:57:10 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.2ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.5ms)
+Completed 200 OK in 73ms (Views: 70.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-22 15:57:55 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (6.3ms)
+  Rendered tracks/edit.html.erb within layouts/admin (8.4ms)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-22 15:58:00 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t/Yt7rgJ5brumIBgBYywsZUszfJZcAStvBE2rlXpYNZyB4J1ncM64j+yUFA8QXY3EZWmmwwQD5D2kHVa++F3ZA==", "track"=>{"name"=>"Track #", "track_number"=>"1", "track_version"=>"Studio version", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"06", "length(6i)"=>"19", "date_finished(3i)"=>"4", "date_finished(2i)"=>"1", "date_finished(1i)"=>"2015", "location_finished"=>"Wildervank (NL)", "latitude"=>"53.0646", "longitude"=>"6.85804", "pitch"=>"Hz", "permalink"=>"01", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+Unpermitted parameter: track_number
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `tracks` SET `name` = 'Track #', `updated_at` = '2017-09-22 13:58:00' WHERE `tracks`.`id` = 1[0m
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/1
+Completed 302 Found in 15ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/tracks/1" for 127.0.0.1 at 2017-09-22 15:58:00 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 15:58:33 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (8.9ms)
+Completed 200 OK in 71ms (Views: 68.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-22 15:58:38 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.5ms)
+  Rendered tracks/edit.html.erb within layouts/admin (7.2ms)
+Completed 200 OK in 74ms (Views: 70.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-22 15:58:43 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2dgN1dfKeTceZX2gfMG5naQ0vEtkIXp5+anZ5so+JQAcKaJO8gCmb89PrZBFDH8bII3XIjFBcUSzKJoSZDYysg==", "track"=>{"name"=>"Track #", "track_number"=>"1", "track_version"=>"Studio version", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"06", "length(6i)"=>"19", "date_finished(3i)"=>"4", "date_finished(2i)"=>"1", "date_finished(1i)"=>"2015", "location_finished"=>"Wildervank (NL)", "latitude"=>"53.0646", "longitude"=>"6.85804", "pitch"=>"Hz", "permalink"=>"01", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+Unpermitted parameter: track_number
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/1
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/tracks/1" for 127.0.0.1 at 2017-09-22 15:58:43 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 51ms (Views: 48.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 15:58:47 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (8.5ms)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-22 15:58:49 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.3ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.5ms)
+Completed 200 OK in 70ms (Views: 67.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:03:43 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb___1454561053478766819_70194857172920 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:31)
+  Rendered tracks/index.html.erb within layouts/admin (18.4ms)
+Completed 200 OK in 81ms (Views: 69.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:03:44 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (7.1ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tracks/1/edit" for 127.0.0.1 at 2017-09-22 16:03:45 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (5.0ms)
+  Rendered tracks/edit.html.erb within layouts/admin (7.8ms)
+Completed 200 OK in 71ms (Views: 67.3ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tracks/1" for 127.0.0.1 at 2017-09-22 16:03:48 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KHlR+CiXgnVqAEKnJI086A67s7QZ/rrjFu2mjVGL3p3tiP5jDV1dLbsqkpcdQPpuigLY3Uyesd5cbOV5/4PJLw==", "track"=>{"name"=>"Track #", "track_number"=>"1", "track_version"=>"Studio version", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"06", "length(6i)"=>"19", "date_finished(3i)"=>"4", "date_finished(2i)"=>"1", "date_finished(1i)"=>"2015", "location_finished"=>"Wildervank (NL)", "latitude"=>"53.0646", "longitude"=>"6.85804", "pitch"=>"Hz", "permalink"=>"01", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `tracks` SET `track_number` = 1, `updated_at` = '2017-09-22 14:03:48' WHERE `tracks`.`id` = 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/1
+Completed 302 Found in 13ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/tracks/1" for 127.0.0.1 at 2017-09-22 16:03:48 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.0ms)
+Completed 200 OK in 51ms (Views: 48.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:03:51 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (7.7ms)
+Completed 200 OK in 65ms (Views: 62.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks/3/edit" for 127.0.0.1 at 2017-09-22 16:03:58 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTrack Load (1.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 3 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.0ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.8ms)
+Completed 200 OK in 68ms (Views: 64.1ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/tracks/3" for 127.0.0.1 at 2017-09-22 16:04:03 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HalOwsYj8vueZp25u+GBCgyFAApRepXwz3OmlC3vQt4kiR+VCwCKlPAJirJO8wvEPrGeHOKHoqrOUmv+Q4kTGQ==", "track"=>{"name"=>"Track #", "track_number"=>"1", "track_version"=>"Walkman (on the Nordic Sound Art Program's cassette-catalogue)", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"05", "length(6i)"=>"00", "date_finished(3i)"=>"21", "date_finished(2i)"=>"7", "date_finished(1i)"=>"2015", "location_finished"=>"Umeå (SE)", "latitude"=>"63.8269", "longitude"=>"20.1719", "pitch"=>"Hz", "permalink"=>"", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"3"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `tracks` SET `name` = 'Track #', `track_number` = 1, `updated_at` = '2017-09-22 14:04:03' WHERE `tracks`.`id` = 3[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/3
+Completed 302 Found in 13ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/tracks/3" for 127.0.0.1 at 2017-09-22 16:04:03 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 3 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 60ms (Views: 58.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:05:04 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (8.2ms)
+Completed 200 OK in 67ms (Views: 63.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tracks/11/edit" for 127.0.0.1 at 2017-09-22 16:05:07 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 11 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.6ms)
+  Rendered tracks/edit.html.erb within layouts/admin (7.0ms)
+Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/11" for 127.0.0.1 at 2017-09-22 16:05:13 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZlobyIRuZZAvJXj6WSEMU6kYzX3Oa9GVYMhMM4qNW4l0jrpYOdkOee48RS+HQzlmj/m+1Use2KguGeBbpe4LcQ==", "track"=>{"name"=>"Track #", "track_number"=>"11", "track_version"=>"Studio version", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"46", "date_finished(3i)"=>"3", "date_finished(2i)"=>"4", "date_finished(1i)"=>"2016", "location_finished"=>"Bergen (NO)", "latitude"=>"60.3649", "longitude"=>"5.14831", "pitch"=>"Hz", "permalink"=>"", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"11"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 11 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `tracks` SET `name` = 'Track #', `track_number` = 11, `updated_at` = '2017-09-22 14:05:13' WHERE `tracks`.`id` = 11[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/11
+Completed 302 Found in 10ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/tracks/11" for 127.0.0.1 at 2017-09-22 16:05:13 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 11 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:05:16 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (8.7ms)
+Completed 200 OK in 72ms (Views: 69.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks/12/edit" for 127.0.0.1 at 2017-09-22 16:05:19 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 12 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (5.0ms)
+  Rendered tracks/edit.html.erb within layouts/admin (7.7ms)
+Completed 200 OK in 67ms (Views: 63.1ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/tracks/12" for 127.0.0.1 at 2017-09-22 16:05:24 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z/D9ipxlFvTz/NGQI1qxFRiZ2qKkp/TlTsqBmqe6PBAQa1Pz1N8m3LuGT9xRtGFs+Qc3ySdcr2SygQdH0Qp5SQ==", "track"=>{"name"=>"Track #", "track_number"=>"12", "track_version"=>"Live at Lydgalleriet", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"05", "length(6i)"=>"48", "date_finished(3i)"=>"15", "date_finished(2i)"=>"4", "date_finished(1i)"=>"2016", "location_finished"=>"Lydgalleriet, Bergen (NO)", "latitude"=>"60.3937", "longitude"=>"5.32595", "pitch"=>"Hz", "permalink"=>"", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"12"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 12 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.5ms)[0m  [1m[33mUPDATE `tracks` SET `name` = 'Track #', `track_number` = 12, `updated_at` = '2017-09-22 14:05:24' WHERE `tracks`.`id` = 12[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/12
+Completed 302 Found in 14ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/tracks/12" for 127.0.0.1 at 2017-09-22 16:05:24 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 12 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.0ms)
+Completed 200 OK in 53ms (Views: 51.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:05:25 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (9.3ms)
+Completed 200 OK in 77ms (Views: 74.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks/10/edit" for 127.0.0.1 at 2017-09-22 16:05:29 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 10 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.1ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.3ms)
+Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/10" for 127.0.0.1 at 2017-09-22 16:05:33 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V2ympjPfX9i1wcrlYiVB2nPSfzJhh27gKCnJtrMJ6jGzlkHT1q2FvPdVAeUxh2smDrpokRlRocaXNW+s6K6J8Q==", "track"=>{"name"=>"Track #", "track_number"=>"6", "track_version"=>"Studio version", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"12", "length(6i)"=>"45", "date_finished(3i)"=>"8", "date_finished(2i)"=>"3", "date_finished(1i)"=>"2016", "location_finished"=>"Bergen (NO)", "latitude"=>"60.3649", "longitude"=>"5.14831", "pitch"=>"Hz", "permalink"=>"", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"10"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 10 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `tracks` SET `name` = 'Track #', `track_number` = 6, `updated_at` = '2017-09-22 14:05:33' WHERE `tracks`.`id` = 10[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/10
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/tracks/10" for 127.0.0.1 at 2017-09-22 16:05:33 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 10 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:05:34 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (9.1ms)
+Completed 200 OK in 72ms (Views: 70.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks/8/edit" for 127.0.0.1 at 2017-09-22 16:05:37 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 8 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.4ms)
+  Rendered tracks/edit.html.erb within layouts/admin (7.2ms)
+Completed 200 OK in 73ms (Views: 70.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/8" for 127.0.0.1 at 2017-09-22 16:05:57 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o+IqG5eZ3ER70LM1rW5aN7n8oJC2FModdvuK/Fikxb474yyyTUtNSzurc2umD8omRMufgIiTE65eGLhth7PPFw==", "track"=>{"name"=>"Track #", "track_number"=>"4", "track_version"=>"Live at HIAP", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"11", "length(6i)"=>"18", "date_finished(3i)"=>"18", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2015", "location_finished"=>"HIAP, Suomenlina (FIN)", "latitude"=>"60.1527", "longitude"=>"24.8754", "pitch"=>"Hz", "permalink"=>"", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"8"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `tracks` SET `name` = 'Track #', `track_number` = 4, `updated_at` = '2017-09-22 14:05:57' WHERE `tracks`.`id` = 8[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/8
+Completed 302 Found in 11ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/tracks/8" for 127.0.0.1 at 2017-09-22 16:05:57 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 8 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.0ms)
+Completed 200 OK in 55ms (Views: 52.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:05:58 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (9.0ms)
+Completed 200 OK in 75ms (Views: 71.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tracks/6/edit" for 127.0.0.1 at 2017-09-22 16:06:03 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 6 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.9ms)
+  Rendered tracks/edit.html.erb within layouts/admin (7.4ms)
+Completed 200 OK in 70ms (Views: 67.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/6" for 127.0.0.1 at 2017-09-22 16:06:10 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m1nzl/PdHvzzbFZB4AXvhNTKF3X91r26cao2Rjv1tspaAzNfgvgqKiUi8aFH9X+1f5sMp2KqvFChv+Mqj+bQ/w==", "track"=>{"name"=>"Track #", "track_number"=>"4", "track_version"=>"Live at Studio17", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"10", "length(6i)"=>"34", "date_finished(3i)"=>"29", "date_finished(2i)"=>"5", "date_finished(1i)"=>"2015", "location_finished"=>"Studio17, Stavanger", "latitude"=>"58.9701", "longitude"=>"5.7364", "pitch"=>"Hz", "permalink"=>"", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"6"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 6 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `tracks` SET `name` = 'Track #', `track_number` = 4, `updated_at` = '2017-09-22 14:06:10' WHERE `tracks`.`id` = 6[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/6
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/tracks/6" for 127.0.0.1 at 2017-09-22 16:06:10 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 6 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.0ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:06:12 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (8.2ms)
+Completed 200 OK in 71ms (Views: 68.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks/13/edit" for 127.0.0.1 at 2017-09-22 16:06:13 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 13 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.0ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.9ms)
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/13" for 127.0.0.1 at 2017-09-22 16:06:17 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vOF4fnXUR7qnBfd3E0Fwy2kEKTQiUo4O3eItVtTAuGWN3re0DW2Fhg+EV0VreMbNO5kSfVJXEVhZ95NDjZ8bYw==", "track"=>{"name"=>"Track #", "track_number"=>"12", "track_version"=>"Live at Christinegaard", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"05", "length(6i)"=>"18", "date_finished(3i)"=>"5", "date_finished(2i)"=>"7", "date_finished(1i)"=>"2016", "location_finished"=>"Christinegaard, Bergen (NO)", "latitude"=>"60.4067", "longitude"=>"5.32634", "pitch"=>"Hz", "permalink"=>"", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"13"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 13 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `tracks` SET `name` = 'Track #', `track_number` = 12, `updated_at` = '2017-09-22 14:06:17' WHERE `tracks`.`id` = 13[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/13
+Completed 302 Found in 11ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/tracks/13" for 127.0.0.1 at 2017-09-22 16:06:17 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 13 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 59ms (Views: 56.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:06:19 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (8.8ms)
+Completed 200 OK in 73ms (Views: 69.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tracks/2/edit" for 127.0.0.1 at 2017-09-22 16:06:22 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 2 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (3.7ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.2ms)
+Completed 200 OK in 69ms (Views: 66.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/2" for 127.0.0.1 at 2017-09-22 16:06:26 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9/eBBct8a3u6LRPVGgWV9oTLBqh5oBzAgt41mvC3CwfVB15/Nme2ngqUNqVzIU9W1idTQdvgB8tnRVUID9+n9Q==", "track"=>{"name"=>"Track #", "track_number"=>"3", "track_version"=>"Studio version", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"05", "length(6i)"=>"50", "date_finished(3i)"=>"18", "date_finished(2i)"=>"3", "date_finished(1i)"=>"2016", "location_finished"=>"Bergen", "latitude"=>"60.3649", "longitude"=>"5.149", "pitch"=>"Hz", "permalink"=>"", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"2"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `tracks` SET `name` = 'Track #', `track_number` = 3, `updated_at` = '2017-09-22 14:06:26' WHERE `tracks`.`id` = 2[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/2
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/tracks/2" for 127.0.0.1 at 2017-09-22 16:06:26 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 2 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.2ms)
+Completed 200 OK in 60ms (Views: 57.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:06:27 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (8.2ms)
+Completed 200 OK in 79ms (Views: 76.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks/4/edit" for 127.0.0.1 at 2017-09-22 16:06:29 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 4 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.0ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.5ms)
+Completed 200 OK in 66ms (Views: 62.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/4" for 127.0.0.1 at 2017-09-22 16:06:34 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k8qP/Ttc8ghTfEFZw9bmRQARxfpo1HUSWdzva+1TjIgNUiWf27fDmkMgyGJy+gutDQ0UwGPNqF47dvxMU+WAHw==", "track"=>{"name"=>"Track #", "track_number"=>"4", "track_version"=>"Studio version", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"08", "length(6i)"=>"01", "date_finished(3i)"=>"13", "date_finished(2i)"=>"5", "date_finished(1i)"=>"2015", "location_finished"=>"Bergen", "latitude"=>"60.3649", "longitude"=>"5.149", "pitch"=>"Hz", "permalink"=>"", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"4"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `tracks` SET `name` = 'Track #', `track_number` = 4, `updated_at` = '2017-09-22 14:06:34' WHERE `tracks`.`id` = 4[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/4
+Completed 302 Found in 15ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/tracks/4" for 127.0.0.1 at 2017-09-22 16:06:34 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 4 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.0ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:06:35 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (8.9ms)
+Completed 200 OK in 78ms (Views: 74.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks/5/edit" for 127.0.0.1 at 2017-09-22 16:06:37 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 5 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.5ms)
+  Rendered tracks/edit.html.erb within layouts/admin (6.9ms)
+Completed 200 OK in 70ms (Views: 67.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/5" for 127.0.0.1 at 2017-09-22 16:06:44 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v35JlIZXT46EhAKfbAxuKChM7zsIAt4yqU1h2/be3MqXYaNXOw1B3Z+ZsXQfB2uaV9TnEm+STDkHw2X/O35RxQ==", "track"=>{"name"=>"Track #", "track_number"=>"4", "track_version"=>"Field Recording", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"02", "length(6i)"=>"06", "date_finished(3i)"=>"25", "date_finished(2i)"=>"4", "date_finished(1i)"=>"2015", "location_finished"=>"Bergen", "latitude"=>"60.3649", "longitude"=>"5.14831", "pitch"=>"Hz", "permalink"=>"", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"5"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `tracks` SET `name` = 'Track #', `track_number` = 4, `updated_at` = '2017-09-22 14:06:44' WHERE `tracks`.`id` = 5[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/5
+Completed 302 Found in 12ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/tracks/5" for 127.0.0.1 at 2017-09-22 16:06:44 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 5 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 55ms (Views: 52.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:06:46 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (13.2ms)
+Completed 200 OK in 91ms (Views: 88.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tracks/7/edit" for 127.0.0.1 at 2017-09-22 16:06:48 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 7 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.2ms)
+  Rendered tracks/edit.html.erb within layouts/admin (7.1ms)
+Completed 200 OK in 72ms (Views: 68.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tracks/7" for 127.0.0.1 at 2017-09-22 16:06:52 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pl3o8TAewwW3AB1KsPD6TLFRBkZZ3vtsbJePPc7TIDv4nJYmtcLsQVbV5Jc/RQwTXjqVKqDjrdq2aoJzsYrsRg==", "track"=>{"name"=>"Track #", "track_number"=>"4", "track_version"=>"Live at Studio17", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"11", "length(6i)"=>"40", "date_finished(3i)"=>"30", "date_finished(2i)"=>"5", "date_finished(1i)"=>"2015", "location_finished"=>"Studio17, Stavanger", "latitude"=>"58.9701", "longitude"=>"5.7364", "pitch"=>"Hz", "permalink"=>"", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"7"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `tracks` SET `name` = 'Track #', `track_number` = 4, `updated_at` = '2017-09-22 14:06:52' WHERE `tracks`.`id` = 7[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/7
+Completed 302 Found in 11ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/tracks/7" for 127.0.0.1 at 2017-09-22 16:06:52 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 7 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.9ms)
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:06:54 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (8.9ms)
+Completed 200 OK in 79ms (Views: 75.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tracks/9/edit" for 127.0.0.1 at 2017-09-22 16:06:56 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 9 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (4.8ms)
+  Rendered tracks/edit.html.erb within layouts/admin (7.5ms)
+Completed 200 OK in 77ms (Views: 74.0ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tracks/9" for 127.0.0.1 at 2017-09-22 16:07:01 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pNWT/HrkOpgInhReUHqHPkcEhVqoD7/rML2kIvnLOLvKKf76p1bDPqYaRzoM4wpKmmQKJTnC5h9EfvljUm9FfA==", "track"=>{"name"=>"Track #", "track_number"=>"4", "track_version"=>"Live at Landmark", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"10", "length(6i)"=>"45", "date_finished(3i)"=>"10", "date_finished(2i)"=>"10", "date_finished(1i)"=>"2015", "location_finished"=>"Landmark, Bergen (NO)", "latitude"=>"60.3897", "longitude"=>"5.32436", "pitch"=>"Hz", "permalink"=>"", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"9"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 9 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.6ms)[0m  [1m[33mUPDATE `tracks` SET `name` = 'Track #', `track_number` = 4, `updated_at` = '2017-09-22 14:07:01' WHERE `tracks`.`id` = 9[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/9
+Completed 302 Found in 15ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/tracks/9" for 127.0.0.1 at 2017-09-22 16:07:01 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 9 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.0ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:07:03 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (9.2ms)
+Completed 200 OK in 71ms (Views: 68.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-09-22 16:07:12 +0200
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/admin
+  Rendered access/menu.html.erb within layouts/admin (1.0ms)
+Completed 200 OK in 68ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-09-22 16:07:16 +0200
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-09-22 16:07:16 +0200
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/admin
+  Rendered access/login.html.erb within layouts/admin (1.2ms)
+Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:07:20 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (7.2ms)
+Completed 200 OK in 60ms (Views: 57.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2017-09-22 16:07:33 +0200
+Processing by TagsController#index as HTML
+  Rendering tags/index.html.erb within layouts/admin
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` ORDER BY name ASC[0m
+  Rendered tags/index.html.erb within layouts/admin (7.8ms)
+Completed 200 OK in 73ms (Views: 63.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 16:07:40 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-09-22 16:07:44 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC[0m
+  Rendered names/index.html.erb within layouts/public (2.7ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 63ms (Views: 59.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-09-22 16:08:26 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_names_index_html_erb___3724291102286549090_70194851486920 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/names/index.html.erb:17)
+  Rendered names/index.html.erb within layouts/public (11.6ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 84ms (Views: 73.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-09-22 16:08:54 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_names_index_html_erb___3724291102286549090_70194839376580 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/names/index.html.erb:17)
+  Rendered names/index.html.erb within layouts/public (12.1ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 200 OK in 78ms (Views: 64.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:08:57 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (7.3ms)
+Completed 200 OK in 62ms (Views: 59.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-09-22 16:08:59 +0200
+Processing by AccessController#menu as HTML
+Redirected to http://localhost:3000/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-09-22 16:08:59 +0200
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/admin
+  Rendered access/login.html.erb within layouts/admin (1.2ms)
+Completed 200 OK in 70ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:09:07 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (6.8ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:10:01 +0200
+Processing by TracksController#index as HTML
+Redirected to http://localhost:3000/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-09-22 16:10:02 +0200
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/admin
+  Rendered access/login.html.erb within layouts/admin (1.4ms)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2017-09-22 16:10:07 +0200
+Processing by TagsController#index as HTML
+Redirected to http://localhost:3000/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-09-22 16:10:07 +0200
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/admin
+  Rendered access/login.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-09-22 16:10:20 +0200
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0qSWa7JuBJWhF4sLQM/GimDRrtATTUX1YZsX5zRVp5ZxJZTUfJKP4Fxj4Pf9Rzva9D2MnyiQarqN0eFEdP6lsw==", "username"=>"jiskahuizing", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  `admin_users`.* FROM `admin_users` WHERE `admin_users`.`username` = 'jiskahuizing' ORDER BY `admin_users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 84ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-09-22 16:10:20 +0200
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/admin
+  Rendered access/menu.html.erb within layouts/admin (0.7ms)
+Completed 200 OK in 52ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-22 16:10:22 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_tracks_index_html_erb___1454561053478766819_70194856323700 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/tracks/index.html.erb:31)
+  Rendered tracks/index.html.erb within layouts/admin (19.0ms)
+Completed 200 OK in 95ms (Views: 82.7ms | ActiveRecord: 0.4ms)
+
+

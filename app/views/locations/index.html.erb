@@ -11,6 +11,7 @@
 
     <tr class="header">
       <th>Track</th>
+      <th>#</th>
       <th>Location</th>
       <th>Latitude</th>
       <th>Longitude</th>
@@ -19,6 +20,7 @@
     <% @tracks.each do |track| %>
     <tr>
       <td><%= track.name %></td>
+      <td><%= track.track_number %></td>
       <td><%= track.location_finished %></td>
       <td class="center"><%= track.latitude %></td>
       <td class="center"><%= track.longitude %></td>
