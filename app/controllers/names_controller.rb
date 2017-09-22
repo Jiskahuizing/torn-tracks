@@ -3,7 +3,7 @@ class NamesController < ApplicationController
   layout 'public'
 
   def index
-    @tracks = Track.sorted
+    @tracks = Track.sorted_by_name
   end
 
   def show

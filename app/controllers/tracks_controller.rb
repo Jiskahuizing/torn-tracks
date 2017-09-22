@@ -1,5 +1,7 @@
 class TracksController < ApplicationController
 
+  before_action :confirm_logged_in
+
   layout 'admin'
 
   def index
@@ -59,7 +61,7 @@ class TracksController < ApplicationController
     params.require(:track).permit(
       :name, :date_finished, :location_finished,
       :latitude, :longitude, :pitch, :length,
-      :permalink, :visible, :sound, :track_version)
+      :permalink, :visible, :sound, :track_version, :track_number)
   end
 
 end

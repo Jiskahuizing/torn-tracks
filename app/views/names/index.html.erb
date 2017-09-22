@@ -11,12 +11,14 @@
 
     <tr class="header">
       <th>Track</th>
+      <th>#</th>
       <th>Version</th>
     </tr>
     <% @tracks.each do |track| %>
 
     <tr>
       <td><%= track.name %></td>
+      <td><%= track.track_number %></td>
       <td><%= track.track_version %></td>
     </tr>
 
