@@ -13,6 +13,7 @@
       <th>Track</th>
       <th>#</th>
       <th>Version</th>
+      <th>Attachment</th>
     </tr>
     <% @tracks.each do |track| %>
 
@@ -20,7 +21,15 @@
       <td><%= track.name %></td>
       <td><%= track.track_number %></td>
       <td><%= track.track_version %></td>
+      <% if track.sound.exists? %>
+        <td><audio controls>
+                <source src="<%= track.sound %>" type="audio/mpeg">
+                  Your browser does not support the audio element.
+            </audio>
+        </td>
+      <% end %>
     </tr>
+
 
   <% end %>
   </table>
