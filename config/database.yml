@@ -10,15 +10,22 @@
 #   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
 #
 default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+  host: localhost
+  username: rails
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+
+development:
   adapter: mysql2
   encoding: utf8
   pool: 5
   username: rails_user
   password: secretpassword
   socket: /tmp/mysql.sock
-
-development:
-  <<: *default
   database: torn_tracks_development
 
 # Warning: The database defined as "test" will be erased and
