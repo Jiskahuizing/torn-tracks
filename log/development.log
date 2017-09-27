@@ -25927,3 +25927,37 @@ Processing by LocationsController#index as HTML
 Completed 200 OK in 63ms (Views: 58.7ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/names" for 127.0.0.1 at 2017-09-27 14:56:20 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/public
+  [1m[36mTrack Load (3.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
+  Rendered names/index.html.erb within layouts/public (7.2ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+Completed 200 OK in 85ms (Views: 78.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-27 14:56:26 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (7.3ms)
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-27 14:59:01 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-27 14:59:03 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (1.9ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.9ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 69ms (Views: 63.7ms | ActiveRecord: 1.9ms)
+
+
