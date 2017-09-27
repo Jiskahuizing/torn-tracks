@@ -33,7 +33,11 @@ p, td, ul, ol, li, dl, dt, dd {
 }
 
 img { border: none; }
-table { border-collapse: collapse; }
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  word-wrap: break-word;
+}
 
 table tr th, table tr td {
   vertical-align: top;

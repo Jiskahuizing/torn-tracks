@@ -6,6 +6,7 @@ class Track < ApplicationRecord
   scope :visible, lambda { where(:visible => true) }
   scope :invisible, lambda { where(:visible => false) }
   scope :sorted, lambda { order("name ASC") }
+  scope :sorted_by_name, lambda { order("track_number ASC", "track_version ASC") }
   scope :sorted_by_date_finished, lambda { order("date_finished DESC") }
   scope :sorted_by_pitch, lambda { order("pitch ASC") }
   scope :sorted_by_location, lambda { order("location_finished ASC") }
