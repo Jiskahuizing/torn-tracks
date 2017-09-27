@@ -25961,3 +25961,43 @@ Processing by LocationsController#index as HTML
 Completed 200 OK in 69ms (Views: 63.7ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/locations" for 127.0.0.1 at 2017-09-27 16:23:14 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/locations_controller.rb:7)
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (4.5ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 297ms (Views: 256.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-09-27 16:23:19 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.7ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
+  Rendered names/index.html.erb within layouts/public (5.3ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 90ms (Views: 86.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-09-27 16:23:21 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/public
+  [1m[36mTrack Load (1.2ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/public (5.7ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 95ms (Views: 91.6ms | ActiveRecord: 1.2ms)
+
+
