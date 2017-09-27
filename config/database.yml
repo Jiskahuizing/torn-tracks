@@ -17,7 +17,7 @@ default: &default
   pool: 5
   host: localhost
   username: rails
-  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+  password: 819d3a7357c6fd8e51f8da01525cbea3
 
 development:
   adapter: mysql2
@@ -57,5 +57,5 @@ test:
 production:
   <<: *default
   database: torn_tracks_production
-  username: torn_tracks
-  password: <%= ENV['TORN_TRACKS_DATABASE_PASSWORD'] %>
+  username: rails
+  password: 819d3a7357c6fd8e51f8da01525cbea3
