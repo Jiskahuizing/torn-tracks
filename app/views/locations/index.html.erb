@@ -33,10 +33,17 @@
     <div id="map" style='width: 800px; height: 400px;'></div>
   </div>
 
-  <script>
+  <!--<script>
       markers = handler.addMarkers(<%=raw @hash.to_json %>);
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
+  </script>-->
+
+  <script>
+  handler = Gmaps.build('Google');
+  handler.buildMap({ internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  });
   </script>
 
 </div>
