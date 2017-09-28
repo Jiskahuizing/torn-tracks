@@ -26049,3 +26049,473 @@ Processing by NamesController#index as HTML
 Completed 200 OK in 78ms (Views: 75.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 11:17:31 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 73ms (Views: 68.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-09-28 11:19:24 +0200
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/admin
+  Rendered access/menu.html.erb within layouts/admin (0.8ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tracks" for 127.0.0.1 at 2017-09-28 11:19:27 +0200
+Processing by TracksController#index as HTML
+  Rendering tracks/index.html.erb within layouts/admin
+  [1m[36mTrack Load (0.7ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY name ASC[0m
+  Rendered tracks/index.html.erb within layouts/admin (11.2ms)
+Completed 200 OK in 75ms (Views: 72.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tracks/8/edit" for 127.0.0.1 at 2017-09-28 11:19:34 +0200
+Processing by TracksController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTrack Load (5.9ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 8 LIMIT 1[0m
+  Rendering tracks/edit.html.erb within layouts/admin
+  Rendered tracks/_form.html.erb (23.4ms)
+  Rendered tracks/edit.html.erb within layouts/admin (26.7ms)
+Completed 200 OK in 90ms (Views: 78.7ms | ActiveRecord: 5.9ms)
+
+
+Started PATCH "/tracks/8" for 127.0.0.1 at 2017-09-28 11:20:03 +0200
+Processing by TracksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cEPidQgQmLya/HXe8e29NMmGzNzToWsvtfPfoHL/csboQuTc0sIJs9qHtYD6jC0lNLHzzO0mspydEO0xreh4bw==", "track"=>{"name"=>"Track #", "track_number"=>"4", "track_version"=>"Live at HIAP", "length(1i)"=>"2000", "length(2i)"=>"1", "length(3i)"=>"1", "length(4i)"=>"00", "length(5i)"=>"11", "length(6i)"=>"18", "date_finished(3i)"=>"18", "date_finished(2i)"=>"9", "date_finished(1i)"=>"2015", "location_finished"=>"HIAP, Suomenlina (FIN)", "latitude"=>"60.143296", "longitude"=>"24.985973", "pitch"=>"Hz", "permalink"=>"", "visible"=>"1"}, "commit"=>"Update Track", "id"=>"8"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 8 LIMIT 1[0m
+  [1m[35m (5.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (11.7ms)[0m  [1m[33mUPDATE `tracks` SET `latitude` = 60.143296, `longitude` = 24.985973, `updated_at` = '2017-09-28 09:20:03' WHERE `tracks`.`id` = 8[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tracks/8
+Completed 302 Found in 23ms (ActiveRecord: 18.1ms)
+
+
+Started GET "/tracks/8" for 127.0.0.1 at 2017-09-28 11:20:03 +0200
+Processing by TracksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 8 LIMIT 1[0m
+  Rendering tracks/show.html.erb within layouts/admin
+  Rendered tracks/show.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 50ms (Views: 46.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 11:20:07 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 61ms (Views: 58.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 11:47:33 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 52ms (Views: 48.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 11:47:57 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.6ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 11:48:53 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.5ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 56ms (Views: 52.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 11:50:07 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.4ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 64ms (Views: 61.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 11:50:56 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.8ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 59ms (Views: 55.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 11:58:04 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (2.0ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 103ms (Views: 98.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:04:38 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.4ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:05:43 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 62ms (Views: 58.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:06:21 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:13:17 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.4ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:15:56 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.3ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "#mapStyle {": expected "}", was "{"):
+     5:     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBuB8PRIyrIrEfCXUp26YwksMEWkLL1orw"></script>
+     6:     <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
+     7:     <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- custom infoboxes -->
+     8:     <%= stylesheet_link_tag('application', :media => 'all') %>
+     9:     <%= javascript_include_tag('application') %>
+    10: 
+    11:   </head>
+  
+app/assets/stylesheets/primary.css.scss:138
+app/views/layouts/public.html.erb:8:in `_app_views_layouts_public_html_erb__187891207012339952_70134017713080'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.5ms)
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:16:38 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.6ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 64ms (Views: 60.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:29:08 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 66ms (Views: 62.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:30:11 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:30:38 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 65ms (Views: 61.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:31:09 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:33:50 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 65ms (Views: 61.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:33:56 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 58ms (Views: 54.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:34:23 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 70ms (Views: 66.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:35:19 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 55ms (Views: 51.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:37:09 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 62ms (Views: 59.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:37:56 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 66ms (Views: 63.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:38:36 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 57ms (Views: 53.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:39:41 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.5ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 67ms (Views: 64.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:40:16 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 56ms (Views: 52.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:41:39 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.4ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 72ms (Views: 68.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:41:46 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.6ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 200 OK in 104ms (Views: 100.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:42:25 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.9ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 73ms (Views: 68.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:42:28 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 68ms (Views: 65.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:42:47 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.3ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:43:05 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 67ms (Views: 63.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:43:24 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.3ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:48:53 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.7ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 66ms (Views: 63.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:49:27 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.3ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:52:56 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.5ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 65ms (Views: 61.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:54:11 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.3ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 61ms (Views: 57.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:58:57 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `gmaps' for #<#<Class:0x007f92b251f580>:0x007f92b2dd8cf8>):
+    30:       <div class="clear"></div>
+    31: 
+    32:       <div id="map">
+    33:         <%= gmaps( :map_options => { :id => "map" } ) %>
+    34:         <script>
+    35:           styles: mapStyle = [
+    36:     {
+  
+app/views/layouts/public.html.erb:33:in `_app_views_layouts_public_html_erb__187891207012339952_70134069522680'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.5ms)
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 12:59:08 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.2ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 13:02:32 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.5ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 65ms (Views: 61.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 13:02:59 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.3ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 57ms (Views: 53.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 13:05:16 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.9ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.6ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 64ms (Views: 60.4ms | ActiveRecord: 0.9ms)
+
+
