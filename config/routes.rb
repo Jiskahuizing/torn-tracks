@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   post 'access/attempt_login'
   get 'access/logout'
 
+  get 'about/index'
+
   resources :admin_users, :except => [:show] do
     member do
       get :delete

@@ -44,7 +44,7 @@ table tr th, table tr td {
   text-align: left;
   padding: 5px;
 }
-a, a:visited {color: $red; }
+a, a:visited {color: $black; }
 a:hover {}
 
 .clear { clear: both; }
@@ -52,7 +52,7 @@ a:hover {}
 
 /* Structure */
 #header {
-  height: 2cm;
+  height: 0.2cm;
   padding-top: 1cm;
   text-align: center;
   background: image-url('DSC00462.png');
@@ -86,11 +86,14 @@ a:hover {}
   padding: 30px;
   background: rgba(76, 175, 80, 0.6);
   color: $white;
+  font: 14px $sans_serif;
+  color: $white;
 }
 
 #content {
   padding: 10px;
   margin-left: 200px;
+  width: 70%;
 }
 
 #footer {
@@ -126,7 +129,7 @@ a:hover {}
     text-decoration: none;
     padding: 1px 3px;
     &:hover {
-      background: $white;
+      background: $light_green;
     }
   }
 
