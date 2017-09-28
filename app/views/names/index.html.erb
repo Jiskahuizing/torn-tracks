@@ -22,7 +22,7 @@
       <td><%= track.track_number %></td>
       <td><%= track.track_version %></td>
       <% if track.sound.exists? %>
-        <td><audio controls>
+        <td><audio controls controlsList="nodownload">
                 <source src="<%= track.sound %>" type="audio/mpeg">
                   Your browser does not support the audio element.
             </audio>

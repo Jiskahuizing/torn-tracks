@@ -26001,3 +26001,51 @@ Processing by FinishedDatesController#index as HTML
 Completed 200 OK in 95ms (Views: 91.6ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-09-28 10:43:21 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (29.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 268ms (Views: 257.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-09-28 10:43:24 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/public
+  [1m[36mTrack Load (6.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_names_index_html_erb___892892066924153931_70134073472720 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/names/index.html.erb:18)
+  Rendered names/index.html.erb within layouts/public (24.6ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 122ms (Views: 88.8ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-09-28 10:44:26 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/public
+  [1m[36mTrack Load (2.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
+  Rendered names/index.html.erb within layouts/public (6.7ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 90ms (Views: 85.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-09-28 10:44:45 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
+  Rendered names/index.html.erb within layouts/public (3.9ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 78ms (Views: 75.5ms | ActiveRecord: 0.4ms)
+
+
