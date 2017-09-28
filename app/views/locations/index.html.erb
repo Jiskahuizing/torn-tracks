@@ -7,28 +7,6 @@
 
   <p>&nbsp;</p>
 
-  <table class="listing" summary="Track list"
-
-    <tr class="header">
-      <th>Track</th>
-      <th>#</th>
-      <th>Location</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-    </tr>
-
-    <% @tracks.each do |track| %>
-    <tr>
-      <td><%= track.name %></td>
-      <td><%= track.track_number %></td>
-      <td><%= track.location_finished %></td>
-      <td class="center"><%= track.latitude %></td>
-      <td class="center"><%= track.longitude %></td>
-      </td>
-    </tr>
-  <% end %>
-  </table>
-
   <div style='width: 800px;'>
     <div id="custom_style" style='width: 800px; height: 400px;'></div>
   </div>
@@ -189,5 +167,29 @@
       handler.fitMapToBounds();
     });
   </script>
+  
+  <p>&nbsp;</p>
+
+  <table class="listing" summary="Track list"
+
+    <tr class="header">
+      <th>Track</th>
+      <th>#</th>
+      <th>Location</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+    </tr>
+
+    <% @tracks.each do |track| %>
+    <tr>
+      <td><%= track.name %></td>
+      <td><%= track.track_number %></td>
+      <td><%= track.location_finished %></td>
+      <td class="center"><%= track.latitude %></td>
+      <td class="center"><%= track.longitude %></td>
+      </td>
+    </tr>
+  <% end %>
+  </table>
 
 </div>

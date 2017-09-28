@@ -61,7 +61,10 @@ a:hover {}
   h1 { margin: 0; padding: 0; }
 }
 
-#main { position: relative; }
+#main {
+  position: relative;
+  height: relative;
+}
 
 #main:after {
     content : "";
@@ -79,7 +82,7 @@ a:hover {}
 #navigation {
   float: left;
   width: 120px;
-  min-height: 650px;
+  height: relative;
   padding: 30px;
   background: rgba(76, 175, 80, 0.6);
   color: $white;
@@ -87,6 +90,7 @@ a:hover {}
 
 #content {
   padding: 10px;
+  margin-left: 200px;
 }
 
 #footer {
