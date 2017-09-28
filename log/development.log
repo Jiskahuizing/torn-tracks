@@ -28633,3 +28633,20 @@ Processing by FinishedDatesController#index as HTML
 Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/locations" for 127.0.0.1 at 2017-09-28 16:10:50 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (2.2ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 74ms (Views: 69.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-28 16:21:48 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
