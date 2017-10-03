@@ -1,5 +1,4 @@
-/* Primary stylesheet */
-
+/* Names Style */
 /* Colors */
 $red: #993120;
 $green: #94B26F;
@@ -14,8 +13,7 @@ $dark_green: #010800;
 $sans_serif: Verdana,Lucida,Arial,Helvetica,sans-serif;
 
 html {
-  height: 100%;
-  width: 100%;
+  background: image-url('Names_03.jpg') no-repeat fixed;
 }
 
 body {
@@ -51,67 +49,36 @@ a:hover {}
 .center { text-align: center; }
 
 /* Structure */
-#header {
-  height: 0.2cm;
+#headernames {
+  height: 0.4cm;
+  position: top;
   padding-top: 1cm;
   text-align: center;
-  background: image-url('DSC00462.png');
+  background: image-url('DSC00462.png') fixed;
   color: $white;
 
   h1 { margin: 0; padding: 0; }
 }
 
-#main {
-  position: relative;
-  height: relative;
-}
-
-#main:after {
+#mainnames {
     content : "";
     display: block;
     position: absolute;
     top: 0;
     left: 0;
-    background: image-url('DSC00462_test2.png');
-    width: 100%;
-    height: 100%;
-    opacity : 0.6;
-    z-index: -1;
 }
 
-#navigation {
+#navigationnames {
   float: left;
-  width: 120px;
+  width: 80px;
   height: 100%;
-  padding: 30px;
-  background: rgba(76, 175, 80, 0.6);
+  position: fixed;
+  padding-top: 100px;
+  padding-left: 20px;
+  font: 40px $sans_serif;
   color: $white;
-  font: 14px $sans_serif;
-  color: $white;
-}
-
-#content {
-  padding: 10px;
-  margin-left: 200px;
-  width: 70%;
-  height: 100%;
-}
-
-#footer {
-  clear: both;
-  height: 2.5em;
-  text-align: left;
-  background: $dark_green;
-  color: $white;
-
-  p {
-    margin: 0;
-    padding: 0.5em 1em;
-  }
-}
-
-/* Navigation */
-#navigation {
+  list-style-type: none;
+  text-align: center;
 
   ul {
     list-style: none;
@@ -133,8 +100,29 @@ a:hover {}
       background: $light_green;
     }
   }
-
 }
+
+#content {
+  padding: 10px;
+  margin-left: 400px;
+  width: 70%;
+  height: 100%;
+}
+
+#footer {
+  clear: both;
+  height: 2.5em;
+  text-align: left;
+  background: $dark_green;
+  color: $white;
+
+  p {
+    margin: 0;
+    padding: 0.5em 1em;
+  }
+}
+
+/* Navigation Buttons */
 
 /* Content */
 #content h2 {
