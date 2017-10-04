@@ -35189,3 +35189,618 @@ Processing by NamesController#index as HTML
 Completed 200 OK in 96ms (Views: 92.5ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-04 13:55:42 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.4ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 254ms (Views: 245.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-04 13:55:45 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/names
+  [1m[36mTrack Load (0.9ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_names_index_html_erb___700087320851235721_70124517907720 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/names/index.html.erb:18)
+  Rendered names/index.html.erb within layouts/names (26.1ms)
+Completed 200 OK in 130ms (Views: 79.0ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 13:55:47 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.7ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+Completed 200 OK in 89ms (Views: 85.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-10-04 13:55:49 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.8ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.5ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 53ms (Views: 46.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-04 13:55:51 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/names
+  [1m[36mTrack Load (0.7ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
+  Rendered names/index.html.erb within layouts/names (5.9ms)
+Completed 200 OK in 68ms (Views: 64.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-04 13:55:55 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/names
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
+  Rendered names/index.html.erb within layouts/names (3.8ms)
+Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/about/index" for 127.0.0.1 at 2017-10-04 13:56:02 +0200
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/public
+  Rendered about/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-04 13:56:17 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/names
+  [1m[36mTrack Load (0.7ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
+  Rendered names/index.html.erb within layouts/names (6.4ms)
+Completed 200 OK in 74ms (Views: 70.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 13:56:19 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 54ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-04 13:56:30 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/public (4.1ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-10-04 13:56:34 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.6ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 55ms (Views: 50.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-10-04 13:58:27 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/locations_controller.rb:7)
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.8ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 200 OK in 290ms (Views: 251.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-04 13:58:32 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/public (5.3ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 81ms (Views: 78.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 13:58:35 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (6.5ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 90ms (Views: 87.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 13:58:42 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 14:05:28 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:05:31 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `tracks`.`track_version`, `tracks`.`pitch` FROM `tracks`[0m
+  Rendered pitches/index.html.erb within layouts/public (115.4ms)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `scatter_chart' for #<#<Class:0x007ff6e6ecd030>:0x007ff6eaefe910>):
+    32: 
+    33: </div>
+    34: 
+    35: <%= scatter_chart Track.pluck(:track_version, :pitch), xtitle: "Track", ytitle: "Pitch" %>
+  
+app/views/pitches/index.html.erb:35:in `_app_views_pitches_index_html_erb___4100141038592478567_70349240138540'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.7ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.1ms)
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:11:05 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_pitches_index_html_erb__2695526671766507266_70240040838520 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/pitches/index.html.erb:16)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `tracks`.`track_version`, `tracks`.`pitch` FROM `tracks`[0m
+  Rendered pitches/index.html.erb within layouts/public (18.5ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 794ms (Views: 770.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:11:26 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_pitches_index_html_erb__2059048577212414240_70130341199700 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/pitches/index.html.erb:16)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `tracks`.`track_version`, `tracks`.`pitch` FROM `tracks`[0m
+  Rendered pitches/index.html.erb within layouts/public (23.2ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+Completed 200 OK in 728ms (Views: 701.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:11:49 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `tracks`.`track_version`, `tracks`.`pitch` FROM `tracks`[0m
+  Rendered pitches/index.html.erb within layouts/public (5.6ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 86ms (Views: 82.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:12:15 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `tracks`.`track_version`, `tracks`.`pitch` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (4.3ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:16:49 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_pitches_index_html_erb__4163311575149901062_70235400745100 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/pitches/index.html.erb:6)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `tracks`.`track_version`, `tracks`.`pitch` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (20.9ms)
+Completed 500 Internal Server Error in 244ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'highcharts' with type 'application/javascript'
+Checked in these paths: 
+  /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/config
+  /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/images
+  /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/javascripts
+  /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets
+  /Users/jiskahuizing/Sites/GitHub/torn-tracks/vendor/assets/javascripts
+  /Users/jiskahuizing/Sites/GitHub/torn-tracks/vendor/assets/stylesheets
+  /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/chartkick-2.2.4/app/assets/javascripts
+  /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/chartkick-2.2.4/vendor/assets/javascripts
+  /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/underscore-rails-1.8.3/vendor/assets/javascripts
+  /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/gmaps4rails-2.1.2/vendor/assets/javascripts
+  /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actioncable-5.0.3/lib/assets/compiled
+  /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts):
+     6:     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBuB8PRIyrIrEfCXUp26YwksMEWkLL1orw"></script>
+     7:     <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
+     8:     <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- custom infoboxes -->
+     9:     <%= stylesheet_link_tag('application', :media => 'all') %>
+    10:     <%= javascript_include_tag('application') %>
+    11:     <script> document.addEventListener('play', function(e){
+    12:         var audios = document.getElementsByTagName('audio');
+  
+app/assets/javascripts/application.js:18
+app/views/layouts/public.html.erb:9:in `_app_views_layouts_public_html_erb___2766695914093946497_70235358937720'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.1ms)
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:17:02 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `tracks`.`track_version`, `tracks`.`pitch` FROM `tracks`[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (4.2ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 368ms (Views: 365.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:22:43 +0200
+Processing by PitchesController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` IS NULL LIMIT 1[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from load_data at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/pitches_controller.rb:17)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `pitch' for nil:NilClass):
+  
+app/controllers/pitches_controller.rb:18:in `load_data'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.8ms)
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:24:14 +0200
+Processing by PitchesController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` IS NULL LIMIT 1[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from load_data at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/pitches_controller.rb:17)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `pitch' for nil:NilClass):
+  
+app/controllers/pitches_controller.rb:18:in `load_data'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.1ms)
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:25:52 +0200
+Processing by PitchesController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` IS NULL LIMIT 1[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from load_data at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/pitches_controller.rb:17)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `pitch' for #<Class:0x007fc1e4cf0be0>):
+  
+app/controllers/pitches_controller.rb:18:in `load_data'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.1ms)
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:26:09 +0200
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/pitches_controller.rb:18: syntax error, unexpected tSYMBEG, expecting '('
+  @pitch = Track.:pitch
+                  ^):
+  
+app/controllers/pitches_controller.rb:18: syntax error, unexpected tSYMBEG, expecting '('
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.8ms)
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:26:17 +0200
+Processing by PitchesController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` IS NULL LIMIT 1[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from load_data at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/pitches_controller.rb:17)
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `tracks`.`track_version`, `tracks`.`pitch` FROM `tracks`[0m
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (14.5ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 78ms (Views: 63.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:37:19 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_pitches_index_html_erb__2323197756264057187_70230971064460 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/pitches/index.html.erb:6)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `tracks`.`track_version`, `tracks`.`pitch` FROM `tracks`[0m
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (29.5ms)
+Completed 500 Internal Server Error in 293ms (ActiveRecord: 3.7ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'highcharts' with type 'application/javascript'
+Checked in these paths: 
+  /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/config
+  /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/images
+  /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/javascripts
+  /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets
+  /Users/jiskahuizing/Sites/GitHub/torn-tracks/vendor/assets/javascripts
+  /Users/jiskahuizing/Sites/GitHub/torn-tracks/vendor/assets/stylesheets
+  /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/chartkick-2.2.4/app/assets/javascripts
+  /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/chartkick-2.2.4/vendor/assets/javascripts
+  /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/underscore-rails-1.8.3/vendor/assets/javascripts
+  /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/gmaps4rails-2.1.2/vendor/assets/javascripts
+  /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actioncable-5.0.3/lib/assets/compiled
+  /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts):
+     6:     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBuB8PRIyrIrEfCXUp26YwksMEWkLL1orw"></script>
+     7:     <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
+     8:     <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- custom infoboxes -->
+     9:     <%= stylesheet_link_tag('application', :media => 'all') %>
+    10:     <%= javascript_include_tag('application') %>
+    11:     <script> document.addEventListener('play', function(e){
+    12:         var audios = document.getElementsByTagName('audio');
+  
+app/assets/javascripts/application.js:19
+app/views/layouts/public.html.erb:9:in `_app_views_layouts_public_html_erb__3344779568997837820_70230979835120'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.5ms)
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:37:40 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_pitches_index_html_erb__1337046375415586659_70339827975960 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/pitches/index.html.erb:6)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `tracks`.`track_version`, `tracks`.`pitch` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (24.6ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 404ms (Views: 379.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:40:53 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `tracks`.`track_number`, `tracks`.`pitch` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (7.5ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 111ms (Views: 107.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:41:50 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `tracks`.`track_version`, `tracks`.`pitch` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (4.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:44:27 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `tracks`.`track_version`, `tracks`.`pitch` FROM `tracks`[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT SUM(`tracks`.`pitch`) AS sum_pitch, `tracks`.`track_version` AS tracks_track_version FROM `tracks` GROUP BY `tracks`.`track_version`[0m
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (8.5ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 67ms (Views: 61.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:44:42 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM(`tracks`.`pitch`) AS sum_pitch, `tracks`.`track_version` AS tracks_track_version FROM `tracks` GROUP BY `tracks`.`track_version`[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (4.6ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:47:12 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT SUM(`tracks`.`pitch`) FROM `tracks`[0m
+  Rendered pitches/index.html.erb within layouts/public (12.8ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 6.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `group' for 1861.1190643310547:Float):
+    3: <div class="tracks index">
+    4:   <h1>The Tracks Sorted on Pitch</h1>
+    5: 
+    6:   <%= bar_chart Track.sum(:pitch).group(:track_version) %>
+    7: 
+    8:   <p>&nbsp;</p>
+    9: 
+  
+app/views/pitches/index.html.erb:6:in `_app_views_pitches_index_html_erb__1337046375415586659_70339879165840'
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.4ms)
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:47:23 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM(`tracks`.`pitch`) AS sum_pitch, `tracks`.`track_version` AS tracks_track_version FROM `tracks` GROUP BY `tracks`.`track_version`[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (5.4ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-04 14:48:35 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM(`tracks`.`pitch`) AS sum_pitch, `tracks`.`track_version` AS tracks_track_version FROM `tracks` GROUP BY `tracks`.`track_version`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `tracks`.`track_number`, `tracks`.`pitch` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (6.2ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 1.0ms)
+
+

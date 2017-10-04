@@ -39,6 +39,9 @@ gem 'geocoder'
 # Paperclip:
 gem "paperclip", "~> 5.1.0"
 
+# Gem for charts
+gem "chartkick"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
