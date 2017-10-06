@@ -35804,3 +35804,51 @@ Processing by PitchesController#index as HTML
 Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-06 13:37:04 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.6ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 831ms (Views: 819.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-06 13:37:08 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/names
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_names_index_html_erb__280523972162401521_70200055349060 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/names/index.html.erb:18)
+  Rendered names/index.html.erb within layouts/names (25.7ms)
+Completed 200 OK in 110ms (Views: 86.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-06 13:37:11 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 80ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-06 13:37:13 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT SUM(`tracks`.`pitch`) AS sum_pitch, `tracks`.`track_version` AS tracks_track_version FROM `tracks` GROUP BY `tracks`.`track_version`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `tracks`.`track_number`, `tracks`.`pitch` FROM `tracks`[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (9.0ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 94ms (Views: 90.2ms | ActiveRecord: 1.9ms)
+
+
