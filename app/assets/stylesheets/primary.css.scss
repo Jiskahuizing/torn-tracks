@@ -94,6 +94,27 @@ a:hover {}
   color: $white;
   font: 14px $sans_serif;
   color: $white;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-bottom: 0.5em;
+      }
+      ul {
+        margin: 0.5em 0 0 1em;
+        font-size: 0.9em;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      padding: 1px 3px;
+      &:hover {
+        background: $light_green;
+      }
+    }
 }
 
 #content {
@@ -102,6 +123,9 @@ a:hover {}
   margin-left: 200px;
   width: 70%;
   height: 100%;
+}
+#content h2 {
+  color: $black;
 }
 
 #footer {
@@ -121,8 +145,29 @@ a:hover {}
   }
 }
 
-/* Navigation */
-#navigation {
+/* NAMES CSS */
+#mainnames {
+    content : "";
+    display: block;
+    background: image-url('Names_03.jpg');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#navigationnames {
+  float: left;
+  width: 80px;
+  height: 100%;
+  position: fixed;
+  padding-top: 20px;
+  padding-left: 20px;
+  font: 40px $sans_serif;
+  color: $white;
+  list-style-type: none;
+  text-align: center;
 
   ul {
     list-style: none;
@@ -144,10 +189,4 @@ a:hover {}
       background: $light_green;
     }
   }
-
-}
-
-/* Content */
-#content h2 {
-  color: $black;
 }
