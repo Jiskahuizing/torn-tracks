@@ -51,9 +51,14 @@ a:hover {}
 .center { text-align: center; }
 
 /* Structure */
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+
 #header {
   height: 0.2cm;
-  padding-top: 1cm;
+  padding-top: 1.1cm;
   text-align: center;
   background: image-url('DSC00462.png');
   color: $white;
@@ -75,6 +80,7 @@ a:hover {}
     background: image-url('DSC00462_test2.png');
     width: 100%;
     height: 100%;
+    min-height: 870px;
     opacity : 0.6;
     z-index: -1;
 }
@@ -92,6 +98,7 @@ a:hover {}
 
 #content {
   padding: 10px;
+  padding-bottom: 2.5em;
   margin-left: 200px;
   width: 70%;
   height: 100%;
@@ -100,9 +107,13 @@ a:hover {}
 #footer {
   clear: both;
   height: 2.5em;
+  width: 100%;
+  position: absolute;
   text-align: left;
   background: $dark_green;
   color: $white;
+  bottom:0;
+  left:0;
 
   p {
     margin: 0;

@@ -15,30 +15,30 @@
   </head>
 
   <body>
-
-    <div id="headernames">
-    </div>
-
-    <div id="mainnames">
-      <div id ="navigationnames">
-        <ul>
-          <li><%= link_to_unless_current("<<", root_path) %></li>
-          <li><%= link_to_unless_current("i", about_index_path) %></li>
-        </ul>
+    <div id="wrapper">
+      <div id="headernames">
       </div>
 
-      <div id="content">
-        <%= yield %>
-        <p>&nbsp;</p>
+      <div id="mainnames">
+        <div id ="navigationnames">
+          <ul>
+            <li><%= link_to_unless_current("<<", root_path) %></li>
+            <li><%= link_to_unless_current("i", about_index_path) %></li>
+          </ul>
+        </div>
+
+        <div id="content">
+          <%= yield %>
+          <p>&nbsp;</p>
+        </div>
+
+        <div class="clear"></div>
       </div>
 
-      <div class="clear"></div>
+      <div id="footer">
+        <p id="copyright">&copy; jiskahuizing.com</p>
+      </div>
     </div>
-
-    <div id="footer">
-      <p id="copyright">&copy; jiskahuizing.com</p>
-    </div>
-
   </body>
 
 </html>
