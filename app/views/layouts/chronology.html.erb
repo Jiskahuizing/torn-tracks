@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>A Field Guide to Torn Tracks</title>
+    <title>Torn Tracks Chronologically</title>
     <%= stylesheet_link_tag('application', :media => 'all') %>
     <%= javascript_include_tag('application') %>
     <script> document.addEventListener('play', function(e){
@@ -16,13 +16,13 @@
 
   <body>
     <div id="wrapper">
-      <div id="mainnames">
+      <div id="mainchronology">
         <div class="btn-group">
           <button class="button"><%= link_to_unless_current("<<", root_path) %></button>
           <button class="button"><%= link_to_unless_current("i", about_index_path) %></button>
         </div>
 
-        <div id="contentnames">
+        <div id="contentchronology">
           <%= yield %>
         </div>
 
