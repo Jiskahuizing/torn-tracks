@@ -1,9 +1,11 @@
 <% @page_title = "Pitches" %>
 
-<%= link_to("<< Back to Index", root_path) %>
-
 <div class="tracks index">
   <h1>The Tracks Sorted on Pitch</h1>
+  <!--Input: string + number-->
+  <%= bar_chart Track.group(:track_version).sum(:pitch) %>
+  <!--Input: only numbers-->
+  <%= scatter_chart Track.pluck(:track_number, :pitch), xtitle: "Track Number", ytitle: "Pitch" %>
 
   <p>&nbsp;</p>
 
@@ -12,6 +14,7 @@
     <tr class="header">
       <th>Track</th>
       <th>#</th>
+      <th>Version</th>
       <th>Pitch</th>
     </tr>
 
@@ -19,6 +22,7 @@
     <tr>
       <td><%= track.name %></td>
       <td><%= track.track_number %></td>
+      <td><%= track.track_version %></td>
       <td><%= track.pitch %></td>
       <% if track.sound.exists? %>
         <td><audio controls controlsList="nodownload">

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Torn Tracks Chronologically</title>
+    <%= stylesheet_link_tag('application', :media => 'all') %>
+    <%= javascript_include_tag('application') %>
+    <script> document.addEventListener('play', function(e){
+        var audios = document.getElementsByTagName('audio');
+        for(var i = 0, len = audios.length; i < len;i++){
+            if(audios[i] != e.target){
+                audios[i].pause();
+              }}},
+        true); </script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div id="mainchronology">
+        <div class="btn-group">
+          <button class="button"><%= link_to_unless_current("<<", root_path) %></button>
+          <button id="button">i</button>
+        </div>
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Torn Tracks organised chronologically.</p>
+          </div>
+        </div>
+
+        <div id="contentchronology">
+          <%= yield %>
+        </div>
+
+        <div class="clear"></div>
+      </div>
+
+      <div id="footer">
+        <p id="copyright">&copy; jiskahuizing.com</p>
+      </div>
+    </div>
+  </body>
+
+  <script>
+  // Get the modal
+  var modal = document.getElementById('myModal');
+  // Get the button that opens the modal
+  var btn = document.getElementById("button");
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  // When the user clicks on the button, open the modal
+  btn.onclick = function() {modal.style.display = "block";}
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { modal.style.display = "none"; }
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</html>

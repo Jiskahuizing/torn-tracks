@@ -1,6 +1,6 @@
 class NamesController < ApplicationController
 
-  layout 'public'
+  layout 'names'
 
   def index
     @tracks = Track.sorted_by_name

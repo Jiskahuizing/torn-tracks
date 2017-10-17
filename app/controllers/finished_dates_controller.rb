@@ -1,6 +1,6 @@
 class FinishedDatesController < ApplicationController
 
-  layout 'public'
+  layout 'chronology'
 
   def index
     @tracks = Track.sorted_by_date_finished
