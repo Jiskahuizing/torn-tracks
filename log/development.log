@@ -32879,6 +32879,7 @@ Processing by PublicController#index as HTML
 Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.0ms)
 
 
+<<<<<<< Updated upstream
 Started GET "/" for 127.0.0.1 at 2017-10-02 13:25:48 +0200
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
 Processing by PublicController#index as HTML
@@ -41303,6 +41304,20 @@ Started GET "/finished_dates" for 127.0.0.1 at 2017-10-17 14:03:35 +0200
 Processing by FinishedDatesController#index as HTML
   Rendering finished_dates/index.html.erb within layouts/chronology
   [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+=======
+Started GET "/" for 127.0.0.1 at 2017-10-06 13:31:51 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (23.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 567ms (Views: 556.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-10-06 13:31:55 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.8ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+>>>>>>> Stashed changes
 DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
 still causes `String`s to be parsed as if they were in `Time.zone`,
 and `Time`s to be converted to `Time.zone`.
@@ -41314,6 +41329,7 @@ To keep the old behavior, you must add the following to your initializer:
 To silence this deprecation warning, add the following:
 
     config.active_record.time_zone_aware_types = [:datetime, :time]
+<<<<<<< Updated upstream
  (called from _app_views_finished_dates_index_html_erb__2465247581104138021_70173393037640 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/finished_dates/index.html.erb:17)
   Rendered finished_dates/index.html.erb within layouts/chronology (21.6ms)
 Completed 200 OK in 102ms (Views: 79.2ms | ActiveRecord: 1.7ms)
@@ -41618,10 +41634,48 @@ Completed 200 OK in 60ms (Views: 57.1ms | ActiveRecord: 0.4ms)
 
 
 Started GET "/" for 127.0.0.1 at 2017-10-17 15:58:06 +0200
+=======
+ (called from index at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/locations_controller.rb:7)
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 85ms (Views: 47.0ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-06 13:31:56 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.7ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
+  Rendered names/index.html.erb within layouts/public (4.8ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 68ms (Views: 64.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-06 13:31:57 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/public (5.4ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 65ms (Views: 63.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-06 13:31:58 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (4.1ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-06 13:31:59 +0200
+>>>>>>> Stashed changes
 Processing by PublicController#index as HTML
   Rendering public/index.html.erb within layouts/public
   Rendered public/index.html.erb within layouts/public (0.3ms)
   Rendered layouts/_navigation.html.erb (0.8ms)
+<<<<<<< Updated upstream
 Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.0ms)
 
 
@@ -42063,5 +42117,8 @@ Processing by NamesController#index as HTML
   [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
   Rendered names/index.html.erb within layouts/names (10.0ms)
 Completed 200 OK in 208ms (Views: 205.8ms | ActiveRecord: 0.5ms)
+=======
+Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+>>>>>>> Stashed changes
 
 
