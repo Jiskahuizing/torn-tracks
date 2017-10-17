@@ -42057,3 +42057,11 @@ To silence this deprecation warning, add the following:
 Completed 200 OK in 102ms (Views: 76.4ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/names" for 127.0.0.1 at 2017-10-17 16:10:11 +0200
+Processing by NamesController#index as HTML
+  Rendering names/index.html.erb within layouts/names
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY track_number ASC, track_version ASC[0m
+  Rendered names/index.html.erb within layouts/names (10.0ms)
+Completed 200 OK in 208ms (Views: 205.8ms | ActiveRecord: 0.5ms)
+
+
