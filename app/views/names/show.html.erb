@@ -1,4 +1,36 @@
-<h1>A Field Guide to Torn Tracks</h1>
+<% @page_title = "A Field Guide to Torn Tracks" %>
 
-<p>All the versions of a specific tracks are collected together, just like a fieldguide
-puts all general information about a certain species (including sub-species) together.</p>
+<div class="tracks index">
+  <h1>A Field Guide to Torn Tracks</h1>
+
+  <p>&nbsp;</p>
+
+  <%= link_to("<< Back to Index", names_path) %>
+  <p>&nbsp;</p>
+
+  <table class="listing" summary="Track list"
+
+    <tr class="header">
+      <th>Tracks</th>
+      <th>#</th>
+      <th>Version</th>
+      <th>Attachment</th>
+    </tr>
+    <% @tracks.each do |track| %>
+
+    <tr>
+      <td><%= track.name %></td>
+      <td><%= track.track_number %></td>
+      <td><%= track.track_version %></td>
+      <% if track.sound.exists? %>
+        <td><audio controls controlsList="nodownload">
+                <source src="<%= track.sound %>" type="audio/ogg">
+                <source src="<%= track.sound %>" type="audio/mpeg">
+                  Your browser does not support the audio element.
+            </audio>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+  </table>
+</div>

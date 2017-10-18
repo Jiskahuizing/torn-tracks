@@ -7,7 +7,8 @@ class NamesController < ApplicationController
   end
 
   def show
-
+    singletrack=Track.find(params[:id])
+    @tracks = Track.where("track_number=?", singletrack.track_number)
   end
 
 end
