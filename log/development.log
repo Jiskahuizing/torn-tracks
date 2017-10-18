@@ -47927,3 +47927,365 @@ Processing by FinishedDatesController#index as HTML
 Completed 200 OK in 187ms (Views: 184.9ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:57:37 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (7.9ms)
+Completed 200 OK in 144ms (Views: 141.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:58:27 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (7.3ms)
+Completed 200 OK in 152ms (Views: 150.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:58:30 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-18 15:58:31 +0200
+Processing by NamesController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT DISTINCT `tracks`.`track_number` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 1 LIMIT 1[0m
+  [1m[36mTrack Load (0.9ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 3 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 4 LIMIT 1[0m
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 6 LIMIT 1[0m
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 11 LIMIT 1[0m
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 12 LIMIT 1[0m
+  Rendering names/index.html.erb within layouts/names
+  Rendered names/index.html.erb within layouts/names (0.9ms)
+Completed 200 OK in 74ms (Views: 63.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:58:33 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 66ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2017-10-18 15:58:34 +0200
+Processing by LocationsController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY location_finished ASC[0m
+  Rendering locations/index.html.erb within layouts/public
+  Rendered locations/index.html.erb within layouts/public (2.0ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 61ms (Views: 56.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:59:12 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (1.0ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (13.2ms)
+Completed 200 OK in 84ms (Views: 81.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:59:24 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (7.8ms)
+Completed 200 OK in 160ms (Views: 157.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:59:47 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.9ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (8.8ms)
+Completed 200 OK in 150ms (Views: 147.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 16:12:55 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 61ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:14:43 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (13.0ms)
+Completed 200 OK in 170ms (Views: 166.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:15:14 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (9.0ms)
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 16:15:17 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 62ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:15:19 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (12.3ms)
+Completed 200 OK in 75ms (Views: 71.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:16:38 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (14.1ms)
+Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 16:16:44 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 60ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:16:45 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (12.8ms)
+Completed 200 OK in 82ms (Views: 78.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 16:16:51 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 75ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-18 16:16:52 +0200
+Processing by NamesController#index as HTML
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT DISTINCT `tracks`.`track_number` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 1 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 3 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 4 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 6 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 11 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 12 LIMIT 1[0m
+  Rendering names/index.html.erb within layouts/names
+  Rendered names/index.html.erb within layouts/names (1.2ms)
+Completed 200 OK in 64ms (Views: 55.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 16:16:54 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:16:54 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (12.3ms)
+Completed 200 OK in 85ms (Views: 82.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:18:49 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (8.9ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:21:19 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (8.6ms)
+Completed 200 OK in 59ms (Views: 56.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:22:59 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (7.3ms)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:24:48 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (9.0ms)
+Completed 200 OK in 158ms (Views: 156.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:33:50 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  Rendered finished_dates/index.html.erb within layouts/chronology (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/finished_dates/index.html.erb:42: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/finished_dates/index.html.erb:42: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.3ms)
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:35:33 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  Rendered finished_dates/index.html.erb within layouts/chronology (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/finished_dates/index.html.erb:42: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/finished_dates/index.html.erb:42: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.5ms)
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:35:47 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  Rendered finished_dates/index.html.erb within layouts/chronology (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/finished_dates/index.html.erb:42: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/finished_dates/index.html.erb:42: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/jiskahuizing/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.3ms)
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:36:30 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (7.1ms)
+Completed 200 OK in 152ms (Views: 149.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:38:38 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (7.7ms)
+Completed 200 OK in 57ms (Views: 54.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:39:36 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (12.9ms)
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:40:47 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (7.6ms)
+Completed 200 OK in 65ms (Views: 62.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 16:44:13 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-18 16:44:28 +0200
+Processing by NamesController#index as HTML
+  [1m[36mTrack Load (0.8ms)[0m  [1m[34mSELECT DISTINCT `tracks`.`track_number` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 1 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 3 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 4 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 6 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 11 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 12 LIMIT 1[0m
+  Rendering names/index.html.erb within layouts/names
+  Rendered names/index.html.erb within layouts/names (1.4ms)
+Completed 200 OK in 67ms (Views: 56.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 16:44:39 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 85ms (Views: 81.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:44:40 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (11.5ms)
+Completed 200 OK in 79ms (Views: 76.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:45:15 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (7.8ms)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 16:48:21 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (6.9ms)
+Completed 200 OK in 61ms (Views: 59.1ms | ActiveRecord: 0.3ms)
+
+

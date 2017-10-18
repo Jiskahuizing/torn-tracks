@@ -1,41 +1,28 @@
 <% @page_title = "Chronology" %>
 
 <div class="tracks index">
-  <h1>The Tracks Chronologically</h1>
 
   <p>&nbsp;</p>
-  
+
   <div class="container">
-    <div data-card="4" class="card"></div>
-    <div data-card="3" class="card"></div>
-    <div data-card="2" class="card"></div>
-    <div data-card="1" class="card"></div>
-    <div data-card="0" class="card"></div>
+    <% @tracks.each_with_index do |track, i| %>
+
+      <div data-card="<%= i %>" class="card">
+        <span>
+          <%= track.date_finished %>
+          <%= track.name %>
+          <%= track.track_number %>
+          <%= track.track_version %>
+          <% if track.sound.exists? %>
+            <td><audio controls controlsList="nodownload" preload="none">
+                    <source src="<%= track.sound %>" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                </audio>
+            </td>
+          <% end %>
+        </span>
+      </div>
+    <% end %>
   </div>
 
-  <table class="listing" summary="Track list"
-
-    <tr class="header">
-      <th>Date finished</th>
-      <th>Track</th>
-      <th>#</th>
-      <th>Version</th>
-    </tr>
-
-    <% @tracks.each do |track| %>
-    <tr>
-      <td><%= track.date_finished %></td>
-      <td><%= track.name %></td>
-      <td><%= track.track_number %></td>
-      <td><%= track.track_version %></td>
-      <% if track.sound.exists? %>
-        <td><audio controls controlsList="nodownload" preload="none">
-                <source src="<%= track.sound %>" type="audio/mpeg">
-                  Your browser does not support the audio element.
-            </audio>
-        </td>
-      <% end %>
-    </tr>
-  <% end %>
-  </table>
 </div>
