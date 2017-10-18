@@ -3,7 +3,12 @@ class NamesController < ApplicationController
   layout 'names'
 
   def index
-    @tracks = Track.sorted_by_name
+    @tracks=Array.new
+    tracknumbers = Track.select(:track_number).distinct
+    tracknumbers.each do |tn|
+      @tracks.concat Track.where(track_number: tn.track_number).limit(1)
+    end
+
   end
 
   def show
