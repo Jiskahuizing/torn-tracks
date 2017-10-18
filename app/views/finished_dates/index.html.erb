@@ -4,6 +4,14 @@
   <h1>The Tracks Chronologically</h1>
 
   <p>&nbsp;</p>
+  
+  <div class="container">
+    <div data-card="4" class="card"></div>
+    <div data-card="3" class="card"></div>
+    <div data-card="2" class="card"></div>
+    <div data-card="1" class="card"></div>
+    <div data-card="0" class="card"></div>
+  </div>
 
   <table class="listing" summary="Track list"
 
@@ -21,7 +29,7 @@
       <td><%= track.track_number %></td>
       <td><%= track.track_version %></td>
       <% if track.sound.exists? %>
-        <td><audio controls controlsList="nodownload">
+        <td><audio controls controlsList="nodownload" preload="none">
                 <source src="<%= track.sound %>" type="audio/mpeg">
                   Your browser does not support the audio element.
             </audio>
@@ -30,5 +38,4 @@
     </tr>
   <% end %>
   </table>
-
 </div>

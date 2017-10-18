@@ -5,13 +5,15 @@
     <title>Torn Tracks Chronologically</title>
     <%= stylesheet_link_tag('application', :media => 'all') %>
     <%= javascript_include_tag('application') %>
+
     <script> document.addEventListener('play', function(e){
         var audios = document.getElementsByTagName('audio');
         for(var i = 0, len = audios.length; i < len;i++){
             if(audios[i] != e.target){
                 audios[i].pause();
               }}},
-        true); </script>
+        true);
+    </script>
   </head>
 
   <body>
@@ -59,6 +61,24 @@
         modal.style.display = "none";
       }
     }
+  </script>
+
+  <script>
+    (function() {
+      var rotate, timeline;
+      rotate = function() {
+        return $('.card:first-child').fadeOut(400, 'swing', function() {
+          return $('.card:first-child').appendTo('.container').hide();
+        }).fadeIn(400, 'swing');
+      };
+      timeline = setInterval(rotate, 1200);
+      $('body').hover(function() {
+        return clearInterval(timeline);
+      });
+      $('.card').click(function() {
+        return rotate();
+      });
+    }).call(this);
   </script>
 
 </html>

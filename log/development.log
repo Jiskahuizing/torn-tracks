@@ -47117,3 +47117,813 @@ Processing by NamesController#index as HTML
 Completed 200 OK in 79ms (Views: 72.4ms | ActiveRecord: 1.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:08:54 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.9ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 267ms (Views: 257.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-18 15:08:56 +0200
+Processing by NamesController#index as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/names_controller.rb:8)
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT DISTINCT `tracks`.`track_number` FROM `tracks`[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 1 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 3 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 4 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 6 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 11 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 12 LIMIT 1[0m
+  Rendering names/index.html.erb within layouts/names
+  Rendered names/index.html.erb within layouts/names (0.8ms)
+Completed 200 OK in 88ms (Views: 48.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/names/1" for 127.0.0.1 at 2017-10-18 15:08:58 +0200
+Processing by NamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering names/show.html.erb within layouts/names
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE (track_number=1)[0m
+  Rendered names/show.html.erb within layouts/names (3.6ms)
+Completed 200 OK in 67ms (Views: 62.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-18 15:09:00 +0200
+Processing by NamesController#index as HTML
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT DISTINCT `tracks`.`track_number` FROM `tracks`[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 1 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 3 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 4 LIMIT 1[0m
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 6 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 11 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 12 LIMIT 1[0m
+  Rendering names/index.html.erb within layouts/names
+  Rendered names/index.html.erb within layouts/names (1.5ms)
+Completed 200 OK in 76ms (Views: 67.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:09:02 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 85ms (Views: 82.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:09:06 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (10.2ms)
+Completed 200 OK in 81ms (Views: 78.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:10:25 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.4ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 266ms (Views: 255.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-18 15:10:28 +0200
+Processing by NamesController#index as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/names_controller.rb:8)
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT DISTINCT `tracks`.`track_number` FROM `tracks`[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 1 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 3 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 4 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 6 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 11 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 12 LIMIT 1[0m
+  Rendering names/index.html.erb within layouts/names
+  Rendered names/index.html.erb within layouts/names (1.0ms)
+Completed 200 OK in 89ms (Views: 46.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/names/1" for 127.0.0.1 at 2017-10-18 15:10:29 +0200
+Processing by NamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering names/show.html.erb within layouts/names
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE (track_number=1)[0m
+  Rendered names/show.html.erb within layouts/names (3.8ms)
+Completed 200 OK in 61ms (Views: 55.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:10:36 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 70ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:10:37 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (10.8ms)
+Completed 200 OK in 84ms (Views: 80.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:12:39 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.0ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 282ms (Views: 269.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-18 15:12:41 +0200
+Processing by NamesController#index as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/names_controller.rb:8)
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT DISTINCT `tracks`.`track_number` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 1 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 3 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 4 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 6 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 11 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 12 LIMIT 1[0m
+  Rendering names/index.html.erb within layouts/names
+  Rendered names/index.html.erb within layouts/names (0.8ms)
+Completed 200 OK in 92ms (Views: 50.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/names/1" for 127.0.0.1 at 2017-10-18 15:12:42 +0200
+Processing by NamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering names/show.html.erb within layouts/names
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE (track_number=1)[0m
+  Rendered names/show.html.erb within layouts/names (3.9ms)
+Completed 200 OK in 63ms (Views: 57.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:12:52 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 77ms (Views: 74.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:12:53 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (11.0ms)
+Completed 200 OK in 81ms (Views: 77.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:17:05 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.5ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 309ms (Views: 295.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about/index" for 127.0.0.1 at 2017-10-18 15:17:09 +0200
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/public
+  Rendered about/index.html.erb within layouts/public (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 58ms (Views: 55.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-18 15:17:11 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_pitches_index_html_erb___3401557472516756720_70273545557960 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/pitches/index.html.erb:6)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM(`tracks`.`pitch`) AS sum_pitch, `tracks`.`track_version` AS tracks_track_version FROM `tracks` GROUP BY `tracks`.`track_version`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `tracks`.`track_number`, `tracks`.`pitch` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (22.0ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 100ms (Views: 71.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-18 15:17:21 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM(`tracks`.`pitch`) AS sum_pitch, `tracks`.`track_version` AS tracks_track_version FROM `tracks` GROUP BY `tracks`.`track_version`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `tracks`.`track_number`, `tracks`.`pitch` FROM `tracks`[0m
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (8.9ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 63ms (Views: 60.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:18:49 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.2ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 279ms (Views: 269.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-18 15:18:54 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_pitches_index_html_erb___2359487405683891580_70297363904980 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/pitches/index.html.erb:6)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM(`tracks`.`pitch`) AS sum_pitch, `tracks`.`track_version` AS tracks_track_version FROM `tracks` GROUP BY `tracks`.`track_version`[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `tracks`.`track_number`, `tracks`.`pitch` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (22.6ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 90ms (Views: 65.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-18 15:19:04 +0200
+Processing by NamesController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `tracks`.`track_number` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 1 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 3 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 4 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 6 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 11 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 12 LIMIT 1[0m
+  Rendering names/index.html.erb within layouts/names
+  Rendered names/index.html.erb within layouts/names (0.7ms)
+Completed 200 OK in 55ms (Views: 48.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/names/1" for 127.0.0.1 at 2017-10-18 15:20:19 +0200
+Processing by NamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering names/show.html.erb within layouts/names
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE (track_number=1)[0m
+  Rendered names/show.html.erb within layouts/names (3.9ms)
+Completed 200 OK in 97ms (Views: 91.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:22:43 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.5ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 263ms (Views: 253.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-18 15:22:45 +0200
+Processing by NamesController#index as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/names_controller.rb:8)
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT DISTINCT `tracks`.`track_number` FROM `tracks`[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 1 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 3 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 4 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 6 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 11 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 12 LIMIT 1[0m
+  Rendering names/index.html.erb within layouts/names
+  Rendered names/index.html.erb within layouts/names (1.1ms)
+Completed 200 OK in 84ms (Views: 44.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/names/1" for 127.0.0.1 at 2017-10-18 15:22:47 +0200
+Processing by NamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering names/show.html.erb within layouts/names
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE (track_number=1)[0m
+  Rendered names/show.html.erb within layouts/names (4.0ms)
+Completed 200 OK in 65ms (Views: 59.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-18 15:22:51 +0200
+Processing by NamesController#index as HTML
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT DISTINCT `tracks`.`track_number` FROM `tracks`[0m
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 1 LIMIT 1[0m
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 3 LIMIT 1[0m
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 4 LIMIT 1[0m
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 6 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 11 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 12 LIMIT 1[0m
+  Rendering names/index.html.erb within layouts/names
+  Rendered names/index.html.erb within layouts/names (1.4ms)
+Completed 200 OK in 83ms (Views: 60.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:22:52 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 200 OK in 73ms (Views: 70.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:22:53 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (13.6ms)
+Completed 200 OK in 82ms (Views: 78.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:22:55 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 89ms (Views: 87.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-18 15:22:57 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM(`tracks`.`pitch`) AS sum_pitch, `tracks`.`track_version` AS tracks_track_version FROM `tracks` GROUP BY `tracks`.`track_version`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `tracks`.`track_number`, `tracks`.`pitch` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (12.6ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 68ms (Views: 65.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-18 15:23:00 +0200
+Processing by NamesController#index as HTML
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT DISTINCT `tracks`.`track_number` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 1 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 3 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 4 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 6 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 11 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 12 LIMIT 1[0m
+  Rendering names/index.html.erb within layouts/names
+  Rendered names/index.html.erb within layouts/names (1.5ms)
+Completed 200 OK in 72ms (Views: 63.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:23:03 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 70ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about/index" for 127.0.0.1 at 2017-10-18 15:23:04 +0200
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/public
+  Rendered about/index.html.erb within layouts/public (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 72ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-18 15:23:05 +0200
+Processing by NamesController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `tracks`.`track_number` FROM `tracks`[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 1 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 3 LIMIT 1[0m
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 4 LIMIT 1[0m
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 6 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 11 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 12 LIMIT 1[0m
+  Rendering names/index.html.erb within layouts/names
+  Rendered names/index.html.erb within layouts/names (1.4ms)
+Completed 200 OK in 74ms (Views: 64.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/names/1" for 127.0.0.1 at 2017-10-18 15:23:06 +0200
+Processing by NamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (1.1ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering names/show.html.erb within layouts/names
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE (track_number=1)[0m
+  Rendered names/show.html.erb within layouts/names (2.8ms)
+Completed 200 OK in 67ms (Views: 62.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:23:12 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 67ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:23:14 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (11.0ms)
+Completed 200 OK in 77ms (Views: 74.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:23:16 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pitches" for 127.0.0.1 at 2017-10-18 15:23:17 +0200
+Processing by PitchesController#index as HTML
+  Rendering pitches/index.html.erb within layouts/public
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM(`tracks`.`pitch`) AS sum_pitch, `tracks`.`track_version` AS tracks_track_version FROM `tracks` GROUP BY `tracks`.`track_version`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `tracks`.`track_number`, `tracks`.`pitch` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY pitch ASC[0m
+  Rendered pitches/index.html.erb within layouts/public (13.0ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 81ms (Views: 77.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-18 15:23:25 +0200
+Processing by NamesController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `tracks`.`track_number` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 1 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 3 LIMIT 1[0m
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 4 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 6 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 11 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 12 LIMIT 1[0m
+  Rendering names/index.html.erb within layouts/names
+  Rendered names/index.html.erb within layouts/names (1.3ms)
+Completed 200 OK in 82ms (Views: 72.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/names/4" for 127.0.0.1 at 2017-10-18 15:23:27 +0200
+Processing by NamesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 4 LIMIT 1[0m
+  Rendering names/show.html.erb within layouts/names
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE (track_number=4)[0m
+  Rendered names/show.html.erb within layouts/names (6.2ms)
+Completed 200 OK in 64ms (Views: 59.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:23:47 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-18 15:23:48 +0200
+Processing by NamesController#index as HTML
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT DISTINCT `tracks`.`track_number` FROM `tracks`[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 1 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 3 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 4 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 6 LIMIT 1[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 11 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 12 LIMIT 1[0m
+  Rendering names/index.html.erb within layouts/names
+  Rendered names/index.html.erb within layouts/names (1.2ms)
+Completed 200 OK in 65ms (Views: 56.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/names/1" for 127.0.0.1 at 2017-10-18 15:23:50 +0200
+Processing by NamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering names/show.html.erb within layouts/names
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE (track_number=1)[0m
+  Rendered names/show.html.erb within layouts/names (3.3ms)
+Completed 200 OK in 69ms (Views: 64.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:24:03 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.5ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 272ms (Views: 262.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-18 15:24:04 +0200
+Processing by NamesController#index as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/names_controller.rb:8)
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT DISTINCT `tracks`.`track_number` FROM `tracks`[0m
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 1 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 3 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 4 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 6 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 11 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 12 LIMIT 1[0m
+  Rendering names/index.html.erb within layouts/names
+  Rendered names/index.html.erb within layouts/names (0.8ms)
+Completed 200 OK in 89ms (Views: 48.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/names/1" for 127.0.0.1 at 2017-10-18 15:24:06 +0200
+Processing by NamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering names/show.html.erb within layouts/names
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE (track_number=1)[0m
+  Rendered names/show.html.erb within layouts/names (3.7ms)
+Completed 200 OK in 71ms (Views: 65.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:24:08 +0200
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 74ms (Views: 71.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:24:09 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (10.5ms)
+Completed 200 OK in 79ms (Views: 76.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:24:51 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.6ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 289ms (Views: 279.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/names" for 127.0.0.1 at 2017-10-18 15:24:54 +0200
+Processing by NamesController#index as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/controllers/names_controller.rb:8)
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT DISTINCT `tracks`.`track_number` FROM `tracks`[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 1 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 3 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 4 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 6 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 11 LIMIT 1[0m
+  [1m[36mTrack Load (0.2ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`track_number` = 12 LIMIT 1[0m
+  Rendering names/index.html.erb within layouts/names
+  Rendered names/index.html.erb within layouts/names (0.8ms)
+Completed 200 OK in 88ms (Views: 47.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/names/1" for 127.0.0.1 at 2017-10-18 15:24:55 +0200
+Processing by NamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  `tracks`.* FROM `tracks` WHERE `tracks`.`id` = 1 LIMIT 1[0m
+  Rendering names/show.html.erb within layouts/names
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` WHERE (track_number=1)[0m
+  Rendered names/show.html.erb within layouts/names (3.7ms)
+Completed 200 OK in 62ms (Views: 56.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:36:18 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.5ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 465ms (Views: 455.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:36:21 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_finished_dates_index_html_erb___4028357549350556108_70106635974100 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/finished_dates/index.html.erb:17)
+  Rendered finished_dates/index.html.erb within layouts/chronology (19.1ms)
+Completed 200 OK in 100ms (Views: 77.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:38:09 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 276ms (Views: 265.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:38:11 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_finished_dates_index_html_erb___4426430129957353340_70215445521460 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/finished_dates/index.html.erb:25)
+  Rendered finished_dates/index.html.erb within layouts/chronology (20.5ms)
+Completed 200 OK in 96ms (Views: 69.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:39:16 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.2ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 286ms (Views: 275.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:39:18 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_finished_dates_index_html_erb___211412771845414078_70198202539580 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/finished_dates/index.html.erb:25)
+  Rendered finished_dates/index.html.erb within layouts/chronology (19.1ms)
+Completed 200 OK in 94ms (Views: 66.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:40:28 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.1ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 270ms (Views: 260.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:40:29 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_finished_dates_index_html_erb___74971776796978884_70326402497340 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/finished_dates/index.html.erb:25)
+  Rendered finished_dates/index.html.erb within layouts/chronology (18.9ms)
+Completed 200 OK in 89ms (Views: 60.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 15:45:11 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendering public/index.html.erb within layouts/public
+  Rendered public/index.html.erb within layouts/public (1.7ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 365ms (Views: 354.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:45:13 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_finished_dates_index_html_erb___2160201164634331778_70213846037560 at /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/views/finished_dates/index.html.erb:25)
+  Rendered finished_dates/index.html.erb within layouts/chronology (21.9ms)
+Completed 200 OK in 90ms (Views: 66.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:46:51 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (8.0ms)
+Completed 200 OK in 173ms (Views: 171.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/finished_dates" for 127.0.0.1 at 2017-10-18 15:47:46 +0200
+Processing by FinishedDatesController#index as HTML
+  Rendering finished_dates/index.html.erb within layouts/chronology
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT `tracks`.* FROM `tracks` ORDER BY date_finished DESC[0m
+  Rendered finished_dates/index.html.erb within layouts/chronology (12.4ms)
+Completed 200 OK in 187ms (Views: 184.9ms | ActiveRecord: 0.3ms)
+
+
