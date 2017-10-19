@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
 
-  layout 'public'
+  layout 'locations'
 
   def index
     @tracks = Track.sorted_by_location
