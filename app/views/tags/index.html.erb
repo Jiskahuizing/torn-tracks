@@ -22,8 +22,8 @@
             <td><%= tag.name %></td>
             <td class="center"><%= tag.permalink %></td>
             <td class="center"><%= status_tag(tag.visible) %></td>
-            <td class="center"><%= tag.created_at %></td>
-            <td class="center"><%= tag.updated_at %></td>
+            <td class="center"><%= tag.created_at.strftime("%d %b %Y %H:%M") %></td>
+            <td class="center"><%= tag.updated_at.strftime("%d %b %Y %H:%M") %></td>
       <td class="actions">
         <%= link_to("Show", tag_path(tag.id), :class => 'action show') %>
         <%= link_to("Edit", edit_tag_path(tag), :class => 'action edit') %>

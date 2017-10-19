@@ -9,7 +9,7 @@
 
       <div data-card="<%= i %>" class="card">
         <div id="cardtitle">
-        <%= track.date_finished %>
+          <%= track.date_finished.strftime("%B %d, %Y") %>
         </div>
 
         <% if track.image.exists? %>
@@ -21,10 +21,11 @@
           <%= track.track_number %>
           <%= track.track_version %>
           <% if track.sound.exists? %>
-            <audio controls controlsList="nodownload" preload="none">
+            <div id="audiochronolgy"><audio controls controlsList="nodownload" preload="none">
                     <source src="<%= track.sound %>" type="audio/mpeg">
                       Your browser does not support the audio element.
                 </audio>
+            </div>
           <% end %>
         </span>
 

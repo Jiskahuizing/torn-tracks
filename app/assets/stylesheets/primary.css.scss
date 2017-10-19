@@ -197,6 +197,7 @@ a:active { color: $black; }
 #mainchronology {
     content : "";
     display: block;
+    overflow: hidden;
     background-color: $black;
     position: absolute;
     background-repeat: no-repeat;
@@ -217,12 +218,18 @@ a:active { color: $black; }
   color: $white;
 }
 
+#audiochronolgy {
+    align-self: right;
+    margin-left: 0;
+    margin-top: 5px;
+}
+
 /* MODAL */
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 11; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -234,7 +241,7 @@ a:active { color: $black; }
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: #e6ffe6;
+    background-color: #D5DED3;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
@@ -245,6 +252,7 @@ a:active { color: $black; }
 .close {
     color: #aaa;
     float: right;
+    width: 28px;
     font-size: 28px;
     font-weight: bold;
 }

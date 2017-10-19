@@ -34,18 +34,18 @@
       <td><%= track.name %></td>
       <td><%= track.track_number %></td>
       <td><%= track.track_version %></td>
-      <td class="center"><%= track.date_finished %></td>
+      <td class="center"><%= track.date_finished.strftime("%d %b %Y") %></td>
       <td class="center"><%= track.location_finished %></td>
       <td class="center"><%= track.latitude %></td>
       <td class="center"><%= track.longitude %></td>
       <td class="center"><%= track.pitch %></td>
-      <td class="center"><%= track.length %></td>
+      <td class="center"><%= track.length.strftime("%H:%M:%S") %></td>
       <td class="center"><%= track.permalink %></td>
       <td class="center"><%= status_tag(track.visible) %></td>
-      <td><%= track.sound %></td>
-      <td><%= track.image %></td>
-      <td class="center"><%= track.created_at %></td>
-      <td class="center"><%= track.updated_at %></td>
+      <td><%= track.sound_file_name %></td>
+      <td><%= track.image_file_name %></td>
+      <td class="center"><%= track.created_at.strftime("%d %b %Y %H:%M") %></td>
+      <td class="center"><%= track.updated_at.strftime("%d %b %Y %H:%M") %></td>
       <td class="actions">
         <%= link_to("Show", track_path(track.id), :class => 'action show') %>
         <%= link_to("Edit", edit_track_path(track), :class => 'action edit') %>
