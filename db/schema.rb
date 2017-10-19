@@ -78,6 +78,10 @@ ActiveRecord::Schema.define(version: 20171018125638) do
     t.string   "track_version"
     t.integer  "track_number"
     t.float    "pitch",              limit: 24
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.index ["name"], name: "index_tracks_on_name", using: :btree
     t.index ["permalink"], name: "index_tracks_on_permalink", using: :btree
   end

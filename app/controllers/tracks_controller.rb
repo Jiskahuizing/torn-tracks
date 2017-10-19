@@ -59,9 +59,9 @@ class TracksController < ApplicationController
 
   def track_params
     params.require(:track).permit(
-      :name, :date_finished, :location_finished,
-      :latitude, :longitude, :pitch, :length,
-      :permalink, :visible, :sound, :track_version, :track_number)
+      :name, :date_finished, :location_finished, :latitude, :longitude,
+      :pitch, :length, :permalink, :visible, :sound, :track_version,
+      :track_number, :image)
   end
 
 end
