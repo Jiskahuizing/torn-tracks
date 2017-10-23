@@ -65,4 +65,14 @@
       <td><%= f.file_field(:image) %></td>
       </tr>
 
+      <tr>
+        <th>Average Pitch</th>
+        <td><%= f.text_field(:average_pitch) %></td>
+      </tr>
+
+      <tr>
+        <th>Average Length</th>
+        <td><%= f.time_select(:length, :include_seconds => true, :order => [:hour, :minute, :second]) %></td>
+      </tr>
+
     </table>

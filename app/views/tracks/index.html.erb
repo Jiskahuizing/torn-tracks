@@ -25,6 +25,8 @@
       <th>Visible</th>
       <th>Sound Attachment</th>
       <th>Image</th>
+      <th>Average Pitch</th>
+      <th>Average Length</th>
       <th>Created</th>
       <th>Updated</th>
     </tr>
@@ -34,7 +36,7 @@
       <td><%= track.name %></td>
       <td><%= track.track_number %></td>
       <td><%= track.track_version %></td>
-      <td class="center"><%= track.date_finished.strftime("%d %b %Y") %></td>
+      <td><%= track.date_finished.strftime("%d %b %Y") %></td>
       <td class="center"><%= track.location_finished %></td>
       <td class="center"><%= track.latitude %></td>
       <td class="center"><%= track.longitude %></td>
@@ -44,6 +46,8 @@
       <td class="center"><%= status_tag(track.visible) %></td>
       <td><%= track.sound_file_name %></td>
       <td><%= track.image_file_name %></td>
+      <td class="center"><%= track.average_pitch %></td>
+      <td class="center"><%= track.average_length %></td>
       <td class="center"><%= track.created_at.strftime("%d %b %Y %H:%M") %></td>
       <td class="center"><%= track.updated_at.strftime("%d %b %Y %H:%M") %></td>
       <td class="actions">

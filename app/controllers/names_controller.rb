@@ -8,7 +8,6 @@ class NamesController < ApplicationController
     tracknumbers.each do |tn|
       @tracks.concat Track.where(track_number: tn.track_number).limit(1)
     end
-
   end
 
   def show
@@ -16,4 +15,8 @@ class NamesController < ApplicationController
     @tracks = Track.where("track_number=?", singletrack.track_number)
   end
 
+  @hash = Gmaps4rails.build_markers(@tracks) do |track, marker|
+    marker.lat track.latitude
+    marker.lng track.longitude
+  end
 end

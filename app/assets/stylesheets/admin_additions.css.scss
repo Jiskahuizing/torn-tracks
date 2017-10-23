@@ -3,8 +3,12 @@
 
 /* Structure */
 #content {
-  padding-left: 100px;
-  padding-right: 100px;
+  position: absolute;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 100px;
+  padding: 30px;
+  width: 90%;
   h2 {
     width: 100%;
     text-align: center;

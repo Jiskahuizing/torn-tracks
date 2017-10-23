@@ -61,7 +61,7 @@ class TracksController < ApplicationController
     params.require(:track).permit(
       :name, :date_finished, :location_finished, :latitude, :longitude,
       :pitch, :length, :permalink, :visible, :sound, :track_version,
-      :track_number, :image)
+      :track_number, :image, :average_pitch, :average_length)
   end
 
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171018125638) do
+ActiveRecord::Schema.define(version: 20171023115041) do
 
   create_table "admin_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "first_name",      limit: 25
@@ -82,6 +82,8 @@ ActiveRecord::Schema.define(version: 20171018125638) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.float    "average_pitch",      limit: 24
+    t.time     "average_length"
     t.index ["name"], name: "index_tracks_on_name", using: :btree
     t.index ["permalink"], name: "index_tracks_on_permalink", using: :btree
   end
