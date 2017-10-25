@@ -9,19 +9,24 @@
   <table class="listing" summary="Track list"
     <p><h3> Versions available: </h3></p><br>
 
+    <% avlen=0 %>
+    <% avpit=0 %>
+
     <% @tracks.each do |track| %>
 
       <tr>
         <ul>
           <%= track.name %><%= track.track_number %> <i><%= track.track_version %></i>
+          <% avlen+=track.length.to_i %>
+          <% avpit+=track.pitch %>
         </ul>
       </tr>
     <% end %>
   </table></p>
 <hr>
   <p>
-    <li>Average Length: ... min.</li>
-    <li>Average Pitch: ... Hz</li>
+    <li>Average Length: <%= Time.at(avlen/@tracks.size).utc.strftime("%M:%S")%> min.</li>
+    <li>Average Pitch: <%= (avpit/@tracks.size).round(2) %> Hz</li>
   </p>
 
   <p>&nbsp;</p>
