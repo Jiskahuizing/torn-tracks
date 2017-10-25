@@ -10,14 +10,12 @@
 
     <tr class="header">
       <th>Tracks</th>
-      <th>#</th>
       <th>Go to</th>
     </tr>
     <% @tracks.each do |track| %>
 
     <tr>
-      <td><%= track.name %></td>
-      <td><%= track.track_number %></td>
+      <td><%= track.name %><%= track.track_number %></td>
       <td><%= link_to "Show", name_path(track) %></td>
     </tr>
   <% end %>
