@@ -70,7 +70,7 @@
           return $('.card:first-child').appendTo('.container').hide();
         }).fadeIn(400, 'swing');
       };
-      timeline = setInterval(rotate, 1200);
+      timeline = setInterval(false);
       $('body').hover(function() {
         return clearInterval(timeline);
       });
@@ -78,19 +78,6 @@
         return rotate();
       });
     }).call(this);
-  </script>
-
-  <script type="text/javascript">
-    $(window).resize(function() {
-        if((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
-            $("html").css("overflow", "hidden");
-        } else {
-            $("html").css("overflow", "auto");
-        }
-    });
-    $(document).ready(function(){
-        $(window).resize();
-    });
   </script>
 
 </html>
