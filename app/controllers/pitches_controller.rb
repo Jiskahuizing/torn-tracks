@@ -1,6 +1,6 @@
 class PitchesController < ApplicationController
 
-  layout 'public'
+  layout 'pitch'
 
   def index
     @tracks = Track.sorted_by_pitch

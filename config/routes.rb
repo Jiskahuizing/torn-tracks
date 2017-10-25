@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   #Root route:
-  root :to => 'public#index'
+  root :to => 'frontpage#index'
 
   get 'show/:permalink', :to => 'public#show', :as => 'public_show'
 
@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   post 'access/attempt_login'
   get 'access/logout'
 
+  get 'public/index'
   get 'about/index'
+  get 'frontpage/index'
 
   resources :admin_users, :except => [:show] do
     member do
