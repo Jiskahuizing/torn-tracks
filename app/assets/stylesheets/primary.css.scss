@@ -224,7 +224,7 @@ a:active { color: $black; }
     content : "";
     display: block;
     overflow: hidden;
-    background: image-url('Names_03.jpg');
+    background: image-url('Fieldguide_01_web.jpg');
     position: absolute;
     background-repeat: no-repeat;
     width: 100%;
@@ -233,23 +233,42 @@ a:active { color: $black; }
     left: 0;
 }
 
-#contentnames {
-  padding-top: 40px;
-  margin-left: 550px;
-  width: 70%;
-  height: 100%;
-  color: $black;
+.wrappernames {
+  display: block;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  z-index: 0;
 }
-#contentnames h2 {
+
+#notebook {
+  display: inline-block;
+  position: absolute;
+  left: 25%;
+  z-index: 1;
+}
+
+#contentnames {
+  display: inline-block;
+  position: absolute;
+  left: 25%;
+  text-align: left;
+  margin: auto;
+  padding-top: 40px;
+  padding-left: 100px;
+  width: 400px;
   color: $black;
+  z-index: 2;
 }
 
 #contentnames2 {
-  padding-top: 1px;
-  margin-left: 400px;
-  width: 300px;
+  display: inline-block;
+  text-align: left;
+  padding-left: 380px;
+  width: 320px;
   height: 100%;
   color: $black;
+  z-index: 2;
 }
 
 /* CHRONOLOGY CSS */
