@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'contact/index'
+
   #Root route:
   root :to => 'frontpage#index'
 
