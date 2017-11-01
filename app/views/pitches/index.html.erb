@@ -2,12 +2,12 @@
 
 <div class="tracks index">
   <h1>The Tracks Sorted on Pitch</h1>
-  <!--Input: string + number-->
-  <!--<%= bar_chart Track.group(:track_version).sum(:pitch) %>-->
-  <!--Input: only numbers-->
-  <%= scatter_chart Track.pluck(:track_number, :pitch), xtitle: "Track Number", ytitle: "Pitch" %>
 
-  <p>&nbsp;</p>
+  <!--Input: only numbers-->
+  <%= scatter_chart Track.pluck(:track_number, :pitch), xtitle: "Track #",
+  ytitle: "Pitch", label: "Pitch" %>
+
+  <br>
 
   <table class="listing" summary="Track list"
 
@@ -32,5 +32,10 @@
     </tr>
   <% end %>
   </table>
+
+  <p>&nbsp;</p>
+
+  <!--Input: string + number-->
+  <!--<%= bar_chart Track.group(:track_version).sum(:pitch), label: "Pitch" %>-->
 
 </div>

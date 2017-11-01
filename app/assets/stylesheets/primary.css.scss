@@ -9,7 +9,7 @@ $dark_brown: #332318;
 $light_brown: #4C2516;
 $white: #FFFFFF;
 $black: #000000;
-$dark_green: #010800;
+$dark_green: #003300;
 
 $sans_serif: Verdana,Lucida,Arial,Helvetica,sans-serif;
 
@@ -120,14 +120,16 @@ a:active { color: $black; }
 
 #content {
   position: fixed;
-  margin-top: 100px;
+  margin-top: 75px;
   margin-left: 250px;
-  padding: 30px;
-  width: 60%;
+  padding: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
+  width: 55%;
   background: rgba(76, 175, 80, 0.6);
 }
 #content h2 {
-  color: $black;
+  color: $dark_green;
 }
 
 #frontpagemain {
@@ -162,12 +164,12 @@ a:active { color: $black; }
   position: fixed;
   left:0;
   bottom:0;
-  height: 40px;
+  height: 36px;
   width: 100%;
   text-align: left;
+  padding-top: 4px;
   background: $black;
   color: $white;
-  bottom:0;
 
   p {
     margin: 0;
@@ -200,6 +202,20 @@ a:active { color: $black; }
     display: block;
 }
 
+.playbutton {
+    background: rgba(0, 102, 0, 0.9);
+    border: none;
+    width: 12px;
+    text-align: center;
+    padding: 1px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 12px;
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
+}
+
 #button {
     background: rgba(76, 175, 80, 0.75);
     border: none;
@@ -224,7 +240,7 @@ a:active { color: $black; }
     content : "";
     display: block;
     overflow: hidden;
-    background: image-url('Names_03.jpg');
+    background: image-url('FieldGuide_1920.jpg');
     position: absolute;
     background-repeat: no-repeat;
     width: 100%;
@@ -233,23 +249,42 @@ a:active { color: $black; }
     left: 0;
 }
 
-#contentnames {
-  padding-top: 40px;
-  margin-left: 550px;
-  width: 70%;
-  height: 100%;
-  color: $black;
+.wrappernames {
+  display: block;
+  position: relative;
+  width: 100%;
+  bottom: 50px;
+  z-index: 0;
 }
-#contentnames h2 {
+
+#notebook {
+  display: inline-block;
+  position: absolute;
+  left: 25%;
+  z-index: 1;
+}
+
+#contentnames {
+  display: inline-block;
+  position: absolute;
+  left: 25%;
+  text-align: left;
+  margin: auto;
+  padding-top: 23px;
+  padding-left: 100px;
+  width: 400px;
   color: $black;
+  z-index: 2;
 }
 
 #contentnames2 {
-  padding-top: 1px;
-  margin-left: 400px;
-  width: 300px;
+  display: inline-block;
+  text-align: left;
+  padding-left: 380px;
+  width: 320px;
   height: 100%;
   color: $black;
+  z-index: 2;
 }
 
 /* CHRONOLOGY CSS */
@@ -300,7 +335,8 @@ a:active { color: $black; }
 #contentlocations {
   display: inline-block;
   position: absolute;
-  margin-left: 150px;
+  margin-top: -95px;
+  margin-left: 160px;
   margin-bottom: 100px;
   width: 80%;
 }
@@ -330,6 +366,7 @@ a:active { color: $black; }
 #contentpitch {
   display: inline-block;
   position: absolute;
+  margin-top: -120px;
   margin-left: 150px;
   margin-bottom: 100px;
   width: 80%;
@@ -356,17 +393,20 @@ a:active { color: $black; }
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: #D5DED3;
+    background-color: #cccccc;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     border: 1px solid #888;
-    width: 60%;
+    width: 55%;
 }
 
 /* The Close Button */
 .close {
     color: #aaa;
     float: right;
+    margin-right: -30px;
     width: 28px;
     font-size: 28px;
     font-weight: bold;

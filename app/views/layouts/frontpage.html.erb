@@ -2,10 +2,10 @@
 <html>
 
   <head>
-    <title>Torn Tracks<%= " | #{@track_title}" if @track_title %></title>
-    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBuB8PRIyrIrEfCXUp26YwksMEWkLL1orw"></script>
+    <title>Torn Tracks</title>
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBuB8PRIyrIrEfCXUp26YwksMEWkLL1orw async defer"></script>
     <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
-    <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- custom infoboxes -->
+    <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
     <%= stylesheet_link_tag('application', :media => 'all') %>
     <%= javascript_include_tag('application') %>
   </head>
@@ -22,7 +22,7 @@
 
       </div>
       <div id="footer">
-        <p id="copyright">&copy; jiskahuizing.com</p>
+        <p id="copyright">&copy; Jiska Huizing 2017</p>
       </div>
 
   </body>
