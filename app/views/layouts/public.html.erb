@@ -2,10 +2,7 @@
 <html>
 
   <head>
-    <title>Torn Tracks<%= " | #{@track_title}" if @track_title %></title>
-    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBuB8PRIyrIrEfCXUp26YwksMEWkLL1orw"></script>
-    <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
-    <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- custom infoboxes -->
+    <title>Torn Tracks</title>
     <%= stylesheet_link_tag('application', :media => 'all') %>
     <%= javascript_include_tag('application') %>
     <script> document.addEventListener('play', function(e){
