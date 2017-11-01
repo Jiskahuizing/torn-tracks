@@ -152,12 +152,12 @@
       internal: {id: 'custom_style'},
       provider: {
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        styles: mapStyle,
-        disableDefaultUI: true
+        styles: mapStyle
       }
     },
       function(){
       markers = handler.addMarkers(<%=raw @hash.to_json %>);
+
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
     });
