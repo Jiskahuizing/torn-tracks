@@ -12,8 +12,8 @@ class Track < ApplicationRecord
   scope :sorted_by_pitch, lambda { order("pitch ASC") }
   scope :sorted_by_location, lambda { order("location_finished ASC") }
 
-  #do_not_validate_attachment_file_type :sound
-  validates_attachment_content_type :sound, :content_type => ['audio/mp3',
+  do_not_validate_attachment_file_type :sound
+  #validates_attachment_content_type :sound, :content_type => ['audio/mp3',
     "audio/wav", "audio/mpeg", 'application/x-mp3'], :if => :sound?
 
   do_not_validate_attachment_file_type :image
