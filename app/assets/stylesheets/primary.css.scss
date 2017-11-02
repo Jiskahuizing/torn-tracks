@@ -20,7 +20,7 @@ html {
 
 body {
   width: 100%;
-  min-width: 980px;
+
   height: 100%;
   margin: 0;
   padding: 0;
@@ -135,7 +135,7 @@ a:active { color: $black; }
 #frontpagemain {
   content : "";
   display: block;
-  overflow: hidden;
+  overflow: auto;
   background: image-url('Frontpage_1920.jpg');
   position: absolute;
   background-repeat: no-repeat;
@@ -170,6 +170,7 @@ a:active { color: $black; }
   padding-top: 4px;
   background: $black;
   color: $white;
+  z-index: 11;
 
   p {
     margin: 0;
@@ -239,7 +240,7 @@ a:active { color: $black; }
 #mainnames {
     content : "";
     display: block;
-    overflow: hidden;
+    overflow: auto;
     background: image-url('FieldGuide_1920.jpg');
     position: absolute;
     background-repeat: no-repeat;
@@ -291,10 +292,9 @@ a:active { color: $black; }
 #mainchronology {
     content : "";
     display: block;
-    overflow: hidden;
+    overflow: auto;
     background-color: $black;
     position: absolute;
-    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     top: 0;
@@ -322,7 +322,7 @@ a:active { color: $black; }
 #mainlocations {
     content : "";
     display: block;
-    overflow: hidden;
+    overflow: auto;
     background: image-url('Public_1920.jpg');
     position: absolute;
     background-repeat: no-repeat;
@@ -355,7 +355,7 @@ a:active { color: $black; }
 #main:after {
     content : "";
     display: block;
-    overflow: hidden;
+    overflow: auto;
     position: absolute;
     width: 100%;
     height: 100%;
