@@ -1,0 +1,669 @@
+/* Primary stylesheet */
+/* Colors */
+/* line 17, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 22, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font: 14px Verdana, Lucida, Arial, Helvetica, sans-serif;
+  color: #000000;
+}
+
+/* line 31, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+p, td, ul, ol, li, dl, dt, dd {
+  font-family: Verdana, Lucida, Arial, Helvetica, sans-serif;
+}
+
+/* line 35, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+img {
+  border: none;
+}
+
+/* line 36, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
+/* line 42, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+table tr th, table tr td {
+  vertical-align: top;
+  text-align: left;
+  padding: 5px;
+}
+
+/* line 47, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+a, a:link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* line 48, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+a:visited {
+  color: #FFFFFF;
+}
+
+/* line 49, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+a:hover {
+  color: #000000;
+}
+
+/* line 50, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+a:active {
+  color: #000000;
+}
+
+/* line 52, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.clear {
+  clear: both;
+}
+
+/* line 53, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.center {
+  text-align: center;
+}
+
+/* Structure */
+/* line 57, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#header {
+  height: 0.5cm;
+  padding-top: 0.5cm;
+  text-align: center;
+  background: url(/assets/Header-246bfc7b89459bff568b7ce93ab9abaac1722a4c333cad62806a7bada350f709.jpg);
+  color: #FFFFFF;
+}
+/* line 64, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 67, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#main {
+  position: relative;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 74, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#main:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(/assets/Public_1920-5ac6bca611d517a11de612edcf4ee7059ff28bfc0362684a5200bddeae6d3d43.jpg);
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* line 88, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#navigation {
+  margin-top: 0px;
+  float: left;
+  width: 120px;
+  padding: 30px;
+  background: rgba(76, 175, 80, 0.6);
+  font: 14px Verdana, Lucida, Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+}
+/* line 97, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 101, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#navigation ul li {
+  margin-bottom: 0.5em;
+}
+/* line 104, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#navigation ul ul {
+  margin: 0.5em 0 0 0.5em;
+  font-size: 0.9em;
+}
+/* line 110, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#navigation a {
+  text-decoration: none;
+  padding: 1px 3px;
+}
+/* line 113, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#navigation a:hover {
+  background: #B6D491;
+}
+
+/* line 119, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#navigation h3 {
+  color: #000000;
+}
+
+/* line 123, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#content {
+  position: fixed;
+  overflow: auto;
+  margin-top: 75px;
+  margin-left: 250px;
+  padding: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
+  width: 55%;
+  background: rgba(76, 175, 80, 0.6);
+}
+
+/* line 134, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#content h2 {
+  color: #003300;
+}
+
+/* line 138, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#frontpagemain {
+  content: "";
+  display: block;
+  overflow: auto;
+  background: url(/assets/Frontpage_1920-5545be72abe44de4a826114a9310c811866fa713cf214049d39df533bad94992.jpg);
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* line 151, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#frontpagecontent {
+  position: fixed;
+  margin-top: 100px;
+  margin-left: 250px;
+  padding: 30px;
+  width: 70%;
+  height: 90%;
+}
+
+/* line 160, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#frontpagecontent {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* line 165, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#footer {
+  clear: both;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 36px;
+  width: 100%;
+  text-align: left;
+  padding-top: 4px;
+  background: #000000;
+  color: #FFFFFF;
+  z-index: 11;
+}
+/* line 178, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#footer p {
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+/* line 184, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.button {
+  background: rgba(76, 175, 80, 0.75);
+  border: none;
+  width: 70px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 20px;
+  font-size: 30px;
+  text-decoration: none;
+  display: block;
+}
+
+/* line 197, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.button2 {
+  background: rgba(102, 255, 102, 0.5);
+  border: none;
+  width: 180px;
+  text-align: center;
+  padding: 20px;
+  margin: 30px;
+  font-size: 25px;
+  text-decoration: none;
+  display: block;
+}
+
+/* line 209, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.playbutton {
+  background: rgba(0, 102, 0, 0.9);
+  border: none;
+  width: 12px;
+  text-align: center;
+  padding: 1px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  padding-right: 12px;
+  font-size: 12px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* line 223, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#button {
+  background: rgba(76, 175, 80, 0.75);
+  border: none;
+  width: 70px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 20px;
+  font-size: 30px;
+  color: #FFFFFF;
+  text-decoration: none;
+  display: block;
+}
+
+/* line 237, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.buttonwrapper {
+  display: inline-block;
+}
+
+/* NAMES CSS */
+/* line 243, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#mainnames {
+  content: "";
+  display: block;
+  overflow: auto;
+  background: url(/assets/FieldGuide_1920-b10cd0785b441ee64355b284bf226b43863e78ad89099ca1b096fdc2a59fdfd3.jpg);
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* line 256, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.wrappernames {
+  display: block;
+  position: relative;
+  width: 100%;
+  bottom: 50px;
+  z-index: 0;
+}
+
+/* line 264, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#notebook {
+  display: inline-block;
+  position: absolute;
+  left: 25%;
+  z-index: 1;
+}
+
+/* line 271, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#contentnames {
+  display: inline-block;
+  position: absolute;
+  left: 25%;
+  text-align: left;
+  margin: auto;
+  padding-top: 23px;
+  padding-left: 100px;
+  width: 400px;
+  color: #000000;
+  z-index: 2;
+}
+
+/* line 284, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#contentnames2 {
+  display: inline-block;
+  text-align: left;
+  padding-left: 380px;
+  width: 320px;
+  height: 100%;
+  color: #000000;
+  z-index: 2;
+}
+
+/* CHRONOLOGY CSS */
+/* line 295, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#mainchronology {
+  content: "";
+  display: block;
+  overflow: auto;
+  background-color: #000000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* line 307, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#contentchronology {
+  padding-top: 0px;
+  margin-left: 200px;
+  width: 70%;
+  height: 100%;
+  color: #FFFFFF;
+}
+
+/* line 314, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#contentchronology h2 {
+  color: #FFFFFF;
+}
+
+/* line 318, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#audiochronolgy {
+  align-self: right;
+  margin-left: 0;
+  margin-top: 5px;
+}
+
+/* CSS LOCATIONS */
+/* line 325, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#mainlocations {
+  content: "";
+  display: block;
+  overflow: auto;
+  background: url(/assets/Public_1920-5ac6bca611d517a11de612edcf4ee7059ff28bfc0362684a5200bddeae6d3d43.jpg);
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* line 338, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#contentlocations {
+  display: inline-block;
+  position: absolute;
+  margin-top: -95px;
+  margin-left: 160px;
+  margin-bottom: 100px;
+  width: 80%;
+}
+
+/* line 347, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#contentlocations h2 {
+  color: #000000;
+}
+
+/* CSS PITCH */
+/* line 352, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#main {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 358, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#main:after {
+  content: "";
+  display: block;
+  overflow: auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* line 369, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#contentpitch {
+  display: inline-block;
+  position: absolute;
+  margin-top: -120px;
+  margin-left: 150px;
+  margin-bottom: 100px;
+  width: 80%;
+}
+
+/* line 378, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#contentpitch h2 {
+  color: #000000;
+}
+
+/* MODAL */
+/* The Modal (background) */
+/* line 384, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  z-index: 11;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+/* line 398, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.modal-content {
+  background-color: #cccccc;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: 1px solid #888;
+  width: 55%;
+}
+
+/* The Close Button */
+/* line 409, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.close {
+  color: #aaa;
+  float: right;
+  margin-right: -30px;
+  width: 28px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* line 418, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 3D Card carousel */
+/* line 426, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.container {
+  position: relative;
+  width: 500px;
+  height: 440px;
+  margin: 100px auto;
+  color: #000000;
+}
+
+/* line 434, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #FFFFFF;
+  width: 500px;
+  height: 450px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform-origin: center;
+  transition: 0.4s cubic-bezier(0.28, 0.55, 0.385, 1.65);
+  cursor: pointer;
+}
+
+/* line 448, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.card:nth-child(1) {
+  z-index: 10;
+  top: 0px;
+  left: 0px;
+  transform-origin: top right;
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* line 457, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.card:nth-child(2) {
+  z-index: 9;
+  top: -20px;
+  left: 20px;
+  transform-origin: top right;
+  transform: scale(0.95);
+  opacity: 0.9;
+}
+
+/* line 466, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.card:nth-child(3) {
+  z-index: 8;
+  top: -40px;
+  left: 40px;
+  transform-origin: top right;
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+
+/* line 475, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.card:nth-child(4) {
+  z-index: 7;
+  top: -60px;
+  left: 60px;
+  transform-origin: top right;
+  transform: scale(0.85);
+  opacity: 0.7;
+}
+
+/* line 484, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.card:nth-child(5) {
+  z-index: 6;
+  top: -80px;
+  left: 80px;
+  transform-origin: top right;
+  transform: scale(0.8);
+  opacity: 0.6;
+}
+
+/* line 493, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.card:nth-child(6) {
+  z-index: 5;
+  top: -100px;
+  left: 100px;
+  transform-origin: top right;
+  transform: scale(0.75);
+  opacity: 0.5;
+}
+
+/* line 502, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.card:nth-child(7) {
+  z-index: 4;
+  top: -120px;
+  left: 120px;
+  transform-origin: top right;
+  transform: scale(0.7);
+  opacity: 0.4;
+}
+
+/* line 511, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.card:nth-child(8) {
+  z-index: 3;
+  top: -140px;
+  left: 140px;
+  transform-origin: top right;
+  transform: scale(0.65);
+  opacity: 0.3;
+}
+
+/* line 520, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.card:nth-child(9) {
+  z-index: 2;
+  top: -160px;
+  left: 160px;
+  transform-origin: top right;
+  transform: scale(0.6);
+  opacity: 0.2;
+}
+
+/* line 529, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.card:nth-child(10) {
+  z-index: 1;
+  top: -180px;
+  left: 180px;
+  transform-origin: top right;
+  transform: scale(0.55);
+  opacity: 0.1;
+}
+
+/* line 538, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.card:nth-child(11) {
+  z-index: 0;
+  top: -200px;
+  left: 200px;
+  transform-origin: top right;
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+/* line 547, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.card:first-child:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.02);
+}
+
+/* line 552, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+.card:last-child {
+  opacity: 0;
+}
+
+/* line 554, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+#cardtitle {
+  font-size: 16px;
+  padding: 5px;
+  padding-left: 10px;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+/* line 562, /Users/jiskahuizing/Sites/GitHub/torn-tracks/app/assets/stylesheets/primary.css.scss */
+span {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 5px;
+  padding-left: 10px;
+  height: 100%;
+  width: 100%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ */
+
