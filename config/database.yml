@@ -12,13 +12,8 @@ default: &default
 
 #bytt denne ut med sqlite3 også etterhvert
 development:
-  adapter: mysql2
-  encoding: utf8
-  pool: 5
-  username: rails_user
-  password: secretpassword
-  socket: /tmp/mysql.sock
-  database: torn_tracks_development
+  <<: *default
+  database: db/development.sqlite3
 
 #development:
 #  <<: *default
@@ -34,4 +29,3 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
-
