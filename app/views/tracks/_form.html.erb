@@ -21,6 +21,11 @@
       </tr>
 
       <tr>
+        <th>Length_Sec (Format: HH:MM:SS)</th>
+        <td><%= f.text_field(:length_sec) %></td>
+      </tr>
+
+      <tr>
         <th>Date</th>
         <td><%= f.date_select(:date_finished, :order => [:day, :month, :year]) %></td>
       </tr>

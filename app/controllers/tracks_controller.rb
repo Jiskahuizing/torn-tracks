@@ -19,6 +19,10 @@ class TracksController < ApplicationController
   def create
     # Instantiate a new object using form parameters
     @track = Track.new(track_params)
+    # Regne om fra HH:MM:SS til sekunder
+    string_sec=params[:track][:length_sec]
+    params[:track][:length_sec]=string_sec.split(':').inject(0){|a,m| a=a * 60 + m.to_i}
+
     # Save object
     if @track.save
       # If save succeeds: redirect to the index action
@@ -36,6 +40,10 @@ class TracksController < ApplicationController
 
   def update
     @track = Track.find(params[:id])
+    # Regne om fra HH:MM:SS til sekunder
+    string_sec=params[:track][:length_sec]
+    params[:track][:length_sec]=string_sec.split(':').inject(0){|a,m| a=a * 60 + m.to_i}
+
     if @track.update_attributes(track_params)
       redirect_to(track_path(@track))
       flash[:notice] = "Track '#{@track.name}' updated succesfully."
@@ -61,7 +69,7 @@ class TracksController < ApplicationController
     params.require(:track).permit(
       :name, :date_finished, :location_finished, :latitude, :longitude,
       :pitch, :length, :permalink, :visible, :sound, :track_version,
-      :track_number, :image, :average_pitch, :average_length)
+      :track_number, :image, :average_pitch, :average_length, :length_sec)
   end
 
 end

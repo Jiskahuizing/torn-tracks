@@ -1,0 +1,17 @@
+<%= link_to("<< Back to List", stops_path, :class => 'back-link') %>
+
+<div class="stops delete">
+  <h2>Delete Stop</h2>
+
+  <%= form_for(@stop, :method => 'delete') do |f| %>
+
+    <p>Are you sure you want to permanently delete this stop?</p>
+
+    <p class="reference-name"><%= f.object.stop_number %></p>
+
+    <div class="form-buttons">
+      <%= f.submit("Delete Stop") %>
+    </div>
+
+    <% end %>
+  </div>

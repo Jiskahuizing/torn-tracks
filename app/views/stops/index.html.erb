@@ -1,0 +1,34 @@
+<% @page_title = "All Stops" %>
+
+<%= link_to("<< Back to Admin Overview", admin_path, :class => 'back-link') %>
+
+<div class="stops index">
+  <h1>Stops</h1>
+
+  <%= link_to("Add New Stop", new_stop_path, :class => 'action new') %>
+
+  <p>&nbsp;</p>
+
+  <table class="listing" summary="Stop list"
+
+    <tr class="header">
+      <th>Stop Nr.</th>
+      <th>Time of stop</th>
+      <th>Track ID</th>
+    </tr>
+
+    <% @stops.each do |stop| %>
+    <tr>
+      <td><%= stop.stop_number %></td>
+      <td><%= stop.stop_time %></td>
+      <td><%= stop.id %></td>
+
+      <td class="actions">
+        <%= link_to("Show", stop_path(stop.id), :class => 'action show') %>
+        <%= link_to("Edit", edit_stop_path(stop), :class => 'action edit') %>
+        <%= link_to("Delete", delete_stop_path(stop), :class => 'action delete') %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+</div>

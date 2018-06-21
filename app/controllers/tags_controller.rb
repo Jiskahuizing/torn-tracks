@@ -37,7 +37,7 @@ class TagsController < ApplicationController
     @tag = Tag.find(params[:id])
     if @tag.update_attributes(tag_params)
       redirect_to(tag_path(@tag))
-      flash[:notice] = "Tage '#{@tag.name}' updated succesfully."
+      flash[:notice] = "Tag '#{@tag.name}' updated succesfully."
     else
       render('edit')
     end
