@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'contact/index'
-
   #Root route:
   root :to => 'frontpage#index'
 
@@ -15,6 +13,7 @@ Rails.application.routes.draw do
 
   get 'public/index'
   get 'about/index'
+  get 'contact/index'
   get 'frontpage/index'
 
   resources :admin_users, :except => [:show] do
@@ -24,6 +23,12 @@ Rails.application.routes.draw do
   end
 
   resources :tags do
+    member do
+      get :delete
+    end
+  end
+
+  resources :stops do
     member do
       get :delete
     end

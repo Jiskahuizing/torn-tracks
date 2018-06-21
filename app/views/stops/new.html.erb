@@ -1,0 +1,15 @@
+<%= link_to("<< Back to List", stops_path, :class => 'back-link') %>
+
+<div class="stops new">
+
+  <h2>Create Stop</h2>
+
+  <%= form_for(@stop) do |f| %>
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form_buttons">
+      <%= f.submit("Create Stop") %>
+    </div>
+  <% end %>
+
+</div>

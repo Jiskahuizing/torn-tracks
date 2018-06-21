@@ -1,0 +1,24 @@
+<%= link_to("<< Back to List", stops_path, :class => 'back-link') %>
+
+<div class="stops show">
+  <h2>Show Stop</h2>
+
+  <table summary="Stop detail view">
+
+    <tr>
+      <th>Stop Nr.</th>
+      <td><%= @stop.stop_number %></td>
+    </tr>
+
+    <tr>
+      <th>Time of Stop</th>
+      <td><%= @stop.stop_time %></td>
+    </tr>
+
+    <tr>
+      <th>Track ID</th>
+      <td><%= @stop.track_id %></td>
+    </tr>
+
+  </table>
+</div>

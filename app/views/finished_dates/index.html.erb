@@ -8,6 +8,9 @@
     <% @tracks.each_with_index do |track, i| %>
 
       <div data-card="<%= i %>" class="card">
+
+        <div class="clickarea">
+
         <div id="cardtitle">
           <%= track.date_finished.strftime("%B %d, %Y") %>
         </div>
@@ -20,14 +23,17 @@
           <%= track.name %>
           <%= track.track_number %>
           <%= track.track_version %>
+        </span>
+      </div>
+
           <% if track.sound.exists? %>
-            <div id="audiochronolgy"><audio controls controlsList="nodownload" preload="none">
+            <div id="audiochronolgy"><audio controls controlsList="nodownload" preload="metadata">
                     <source src="<%= track.sound %>" type="audio/mpeg">
                       Your browser does not support the audio element.
                 </audio>
             </div>
           <% end %>
-        </span>
+
 
       </div>
     <% end %>

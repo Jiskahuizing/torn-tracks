@@ -21,6 +21,7 @@
       <th>Longitude</th>
       <th>Pitch</th>
       <th>Length</th>
+      <th>Length_Sec</th>
       <th>Permalink</th>
       <th>Visible</th>
       <th>Sound Attachment</th>
@@ -42,6 +43,7 @@
       <td class="center"><%= track.longitude %></td>
       <td class="center"><%= track.pitch %></td>
       <td class="center"><%= track.length.strftime("%H:%M:%S") %></td>
+      <td class="center"><%= track.length_sec %></td>
       <td class="center"><%= track.permalink %></td>
       <td class="center"><%= status_tag(track.visible) %></td>
       <td><%= track.sound_file_name %></td>

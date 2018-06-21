@@ -1,0 +1,14 @@
+<%= link_to("<< Back to List", stops_path, :class => 'back-link') %>
+
+<div class="stops edit">
+  <h2>Update Stop</h2>
+
+  <%= form_for(@stop) do |f| %>
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form_buttons">
+      <%= f.submit("Update Stop") %>
+    </div>
+  <% end %>
+
+</div>
