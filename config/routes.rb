@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   #Root route:
   root :to => 'frontpage#index'
 
@@ -15,6 +16,7 @@ Rails.application.routes.draw do
   get 'about/index'
   get 'contact/index'
   get 'frontpage/index'
+  get 'stop_map/index'
 
   resources :admin_users, :except => [:show] do
     member do
