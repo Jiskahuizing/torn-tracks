@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181029114228) do
+ActiveRecord::Schema.define(version: 20181029210006) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "first_name",      limit: 25
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20181029114228) do
     t.integer "stop_number"
     t.integer "track_id"
     t.integer "stop_time"
+    t.string  "stop_title"
     t.index ["stop_number"], name: "index_stops_on_stop_number"
   end
 
