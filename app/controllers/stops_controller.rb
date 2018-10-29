@@ -57,7 +57,7 @@ end
 
 private
 def stop_params
-  params.require(:stop).permit(:stop_number, :stop_time, :track_id)
+  params.require(:stop).permit(:stop_number, :stop_time, :track_id, :stop_title)
 end
 
 end

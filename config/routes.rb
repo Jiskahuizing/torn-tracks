@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   get 'about/index'
   get 'contact/index'
   get 'frontpage/index'
-  get 'stop_map/index'
 
   resources :admin_users, :except => [:show] do
     member do
@@ -31,6 +30,12 @@ Rails.application.routes.draw do
   end
 
   resources :stops do
+    member do
+      get :delete
+    end
+  end
+
+  resources :stop_map do
     member do
       get :delete
     end

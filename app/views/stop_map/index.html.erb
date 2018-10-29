@@ -10,13 +10,14 @@
       <th>Tracks</th>
       <th> </th>
       <th> </th>
+      <th>Stop Nr.</th>
     </tr>
     <% @tracks.each do |track| %>
 
     <tr>
       <td><%= track.name %><%= track.track_number %></td>
       <td>&nbsp; &nbsp;</td>
-      <td><%= link_to "Show", name_path(track) %></td>
+      <td><%= link_to "Show", stop_map_path(track) %></td>
       <% track.stops.each do |stop| %>
       <td> <%= stop.stop_number %> </td>
       <% end %>
