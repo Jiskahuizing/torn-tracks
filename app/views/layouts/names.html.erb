@@ -2,6 +2,7 @@
 <html>
 
   <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <title>Torn Tracks Field Guide</title>
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBuB8PRIyrIrEfCXUp26YwksMEWkLL1orw"></script>
     <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
@@ -12,7 +13,8 @@
 
   <body>
 
-      <div id="mainnames">
+      <div class="page mainnames">
+        <div class="menu pitch">
           <button class="button"><%= link_to("<<", public_index_path) %></button>
           <button id="button">i</button>
 
@@ -30,10 +32,10 @@
             <p>&nbsp;</p>
           </div>
         </div>
-
+      </div>
     <div class="wrappernames">
 
-      <div id="contentnames">
+      <div class="section contentnames">
         <%= yield %>
       </div>
 
@@ -46,7 +48,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="footer">
+      <div class="content footer">
         <p id="copyright">&copy; Jiska Huizing 2018</p>
       </div>
 

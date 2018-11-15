@@ -2,6 +2,7 @@
 <html>
 
   <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <title>Torn Tracks</title>
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBuB8PRIyrIrEfCXUp26YwksMEWkLL1orw"></script>
     <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
@@ -19,17 +20,17 @@
 
   <body>
 
-      <div id="main">
+      <div class="page">
         <div id ="navigation">
           <%= render(:partial => 'layouts/navigation', :locals => { :tracks => @tracks}) %>
         </div>
 
-        <div id="content">
+        <div class="section content">
           <%= yield %>
         </div>
       </div>
 
-      <div id="footer">
+      <div class="section footer">
         <p id="copyright">&copy; Jiska Huizing 2018</p>
       </div>
 

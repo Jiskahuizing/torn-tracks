@@ -2,6 +2,7 @@
 <html>
 
   <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <title>Torn Tracks</title>
     <%= stylesheet_link_tag('application', :media => 'all') %>
     <%= javascript_include_tag('application') %>
@@ -9,16 +10,16 @@
 
   <body>
 
-      <div id="frontpagemain">
+      <div class="page frontpagemain">
         <button class="button2"><%= link_to("Torn Tracks", public_index_path) %></button>
 
 
-        <div id="frontpagecontent">
+        <div class="section content frontpage">
           <%= yield %>
         </div>
 
       </div>
-      <div id="footer">
+      <div class="section footer">
         <p id="copyright">&copy; Jiska Huizing 2018</p>
       </div>
 
