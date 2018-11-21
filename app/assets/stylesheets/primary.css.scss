@@ -64,67 +64,10 @@ a:active { color: $black; }
   top: 0px;
   left: 0px;
 }
-
+p {
+  margin-top: 20px;
+}
 /* Structure */
-
-#header {
-  height: 0.5cm;
-  padding-top: 0.5cm;
-  text-align: center;
-  background: image-url('Header.jpg');
-  color: $white;
-
-  h1 { margin: 0; padding: 0; }
-}
-
-#main {
-    content : "";
-    display: block;
-    overflow: auto;
-    top: 0;
-    left: 0;
-    background: image-url('Public_2_1920.jpg');
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-#navigation {
-  a, a:link { color: $white; text-decoration: none; }
-  a:visited { color: $white; }
-  margin-top: 0px;
-  float: left;
-  width: 120px;
-  padding: 30px;
-  background: rgba(76, 175, 80, 0.6);
-  font: 14px $sans_serif;
-  color: $white;
-
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      li {
-        margin-bottom: 0.5em;
-      }
-      ul {
-        margin: 0.5em 0 0 0.5em;
-        font-size: 0.9em;
-      }
-    }
-
-    a {
-      text-decoration: none;
-      padding: 1px 3px;
-      &:hover {
-        background: $light_green;
-      }
-    }
-}
-
-#navigation h3 {
-  color: $black;
-}
 
 span { //tja?
   display: inline-block;
@@ -146,7 +89,7 @@ span { //tja?
 
 .menu {
   display: inline-block;
-  width: 100px;
+  width: 170px;
   flex-basis:170px;
   a, a:link { color: $white; text-decoration: none; }
   a:visited { color: $white; }
@@ -162,7 +105,6 @@ span { //tja?
 .clear {
   width: 100%;
   height: 100px;
-  //background: rgba(76, 175, 80, 0.75);
 }
 
 .index {
@@ -174,6 +116,7 @@ span { //tja?
   justify-content: flex-start;
   align-items: flex-start;
   padding-left:20px;
+  padding-top:6px;
 }
 
 .isection {
@@ -230,50 +173,189 @@ span { //tja?
   }
 }
 
-/* MODAL */
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 11; /* Sit on top */
-    left: 0;
+/*individual views*/
+//admin
+#header { //admin
+  height: 0.5cm;
+  padding-top: 0.5cm;
+  text-align: center;
+  background: image-url('Header.jpg');
+  color: $white;
+
+  h1 { margin: 0; padding: 0; }
+}
+
+#main { //admin
+    content : "";
+    display: block;
+    overflow: auto;
     top: 0;
+    left: 0;
+    background: image-url('Public_2_1920.jpg');
+    position: absolute;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
-.modal-content {
-    background-color: #cccccc;
-    margin: 15% auto; /* 15% from the top and centered */
+#navigation {
+  a, a:link { color: $white; text-decoration: none; }
+  a:visited { color: $white; }
+  display: inline-block;
+  //margin-right: 70px;
+  width: 170px;
+
+  padding: 21px;
+  background: rgba(76, 175, 80, 0.6);
+  font: 14px $sans_serif;
+  color: $white;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-bottom: 0.5em;
+      }
+      ul {
+        margin: 0.5em 0 0 0.5em;
+        font-size: 0.9em;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      padding: 1px 3px;
+      &:hover {
+        background: $light_green;
+      }
+    }
+}
+
+#navigation h3 {
+  color: $black;
+  padding-bottom: 15px;
+}
+//Menupage
+.public {
+    background: image-url('Public_2_1920.jpg');
+    background-repeat:repeat-y;
+    background-size: cover;
+    height:100%;
+    overflow:scroll;
+}
+
+#publictext {
+  margin-left: 70px; //fjerne i mobile
+  padding: 50px; //fjerne i mobile
+  background: rgba(76, 175, 80, 0.6);
+  width: 90%;
+
+  a, a:link { color: $white; text-decoration: none;
+    &:hover {
+      background: $light_green;
+    }
+   }
+  a:visited { color: $white; }
+}
+
+//Frontpage
+.frontpagemain {
+  content : "";
+  display: block;
+  overflow: auto;
+  background: image-url('Frontpage_1920.jpg');
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.frontpagecontent {
+  position: fixed;
+  margin-top: 100px;
+  margin-left: 250px;
+  padding: 30px;
+  width: 70%;
+  height: 90%;
+  text-align: center;
+  color: $white;
+}
+
+.button2 {
+    background: rgba(102, 255, 102, 0.5);
+    border: none;
+    width: 180px;
+    text-align: center;
     padding: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-    border: 1px solid #888;
-    width: 55%;
-}
-
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    margin-right: -30px;
-    width: 28px;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
+    margin: 30px;
+    font-size: 25px;
     text-decoration: none;
-    cursor: pointer;
+    display: block;
+    a, a:link { color: $white; text-decoration: none; }
+    a:visited { color: $white; }
 }
 
-/*individual views*/
+//Chronology
+.mainchronology {
+    background-color: $black;
+}
+
+/* NAMES CSS */
+
+.mainnames {
+    content : "";
+    display: block;
+    overflow: auto;
+    background: image-url('FieldGuide_1920.jpg');
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.wrappernames {
+  display: block;
+  position: relative;
+  width: 100%;
+  bottom: 50px;
+  z-index: 0;
+}
+
+#notebook {
+  display: inline-block;
+  position: absolute;
+  left: 25%;
+  z-index: 1;
+}
+
+.contentnames {
+  display: inline-block;
+  position: absolute;
+  left: 25%;
+  text-align: left;
+  margin: auto;
+  padding-top: 53px;
+  padding-left: 100px;
+  width: 400px;
+  color: $black;
+  z-index: 2;
+}
+
+.contentnames2 {
+  display: inline-block;
+  text-align: left;
+  padding-left: 0px;
+  width: 320px;
+  height: 100%;
+  color: $black;
+  z-index: 2;
+}
+
+/* CSS PITCHES */
 .pitch {
     background: rgba(0, 102, 0, 0.07);
 }
@@ -287,7 +369,7 @@ span { //tja?
 /* CSS LOCATIONS */
 .locations {
     background: image-url('Public_1920.jpg');
-    background-repeat: no-repeat;
+    background-repeat:repeat-y;
 }
 
 /*audio styler*/
@@ -299,7 +381,7 @@ span { //tja?
 }
 
 .acwhite {
-  background-color: $white;
+  background-color: rgba(255, 255, 255, 0.5);;
 }
 
 /* Plyr Overrides
@@ -347,8 +429,8 @@ color:rgba(0,0,0,.1);
   top: 0;
   left: 0;
   background: #e6e6e6;
-  width: 500px;
-  height: 475px;
+  width: 100%;
+  height: 100%;
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transform-origin: center;
@@ -470,6 +552,50 @@ color:rgba(0,0,0,.1);
   color: $white;
 }
 
+
+/* MODAL */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 11; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #cccccc;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 1px solid #888;
+    width: 55%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    margin-right: -30px;
+    width: 28px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* media centric styles
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
@@ -480,6 +606,7 @@ color:rgba(0,0,0,.1);
     width: 100%;
     padding-top: 5px;
     padding-left: 15px;
+    overflow-x:hidden; //stoppe vertical scroll
   }
   .index {
     width: 100%;
@@ -488,6 +615,15 @@ color:rgba(0,0,0,.1);
   #custom_style { //locations map
      width: 90%;
      height: 650px;
+  }
+  #publictext {
+    margin-left: 0px;
+    padding: 10px;
+  }
+  .container {
+    position: relative;
+    width: 300px;
+    height: 350px;
   }
 }
 
@@ -507,6 +643,10 @@ color:rgba(0,0,0,.1);
   #custom_style { //locations map
      width: 90%;
      height: 650px;
+  }
+  #publictext {
+    margin-left: 0px;
+    padding: 10px;
   }
 }
 

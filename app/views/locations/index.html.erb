@@ -164,7 +164,7 @@
 <br>
 
 <div class="acontainer acwhite">
-  <p id="curraudiotitle">Now playing: Track #<%= @tracks.first.track_number %></p>
+  <div class="index">  <p id="curraudiotitle">Now playing: Track #<%= @tracks.first.track_number %></p> </div>
    <audio id="player" controls>
       <source src="<%= @tracks.first.sound %>" type="audio/mpeg">
         Your browser does not support the audio element.
