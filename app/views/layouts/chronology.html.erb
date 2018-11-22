@@ -2,6 +2,7 @@
 <html>
 
   <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <title>Torn Tracks Chronology</title>
     <%= stylesheet_link_tag('application', :media => 'all') %>
     <%= javascript_include_tag('application') %>
@@ -18,33 +19,34 @@
   </head>
 
   <body>
-    <div id="wrapper">
-      <div id="mainchronology">
-          <button class="button"><%= link_to_unless_current("<<", public_index_path) %></button>
+
+      <div class="page mainchronology">
+        <div class="menu">
+          <button class="button"><%= link_to("<<", public_index_path) %></button>
           <button id="button">i</button>
 
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>&nbsp;</p>
-            <p>This view shows the collection organised chronologically.</p>
-            <p>The date that is used to create this order is the date on which each
-            track was finished and exported to be added to the collection.</p>
-            <p>&nbsp;</p>
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>&nbsp;</p>
+              <p>This view shows the collection organised chronologically.</p>
+              <p>The date that is used to create this order is the date on which each
+              track was finished and exported to be added to the collection.</p>
+              <p>&nbsp;</p>
+            </div>
           </div>
         </div>
-
-        <div id="contentchronology">
+        <div class="content">
           <%= yield %>
         </div>
 
         <div class="clear"></div>
       </div>
 
-      <div id="footer">
+      <div class="footer">
         <p id="copyright">&copy; Jiska Huizing 2018</p>
       </div>
-    </div>
+
   </body>
 
   <script>

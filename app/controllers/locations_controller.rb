@@ -8,15 +8,9 @@ class LocationsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@tracks) do |track, marker|
       marker.lat track.latitude
       marker.lng track.longitude
-      marker.infowindow track.name + track.track_number.to_s + " " + track.track_version + " // " +
-      track.location_finished + "<br>" +
-
-      "<td><audio controls controlsList=\"nodownload\" preload=\"none\">
-              <source src=" + track.sound.to_s + " type=\"audio/mpeg\">
-                Your browser does not support the audio element.
-          </audio>
-      </td>"
-
+      marker.infowindow "<input class=\"newsound\" type=\"button\" value=\"play\" data-arglink="+track.sound.to_s+" data-argtitle="+track.track_number.to_s+" />
+      Track # "+track.track_number.to_s+"</a>"+ " " + track.track_version + " // " +
+      track.location_finished + "<br>"
     end
   end
 

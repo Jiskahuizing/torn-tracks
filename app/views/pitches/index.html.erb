@@ -1,41 +1,34 @@
 <% @page_title = "Pitches" %>
 
-<div class="tracks index">
-  <h1>The Tracks Sorted on Pitch</h1>
 
+  <h1>The Tracks Sorted on Pitch</h1>
+  <br>
   <!--Input: only numbers-->
   <%= scatter_chart Track.pluck(:track_number, :pitch), xtitle: "Track #",
-  ytitle: "Pitch", label: "Pitch" %>
+  ytitle: "Pitch", label: "Pitch", width: "100%"%>
 
   <br>
+  <div class="index">  <p id="curraudiotitle">Now playing: Track #<%= @tracks.first.track_number %></p> </div>
 
-  <table class="listing" summary="Track list"
-
-    <tr class="header">
-      <th>Pitch</th>
-    </tr>
-
+  <div class="acontainer">
+     <audio id="player" controls>
+        <source src="<%= @tracks.first.sound %>" type="audio/mpeg">
+          Your browser does not support the audio element.
+    </audio>
+  </div>
     <% @tracks.each do |track| %>
-    <tr>
-      <td><%= track.pitch %></td>
+    <div class="index">
       <% if track.sound.exists? %>
-        <td><audio controls controlsList="nodownload" preload="none">
-                <source src="<%= track.sound %>" type="audio/mpeg">
-                  Your browser does not support the audio element.
-            </audio>
-        </td>
-      <td>Track #<%= track.track_number %></td>
-      <td><%= track.track_version %></td>
-
+        <div class="isection">
+          <a href="#" class="newsound" data-arglink="<%= track.sound %>" data-argtitle="<%= track.track_number %>" role="button">
+          <%= image_tag(asset_path('468294.svg'),  alt: "play sound", class: "playerimage", width: "15px", align:"left", class:"icon")%>&nbsp;&nbsp;Track # <%= track.track_number %> </a></div>
+        <div class="isection"><%= track.track_version %></div>
+        <div class="isection">Pitch: <%= track.pitch %></div>
       <% end %>
-      </td>
-    </tr>
+    </div>
   <% end %>
-  </table>
 
   <p>&nbsp;</p>
 
   <!--Input: string + number-->
   <!--<%= bar_chart Track.group(:track_version).sum(:pitch), label: "Pitch" %>-->
-
-</div>

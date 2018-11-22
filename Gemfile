@@ -43,6 +43,9 @@ gem "paperclip", "~> 5.1.0"
 gem "chartkick"
 gem "gnuplot"
 
+# gem for html5 audio
+gem 'plyr-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -1,9 +1,7 @@
 <% @page_title = "Locations" %>
 
-<div class="tracks index">
-  <div style='width: 100%'>
-    <div id="custom_style" style='width: 100%; height: 650px;'></div>
-  </div>
+    <div id="custom_style"></div>
+    <div class="tracks index">
 
   <script>
   mapStyle = [
@@ -162,4 +160,13 @@
     });
   </script>
 
+</div>
+<br>
+
+<div class="acontainer acwhite">
+  <div class="index">  <p id="curraudiotitle">Now playing: Track #<%= @tracks.first.track_number %></p> </div>
+   <audio id="player" controls>
+      <source src="<%= @tracks.first.sound %>" type="audio/mpeg">
+        Your browser does not support the audio element.
+  </audio>
 </div>

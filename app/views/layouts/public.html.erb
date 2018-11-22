@@ -2,34 +2,31 @@
 <html>
 
   <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <title>Torn Tracks</title>
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBuB8PRIyrIrEfCXUp26YwksMEWkLL1orw"></script>
     <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
     <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
     <%= stylesheet_link_tag('application', :media => 'all') %>
     <%= javascript_include_tag('application') %>
-    <script> document.addEventListener('play', function(e){
-        var audios = document.getElementsByTagName('audio');
-        for(var i = 0, len = audios.length; i < len;i++){
-            if(audios[i] != e.target){
-                audios[i].pause();
-              }}},
-        true); </script>
   </head>
 
   <body>
 
-      <div id="main">
+      <div class="page public">
         <div id ="navigation">
           <%= render(:partial => 'layouts/navigation', :locals => { :tracks => @tracks}) %>
         </div>
 
-        <div id="content">
+        <div class="content">
+          <div id="publictext">
           <%= yield %>
+          </div>
         </div>
+        <div class="clear"></div>
       </div>
 
-      <div id="footer">
+      <div class="footer">
         <p id="copyright">&copy; Jiska Huizing 2018</p>
       </div>
 

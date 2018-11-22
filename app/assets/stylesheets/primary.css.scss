@@ -13,6 +13,13 @@ $dark_green: #003300;
 
 $sans_serif: Verdana,Lucida,Arial,Helvetica,sans-serif;
 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
   width: 100%;
@@ -43,17 +50,132 @@ table tr th, table tr td {
   text-align: left;
   padding: 5px;
 }
-a, a:link { color: $white; text-decoration: none; }
-a:visited { color: $white; }
+a, a:link { color: $green; text-decoration: none; }
+a:visited { color: $green; }
 a:hover { color: $black; }
 a:active { color: $black; }
 
 .clear { clear: both; }
 .center { text-align: center; }
 
+.icon {
+  position: relative;
+  /* Adjust these values accordingly */
+  top: 0px;
+  left: 0px;
+}
+p {
+  margin-top: 20px;
+}
 /* Structure */
 
-#header {
+span { //tja?
+  display: inline-block;
+  background: rgba(0, 0, 0, 0);
+  padding: 5px;
+  padding-left: 10px;
+
+  height: 100%;
+  width: 100%;
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  padding:5px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.menu {
+  display: inline-block;
+  width: 170px;
+  flex-basis:170px;
+  a, a:link { color: $white; text-decoration: none; }
+  a:visited { color: $white; }
+}
+
+.content {
+  width: 82%;
+  padding-top: 105px;  //fjern på mobile.
+  padding-right: 15px;
+  max-width: 900px;
+}
+
+.clear {
+  width: 100%;
+  height: 100px;
+}
+
+.index {
+  width: 82%;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left:20px;
+  padding-top:6px;
+}
+
+.isection {
+  width: 33%;
+  display: inline-block;
+  max-width: 300px;
+  min-width: 199px;
+  padding:2px;
+}
+
+.button {
+    background: rgba(76, 175, 80, 0.75);
+    border: none;
+    width: 70px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    display: block;
+}
+
+#button {
+    background: rgba(76, 175, 80, 0.75);
+    border: none;
+    width: 70px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 20px;
+    font-size: 30px;
+    color: $white;
+    text-decoration: none;
+    display: block;
+}
+
+.footer {
+  clear: both;
+  position: fixed;
+  left:0;
+  bottom:0;
+  height: 36px;
+  width: 100%;
+  text-align: left;
+  padding-top: 4px;
+  background: $black;
+  color: $white;
+  z-index: 11;
+
+  p {
+    margin: 0;
+    padding: 0.5em 1em;
+  }
+}
+
+/*individual views*/
+//admin
+#header { //admin
   height: 0.5cm;
   padding-top: 0.5cm;
   text-align: center;
@@ -63,7 +185,7 @@ a:active { color: $black; }
   h1 { margin: 0; padding: 0; }
 }
 
-#main {
+#main { //admin
     content : "";
     display: block;
     overflow: auto;
@@ -76,10 +198,13 @@ a:active { color: $black; }
 }
 
 #navigation {
-  margin-top: 0px;
-  float: left;
-  width: 120px;
-  padding: 30px;
+  a, a:link { color: $white; text-decoration: none; }
+  a:visited { color: $white; }
+  display: inline-block;
+  //margin-right: 70px;
+  width: 170px;
+
+  padding: 21px;
   background: rgba(76, 175, 80, 0.6);
   font: 14px $sans_serif;
   color: $white;
@@ -108,25 +233,33 @@ a:active { color: $black; }
 
 #navigation h3 {
   color: $black;
+  padding-bottom: 15px;
+}
+//Menupage
+.public {
+    background: image-url('Public_2_1920.jpg');
+    background-repeat:repeat-y;
+    background-size: cover;
+    height:100%;
+    overflow:scroll;
 }
 
-#content {
-  position: absolute;
-  overflow: auto;
-  margin-top: 75px;
-  margin-left: 250px;
-  margin-bottom: 100px;
-  padding: 20px;
-  padding-left: 60px;
-  padding-right: 60px;
-  width: 55%;
+#publictext {
+  margin-left: 70px; //fjerne i mobile
+  padding: 50px; //fjerne i mobile
   background: rgba(76, 175, 80, 0.6);
-}
-#content h2 {
-  color: $dark_green;
+  width: 90%;
+
+  a, a:link { color: $white; text-decoration: none;
+    &:hover {
+      background: $light_green;
+    }
+   }
+  a:visited { color: $white; }
 }
 
-#frontpagemain {
+//Frontpage
+.frontpagemain {
   content : "";
   display: block;
   overflow: auto;
@@ -139,50 +272,15 @@ a:active { color: $black; }
   left: 0;
 }
 
-#frontpagecontent {
+.frontpagecontent {
   position: fixed;
   margin-top: 100px;
   margin-left: 250px;
   padding: 30px;
   width: 70%;
   height: 90%;
-}
-
-#frontpagecontent {
   text-align: center;
   color: $white;
-}
-
-#footer {
-  clear: both;
-  position: fixed;
-  left:0;
-  bottom:0;
-  height: 36px;
-  width: 100%;
-  text-align: left;
-  padding-top: 4px;
-  background: $black;
-  color: $white;
-  z-index: 11;
-
-  p {
-    margin: 0;
-    padding: 0.5em 1em;
-  }
-}
-
-.button {
-    background: rgba(76, 175, 80, 0.75);
-    border: none;
-    width: 70px;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin: 20px;
-    font-size: 30px;
-    text-decoration: none;
-    display: block;
 }
 
 .button2 {
@@ -195,43 +293,18 @@ a:active { color: $black; }
     font-size: 25px;
     text-decoration: none;
     display: block;
+    a, a:link { color: $white; text-decoration: none; }
+    a:visited { color: $white; }
 }
 
-.playbutton {
-    background: rgba(0, 102, 0, 0.9);
-    border: none;
-    width: 12px;
-    text-align: center;
-    padding: 1px;
-    padding-bottom: 2px;
-    padding-left: 5px;
-    padding-right: 12px;
-    font-size: 12px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-#button {
-    background: rgba(76, 175, 80, 0.75);
-    border: none;
-    width: 70px;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin: 20px;
-    font-size: 30px;
-    color: $white;
-    text-decoration: none;
-    display: block;
-}
-
-.buttonwrapper {
-  display: inline-block;
+//Chronology
+.mainchronology {
+    background-color: $black;
 }
 
 /* NAMES CSS */
 
-#mainnames {
+.mainnames {
     content : "";
     display: block;
     overflow: auto;
@@ -259,153 +332,87 @@ a:active { color: $black; }
   z-index: 1;
 }
 
-#contentnames {
+.contentnames {
   display: inline-block;
   position: absolute;
   left: 25%;
   text-align: left;
   margin: auto;
-  padding-top: 23px;
+  padding-top: 53px;
   padding-left: 100px;
   width: 400px;
   color: $black;
   z-index: 2;
 }
 
-#contentnames2 {
+.contentnames2 {
   display: inline-block;
   text-align: left;
-  padding-left: 380px;
+  padding-left: 0px;
   width: 320px;
   height: 100%;
   color: $black;
   z-index: 2;
 }
 
-/* CHRONOLOGY CSS */
-#mainchronology {
-    content : "";
-    display: block;
-    overflow: auto;
-    background-color: $black;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+/* CSS PITCHES */
+.pitch {
+    background: rgba(0, 102, 0, 0.07);
 }
 
-#contentchronology {
-  padding-top: 0px;
-  margin-left: 200px;
-  width: 70%;
-  height: 100%;
-  color: $white;
-}
-#contentchronology h2 {
-  color: $white;
+#custom_style { //locations map
+   width: 100%;
+   height: 650px;
 }
 
-#audiochronolgy {
-    align-self: center;
-    margin-left: 5px;
-    margin-top: 5px;
-}
 
 /* CSS LOCATIONS */
-#mainlocations {
-    content : "";
-    display: block;
-    overflow: auto;
+.locations {
     background: image-url('Public_1920.jpg');
-    position: absolute;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+    background-repeat:repeat-y;
 }
 
-#contentlocations {
+/*audio styler*/
+.acontainer {
   display: inline-block;
-  position: absolute;
-  margin-top: -95px;
-  margin-left: 160px;
-  margin-bottom: 100px;
-  width: 80%;
+	margin: 2px auto;
+  width:100%;
+	max-width: 500px;
 }
 
-#contentlocations h2 {
-  color: $black;
+.acwhite {
+  background-color: rgba(255, 255, 255, 0.5);;
 }
 
-/* CSS PITCH */
-#mainpitch {
-    content : "";
-    display: block;
-    overflow: auto;
-    background: rgba(0, 102, 0, 0.07);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+/* Plyr Overrides
+================================================== */
+
+.plyr--audio .plyr__controls {
+background-color:transparent;
+border:none;
+color:#000;
+padding:20px 20px 20px 13px;
+width:100%;
 }
 
-#contentpitch {
-  display: inline-block;
-  position: absolute;
-  margin-top: -120px;
-  margin-left: 150px;
-  margin-bottom: 100px;
-  width: 80%;
+.plyr--audio .plyr__controls button.tab-focus:focus,
+.plyr--audio .plyr__controls button:hover,
+.plyr__play-large {
+background:rgba(0,0,0,.1);
 }
 
-#contentpitch h2 {
-  color: $black;
+.plyr__progress--played,
+.plyr__volume--display {
+color:rgba(0,0,0,.1);
 }
 
-/* MODAL */
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 11; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+.plyr--audio .plyr__progress--buffer,
+.plyr--audio .plyr__volume--display {
+background:rgba(0,0,0,.1);
 }
 
-/* Modal Content/Box */
-.modal-content {
-    background-color: #cccccc;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-    border: 1px solid #888;
-    width: 55%;
-}
-
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    margin-right: -30px;
-    width: 28px;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.plyr--audio .plyr__progress--buffer {
+color:rgba(0,0,0,.1);
 }
 
 /* 3D Card carousel */
@@ -422,8 +429,8 @@ a:active { color: $black; }
   top: 0;
   left: 0;
   background: #e6e6e6;
-  width: 500px;
-  height: 475px;
+  width: 100%;
+  height: 100%;
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transform-origin: center;
@@ -545,12 +552,110 @@ a:active { color: $black; }
   color: $white;
 }
 
-span {
-  display: inline-block;
-  background: rgba(0, 0, 0, 0);
-  padding: 5px;
-  padding-left: 10px;
 
-  height: 100%;
-  width: 100%;
+/* MODAL */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 11; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #cccccc;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 1px solid #888;
+    width: 55%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    margin-right: -30px;
+    width: 28px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* media centric styles
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  body {
+//    background-color: #F09A9D; /* Red test*/
+  }
+  .content {
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 15px;
+    overflow-x:hidden; //stoppe vertical scroll
+  }
+  .index {
+    width: 100%;
+    justify-content: center;
+  }
+  #custom_style { //locations map
+     width: 90%;
+     height: 650px;
+  }
+  #publictext {
+    margin-left: 0px;
+    padding: 10px;
+  }
+  .container {
+    position: relative;
+    width: 300px;
+    height: 350px;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 969px) {
+  body {
+    //background-color: #F5CF8E; /* Yellow test */
+  }
+  .content {
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 15px;
+  }
+  .index {
+    width: 100%;
+  }
+  #custom_style { //locations map
+     width: 90%;
+     height: 650px;
+  }
+  #publictext {
+    margin-left: 0px;
+    padding: 10px;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 970px) {
+  body {
+    //background-color: #B2D6FF; /* Blue test*/
+  }
+  .menu{
+
+  }
 }
