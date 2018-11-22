@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   #Root route:
   root :to => 'frontpage#index'
 
@@ -29,6 +30,12 @@ Rails.application.routes.draw do
   end
 
   resources :stops do
+    member do
+      get :delete
+    end
+  end
+
+  resources :stop_map do
     member do
       get :delete
     end
