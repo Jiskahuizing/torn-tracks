@@ -1,8 +1,8 @@
 class Track < ApplicationRecord
 
   has_and_belongs_to_many :tags
-  has_many :stops
-  
+  has_and_belongs_to_many :stops
+
   has_attached_file :sound
   has_attached_file :image
 

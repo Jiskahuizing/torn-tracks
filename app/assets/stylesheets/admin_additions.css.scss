@@ -2,16 +2,21 @@
 /* load after primary.css.scss */
 
 /* Structure */
-#content {
+
+.acontent {
   position: absolute;
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 100px;
   padding: 30px;
   width: 90%;
+  background: rgba(76, 175, 80, 0.6);
   h2 {
     width: 100%;
     text-align: center;
+  }
+  a {
+    color: #FFFFFF;
   }
 }
 
@@ -19,7 +24,7 @@
   margin: 100px 250px;
 }
 
-.menu {
+.amenu {
   .identity { text-align: center; }
   ul {
     margin: 3em 250px;
@@ -79,7 +84,7 @@ a.action.large {
   margin: 1em 0;
 }
 
-.index {
+.aindex {
   table {
     clear: both;
     width: 100%;
