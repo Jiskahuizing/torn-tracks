@@ -10,6 +10,7 @@ $light_brown: #4C2516;
 $white: #FFFFFF;
 $black: #000000;
 $dark_green: #003300;
+$very_light_blue:	#e6f2ff;
 
 $sans_serif: Verdana,Lucida,Arial,Helvetica,sans-serif;
 
@@ -344,6 +345,9 @@ span { //tja?
   width: 400px;
   color: $black;
   z-index: 2;
+  a, a:link { color: $very_light_blue; text-decoration: none; }
+  a:visited { color: $very_light_blue; }
+  a:hover { color: $black;}
 }
 
 .contentnames2 {
@@ -359,6 +363,7 @@ span { //tja?
 /* CSS PITCHES */
 .pitch {
     background: rgba(0, 102, 0, 0.07);
+    a, a:link { color: $black; text-decoration: none; }
 }
 
 #custom_style { //locations map
