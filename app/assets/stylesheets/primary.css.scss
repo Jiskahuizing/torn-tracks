@@ -10,6 +10,7 @@ $light_brown: #4C2516;
 $white: #FFFFFF;
 $black: #000000;
 $dark_green: #003300;
+$very_light_blue:	#e6f2ff;
 
 $sans_serif: Verdana,Lucida,Arial,Helvetica,sans-serif;
 
@@ -303,62 +304,78 @@ span { //tja?
     background-color: $black;
 }
 
-/* NAMES CSS */
+/* NAMES FIELDGUIDE CSS */
 
 .mainnames {
-    content : "";
-    display: block;
-    overflow: auto;
     background: image-url('FieldGuide_1920.jpg');
-    position: absolute;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
 }
 
 .wrappernames {
-  display: block;
-  position: relative;
-  width: 100%;
-  bottom: 50px;
-  z-index: 0;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#clearnote {
+  height: 70px;
 }
 
 #notebook {
-  display: inline-block;
-  position: absolute;
-  left: 25%;
+  //display:inline-block;
+  background: image-url('Notebook_1000.png');
+  background-repeat: no-repeat;
+  width: 1000px;
+  height: 839px;
+  //position: absolute;
+  //top: 70px;
+//  left: 15%;
+//  bottom:0;
   z-index: 1;
 }
 
 .contentnames {
-  display: inline-block;
-  position: absolute;
-  left: 25%;
+//  display: inline-block;
+//  position: absolute;
+//  left: 15%;
+  margin-top: 40px;
+//  bottom:0;
   text-align: left;
-  margin: auto;
-  padding-top: 53px;
-  padding-left: 100px;
+  margin-left: 130px;
   width: 400px;
+//  height:825px;
   color: $black;
   z-index: 2;
+  a, a:link { color: $very_light_blue; text-decoration: none; }
+  a:visited { color: $very_light_blue; }
+  a:hover { color: $black;}
 }
 
 .contentnames2 {
-  display: inline-block;
+//  display: inline-block;
+//  position: absolute;
+//  left: 15%;
+  margin-top: 10px;
+//  bottom:0;
   text-align: left;
-  padding-left: 0px;
-  width: 320px;
-  height: 100%;
+  margin-left: 540px;
+  width: 400px;
+//  height:780px;
   color: $black;
   z-index: 2;
+  a, a:link { color: $very_light_blue; text-decoration: none; }
+  a:visited { color: $very_light_blue; }
+  a:hover { color: $black;}
 }
 
 /* CSS PITCHES */
 .pitch {
     background: rgba(0, 102, 0, 0.07);
+    a, a:link { color: $black; text-decoration: none; }
 }
 
 #custom_style { //locations map
@@ -626,10 +643,27 @@ color:rgba(0,0,0,.1);
     width: 300px;
     height: 350px;
   }
+  .card:nth-child(-n+11) {left: 0px;}
+  #clearnote {
+    height: 0px;
+  }
+  #notebook { //names fieldnotes
+    background: image-url('Notepad_1200_crop.png');
+    width: 530px;
+    height: 1200px;
+  }
+  .contentnames {
+    margin-left: 60px;
+    margin-top: 87px;
+  }
+  .contentnames2 {
+    margin-left: 65px;
+    margin-top: 37px;
+  }
 }
 
 /* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 969px) {
+@media only screen and (min-width: 401px) and (max-width: 1069px) {
   body {
     //background-color: #F5CF8E; /* Yellow test */
   }
@@ -649,14 +683,36 @@ color:rgba(0,0,0,.1);
     margin-left: 0px;
     padding: 10px;
   }
+
+  #clearnote {
+    height: 0px;
+  }
+  #notebook { //names fieldnotes
+    background: image-url('Notepad_1200_mediumcrop.png');
+    width: 660px;
+    height: 964px;
+  }
+  .contentnames {
+    margin-left: 190px;
+    margin-top: 87px;
+  }
+  .contentnames2 {
+    margin-left: 190px;
+    margin-top: 37px;
+  }
+
 }
 
 /* Desktop Styles */
-@media only screen and (min-width: 970px) {
+@media only screen and (min-width: 1070px) {
   body {
     //background-color: #B2D6FF; /* Blue test*/
   }
   .menu{
 
+  }
+  .mainnames {
+      width: 100%;
+      height: 100%;
   }
 }

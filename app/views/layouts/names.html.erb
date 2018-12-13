@@ -34,21 +34,16 @@
         </div>
       </div>
     <div class="wrappernames">
-
-      <div class="content contentnames">
-        <%= yield %>
-      </div>
+      <div id="clearnote"></div>
 
       <div id="notebook">
-        <%= image_tag("Notebook_web_01.png", :height => "860", :width => "829") %>
+        <%= yield %>
       </div>
+    </div>
 
     </div>
 
-        <div class="clear"></div>
-      </div>
-
-      <div class="content footer">
+      <div class="footer">
         <p id="copyright">&copy; Jiska Huizing 2018</p>
       </div>
 
