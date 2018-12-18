@@ -1,7 +1,11 @@
 <table summary="Summary from fields">
+  <tr>
+    <th>Title of the stop</th>
+    <td><%= f.text_field(:stop_title) %></td>
+  </tr>
 
   <tr>
-    <th>Stop-track (sound of stop)</th>
+    <th>Stop-track (track/sound of stop)</th>
     <td><%= f.number_field(:stop_number) %></td>
   </tr>
 
@@ -14,5 +18,4 @@
     <th>Track ID (track containing this stop)</th>
     <td><%= f.number_field(:track_id) %></td>
   </tr>
-
 </table>

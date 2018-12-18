@@ -12,6 +12,7 @@
   <table class="listing" summary="Track list"
 
     <tr class="header">
+      <th>ID(in base)</th>
       <th>Track</th>
       <th>#</th>
       <th>Version</th>
@@ -30,10 +31,12 @@
       <th>Average Length</th>
       <th>Created</th>
       <th>Updated</th>
+      <th>Stops</th>
     </tr>
 
     <% @tracks.each do |track| %>
     <tr>
+      <td><%= track.id %></td>
       <td><%= track.name %></td>
       <td><%= track.track_number %></td>
       <td><%= track.track_version %></td>
@@ -52,6 +55,9 @@
       <td class="center"><%= track.average_length %></td>
       <td class="center"><%= track.created_at.strftime("%d %b %Y %H:%M") %></td>
       <td class="center"><%= track.updated_at.strftime("%d %b %Y %H:%M") %></td>
+      <td class="center"><% track.stops.each do |stop| %>
+        <%= stop.stop_number %>,
+        <% end %></td>
       <td class="actions">
         <%= link_to("Show", track_path(track.id), :class => 'action show') %>
         <%= link_to("Edit", edit_track_path(track), :class => 'action edit') %>

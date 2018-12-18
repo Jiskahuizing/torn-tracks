@@ -17,9 +17,16 @@ def new
 end
 
 def create
-  @stop = Stop.new(stop_params)
+
   # Save object
+  # Regne om fra HH:MM:SS til sekunder
+  string_sec=params[:stop][:stop_time]
+  params[:stop][:stop_time]=string_sec.split(':').inject(0){|a,m| a=a * 60 + m.to_i}
+  @stop = Stop.new(stop_params)
   if @stop.save
+    # legge stop inn i tilhørende track gjennom join
+    tracktostop=Track.find(params[:stop][:track_id])
+    tracktostop.stops << @stop
     redirect_to(stops_path)
   else
     render('new')
@@ -37,6 +44,9 @@ def update
   params[:stop][:stop_time]=string_sec.split(':').inject(0){|a,m| a=a * 60 + m.to_i}
 
   if @stop.update_attributes(stop_params)
+    # legge stop inn i tilhørende track gjennom join
+    tracktostop=Track.find(params[:stop][:track_id])
+    tracktostop.stops << @stop
     redirect_to(stop_path(@stop))
     flash[:notice] = "Stop '#{@stop.stop_number}' updated succesfully."
   else

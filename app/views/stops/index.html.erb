@@ -12,6 +12,7 @@
   <table class="listing" summary="Stop list"
 
     <tr class="header">
+      <th>Stop-title</th>
       <th>Stop-track (sound of stop)</th>
       <th>Time of stop</th>
       <th>Track ID (track containing this stop)</th>
@@ -19,6 +20,7 @@
 
     <% @stops.each do |stop| %>
     <tr>
+      <td><%= stop.stop_title %></td>
       <td><%= stop.stop_number %></td>
       <td><%= stop.stop_time %></td>
       <td><%= stop.track_id %></td>

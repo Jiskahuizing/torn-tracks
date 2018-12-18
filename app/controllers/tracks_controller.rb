@@ -63,6 +63,14 @@ class TracksController < ApplicationController
     flash[:notice] = "Track '#{@track.name}' destroyed succesfully."
   end
 
+  def stopdelete
+    @track = Track.find(params[:id])
+    @stop = @track.stops.find(params[:stop_id])
+    @track.stops.delete(@stop)
+    redirect_to(track_path(params[:id]))
+    flash[:notice] = "Trackstop destroyed succesfully."
+  end
+
   private
 
   def track_params

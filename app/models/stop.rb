@@ -1,6 +1,6 @@
 class Stop < ApplicationRecord
 
-  belongs_to :track
+  has_and_belongs_to_many :tracks
 
   scope :sorted, lambda { order("stop_number ASC") }
 

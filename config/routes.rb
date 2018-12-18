@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   get 'contact/index'
   get 'frontpage/index'
 
+  get 'track/:id/:stop_id', :to => 'tracks#stopdelete', :as => 'delete_stop_in_track'
+
   resources :admin_users, :except => [:show] do
     member do
       get :delete

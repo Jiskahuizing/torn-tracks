@@ -5,6 +5,11 @@
 
   <table summary="Track detail view">
     <tr>
+      <th>ID in base</th>
+      <td><%= @track.id %></td>
+    </tr>
+
+    <tr>
       <th>Name</th>
       <td><%= @track.name %></td>
     </tr>
@@ -93,6 +98,23 @@
       <th>Updated</th>
       <td><%= @track.updated_at %></td>
     </tr>
-  </table>
 
+  </table>
+  <table class="listing" summary="Stop list"
+
+    <tr class="header">
+      <th>title</th>
+      <th>Stop</th>
+      <th>Time</th>
+    </tr>
+
+    <% @track.stops.each do |stop| %>
+    <tr>
+      <td><%= stop.stop_title %></td>
+      <td><%= stop.stop_number %></td>
+      <td><%= stop.stop_time %></td>
+      <td><%= link_to("Delete", delete_stop_in_track_path(@track.id,stop.id)) %></td>
+    </tr>
+  <% end %>
+  </table>
 </div>

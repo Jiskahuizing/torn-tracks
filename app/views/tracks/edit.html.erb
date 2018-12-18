@@ -11,5 +11,21 @@
       <%= f.submit("Update Track") %>
     </div>
   <% end %>
+  <table class="listing" summary="Stop list"
 
+    <tr class="header">
+      <th>title</th>
+      <th>Stop</th>
+      <th>Time</th>
+    </tr>
+
+    <% @track.stops.each do |stop| %>
+    <tr>
+      <td><%= stop.stop_title %></td>
+      <td><%= stop.stop_number %></td>
+      <td><%= stop.stop_time %></td>
+      <td><%= link_to("Delete", delete_stop_in_track_path(@track.id,stop.id)) %></td>
+    </tr>
+  <% end %>
+  </table>
 </div>
