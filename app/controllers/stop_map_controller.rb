@@ -1,6 +1,6 @@
 class StopMapController < ApplicationController
 
-layout 'public'
+layout 'stopmap'
 
   def index
     @tracks=Array.new

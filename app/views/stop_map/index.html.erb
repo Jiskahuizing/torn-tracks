@@ -8,20 +8,31 @@
 
     <tr class="header">
       <th>Tracks</th>
-      <th> </th>
-      <th> </th>
       <th>Stop Nr.</th>
     </tr>
     <% @tracks.each do |track| %>
 
     <tr>
       <td><%= track.name %><%= track.track_number %></td>
-      <td>&nbsp; &nbsp;</td>
-      <td><%= link_to "Show", stop_map_path(track) %></td>
-      <% track.stops.each do |stop| %>
-      <td> <%= stop.stop_number %> </td>
+
+      <td> <% track.stops.each do |stop| %>
+      <%= stop.stop_number %>,
       <% end %>
-    </tr>
+    </td> </tr>
   <% end %>
   </table>
+   <div id="timeline2" style="width:200px;height: 450px;"></div>
+
 </div>
+    <% @tracks.each do |track| %>
+    <%= track.name %><%= track.track_number %>
+    <script>
+      var mySchedule = [
+    <% track.stops.each do |stop| %>
+{name:"<%= stop.stop_title %>", date: "2012-09-28T<%= Time.at(stop.stop_time).utc.strftime("%H:%M:%S") %>"},
+<% end %>
+];
+TimeKnots.draw("#timeline2", mySchedule, {horizontalLayout: false, color: "#669", height: 450, width:200, showLabels: true, labelFormat:"%H:%M"});
+
+</script>
+<% end %>

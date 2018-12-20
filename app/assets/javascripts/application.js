@@ -18,5 +18,6 @@
 //= require chartkick
 //= require turbolinks
 //= require plyr
-
+//= require d3
+//= require timeknots
 //= require_tree .
