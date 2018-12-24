@@ -1,38 +1,26 @@
 <div class="tracks aindex">
 
-  <p>&nbsp;</p>
-
-  <h2>Index</h2>
-
-  <table class="listing" summary="Track list"
-
-    <tr class="header">
-      <th>Tracks</th>
-      <th>Stop Nr.</th>
-    </tr>
+  <h2>Desire lines</h2>
     <% @tracks.each do |track| %>
-
-    <tr>
-      <td><%= track.name %><%= track.track_number %></td>
-
-      <td> <% track.stops.each do |stop| %>
-      <%= stop.stop_number %>,
-      <% end %>
-    </td> </tr>
-  <% end %>
-  </table>
-   <div id="timeline2" style="width:200px;height: 450px;"></div>
-
-</div>
-    <% @tracks.each do |track| %>
-    <%= track.name %><%= track.track_number %>
+   <div class="isection" id="knot<%= track.id %>" style="width:200px;height: 450px;"></div>
     <script>
       var mySchedule = [
+    {name:"<%= track.name %><%= track.track_number %>", value: 0, arglink:"<%= track.sound.to_s %>", argtitle:"<%= track.track_number.to_s %>" },
     <% track.stops.each do |stop| %>
-{name:"<%= stop.stop_title %>", date: "2012-09-28T<%= Time.at(stop.stop_time).utc.strftime("%H:%M:%S") %>"},
+{name:"<%= stop.stop_title %>", value: <%=stop.stop_time%>, arglink:"<%= @trackall.where('id = ?', stop.stop_number)[0].sound.to_s %>", argtitle:"<%= stop.stop_title %>"},
 <% end %>
+{name:"arrival", value: <%= track.length_sec %>, arglink:"<%= track.sound.to_s %>", argtitle:"<%= track.track_number.to_s %>"},
 ];
-TimeKnots.draw("#timeline2", mySchedule, {horizontalLayout: false, color: "#669", height: 450, width:200, showLabels: true, labelFormat:"%H:%M"});
+TimeKnots.draw("#knot<%= track.id %>", mySchedule, {dateDimension:false, horizontalLayout: false, color: "#669", height: 450, radius:15, width:200, showLabels: false, labelFormat:"%H:%M:%S"});
 
 </script>
 <% end %>
+</div>
+
+<div class="acontainer acwhite astop">
+  <div class="index">  <p id="curraudiotitle">Now playing: Track #<%= @tracks.first.track_number %></p> </div>
+   <audio id="player" controls>
+      <source src="<%= @tracks.first.sound %>" type="audio/mpeg">
+        Your browser does not support the audio element.
+  </audio>
+</div>

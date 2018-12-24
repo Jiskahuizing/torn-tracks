@@ -399,7 +399,11 @@ span { //tja?
 }
 
 .acwhite {
-  background-color: rgba(255, 255, 255, 0.5);;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.astop {
+  margin-left:90px;
 }
 
 /* Plyr Overrides
@@ -660,6 +664,9 @@ color:rgba(0,0,0,.1);
     margin-left: 65px;
     margin-top: 37px;
   }
+  .astop {
+    margin-left:0px;
+  }
 }
 
 /* Tablet Styles */
@@ -700,7 +707,9 @@ color:rgba(0,0,0,.1);
     margin-left: 190px;
     margin-top: 37px;
   }
-
+  .astop {
+    margin-left:0px;
+  }
 }
 
 /* Desktop Styles */

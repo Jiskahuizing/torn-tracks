@@ -9,6 +9,29 @@
     <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
     <%= stylesheet_link_tag('application', :media => 'all') %>
     <%= javascript_include_tag('application') %>
+    <script>
+      $(document).on("turbolinks:load", function() {
+         const player = new Plyr('#player');
+         $('.content').on('click', '.timeline-event', function(event) {
+           event.preventDefault();
+           var arglink = $(this).data('arglink');
+           var argtitle = $(this).data('argtitle');
+           player.source = {
+               type: 'audio',
+               title: argtitle,
+               sources: [
+                   {
+                       src: arglink,
+                       type: 'audio/mpeg',
+                   },
+               ],
+           };
+           document.getElementById("curraudiotitle").innerHTML = 'Now playing: Track # '+argtitle;
+           player.play();
+          })
+       });
+
+    </script>
   </head>
 
   <body>
