@@ -388,6 +388,9 @@ span { //tja?
 .locations {
     background: image-url('Public_1920.jpg');
     background-repeat:repeat-y;
+    background-size: cover;
+    height:100%;
+    overflow:scroll;
 }
 
 /*audio styler*/
