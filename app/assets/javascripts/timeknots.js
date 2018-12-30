@@ -15,7 +15,7 @@ var TimeKnots = {
       seriesColor: d3.scaleOrdinal(d3.schemeCategory20),
       dateDimension: true
     };
-
+    var leftpos=30;
 
     //default configuration overrid
     if(options != undefined){
@@ -70,7 +70,8 @@ var TimeKnots = {
                         ret = Math.floor(step*(datum - minValue) + margin)
                       }
                       else{
-                        ret = Math.floor(cfg.width/2)
+                        //ret = Math.floor(cfg.width/2)
+                        ret = leftpos
                       }
                       linePrevious.x1 = ret
                       return ret
@@ -83,7 +84,8 @@ var TimeKnots = {
                         var datum = (cfg.dateDimension)?new Date(d.date).getTime():d.value;
                         ret = Math.floor(step*(datum - minValue ))
                       }
-                      return Math.floor(cfg.width/2)
+                      //return Math.floor(cfg.width/2)
+                        ret = leftpos
                       })
     .attr("y1", function(d){
                       var ret;
@@ -155,7 +157,8 @@ var TimeKnots = {
           var x=  Math.floor(step*(datum - minValue) + margin);
           return x;
         }
-        return Math.floor(cfg.width/2)
+        //return Math.floor(cfg.width/2)
+        return leftpos
     }).on("click", function(d){
       //alert("click");
     }).on("mouseover", function(d){
@@ -193,14 +196,19 @@ var TimeKnots = {
     svg.selectAll("text")
     .data(events).enter()
     .append("text")
-       .text(function(d) { return d.value+" "+d.name; }).style("font-size", "100%")
+       .text(function(d) {
+         var time = new Date(d.value * 1000).toISOString().substr(11, 8).slice(3);
+         return time+" "+d.name; })
+       .style("font-size", "100%")
        .attr("y", function(d){
            var datum = (cfg.dateDimension)?new Date(d.date).getTime():d.value;
            return Math.floor(step*(datum - minValue) + margin)+5
        })
        .attr("x", function(d){
-           return Math.floor(cfg.width/2)+20
-       });
+           //return Math.floor(cfg.width/2)+20
+           return leftpos+20
+       })
+       .call(wrap, 150);
 
     //Adding start and end labels
     if(cfg.showLabels != false){
@@ -230,4 +238,37 @@ var TimeKnots = {
     return tip.style("top", (d3.event.pageY-tipPixels-margin)+"px").style("left",(d3.event.pageX+20)+"px");})
     .on("mouseout", function(){return tip.style("opacity", 0).style("top","0px").style("left","0px");});
   }
+}
+
+function wrap(text, width) {
+    text.each(function () {
+        var text = d3.select(this),
+            words = text.text().split(/\s+/).reverse(),
+            word,
+            line = [],
+            lineNumber = 0,
+            lineHeight = 1.1, // ems
+            x = text.attr("x"),
+            y = text.attr("y"),
+            dy = 0, //parseFloat(text.attr("dy")),
+            tspan = text.text(null)
+                        .append("tspan")
+                        .attr("x", x)
+                        .attr("y", y)
+                        .attr("dy", dy + "em");
+        while (word = words.pop()) {
+            line.push(word);
+            tspan.text(line.join(" "));
+            if (tspan.node().getComputedTextLength() > width) {
+                line.pop();
+                tspan.text(line.join(" "));
+                line = [word];
+                tspan = text.append("tspan")
+                            .attr("x", x)
+                            .attr("y", y)
+                            .attr("dy", ++lineNumber * lineHeight + dy + "em")
+                            .text(word);
+            }
+        }
+    });
 }
