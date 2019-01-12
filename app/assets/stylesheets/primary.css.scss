@@ -639,7 +639,7 @@ color:rgba(0,0,0,.1);
   }
   #custom_style { //locations map
      width: 90%;
-     height: 650px;
+     height: 450px;
   }
   #publictext {
     margin-left: 0px;
@@ -656,16 +656,19 @@ color:rgba(0,0,0,.1);
   }
   #notebook { //names fieldnotes
     background: image-url('Notepad_1200_crop.png');
-    width: 530px;
-    height: 1200px;
+    background-size: 370px 838px;
+    background-repeat: no-repeat;
+    width:370px;
+    overflow-x:hidden;
   }
+
   .contentnames {
     margin-left: 60px;
-    margin-top: 87px;
+    margin-top: 50px;
   }
   .contentnames2 {
     margin-left: 65px;
-    margin-top: 37px;
+    margin-top: 17px;
   }
   .astop {
     margin-left:0px;
@@ -681,19 +684,19 @@ color:rgba(0,0,0,.1);
     width: 100%;
     padding-top: 5px;
     padding-left: 15px;
+    overflow-x: hidden;
   }
   .index {
     width: 100%;
   }
   #custom_style { //locations map
      width: 90%;
-     height: 650px;
+     height: 450px;
   }
   #publictext {
     margin-left: 0px;
     padding: 10px;
   }
-
   #clearnote {
     height: 0px;
   }
