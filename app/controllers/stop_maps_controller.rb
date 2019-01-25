@@ -1,4 +1,4 @@
-class StopMapController < ApplicationController
+class StopMapsController < ApplicationController
 
 layout 'stopmap'
 
@@ -10,7 +10,5 @@ layout 'stopmap'
         @tracks.concat Track.where(id: tn.id)
       end
     end
-
-
   end
 end
