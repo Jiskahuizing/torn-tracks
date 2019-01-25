@@ -20,7 +20,7 @@ TimeKnots.draw("#knot<%= track.id %>", mySchedule, {dateDimension:false, horizon
 </div>
 
 <div class="acontainer acwhite astop">
-  <div class="index">  <p id="curraudiotitle">Now playing: Track #<%= @tracks.first.track_number %></p> </div>
+  <div class="index">  <p id="curraudiotitle">Playing: Track #<%= @tracks.first.track_number %></p> </div>
    <audio id="player" controls>
       <source src="<%= @tracks.first.sound %>" type="audio/mpeg">
         Your browser does not support the audio element.
