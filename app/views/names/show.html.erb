@@ -12,7 +12,7 @@
     <% avlen=0 %>
     <% avpit=0 %>
 
-  <ul id="playlist" style="list-style-type:none">
+    <p><ul id="playlist" style="list-style-type:none">
 
     <% @tracks.each do |track| %>
           <li><button class="playbutton"><%= link_to(">", track.sound.to_s) %></button>
@@ -21,22 +21,21 @@
           <% avlen+=track.length.to_i %>
           <% avpit+=track.pitch %>
     <% end %>
-  </ul>
+  </ul></p>
 
   <audio id="audio" controls controlsList="nodownload" preload="none">
       <source src="<%= @tracks[0].sound %>" type="audio/mpeg">
       Your browser does not support the audio element.
   </audio>
 
-<hr>
   <p>
     <li>Average Length: <%= Time.at(avlen/@tracks.size).utc.strftime("%M:%S")%> min.</li>
     <li>Average Pitch: <%= (avpit/@tracks.size).round(2) %> Hz</li></p>
 
 
 
-    <p>Where the tracks were made:<br>
-    <div style='width: 100%'>
+    <p>Where the tracks were made:</p>
+    <p><div style='width: 100%'>
     <div id="custom_style" style='width: 300px; height: 200px;'></div>
     </div>
 
