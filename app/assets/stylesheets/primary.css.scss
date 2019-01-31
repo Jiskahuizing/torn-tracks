@@ -31,7 +31,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font: 14px $sans_serif;
+  font: 13px $sans_serif;
   color: $black;
 }
 
@@ -203,11 +203,11 @@ span { //tja?
   a:visited { color: $white; }
   display: inline-block;
   //margin-right: 70px;
-  width: 170px;
+  width: 155px;
 
   padding: 21px;
   background: rgba(76, 175, 80, 0.6);
-  font: 14px $sans_serif;
+  font: 13px $sans_serif;
   color: $white;
 
     ul {
@@ -666,7 +666,7 @@ color:rgba(0,0,0,.1);
   }
   #custom_style { //locations map
      width: 90%;
-     height: 450px;
+     height: 400px;
   }
   #publictext {
     margin-left: 0px;
@@ -718,7 +718,7 @@ color:rgba(0,0,0,.1);
   }
   #custom_style { //locations map
      width: 90%;
-     height: 450px;
+     height: 400px;
   }
   #publictext {
     margin-left: 0px;
