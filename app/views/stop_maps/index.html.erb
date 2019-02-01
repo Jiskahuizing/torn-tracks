@@ -3,21 +3,31 @@
 <div class="tracks aindex">
 
   <h2>Sketch Maps</h2>
-    <% @tracks.each do |track| %>
-   <div class="isection" id="knot<%= track.id %>" style="width:200px;height: 450px;"></div>
-    <script>
-      var mySchedule = [
-    {name:"<%= track.name %><%= track.track_number %>", value: 0, arglink:"<%= track.sound.to_s %>", argtitle:"<%= track.track_number.to_s %>" },
-    <% track.stops.each do |stop| %>
-{name:"<%= stop.stop_title %>", value: <%=stop.stop_time%>, arglink:"<%= @trackall.where('id = ?', stop.stop_number)[0].sound.to_s %>", argtitle:"<%= stop.stop_title %>"},
-<% end %>
-{name:"arrival", value: <%= track.length_sec %>, arglink:"<%= track.sound.to_s %>", argtitle:"<%= track.track_number.to_s %>"},
-];
-TimeKnots.draw("#knot<%= track.id %>", mySchedule, {dateDimension:false, horizontalLayout: false, color: "#891", height: 470, radius:10, width:200, showLabels: false, labelFormat:"%H:%M:%S"});
 
-</script>
-<% end %>
-</div>
+<p>&nbsp;</p>
+
+  <% @tracks.each do |track| %>
+    <div class="isection" id="knot<%= track.id %>" style="width:200px;height: 450px;"></div>
+
+      <script>
+        var mySchedule = [
+        {name:"<%= track.name %><%= track.track_number %>", value: 0, arglink:"<%= track.sound.to_s %>",
+        argtitle:"<%= track.track_number.to_s %>" },
+        <% track.stops.each do |stop| %>
+        {name:"<%= stop.stop_title %>", value: <%=stop.stop_time%>, arglink:"<%= @trackall.where('id = ?', stop.stop_number)[0].sound.to_s %>", argtitle:"<%= stop.stop_title %>"},
+        <% end %>
+
+        {name:"end", value: <%= track.length_sec %>, arglink:"<%= track.sound.to_s %>",
+        argtitle:"<%= track.track_number.to_s %>"},
+        ];
+
+        TimeKnots.draw("#knot<%= track.id %>", mySchedule, {dateDimension:false, horizontalLayout: false,
+        color: "#034", height: 440, radius:10, width:200, showLabels: false, labelFormat:"%H:%M:%S", lineWidth: 2});
+      </script>
+    <% end %>
+  </div>
+
+<p>&nbsp;</p>
 
 <div class="acontainer acwhite astop">
   <div class="index">  <p id="curraudiotitle">Playing: Track #<%= @tracks.first.track_number %></p> </div>
