@@ -14,8 +14,7 @@
         {name:"<%= track.name %><%= track.track_number %>", value: 0, arglink:"<%= track.sound.to_s %>",
         argtitle:"<%= track.track_number.to_s %>" },
         <% track.stops.each do |stop| %>
-        {name:"<%= stop.stop_title %>", value: <%=stop.stop_time%>, arglink:"<%= @trackall.where('id = ?',
-        stop.stop_number)[0].sound.to_s %>", argtitle:"<%= stop.stop_title %>"},
+        {name:"<%= stop.stop_title %>", value: <%=stop.stop_time%>, arglink:"<%= @trackall.where('id = ?', stop.stop_number)[0].sound.to_s %>", argtitle:"<%= stop.stop_title %>"},
         <% end %>
 
         {name:"end", value: <%= track.length_sec %>, arglink:"<%= track.sound.to_s %>",
