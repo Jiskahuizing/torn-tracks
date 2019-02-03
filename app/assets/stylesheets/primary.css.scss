@@ -338,6 +338,8 @@ span { //tja?
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #clearnote {
@@ -657,7 +659,7 @@ color:rgba(0, 0, 0,.1);
 
 /* media centric styles
 /* Mobile Styles */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 645px) {
   body {
 //    background-color: #F09A9D; /* Red test*/
   }
@@ -665,7 +667,7 @@ color:rgba(0, 0, 0,.1);
     width: 100%;
     padding-top: 5px;
     padding-left: 15px;
-    overflow-x:hidden; //stoppe vertical scroll
+    overflow-x:hidden;
   }
   .index {
     width: 100%;
@@ -688,17 +690,18 @@ color:rgba(0, 0, 0,.1);
   #clearnote {
     height: 0px;
   }
+
   #notebook { //names fieldnotes
     background: image-url('Notepad_1200_crop.png');
     background-size: 370px 838px;
     background-repeat: no-repeat;
-    width:370px;
-    overflow-x:hidden;
+    overflow-x: hidden;
   }
 
   .contentnames {
     margin-left: 60px;
     margin-top: 50px;
+    //max-width: 100%;
   }
   .contentnames2 {
     margin-left: 65px;
@@ -710,7 +713,7 @@ color:rgba(0, 0, 0,.1);
 }
 
 /* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 1069px) {
+@media only screen and (min-width: 646px) and (max-width: 1180px) {
   body {
     //background-color: #F5CF8E; /* Yellow test */
   }
