@@ -11,14 +11,11 @@
 
       <script>
         var mySchedule = [
-        {name:"<%= track.name %><%= track.track_number %>", value: 0, arglink:"<%= track.sound.to_s %>",
-        argtitle:"<%= track.track_number.to_s %>" },
+        {name:"<%= track.name %><%= track.track_number %> <%= track.track_version %>", value: 0, arglink:"<%= track.sound.to_s %>", argtitle:"<%= track.track_number.to_s %>" },
         <% track.stops.each do |stop| %>
         {name:"<%= stop.stop_title %>", value: <%=stop.stop_time%>, arglink:"<%= @trackall.where('id = ?', stop.stop_number)[0].sound.to_s %>", argtitle:"<%= stop.stop_title %>"},
         <% end %>
-
-        {name:"end", value: <%= track.length_sec %>, arglink:"<%= track.sound.to_s %>",
-        argtitle:"<%= track.track_number.to_s %>"},
+        {name:"Arrival", value: <%= track.length_sec %>, arglink:"<%= track.sound.to_s %>", argtitle:"<%= track.track_number.to_s %>"},
         ];
 
         TimeKnots.draw("#knot<%= track.id %>", mySchedule, {dateDimension:false, horizontalLayout: false,
@@ -30,7 +27,7 @@
 <p>&nbsp;</p>
 
 <div class="acontainer acwhite astop">
-  <div class="index">  <p id="curraudiotitle">Playing: Track #<%= @tracks.first.track_number %></p> </div>
+  <div class="index">  <p id="curraudiotitle">Playing: Track #<%= @tracks.first.track_number %> <%= @tracks.first.track_version %></p> </div>
    <audio id="player" controls>
       <source src="<%= @tracks.first.sound %>" type="audio/mpeg">
         Your browser does not support the audio element.
