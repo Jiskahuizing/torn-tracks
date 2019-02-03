@@ -20,10 +20,10 @@
     <div class="index">
       <% if track.sound.exists? %>
         <div class="isection">
-          <a href="#" class="newsound" data-arglink="<%= track.sound %>" data-argtitle="<%= track.track_number %>" role="button">
-          <%= image_tag(asset_path('468294.svg'),  alt: "play sound", class: "playerimage", width: "15px", align:"left", class:"icon")%>&nbsp;&nbsp;Track # <%= track.track_number %> </a></div>
+          <a href="#" class="newsound" data-arglink="<%= track.sound %>" data-argtitle="<%= track.pitch %>" role="button">
+          <%= image_tag(asset_path('468294.svg'),  alt: "play sound", class: "playerimage", width: "15px", align:"left", class:"icon")%>&nbsp;&nbsp;Pitch: <%= track.pitch %> </a></div>
+        <div class="isection">Track # <%= track.track_number %></div>
         <div class="isection"><%= track.track_version %></div>
-        <div class="isection">Pitch: <%= track.pitch %></div>
       <% end %>
     </div>
   <% end %>
