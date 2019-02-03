@@ -26,8 +26,8 @@
 
 <p>&nbsp;</p>
 
-<div class="asketchcontainer asketchwhite asketchstop">
-  <div class="index">  <p id="sketchmapsaudio">Playing: Track #<%= @tracks.first.track_number %> <%= @tracks.first.track_version %></p> </div>
+<div class="acontainer astop">
+  <div class="index">  <p id="currentaudiotitle">Playing: Track #<%= @tracks.first.track_number %> <%= @tracks.first.track_version %></p> </div>
    <audio id="player" controls>
       <source src="<%= @tracks.first.sound %>" type="audio/mpeg">
         Your browser does not support the audio element.

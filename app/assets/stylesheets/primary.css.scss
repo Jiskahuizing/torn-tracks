@@ -421,71 +421,57 @@ span { //tja?
     overflow:scroll;
 }
 
-/*audio styler*/
+/*Audio styler*/
 .acontainer {
   display: inline-block;
 	margin: 2px auto;
   width:100%;
-	max-width: 450px;
+	max-width: 400px;
 }
 
 .acwhite {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/*Used in Locations*/
+.acgreen {
+  background-color: rgba(217, 255, 179, 0.4);
 }
 
 .astop {
   margin-left:90px;
 }
 
-/*audio styler for Sketch Maps*/
-.asketchcontainer {
-  display: inline-block;
-	margin: 2px auto;
-  width:100%;
-	max-width: 450px;
-}
 
-.asketchwhite {
-  background-color: rgba(255, 255, 255, 0);
-}
 
-.asketchstop {
-  margin-left:90px;
-}
 
-#sketchmapsaudio {
-  color: $dark_blue;
-}
-
-/* Plyr Overrides
+/* PLYR OVERRIDES
 ================================================== */
-
 .plyr--audio .plyr__controls {
 background: transparent;
 border:none;
-color:#034;
-padding:20px 20px 20px 13px;
+color:#000;
+padding:10px 10px 10px 13px;
 width:100%;
 }
 
 .plyr--audio .plyr__controls button.tab-focus:focus,
 .plyr--audio .plyr__controls button:hover,
 .plyr__play-large {
-background:rgba(0, 51, 68,.2);
+background:rgba(0, 0, 0,.1);
 }
 
 .plyr__progress--played,
 .plyr__volume--display {
-color:rgba(0, 51, 68,.8);
+color:rgba(0, 0, 0,.1);
 }
 
 .plyr--audio .plyr__progress--buffer,
 .plyr--audio .plyr__volume--display {
-background:rgba(0, 51, 68,.2);
+background:rgba(0, 0, 0,.1);
 }
 
 .plyr--audio .plyr__progress--buffer {
-color:rgba(0, 51, 68,.6);
+color:rgba(0, 0, 0,.1);
 }
 
 /* 3D Card carousel */
