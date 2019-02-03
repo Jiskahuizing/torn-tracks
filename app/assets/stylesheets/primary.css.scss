@@ -103,12 +103,17 @@ span { //tja?
   padding-right: 15px;
   max-width: 900px;
 }
-
 .contentlocations {
   width: 82%;
   padding-top: 105px;
   padding-right: 15px;
   max-width: 1000px;
+}
+.contentsketchmaps {
+  width: 82%;
+  padding-top: 50px;  //fjern på mobile.
+  padding-right: 15px;
+  max-width: 900px;
 }
 
 .clear {
