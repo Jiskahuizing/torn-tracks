@@ -37,12 +37,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :stop_map do
-    member do
-      get :delete
-    end
-  end
-
   resources :tracks do
     member do
       get :delete
@@ -68,6 +62,12 @@ Rails.application.routes.draw do
   end
 
   resources :pitches do
+    member do
+      get :delete
+    end
+  end
+
+  resources :stop_maps do
     member do
       get :delete
     end

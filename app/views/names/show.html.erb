@@ -27,8 +27,6 @@
       <source src="<%= @tracks[0].sound %>" type="audio/mpeg">
       Your browser does not support the audio element.
   </audio>
-
-<hr>
   <p>
     <li>Average Length: <%= Time.at(avlen/@tracks.size).utc.strftime("%M:%S")%> min.</li>
     <li>Average Pitch: <%= (avpit/@tracks.size).round(2) %> Hz</li></p>
