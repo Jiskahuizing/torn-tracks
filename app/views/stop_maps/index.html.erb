@@ -1,6 +1,8 @@
-<div class="tracks aindex">
+<% @page_title = "Sketch Maps" %>
 
-  <h2>Desire lines</h2>
+<div class="tracks aindex">
+  <h2>Sketch Maps</h2>
+  <p>&nbsp;</p>
     <% @tracks.each do |track| %>
    <div class="isection" id="knot<%= track.id %>" style="width:200px;height: 450px;"></div>
     <script>
@@ -11,12 +13,12 @@
 <% end %>
 {name:"arrival", value: <%= track.length_sec %>, arglink:"<%= track.sound.to_s %>", argtitle:"<%= track.track_number.to_s %>"},
 ];
-TimeKnots.draw("#knot<%= track.id %>", mySchedule, {dateDimension:false, horizontalLayout: false, color: "#891", height: 470, radius:10, width:200, showLabels: false, labelFormat:"%H:%M:%S"});
+TimeKnots.draw("#knot<%= track.id %>", mySchedule, {dateDimension:false, horizontalLayout: false, color: "#114", lineWidth:2, height: 470, radius:10, width:200, showLabels: false, labelFormat:"%H:%M:%S"});
 
 </script>
 <% end %>
 </div>
-
+  <p>&nbsp;</p>
 <div class="acontainer acwhite astop">
   <div class="index">  <p id="curraudiotitle">Now playing: Track #<%= @tracks.first.track_number %></p> </div>
    <audio id="player" controls>

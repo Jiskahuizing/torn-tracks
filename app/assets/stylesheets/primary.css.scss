@@ -304,6 +304,29 @@ span { //tja?
     background-color: $black;
 }
 
+/* CSS SKETCH MAPS */
+.sketchmaps {
+    background: image-url('Sketchmaps_1920.jpg');
+    background-repeat:repeat-y;
+    background-size: cover;
+    height:100%;
+    overflow:scroll;
+}
+
+#sketchmapstext {
+  margin-left: 70px; //fjerne i mobile
+  padding: 50px; //fjerne i mobile
+  background: rgba(204, 255, 255, 0);
+  width: 90%;
+
+   a, a:link { color: $white; text-decoration: none;
+    &:hover {
+      background: $light_green;
+    }
+   }
+  a:visited { color: $white; }
+}
+
 /* NAMES FIELDGUIDE CSS */
 
 .mainnames {
