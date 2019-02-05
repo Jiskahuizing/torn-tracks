@@ -31,7 +31,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font: 14px $sans_serif;
+  font: 13px $sans_serif;
   color: $black;
 }
 
@@ -84,6 +84,13 @@ span { //tja?
   display: flex;
   flex-wrap: wrap;
   padding:5px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.namespage {
+  display: flex;
+  flex-wrap: wrap;
+  //padding: 5px;
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -345,6 +352,8 @@ span { //tja?
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #clearnote {
@@ -680,10 +689,21 @@ color:rgba(0,0,0,.1);
   #clearnote {
     height: 0px;
   }
+  .wrappernames {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: 0;
+    margin-right: auto;
+    overflow-x: hidden;
+  }
   #notebook { //names fieldnotes
-    background: image-url('Notepad_1200_crop.png');
-    width: 530px;
-    height: 1200px;
+    background: image-url('Notepad_380.png');
+    width: 380px;
+    height: 889px;
   }
   .contentnames {
     margin-left: 60px;
@@ -699,7 +719,7 @@ color:rgba(0,0,0,.1);
 }
 
 /* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 1069px) {
+@media only screen and (min-width: 401px) and (max-width: 1169px) {
   body {
     //background-color: #F5CF8E; /* Yellow test */
   }
@@ -723,6 +743,17 @@ color:rgba(0,0,0,.1);
   #clearnote {
     height: 0px;
   }
+  .wrappernames {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+  }
   #notebook { //names fieldnotes
     background: image-url('Notepad_1200_mediumcrop.png');
     width: 660px;
@@ -742,7 +773,7 @@ color:rgba(0,0,0,.1);
 }
 
 /* Desktop Styles */
-@media only screen and (min-width: 1070px) {
+@media only screen and (min-width: 1170px) and (max-height: 1280px) {
   body {
     //background-color: #B2D6FF; /* Blue test*/
   }
@@ -752,5 +783,21 @@ color:rgba(0,0,0,.1);
   .mainnames {
       width: 100%;
       height: 100%;
+  }
+}
+
+/* Desktop Styles over height: 1280px */
+@media only screen and (min-height: 1281px) {
+  body {
+    //background-color: #B2D6FF; /* Blue test*/
+  }
+  .menu{
+
+  }
+  .mainnames {
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
   }
 }
