@@ -7,13 +7,13 @@
    <div class="isection" id="knot<%= track.id %>" style="width:200px;height: 450px;"></div>
     <script>
       var mySchedule = [
-    {name:"<%= track.name %><%= track.track_number %>", value: 0, arglink:"<%= track.sound.to_s %>", argtitle:"<%= track.track_number.to_s %>" },
+    {name:"<%= track.name %><%= track.track_number %> <%= track.track_version %>", value: 0, arglink:"<%= track.sound.to_s %>", argtitle:"<%= track.track_number.to_s %>" },
     <% track.stops.each do |stop| %>
 {name:"<%= stop.stop_title %>", value: <%=stop.stop_time%>, arglink:"<%= @trackall.where('id = ?', stop.stop_number)[0].sound.to_s %>", argtitle:"<%= stop.stop_title %>"},
 <% end %>
 {name:"arrival", value: <%= track.length_sec %>, arglink:"<%= track.sound.to_s %>", argtitle:"<%= track.track_number.to_s %>"},
 ];
-TimeKnots.draw("#knot<%= track.id %>", mySchedule, {dateDimension:false, horizontalLayout: false, color: "#114", lineWidth:2, height: 470, radius:10, width:200, showLabels: false, labelFormat:"%H:%M:%S"});
+TimeKnots.draw("#knot<%= track.id %>", mySchedule, {dateDimension:false, horizontalLayout: false, color: "#164", lineWidth:2, height: 470, radius:10, width:200, showLabels: false, labelFormat:"%H:%M:%S"});
 
 </script>
 <% end %>
