@@ -13,7 +13,7 @@
 <% end %>
 {name:"arrival", value: <%= track.length_sec %>, arglink:"<%= track.sound.to_s %>", argtitle:"<%= track.track_number.to_s %>"},
 ];
-TimeKnots.draw("#knot<%= track.id %>", mySchedule, {dateDimension:false, horizontalLayout: false, color: "#164", lineWidth:2, height: 470, radius:10, width:200, showLabels: false, labelFormat:"%H:%M:%S"});
+TimeKnots.draw("#knot<%= track.id %>", mySchedule, {dateDimension:false, horizontalLayout: false, color: "darkgoldenrod", lineWidth:2, height: 470, radius:10, width:200, showLabels: false, labelFormat:"%H:%M:%S"});
 
 </script>
 <% end %>
