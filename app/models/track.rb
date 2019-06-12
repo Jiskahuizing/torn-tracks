@@ -1,7 +1,7 @@
 class Track < ApplicationRecord
 
   has_and_belongs_to_many :tags
-  has_and_belongs_to_many :stops #må ha denne for ellers leter etter stops_tracks alfabetisk join 
+  has_and_belongs_to_many :stops #må ha denne for ellers leter etter stops_tracks alfabetisk join
 
   has_attached_file :sound
   has_attached_file :image
@@ -13,6 +13,7 @@ class Track < ApplicationRecord
   scope :sorted_by_date_finished, lambda { order("date_finished DESC") }
   scope :sorted_by_pitch, lambda { order("pitch ASC") }
   scope :sorted_by_location, lambda { order("location_finished ASC") }
+  scope :sorted_by_name_DESC, lambda { order("track_number DESC") }
 
   do_not_validate_attachment_file_type :sound
   #validates_attachment_content_type :sound, :content_type => ['audio/mp3', "audio/wav", "audio/mpeg", 'application/x-mp3'], :if => :sound?
