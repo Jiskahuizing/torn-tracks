@@ -64,12 +64,12 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Use mysql as the database for Active Record
   #gem 'mysql2', '>= 0.3.18', '< 0.5'
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.0'
 end
 
 group :production do
   gem 'unicorn'
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
