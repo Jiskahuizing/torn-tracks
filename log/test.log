@@ -355,3 +355,550 @@
   [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
   [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches" () VALUES ()[0m
   [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.7ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (1.3ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.8ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (1.2ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.9ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (1.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (6.5ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.8ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.9ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (1.6ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (1.2ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.6ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (1.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (1.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (2.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "pitches"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tracks"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "stops"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "tags"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "names"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "finished_dates"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "chronological_times"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "pitches"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m

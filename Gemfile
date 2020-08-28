@@ -50,6 +50,11 @@ gem 'd3-rails', '~> 5.7.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem "activestorage", '~> 5.2.4.3'
+gem "activesupport", '~> 5.2.4.3'
+gem "actionpack", '~> 5.2.4.3'
+gem "actionview", '~> 5.2.4.3'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
