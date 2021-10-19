@@ -117,9 +117,11 @@ GEM
       nokogiri (~> 1)
       rake
     mini_mime (1.1.2)
+    mini_portile2 (2.6.1)
     minitest (5.14.4)
     nio4r (2.5.8)
-    nokogiri (1.12.5-x86_64-darwin)
+    nokogiri (1.12.5)
+      mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     plyr-rails (3.5.6)
     puma (4.3.10)
@@ -207,7 +209,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  x86_64-darwin-18
+  ruby
 
 DEPENDENCIES
   actionpack (~> 6.1.4.1)
@@ -227,6 +229,7 @@ DEPENDENCIES
   kt-paperclip (~> 6.4)
   listen (~> 3.0.5)
   mimemagic (~> 0.3.10)
+  nokogiri (~> 1.12.5)
   plyr-rails
   puma (~> 4.3.9)
   rails (~> 6.1.4)
