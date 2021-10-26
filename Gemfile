@@ -76,7 +76,7 @@ group :development do
 end
 
 group :production do
-  gem 'unicorn'
+  gem 'unicorn', '~> 6.0.0'
   gem 'sqlite3'
 end
 
