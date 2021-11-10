@@ -47,7 +47,7 @@ gem "gnuplot"
 # gem for html5 audio
 gem 'plyr-rails'
 
-gem 'd3-rails', '~> 5.7.0'
+gem 'd3-rails', '~> 7.0.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

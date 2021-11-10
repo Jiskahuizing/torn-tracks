@@ -1,28 +1,45 @@
 <% @page_title = "Sketch Maps" %>
 
-<div class="tracks aindex">
-  <h2>Sketch Maps</h2>
-  <p>&nbsp;</p>
-    <% @tracks.each do |track| %>
-   <div class="isection" id="knot<%= track.id %>" style="width:200px;height: 450px;"></div>
-    <script>
-      var mySchedule = [
-    {name:"<%= track.name %><%= track.track_number %> <%= track.track_version %>", value: 0, arglink:"<%= track.sound.to_s %>", argtitle:"<%= track.track_number.to_s %>" },
-    <% track.stops.each do |stop| %>
-{name:"<%= stop.stop_title %>", value: <%=stop.stop_time%>, arglink:"<%= @trackall.where('id = ?', stop.stop_number)[0].sound.to_s %>", argtitle:"<%= stop.stop_title %>"},
-<% end %>
-{name:"arrival", value: <%= track.length_sec %>, arglink:"<%= track.sound.to_s %>", argtitle:"<%= track.track_number.to_s %>"},
-];
-TimeKnots.draw("#knot<%= track.id %>", mySchedule, {dateDimension:false, horizontalLayout: false, color: "GoldenRod", lineWidth:2, height: 470, radius:10, width:200, showLabels: false, labelFormat:"%H:%M:%S"});
+<div id="map_application">
 
-</script>
-<% end %>
-</div>
-  <p>&nbsp;</p>
-<div class="acontainer acwhite astop">
-  <div class="index">  <p id="curraudiotitle">Now playing: Track #<%= @tracks.first.track_number %></p> </div>
-   <audio id="player" controls>
-      <source src="<%= @tracks.first.sound %>" type="audio/mpeg">
-        Your browser does not support the audio element.
-  </audio>
+  <audio preload="auto" id="station" src="knock01.mp3"></audio>
+
+  <section class="map_intro_wrapper">
+    <article class="map_intro">
+      <section class="map_intro_text">
+        <p><strong>Welcome to the Sketch maps-view!</strong></p>
+        <p>The map shows the site-specific audio works that were made for the <em>Disobedient Buildings</em>* project, at the
+        Enerhaugen condominium in Oslo.</p>
+        <p><strong>Navigating the map:</strong></p>
+        <ul>
+          <li><strong>Play:</strong> press play on any track you'd like to hear. A marker will show your progress.</li>
+          <li><strong>Choices:</strong> when you come to an intersection on the track you're listening to, you can choose to continue on
+            that same track, or take a sidetrack. The intersection will be signaled with a knocking sound.
+            <br><em>If you don't make a choice, you'll automatically continue on your current track after 10
+              seconds.</em></li>
+        </ul>
+        <p class="smaller">* An interdisciplinary, multi-sited research project about housing, welfare and wellbeing based at the
+        Institute of Social and Cultural Anthropology at the University of Oxford. The Disobedient Buildings project
+        explores how people today experience everyday life in aging blocks of flats.</p>
+      </section>
+      <button id="start">Open Map</button>
+    </article>
+  </section>
+
+  <section class="question_overlay">
+    <nav class="choice_tray">
+      <article class="choice_description">
+        Choose next:
+      </article>
+      <div class="option_wrapper">
+        <button>Choice A</button>
+        <button>Choice B</button>
+        <button>Choice C</button>
+      </div>
+    </nav>
+  </section>
+
+    <div class="menu">
+      <button class="button"><%= link_to("<<", public_index_path) %></button>
+    </div>
 </div>

@@ -1,0 +1,153 @@
+#map_application {
+  box-sizing: border-box;
+}
+#map_application *, #map_application *:before, #map_application *:after {
+  box-sizing: inherit;
+}
+
+#map_application {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  background: image-url('Sketchmaps_1920.jpg');
+  background-repeat:repeat-y;
+  background-size: cover;
+  position: relative;
+}
+
+#map_application .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+#map_application svg {
+  width: 100vw;
+  height: 100vh;
+
+}
+
+#start {
+}
+
+#start.hide {
+  display: none;
+}
+
+.map_intro_wrapper {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.map_intro {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.map_intro_text {
+  font-size: 16px;
+  line-height: 1.5em;
+  font-family: sans-serif;
+  padding: 2em;
+  background: rgba(255,255,255,0.5);
+  box-shadow: inset 0 0 64px 0px rgba(255,255,255,0.5), 0 5px 16px 0px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 2em;
+  margin-bottom: 1em;
+  text-shadow: 0 1px 0 #fff;
+  color: #252020;
+}
+
+.map_intro_text strong {
+  color: #00623c;
+}
+
+.map_intro_text .smaller {
+  font-size: 0.9em;
+}
+
+.map_container {
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.question_overlay {
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top,#00000038,#0000);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+
+.question_overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.choice_tray {
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  padding: 5vh;
+  text-align: center;
+  width: 100vw;
+  background: linear-gradient(to top,#00000038 0%,#0000 60%);
+}
+
+.choice_tray::after {
+  content: "";
+  width: calc(100% + 32px);
+  position: fixed;
+  bottom: 16px;
+  left: -16px;
+  height: 16px;
+  background: #f2ac66;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 0 10px 2px rgba(0,0,0,0.3);
+  transition: width 10s ease-in;
+}
+
+.question_overlay.open .choice_tray::after {
+  width: 0%;
+}
+
+.choice_tray button, #start {
+  margin: 1vh 2vh;
+  background: #fff;
+  border-radius: 2em;
+  font-size: 26px;
+  padding: 0.5em 1em;
+  border: 1px solid rgba(0,0,0,0.3);
+  cursor: pointer;
+  box-shadow: 0 0 30px 0 rgba(0,0,0,0.1), 0 10px 20px 0 rgba(0,0,0,0.1);
+}
+
+.choice_tray button:hover {
+  border: 1px solid rgba(0,0,0,0.9);
+}
+
+.choice_tray button.backtrack {
+
+  background: #f2dc77;
+
+}
+
+.choice_description {
+  font-size: 32px;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}

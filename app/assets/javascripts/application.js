@@ -20,4 +20,5 @@
 //= require plyr
 //= require d3
 //= require timeknots
+//= require graph
 //= require_tree .
