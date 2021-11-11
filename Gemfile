@@ -37,8 +37,8 @@ gem 'underscore-rails'
 gem 'geocoder'
 
 # Paperclip:
-gem "mimemagic", "~> 0.3.10"
-gem "kt-paperclip", "~> 6.4"
+gem "mimemagic", "~> 0.4.3"
+gem "kt-paperclip", "~> 7.0.1"
 
 # Gem for charts
 gem "chartkick"
