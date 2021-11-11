@@ -4,7 +4,7 @@ class NamesController < ApplicationController
 
   def index
     @tracks=Array.new
-    tracknumbers = Track.select(:track_number).distinct
+    tracknumbers = Track.select(:track_number).distinct.sorted_by_name
     tracknumbers.each do |tn|
       @tracks.concat Track.where(track_number: tn.track_number).limit(1)
     end
