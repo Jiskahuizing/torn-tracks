@@ -20,7 +20,7 @@ Rails.application.configure do
 
   # Compress JavaScripts and CSS.
   # config.assets.js_compressor = Uglifier.new(harmony: true)
-  config.assets.js_compressor = :terser
+  # config.assets.js_compressor = :terser
 
   # config.assets.css_compressor = :sass
 
