@@ -1,5 +1,26 @@
 ;(function() {
-  document.addEventListener("DOMContentLoaded", function() {
+
+  function waitForElm(selector) {
+    return new Promise(resolve => {
+      if (document.querySelector(selector)) {
+        return resolve(document.querySelector(selector));
+      }
+
+      const observer = new MutationObserver(mutations => {
+        if (document.querySelector(selector)) {
+          resolve(document.querySelector(selector));
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    });
+  }
+
+  waitForElm('#map_application').then((elm_m) => {
 
     const static_data = {
       "nodes": [
@@ -118,7 +139,6 @@
       }
     }
 
-    //TODO: DEHACK
     function fmtMSS(ls){var s = Math.floor(ls); return(s-(s%=60))/60+(9<s?':':':0')+s}
 
     function makeAbsoluteContext(element, svgDocument) {
@@ -146,7 +166,9 @@
 
     const width = window.innerWidth;
     const height = window.innerHeight;
-    var map_application = document.getElementById("map_application");
+    const map_application = document.getElementById("map_application");
+
+    document.body.contains(map_application);
 
     let zoom = d3.zoom()
       .on('zoom', handleZoom);
