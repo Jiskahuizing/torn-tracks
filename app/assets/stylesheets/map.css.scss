@@ -23,10 +23,10 @@
 #map_application svg {
   width: 100vw;
   height: 100vh;
-
 }
 
 #start {
+
 }
 
 #start.hide {
@@ -62,6 +62,11 @@
   margin-bottom: 1em;
   text-shadow: 0 1px 0 #fff;
   color: #252020;
+  margin: 1em;
+}
+
+.map_intro_text p:first-child {
+    margin: 0;
 }
 
 .map_intro_text strong {
@@ -150,4 +155,12 @@
   font-size: 32px;
   color: #fff;
   text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 640px) {
+
+  .map_intro_text {
+    font-size: 14px;
+  }
+
 }

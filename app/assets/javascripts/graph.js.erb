@@ -1,4 +1,4 @@
-;(function(d3) {
+;(function() {
   document.addEventListener("DOMContentLoaded", function() {
 
     const static_data = {
@@ -166,8 +166,7 @@
     var link_data = [];
     var visible_link_data = [];
 
-    const start_button = d3.select("#start");
-    start_button.classed("hide", true);
+    const start_button = d3.select(".map_intro_wrapper").remove();
 
     (function(data) {
 
@@ -379,34 +378,6 @@
 
         d3.selectAll(".play_button").attr("xlink:href", "<%= image_path('play.png') %>");
         d3.select(document.querySelector('[data-id="' + d.id + '"]')).attr("xlink:href", "<%= image_path('pause.png') %>");
-
-        /*
-    var target = d3.select(path[1]).select("line").node();
-    var bbox_t = target.getBBox(),
-      middleX_t = bbox_t.x + (bbox_t.width / 2),
-      middleY_t  = bbox_t.y + (bbox_t.height / 2);
-
-    var convert_t = makeAbsoluteContext(target, svg_o.node());
-    var absoluteCenter_t = convert_t(middleX_t, middleY_t);
-
-    console.log(absoluteCenter_t);
-
-        /*
-    const bb = current_track_element.getBBox();
-    const x0 = bbox_t.x;
-    const y0 = bbox_t.y;
-    const x1 = bbox_t.x + bbox_t.width;
-    const y1 = bbox_t.y + bbox_t.height;
-
-    svg.transition().duration(750).call(
-      zoom.transform,
-      d3.zoomIdentity
-        .translate(width / 2, height / 2)
-        .scale(Math.min(8, 0.9 / Math.max((x1 - x0) / width, (y1 - y0) / height)))
-        .translate(-(x0 + x1) / 2, -(y0 + y1) / 2),
-      d3.pointer(e, svg.node())
-    );
-    svg.call(zoom.translateTo,  absoluteCenter_t.x, absoluteCenter_t.y); */
 
         if (d.type == "sidetrack" && d.nexus) {
 
@@ -625,9 +596,9 @@
       var defs = svg_o.append("defs");
       defs.append("radialGradient")
         .attr("id", "sun-gradient")
-        .attr("cx", "50%")	//not really needed, since 50% is the default
-        .attr("cy", "50%")	//not really needed, since 50% is the default
-        .attr("r", "50%")	//not really needed, since 50% is the default
+        .attr("cx", "50%")
+        .attr("cy", "50%")
+        .attr("r", "50%")
         .selectAll("stop")
         .data([
           {offset: "0%", color: "rgba(255,255,255,0.4"},
@@ -641,22 +612,6 @@
 
       const svg = svg_o.append("g");
 
-      // THIS SEEEMS COOLER BUT IDK HOW TO CHANGE TO IT
-      function started_old(event) {
-        const circle = d3.select(this).classed("dragging", true);
-
-        event.on("drag", dragged).on("end", ended);
-
-        function dragged(event, d) {
-          circle.raise().attr("cx", d.x = event.x).attr("cy", d.y = event.y);
-        }
-
-        function ended() {
-          circle.classed("dragging", false);
-        }
-      }
-
-      // Highlight the link if its the current choice
       const visible_links = svg.append("g")
         .attr("stroke-opacity", 0.4)
         .attr("fill", "none")
@@ -729,7 +684,6 @@
         .attr("y", d => -(d.duration / 2.0 / 2.0) + 52)
         .text(d => d.date);
 
-      // Find a way to check for whether we are paused or playing.
       var players = tracks
         .append("svg:image")
         .classed("play_button", true)
@@ -755,7 +709,6 @@
         .attr('height', 64)
         .attr("xlink:href", "<%= image_path('sidemark.png') %>")
 
-      // Find a way to check for whether we are paused or playing.
       var playhead_object = tracks
         .append("svg:image")
         .classed("playhead_object", true)
@@ -849,7 +802,6 @@
         .attr("y", d => -(d.duration / 2.0 / 2.0))
         .text(d => d.title);
 
-      // Find a way to check for whether we are paused or playing.
       var side_players = sidetracks
         .append("svg:image")
         .classed("play_button", true)
@@ -938,4 +890,4 @@
     }, false);
 
   });
-})(d3)
+})()
