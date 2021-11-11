@@ -166,7 +166,8 @@
     var link_data = [];
     var visible_link_data = [];
 
-    const start_button = d3.select(".map_intro_wrapper").remove();
+    const start_button = d3.select("#start");
+    start_button.classed("hide", true);
 
     (function(data) {
 
@@ -292,7 +293,7 @@
 
       var constant_timeout = null;
 
-      start_button.classed("hide", true);
+      d3.select(".map_intro_wrapper").remove();
 
       const AudioContext = window.AudioContext || window.webkitAudioContext;
       const audioContext = new AudioContext();
