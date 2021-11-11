@@ -1,3 +1,7 @@
+body {
+  overscroll-behavior-y: contain;
+}
+
 #map_application {
   box-sizing: border-box;
 }
@@ -11,7 +15,6 @@
   background-repeat:repeat-y;
   background-size: cover;
   position: relative;
-  overscroll-behavior-y: contain;
 }
 
 #map_application .menu {
