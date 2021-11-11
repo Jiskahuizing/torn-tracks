@@ -16,7 +16,6 @@
 //= require gmaps/google
 //= require Chart.bundle
 //= require chartkick
-//= require turbolinks
 //= require plyr
 //= require d3
 //= require timeknots
