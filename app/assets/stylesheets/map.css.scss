@@ -11,6 +11,7 @@
   background-repeat:repeat-y;
   background-size: cover;
   position: relative;
+  overscroll-behavior-y: contain;
 }
 
 #map_application .menu {
