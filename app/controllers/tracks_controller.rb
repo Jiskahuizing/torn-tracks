@@ -44,7 +44,7 @@ class TracksController < ApplicationController
     string_sec=params[:track][:length_sec]
     params[:track][:length_sec]=string_sec.split(':').inject(0){|a,m| a=a * 60 + m.to_i}
 
-    if @track.update_attributes(track_params)
+    if @track.update(track_params)
       redirect_to(track_path(@track))
       flash[:notice] = "Track '#{@track.name}' updated succesfully."
     else
