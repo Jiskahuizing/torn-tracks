@@ -548,7 +548,7 @@
       const simulation = d3.forceSimulation(node_data)
         .alphaTarget(0.05)
         .alphaMin(0.1)
-        .alphaDecay(0.066)
+        .alphaDecay(0.05)
         .force('center', d3.forceCenter(width / 2, height / 2).strength(0.5))
         .force("link", d3.forceLink(link_data).id(d => d.id).distance(d => {
           switch(d.type) {
