@@ -593,28 +593,6 @@
         .attr("offset", function(d) { return d.offset; })
         .attr("stop-color", function(d) { return d.color; });
 
-      const svg_o = d3.create("svg")
-        .classed("map_container", true)
-        .attr("width", "100%")
-        .attr("height", "100%");
-
-      var defs = svg_o.append("defs");
-      defs.append("radialGradient")
-        .attr("id", "sun-gradient")
-        .attr("cx", "50%")
-        .attr("cy", "50%")
-        .attr("r", "50%")
-        .selectAll("stop")
-        .data([
-          {offset: "0%", color: "rgba(255,255,255,0.4"},
-          {offset: "33.33%", color: "rgba(255,255,255,0.33)"},
-          {offset: "66.66%", color: "rgba(255,255,255,0.127)"},
-          {offset: "100%", color: "rgba(255,255,255,0"}
-        ])
-        .enter().append("stop")
-        .attr("offset", function(d) { return d.offset; })
-        .attr("stop-color", function(d) { return d.color; });
-
       const svg = svg_o.append("g");
 
       const nodes_highlight =
