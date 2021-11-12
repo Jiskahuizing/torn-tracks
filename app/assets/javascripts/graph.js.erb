@@ -676,7 +676,7 @@
         .attr('y', d => -(d.duration / 2.0) + 60)
         .attr('width', 96)
         .attr('height', 96)
-        .attr("xlink:href", <%= image_path('play.png') %>)
+        .attr("xlink:href", "<%= image_path('play.png') %>")
 
       players.on("click", manage_playback);
 
