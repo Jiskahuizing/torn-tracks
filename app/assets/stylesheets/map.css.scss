@@ -15,6 +15,7 @@ body {
   background-repeat:repeat-y;
   background-size: cover;
   position: relative;
+  overflow:hidden;
 }
 
 #map_application .menu {
@@ -46,6 +47,7 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
+  z-index:100;
 }
 
 .map_intro {
@@ -165,7 +167,7 @@ body {
 @media screen and (max-width: 640px) {
 
   .map_intro_text {
-    font-size: 14px;
+    font-size: 13px;
   }
 
 }
