@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Torn Tracks</title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="/manifest.json">
+    <script src="d3.min.js"></script>
+    <link rel="stylesheet" href="a.css"/>
+  </head>
+  <body id="body">
+
+    <div id="map_application">
+      <audio preload="auto" id="station" src="knock01.mp3"></audio>
+
+      <section class="map_intro_wrapper">
+        <article class="map_intro">
+          <section class="map_intro_text">
+            <p><strong>Welcome to the Sketch maps-view!</strong></p>
+            <p>The map shows the site-specific audio works that were made for the <em>Disobedient Buildings</em>* project, at the
+            Enerhaugen condominium in Oslo.</p>
+            <p><strong>Navigating the map:</strong></p> 
+            <ul>
+              <li><strong>Play:</strong> press play on any track you'd like to hear. A marker will show your progress.</li>
+              <li><strong>Choices:</strong> when you come to an intersection on the track you're listening to, you can choose to continue on
+                that same track, or take a sidetrack. The intersection will be signaled with a knocking sound. 
+                <br><em>If you don't make a choice, you'll automatically continue on your current track after 10
+                  seconds.</em></li>
+            </ul>
+            <p class="smaller">* An interdisciplinary, multi-sited research project about housing, welfare and wellbeing based at the
+            Institute of Social and Cultural Anthropology at the University of Oxford. The Disobedient Buildings project
+            explores how people today experience everyday life in aging blocks of flats.</p>
+          </section>
+          <button id="start">Open Map</button>
+        </article>
+      </section>
+
+      <section class="question_overlay">
+        <nav class="choice_tray">
+          <article class="choice_description">
+            Choose next:
+          </article>
+          <div class="option_wrapper">
+            <button>Choice A</button>
+            <button>Choice B</button>
+            <button>Choice C</button>
+          </div>
+        </nav>
+      </section>
+    </div>
+
+    <script src="graph.js"></script>
+
+  </body>
+</html>

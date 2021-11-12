@@ -8,65 +8,65 @@
           "date": "June - Nov 2021",
           "color": "#10a100",
           "type": "track",
-          "file": "/system/tracks/sounds/000/000/041/original/21-walk.mp3",
+          "file": "21-walk.mp3",
           "sidetracks": [
-            {"file":"/system/tracks/sounds/000/000/049/original/threebranchesfalling.mp3","at":"3:43"},
-            {"file":"/system/tracks/sounds/000/000/047/original/metropassing.mp3","at":"6:35"},
-            {"file":"/system/tracks/sounds/000/000/048/original/pathtypes.mp3","at":"11:10"}]
+            {"file":"threebranchesfalling.mp3","at":"3:43"},
+            {"file":"metropassing.mp3","at":"6:35"},
+            {"file":"pathtypes.mp3","at":"11:10"}]
         },
         {
           "title": "22: Enerhaugen - Constructions",
           "date": "June - Nov 2021",
           "color": "#d44e65",
           "type": "track",
-          "file": "/system/tracks/sounds/000/000/052/original/22-walk.mp3",
+          "file": "22-walk.mp3",
           "sidetracks": [
-            {"file":"/system/tracks/sounds/000/000/046/original/drillingbetweenbuildings.mp3","at":"9:10"}]
+            {"file":"drillingbetweenbuildings.mp3","at":"9:10"}]
         },
         {
           "title": "23: Enerhaugen - Air",
           "date": "June - Nov 2021",
           "color": "#0096ed",
           "type": "track",
-          "file": "/system/tracks/sounds/000/000/043/original/23-walk.mp3",
+          "file": "23-walk.mp3",
           "sidetracks": [
-            {"file":"/system/tracks/sounds/000/000/049/original/threebranchesfalling.mp3","at":"2:24"}]
+            {"file":"threebranchesfalling.mp3","at":"2:24"}]
         },
         {
           "title": "24: Enerhaugen - Allotments",
           "date": "June - Nov 2021",
           "color": "#ffd000",
           "type": "track",
-          "file": "/system/tracks/sounds/000/000/044/original/24-walk.mp3",
+          "file": "24-walk.mp3",
           "sidetracks": [
-            {"file":"/system/tracks/sounds/000/000/045/original/chives.mp3","at":"5:05"}]
+            {"file":"chives.mp3","at":"5:05"}]
         },
         {
           "title": "Three branches falling off a tree",
-          "file": "/system/tracks/sounds/000/000/049/original/threebranchesfalling.mp3",
+          "file": "threebranchesfalling.mp3",
           "type": "sidetrack",
           "nexus": "Flora"
         },
         {
           "title": "Metro passing underneath Enerhaugen",
-          "file": "/system/tracks/sounds/000/000/047/original/metropassing.mp3",
+          "file": "metropassing.mp3",
           "type": "sidetrack",
           "nexus": "Trails"
         },
         {
           "title": "Path types",
-          "file": "/system/tracks/sounds/000/000/048/original/pathtypes.mp3",
+          "file": "pathtypes.mp3",
           "type": "sidetrack",
           "nexus": "Trails"
         },
         {
           "title": "Drilling echoing between buildings",
-          "file": "/system/tracks/sounds/000/000/046/original/drillingbetweenbuildings.mp3",
+          "file": "drillingbetweenbuildings.mp3",
           "type": "sidetrack"
         },
         {
           "title": "Chives",
-          "file": "/system/tracks/sounds/000/000/045/original/chives.mp3",
+          "file": "chives.mp3",
           "type": "sidetrack",
           "nexus": "Flora"
         }
@@ -334,7 +334,7 @@
         if (d.audio_element.duration > 0 && !d.audio_element.paused) {
 
           d.audio_element.pause();
-          d3.select(document.querySelector('[data-id="' + d.id + '"]')).attr("xlink:href", "<%= image_path('play.png') %>");
+          d3.select(document.querySelector('[data-id="' + d.id + '"]')).attr("xlink:href", "play.png");
           clearInterval(playhead_interval);
           return;
 
@@ -344,7 +344,7 @@
           d.audio_element.duration > 0 &&
           d.audio_element.paused) {
 
-          d3.select(document.querySelector('[data-id="' + d.id + '"]')).attr("xlink:href", "<%= image_path('pause.png') %>");
+          d3.select(document.querySelector('[data-id="' + d.id + '"]')).attr("xlink:href", "pause.png");
           d.audio_element.play();
           return;
 
@@ -378,8 +378,8 @@
         d3.selectAll(".node-highlight").transition().duration(750).style("opacity", 0.0);
         d3.select("#" + d.id + "-highlight").transition().duration(750).style("opacity", 1.0);
 
-        d3.selectAll(".play_button").attr("xlink:href", "<%= image_path('play.png') %>");
-        d3.select(document.querySelector('[data-id="' + d.id + '"]')).attr("xlink:href", "<%= image_path('pause.png') %>");
+        d3.selectAll(".play_button").attr("xlink:href", "play.png");
+        d3.select(document.querySelector('[data-id="' + d.id + '"]')).attr("xlink:href", "pause.png");
 
         if (d.type == "sidetrack" && d.nexus) {
 
@@ -436,7 +436,7 @@
         }
 
         d3.selectAll(".playhead_object")
-          .attr("xlink:href", "<%= image_path('mark.png') %>")
+          .attr("xlink:href", "mark.png")
           .attr("transform", "translate(-32 -32)")
           .attr('width', 64)
           .attr('height', 64);
@@ -445,7 +445,7 @@
 
         track_playhead.transition().duration(720).style("opacity", 1.0);
 
-        track_playhead.attr("xlink:href", "<%= image_path('finger.png') %>")
+        track_playhead.attr("xlink:href", "finger.png")
           .attr("transform", "translate(-64 -64)")
           .attr('width', 128)
           .attr('height', 128);
@@ -593,28 +593,6 @@
         .attr("offset", function(d) { return d.offset; })
         .attr("stop-color", function(d) { return d.color; });
 
-      const svg_o = d3.create("svg")
-        .classed("map_container", true)
-        .attr("width", "100%")
-        .attr("height", "100%");
-
-      var defs = svg_o.append("defs");
-      defs.append("radialGradient")
-        .attr("id", "sun-gradient")
-        .attr("cx", "50%")
-        .attr("cy", "50%")
-        .attr("r", "50%")
-        .selectAll("stop")
-        .data([
-          {offset: "0%", color: "rgba(255,255,255,0.4"},
-          {offset: "33.33%", color: "rgba(255,255,255,0.33)"},
-          {offset: "66.66%", color: "rgba(255,255,255,0.127)"},
-          {offset: "100%", color: "rgba(255,255,255,0"}
-        ])
-        .enter().append("stop")
-        .attr("offset", function(d) { return d.offset; })
-        .attr("stop-color", function(d) { return d.color; });
-
       const svg = svg_o.append("g");
 
       const nodes_highlight =
@@ -698,7 +676,7 @@
         .attr('y', d => -(d.duration / 2.0) + 60)
         .attr('width', 96)
         .attr('height', 96)
-        .attr("xlink:href", <%= image_path('play.png') %>)
+        .attr("xlink:href", "play.png")
 
       players.on("click", manage_playback);
 
@@ -712,7 +690,7 @@
         .attr("y", d => (toMS(d.at) / 1000.0 ) - (d.od / 2.0))
         .attr('width', 64)
         .attr('height', 64)
-        .attr("xlink:href", "<%= image_path('sidemark.png') %>")
+        .attr("xlink:href", "sidemark.png")
 
       var playhead_object = tracks
         .append("svg:image")
@@ -723,7 +701,7 @@
         .attr('y', d => -(d.duration / 2.0))
         .attr('width', 64)
         .attr('height', 64)
-        .attr("xlink:href", "<%= image_path('mark.png') %>")
+        .attr("xlink:href", "mark.png")
 
       var deltaX, deltaY;
       var dragHandler = d3.drag()
@@ -794,7 +772,7 @@
         .attr('y', d => -(d.duration / 2.0))
         .attr('width', 64)
         .attr('height', 64)
-        .attr("xlink:href", "<%= image_path('mark.png') %>")
+        .attr("xlink:href", "mark.png")
 
       dragHandler(side_playhead_object);
 
@@ -816,7 +794,7 @@
         .attr('y', d => -(d.duration / 2.0) + 8)
         .attr('width', 64)
         .attr('height', 64)
-        .attr("xlink:href", "<%= image_path('play.png') %>")
+        .attr("xlink:href", "play.png")
 
       side_players.on("click", manage_playback);
 
