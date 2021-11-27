@@ -48,6 +48,8 @@ body {
   justify-content: center;
   align-items: center;
   z-index:100;
+  overflow: auto;
+pointer-events: none;
 }
 
 .map_intro {
@@ -56,6 +58,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: auto;
+pointer-events: all;
 }
 
 .map_intro_text {
