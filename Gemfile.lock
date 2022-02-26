@@ -117,11 +117,11 @@ GEM
       nokogiri (~> 1)
       rake
     mini_mime (1.1.2)
-    mini_portile2 (2.6.1)
+    mini_portile2 (2.8.0)
     minitest (5.14.4)
     nio4r (2.5.8)
-    nokogiri (1.12.5)
-      mini_portile2 (~> 2.6.1)
+    nokogiri (1.13.2)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     plyr-rails (3.5.6)
     puma (4.3.10)
@@ -185,13 +185,8 @@ GEM
     sqlite3 (1.4.2)
     terrapin (0.6.0)
       climate_control (>= 0.0.3, < 1.0)
-    terser (1.1.7)
-      execjs (>= 0.3.0, < 3)
     thor (1.1.0)
     tilt (2.0.10)
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     underscore-rails (1.8.3)
@@ -226,10 +221,10 @@ DEPENDENCIES
   gnuplot
   jbuilder (~> 2.5)
   jquery-rails
-  kt-paperclip (~> 6.4)
+  kt-paperclip (~> 6.4.1)
   listen (~> 3.0.5)
   mimemagic (~> 0.3.10)
-  nokogiri (~> 1.12.5)
+  nokogiri (~> 1.13.2)
   plyr-rails
   puma (~> 4.3.9)
   rails (~> 6.1.4)
@@ -237,8 +232,6 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
-  terser (~> 1.1.7)
-  turbolinks (~> 5)
   tzinfo-data
   underscore-rails
   unicorn (~> 6.0.0)
