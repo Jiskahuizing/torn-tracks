@@ -117,11 +117,11 @@ GEM
       nokogiri (~> 1)
       rake
     mini_mime (1.1.2)
-    mini_portile2 (2.6.1)
+    mini_portile2 (2.8.0)
     minitest (5.14.4)
     nio4r (2.5.8)
-    nokogiri (1.12.5)
-      mini_portile2 (~> 2.6.1)
+    nokogiri (1.13.2)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     plyr-rails (3.5.6)
     puma (4.3.12)
@@ -224,7 +224,7 @@ DEPENDENCIES
   kt-paperclip (~> 6.4.1)
   listen (~> 3.0.5)
   mimemagic (~> 0.3.10)
-  nokogiri (~> 1.12.5)
+  nokogiri (~> 1.13.2)
   plyr-rails
   puma (~> 4.3.12)
   rails (~> 6.1.4)
