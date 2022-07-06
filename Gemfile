@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.4'
+gem 'rails', '~> 7.0.3'
 
 # Use Puma as the app server
 gem 'puma', '~> 4.3.12'
@@ -25,7 +25,7 @@ gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 # gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.11'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -38,7 +38,7 @@ gem 'geocoder'
 
 # Paperclip:
 gem "mimemagic", "~> 0.3.10"
-gem "kt-paperclip", "~> 6.4.1"
+gem "kt-paperclip", "~> 7.1.1"
 
 # Gem for charts
 gem "chartkick"
@@ -51,10 +51,10 @@ gem 'd3-rails', '~> 7.0.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem "activestorage", '~> 6.1.4.1'
-gem "activesupport", '~> 6.1.4.1'
-gem "actionpack", '~> 6.1.4.1'
-gem "actionview", '~> 6.1.4.1'
+gem "activestorage", '~> 7.0.3'
+gem "activesupport", '~> 7.0.3'
+gem "actionpack", '~> 7.0.3'
+gem "actionview", '~> 7.0.3'
 
 gem "nokogiri", '~> 1.13.6'
 
