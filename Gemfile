@@ -56,7 +56,7 @@ gem "activesupport", '~> 6.1.4.1'
 gem "actionpack", '~> 6.1.4.1'
 gem "actionview", '~> 6.1.4.1'
 
-gem "nokogiri", '~> 1.13.6'
+gem "nokogiri", '~> 1.13.9'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
