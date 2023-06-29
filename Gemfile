@@ -51,10 +51,10 @@ gem 'd3-rails', '~> 7.0.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem "activestorage", '~> 7.0.4.3'
-gem "activesupport", '~> 7.0.4.3'
-gem "actionpack", '~> 7.0.4.3'
-gem "actionview", '~> 7.0.4.3'
+gem "activestorage", '~> 7.0.5.1'
+gem "activesupport", '~> 7.0.5.1'
+gem "actionpack", '~> 7.0.5.1'
+gem "actionview", '~> 7.0.5.1'
 
 gem "nokogiri", '~> 1.14.3'
 
