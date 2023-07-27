@@ -5,65 +5,65 @@
       "date": "June - Nov 2021",
       "color": "#10a100",
       "type": "track",
-      "file": "21-walk.mp3",
+      "file": "/system/tracks/sounds/000/000/041/original/21-walk.mp3",
       "sidetracks": [
-        {"file":"threebranchesfalling.mp3","at":"3:49"},
-        {"file":"metropassing.mp3","at":"6:48"},
-        {"file":"pathtypes.mp3","at":"11:10"}]
+        {"file":"/system/tracks/sounds/000/000/049/original/threebranchesfalling.mp3","at":"3:43"},
+        {"file":"/system/tracks/sounds/000/000/047/original/metropassing.mp3","at":"6:35"},
+        {"file":"/system/tracks/sounds/000/000/048/original/pathtypes.mp3","at":"11:10"}]
     },
     {
       "title": "22: Enerhaugen - Constructions",
       "date": "June - Nov 2021",
       "color": "#d44e65",
       "type": "track",
-      "file": "22-walk.mp3",
+      "file": "/system/tracks/sounds/000/000/052/original/22-walk.mp3",
       "sidetracks": [
-        {"file":"drillingbetweenbuildings.mp3","at":"1:32"}]
+        {"file":"/system/tracks/sounds/000/000/046/original/drillingbetweenbuildings.mp3","at":"9:10"}]
     },
     {
       "title": "23: Enerhaugen - Air",
       "date": "June - Nov 2021",
       "color": "#0096ed",
       "type": "track",
-      "file": "23-walk.mp3",
+      "file": "/system/tracks/sounds/000/000/043/original/23-walk.mp3",
       "sidetracks": [
-        {"file":"threebranchesfalling.mp3","at":"3:30"}]
+        {"file":"/system/tracks/sounds/000/000/049/original/threebranchesfalling.mp3","at":"2:24"}]
     },
     {
       "title": "24: Enerhaugen - Allotments",
       "date": "June - Nov 2021",
       "color": "#ffd000",
       "type": "track",
-      "file": "24-walk.mp3",
+      "file": "/system/tracks/sounds/000/000/044/original/24-walk.mp3",
       "sidetracks": [
-        {"file":"chives.mp3","at":"5:05"}]
+        {"file":"/system/tracks/sounds/000/000/045/original/chives.mp3","at":"5:05"}]
     },
     {
-      "title": "Three branches falling of a tree",
-      "file": "threebranchesfalling.mp3",
+      "title": "Three branches falling off a tree",
+      "file": "/system/tracks/sounds/000/000/049/original/threebranchesfalling.mp3",
       "type": "sidetrack",
       "nexus": "Flora"
     },
     {
       "title": "Metro passing underneath Enerhaugen",
-      "file": "metropassing.mp3",
+      "file": "/system/tracks/sounds/000/000/047/original/metropassing.mp3",
       "type": "sidetrack",
       "nexus": "Trails"
     },
     {
       "title": "Path types",
-      "file": "pathtypes.mp3",
+      "file": "/system/tracks/sounds/000/000/048/original/pathtypes.mp3",
       "type": "sidetrack",
       "nexus": "Trails"
     },
     {
       "title": "Drilling echoing between buildings",
-      "file": "drillingbetweenbuildings.mp3",
+      "file": "/system/tracks/sounds/000/000/046/original/drillingbetweenbuildings.mp3",
       "type": "sidetrack"
     },
     {
       "title": "Chives",
-      "file": "chives.mp3",
+      "file": "/system/tracks/sounds/000/000/045/original/chives.mp3",
       "type": "sidetrack",
       "nexus": "Flora"
     }
