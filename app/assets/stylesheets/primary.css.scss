@@ -140,12 +140,16 @@ span { //tja?
     border: none;
     width: 70px;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
     margin: 20px;
     font-size: 30px;
     text-decoration: none;
     display: block;
+}
+
+.menu a {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: block;
 }
 
 #button {
