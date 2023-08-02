@@ -108,6 +108,8 @@ span { //tja?
   padding-top: 105px;  //fjern på mobile.
   padding-right: 15px;
   max-width: 900px;
+  position: relative;
+  z-index: 1;
 }
 
 .clear {
@@ -436,6 +438,11 @@ span { //tja?
     overflow:scroll;
 }
 
+#OSMmap {
+  height: 600px;
+  width: 100%;
+}
+
 /*audio styler*/
 .acontainer {
   display: inline-block;
@@ -626,7 +633,7 @@ color:rgba(0,0,0,.1);
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
-    z-index: 11; /* Sit on top */
+    z-index: 99; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%;
