@@ -90,18 +90,30 @@
     evaluate: /\{\{(.+?)\}\}/g
   };
 
-  var map = L.map('OSMmap').setView([53.073, 6.858], 9);
+  var mapOptions = {
+    zoomControl: false
+ }
+
+  var map = L.map('OSMmap', mapOptions).setView([53.073, 6.858], 9);
   
   L.control.scale().addTo(map);
 
   var popup_template = _.template(window.document.querySelector('#popup-template').innerText);
-
   var geo_data = JSON.parse(window.document.querySelector('#geo-data').innerText);
-
+ 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'  
   }).addTo(map);
+
+var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+map.addLayer(layer);
+
+var zoomOptions = {
+  position: 'topright',
+};
+var zoom = L.control.zoom(zoomOptions);
+zoom.addTo(map);
 
   var Icon = L.icon({
     iconUrl: '/assets/finger_locations.png',
