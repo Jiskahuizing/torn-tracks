@@ -68,17 +68,8 @@ a:active { color: $black; }
 p {
   margin-top: 20px;
 }
+
 /* Structure */
-
-span { //tja?
-  display: inline-block;
-  background: rgba(0, 0, 0, 0);
-  padding: 5px;
-  padding-left: 10px;
-
-  height: 100%;
-  width: 100%;
-}
 
 .page {
   display: flex;
@@ -439,7 +430,7 @@ span { //tja?
 }
 
 #OSMmap {
-  height: 600px;
+  height: 100%;
   width: 100%;
 }
 

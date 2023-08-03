@@ -10,29 +10,7 @@
     <title>Torn Tracks Locations</title>
     <%= stylesheet_link_tag('application', :media => 'all') %>
     <%= javascript_include_tag('application') %>
-    
-    <script>
-      $(document).on("turbolinks:load", function() {
-         const player = new Plyr('#player');
-         $('.content').on('click', '.newsound', function(event) {
-           event.preventDefault();
-           var arglink = $(this).data('arglink');
-           var argtitle = $(this).data('argtitle');
-           player.source = {
-               type: 'audio',
-               title: argtitle,
-               sources: [
-                   {
-                       src: arglink,
-                       type: 'audio/mpeg',
-                   },
-               ],
-           };
-           document.getElementById("curraudiotitle").innerHTML = 'Now playing: Track # '+argtitle;
-           player.play();
-          })
-       });
-    </script>
+
 
 <script type="application/geo+json" id="geo-data">
 {
@@ -42,11 +20,11 @@
     <% if track.sound.exists? %>
     {"type": "Feature",
     "properties": {
-      "title": "<%= track.name %>",
+      "title": "<%= track.name %><%= track.track_number %>: <%= track.track_version %>",
       "audio_url": "<%= track.sound %>",
       "marker-symbol": "commercial",
-        "marker-size": "large",
-        "marker-color": "c4ba6a"
+      "marker-size": "large",
+      "marker-color": "c4ba6a"
     },
     "geometry": {
       "type": "Point",
@@ -61,7 +39,8 @@
 
 <script type="text/html" id="popup-template">
 <div class="audio-popup">
-    <h2>{{= title }}</h2>
+    <h3>{{= title }}</h3>
+    &nbsp;
     <audio src="{{= audio_url }}" controls ></audio>
 </div>
 </script>
@@ -90,8 +69,6 @@
                 <p>&nbsp;</p>
             </div>
           </div>
-        
-        
 
         <div class="clear"></div>
       </div>
@@ -102,7 +79,6 @@
   </body>
 
   <script src="https://cdn.jsdelivr.net/lodash/4.16.2/lodash.min.js"></script>
-
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
   crossorigin="">
@@ -114,7 +90,9 @@
     evaluate: /\{\{(.+?)\}\}/g
   };
 
-  var map = L.map('OSMmap').setView([51.505, -0.09], 9);
+  var map = L.map('OSMmap').setView([53.073, 6.858], 9);
+  
+  L.control.scale().addTo(map);
 
   var popup_template = _.template(window.document.querySelector('#popup-template').innerText);
 
@@ -122,17 +100,17 @@
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '© OpenStreetMap'
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'  
   }).addTo(map);
 
-  var greenIcon = L.icon({
-    iconUrl: '/assets/finger.png',
-    iconSize:     [38, 95],
-    iconAnchor:   [22, 94], 
-    popupAnchor:  [-3, -76] 
+  var Icon = L.icon({
+    iconUrl: '/assets/finger_locations.png',
+    iconSize:     [40, 40],
+    iconAnchor:   [20, 40], 
+    popupAnchor:  [0, -40] 
   });
 
-  L.geoJson(geo_data, {
+  var addedGeoJSON = L.geoJson(geo_data, {
     onEachFeature: function (feature, layer) {
         if (feature.properties && feature.properties.audio_url) {
             layer.bindPopup(popup_template(feature.properties));
@@ -142,11 +120,13 @@
         }
     },
     pointToLayer: function (feature, latlng) {
-        return L.marker(latlng, {icon: greenIcon});
+        return L.marker(latlng, {icon: Icon}, {autoPanOnFocus: true});
     }
   }).addTo(map);
 
-// frame and whatever else 
+  map.fitBounds(addedGeoJSON.getBounds(), {
+    padding: [20,20]
+  });
 
   </script>
 
