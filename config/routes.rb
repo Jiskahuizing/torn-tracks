@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get 'frontpage/index'
 
   get 'track/:id/:stop_id', :to => 'tracks#stopdelete', :as => 'delete_stop_in_track'
+
+  resources :static, except: [:new, :create, :edit, :show, :update, :destroy ]
   get 'sketch-map-track-list.json' => 'static#sketch-map-track-list', :defaults => { :format => 'json' }
 
   resources :admin_users, :except => [:show] do
