@@ -1,13 +1,15 @@
 {
   "nodes": [
     {
-      "title": "#21: Enerhaugen - Surroundings",
+      "title": "21: Enerhaugen - Surroundings",
       "date": "June - Nov 2021",
       "color": "#E29E56",
       "type": "track",
       "file": "/system/tracks/sounds/000/000/041/original/21-walk.mp3",
       "sidetracks": [
-        {"file":"/system/tracks/sounds/000/000/0049/original/threebranchesfalling.mp3","at":"3:10"}]
+        {"file":"/system/tracks/sounds/000/000/049/original/threebranchesfalling.mp3","at":"3:43"},
+        {"file":"/system/tracks/sounds/000/000/047/original/metropassing.mp3","at":"6:35"},
+        {"file":"/system/tracks/sounds/000/000/048/original/pathtypes.mp3","at":"11:10"}]
     },
     {
       "title": "#22: Enerhaugen - Constructions",
