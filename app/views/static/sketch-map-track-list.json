@@ -3,16 +3,16 @@
     {
       "title": "#21: Enerhaugen - Surroundings",
       "date": "June - Nov 2021",
-      "color": "##E29E56",
+      "color": "#E29E56",
       "type": "track",
       "file": "/system/tracks/sounds/000/000/041/original/21-walk.mp3",
       "sidetracks": [
-        {"file":"/system/tracks/sounds/000/000/001/original/Torn_Tracks__1.mp3?1509703137","at":"3:10"}]
+        {"file":"/system/tracks/sounds/000/000/0049/original/threebranchesfalling.mp3","at":"3:10"}]
     },
     {
       "title": "#22: Enerhaugen - Constructions",
       "date": "June - Nov 2021",
-      "color": "##E29E56",
+      "color": "#E29E56",
       "type": "track",
       "file": "/system/tracks/sounds/000/000/028/original/Torn_Tracks__15_-_Haugesund_%288-12_Oct_2018%29.mp3",
       "sidetracks": [
@@ -21,7 +21,7 @@
     {
       "title": "#23: Enerhaugen - Air",
       "date": "June - Nov 2021",
-      "color": "##E29E56",
+      "color": "#E29E56",
       "type": "track",
       "file": "/system/tracks/sounds/000/000/043/original/23-walk.mp3",
       "sidetracks": [
@@ -30,7 +30,7 @@
     {
       "title": "#24: Enerhaugen - Allotments",
       "date": "June - Nov 2021",
-      "color": "##E29E56",
+      "color": "#E29E56",
       "type": "track",
       "file": "/system/tracks/sounds/000/000/044/original/24-walk.mp3",
       "sidetracks": [
