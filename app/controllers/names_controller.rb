@@ -13,10 +13,5 @@ class NamesController < ApplicationController
   def show
     singletrack=Track.find(params[:id])
     @tracks = Track.where("track_number=?", singletrack.track_number)
-
-    @hash = Gmaps4rails.build_markers(@tracks) do |track, marker|
-      marker.lat track.latitude
-      marker.lng track.longitude
-    end
   end
 end

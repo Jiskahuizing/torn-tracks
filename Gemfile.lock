@@ -90,7 +90,6 @@ GEM
     geocoder (1.8.2)
     globalid (1.1.0)
       activesupport (>= 5.0)
-    gmaps4rails (2.1.2)
     gnuplot (2.6.2)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
@@ -213,7 +212,6 @@ GEM
     timeout (0.4.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    underscore-rails (1.8.3)
     unicorn (6.0.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
@@ -240,8 +238,6 @@ DEPENDENCIES
   chartkick
   coffee-rails (~> 5.0.0)
   d3-rails (~> 7.0.0)
-  geocoder
-  gmaps4rails (~> 2.1.2)
   gnuplot
   jbuilder (~> 2.5)
   jquery-rails
@@ -257,7 +253,6 @@ DEPENDENCIES
   spring-watcher-listen
   sqlite3
   tzinfo-data
-  underscore-rails
   unicorn (~> 6.0.0)
   web-console (>= 3.3.0)
 

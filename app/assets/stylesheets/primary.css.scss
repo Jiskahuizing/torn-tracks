@@ -11,6 +11,7 @@ $white: #FFFFFF;
 $black: #000000;
 $dark_green: #003300;
 $very_light_blue:	#e6f2ff;
+$notebook_blue: #7c8595;
 
 $sans_serif: Verdana,Lucida,Arial,Helvetica,sans-serif;
 
@@ -93,17 +94,8 @@ a:active { color: $black; }
 p {
   margin-top: 20px;
 }
+
 /* Structure */
-
-span { //tja?
-  display: inline-block;
-  background: rgba(0, 0, 0, 0);
-  padding: 5px;
-  padding-left: 10px;
-
-  height: 100%;
-  width: 100%;
-}
 
 .page {
   display: flex;
@@ -133,6 +125,8 @@ span { //tja?
   padding-top: 105px;  //fjern på mobile.
   padding-right: 15px;
   max-width: 900px;
+  position: relative;
+  z-index: 1;
 }
 
 .clear {
@@ -446,12 +440,6 @@ span { //tja?
     a, a:link { color: $black; text-decoration: none; }
 }
 
-#custom_style { //locations map
-   width: 100%;
-   height: 650px;
-}
-
-
 /* CSS LOCATIONS */
 .locations {
     background: image-url('Public_1920.jpg');
@@ -459,6 +447,23 @@ span { //tja?
     background-size: cover;
     height:100%;
     overflow:scroll;
+}
+
+#custom_style { //Locations map
+  width: 100%;
+  height: 650px;
+}
+
+#custom_style_names { //Field guide map
+  color: $black;
+  a, a:link { color: $notebook_blue; text-decoration: none; }
+  a:visited { color: $notebook_blue }
+  a:hover { color: $notebook_blue;}
+}
+
+#OSMmap {
+  height: 100%;
+  width: 100%;
 }
 
 /*audio styler*/
@@ -651,7 +656,7 @@ color:rgba(0,0,0,.1);
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
-    z-index: 11; /* Sit on top */
+    z-index: 99; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%;
@@ -705,9 +710,15 @@ color:rgba(0,0,0,.1);
     width: 100%;
     justify-content: center;
   }
-  #custom_style { //locations map
+  #custom_style { //Locations map
      width: 90%;
      height: 450px;
+  }
+  #custom_style_names { //Field guide map
+    color: $black;
+    a, a:link { color: $notebook_blue; text-decoration: none; }
+    a:visited { color: $notebook_blue }
+    a:hover { color: $notebook_blue;}
   }
   #publictext {
     margin-left: 0px;
@@ -759,9 +770,15 @@ color:rgba(0,0,0,.1);
   .index {
     width: 100%;
   }
-  #custom_style { //locations map
+  #custom_style { //Locations map
      width: 90%;
      height: 450px;
+  }
+  #custom_style_names { //Field guide map
+    color: $black;
+    a, a:link { color: $notebook_blue; text-decoration: none; }
+    a:visited { color: $notebook_blue }
+    a:hover { color: $notebook_blue;}
   }
   #publictext {
     margin-left: 0px;

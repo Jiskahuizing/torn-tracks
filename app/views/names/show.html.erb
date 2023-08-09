@@ -1,6 +1,5 @@
 <% @page_title = "A Field Guide to Torn Tracks" %>
 
-
 <div class="contentnames">
   <p>&nbsp;</p>
 <%= link_to("<< Back to Index", names_path) %><br>
@@ -32,169 +31,16 @@
     <li>Average Length: <%= Time.at(avlen/@tracks.size).utc.strftime("%M:%S")%> min.</li>
     <li>Average Pitch: <%= (avpit/@tracks.size).round(2) %> Hz</li></p>
 
-
-
     <p>Where the tracks were made:<br>
+	&nbsp;
     <div style='width: 100%'>
-    <div id="custom_style" style='width: 300px; height: 200px;'></div>
-    </div>
-
-    <script>
-    mapStyle = [
-      {
-          "featureType": "water",
-          "elementType": "geometry",
-          "stylers": [
-              {"visibility": "on"},
-              {"color": "#aee2e0"}
-          ]
-      },
-      {
-          "featureType": "landscape",
-          "elementType": "geometry.fill",
-          "stylers": [
-              {"color": "#abce83"}
-          ]
-      },
-      {
-          "featureType": "poi",
-          "elementType": "geometry.fill",
-          "stylers": [
-              {"color": "#769E72"}
-          ]
-      },
-      {
-          "featureType": "poi",
-          "elementType": "labels.text.fill",
-          "stylers": [
-              {"color": "#7B8758"}
-          ]
-      },
-      {
-          "featureType": "poi",
-          "elementType": "labels.text.stroke",
-          "stylers": [
-              {"color": "#EBF4A4"}
-          ]
-      },
-      {
-          "featureType": "poi.park",
-          "elementType": "geometry",
-          "stylers": [
-              {"visibility": "simplified"},
-              {"color": "#8dab68"}
-          ]
-      },
-      {
-          "featureType": "road",
-          "elementType": "geometry.fill",
-          "stylers": [
-              {"visibility": "simplified"}
-          ]
-      },
-      {
-          "featureType": "road",
-          "elementType": "labels.text.fill",
-          "stylers": [
-              {"color": "#5B5B3F"}
-          ]
-      },
-      {
-          "featureType": "road",
-          "elementType": "labels.text.stroke",
-          "stylers": [
-              {"color": "#ABCE83"}
-          ]
-      },
-      {
-          "featureType": "road",
-          "elementType": "labels.icon",
-          "stylers": [
-              {"visibility": "on"}
-          ]
-      },
-      {
-          "featureType": "road.local",
-          "elementType": "geometry",
-          "stylers": [
-              {"color": "#A4C67D"}
-          ]
-      },
-      {
-          "featureType": "road.arterial",
-          "elementType": "geometry",
-          "stylers": [
-              {"color": "#9BBF72"}
-          ]
-      },
-      {
-          "featureType": "road.highway",
-          "elementType": "geometry",
-          "stylers": [
-              {"color": "#EBF4A4"}
-          ]
-      },
-      {
-          "featureType": "transit",
-          "stylers": [
-              {"visibility": "on"}
-          ]
-      },
-      {
-          "featureType": "administrative",
-          "elementType": "geometry.stroke",
-          "stylers": [
-              {"visibility": "on"},
-              {"color": "#87ae79"}
-          ]
-      },
-      {
-          "featureType": "administrative",
-          "elementType": "geometry.fill",
-          "stylers": [
-              {"color": "#7f2200"},
-              {"visibility": "off"}
-          ]
-      },
-      {
-          "featureType": "administrative",
-          "elementType": "labels.text.stroke",
-          "stylers": [
-              {"color": "#ffffff"},
-              {"visibility": "on"},
-              {"weight": 4.1}
-          ]
-      },
-      {
-          "featureType": "administrative",
-          "elementType": "labels.text.fill",
-          "stylers": [
-              {"color": "#495421"}
-          ]
-      },
-      {
-          "featureType": "administrative.neighborhood",
-          "elementType": "labels",
-          "stylers": [
-              {"visibility": "off"}
-          ]
-      }
-    ]
-
-    handler = Gmaps.build('Google');
-    handler.buildMap({
-        internal: {id: 'custom_style'},
-        provider: {
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-          styles: mapStyle
-        }
-      },
-        function(){
-        markers = handler.addMarkers(<%=raw @hash.to_json %>);
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-      });
-    </script>
+        <div id="custom_style_names" style='width: 300px; height: 200px;'>
+			<div id="OSMmap"></div>
+		</div>
+	   
+	</div>
+</div>
+   
   </p>
 </div>
 

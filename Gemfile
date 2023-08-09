@@ -31,11 +31,6 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-# Gems concerning (google)maps:
-gem 'gmaps4rails', '~> 2.1.2'
-gem 'underscore-rails'
-gem 'geocoder'
-
 # Paperclip:
 gem "mimemagic", "~> 0.3.10"
 gem "kt-paperclip", "~> 6.4.1"

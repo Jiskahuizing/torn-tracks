@@ -2,37 +2,49 @@
 <html>
 
   <head>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>  
+  
+   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <title>Torn Tracks Locations</title>
-    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBuB8PRIyrIrEfCXUp26YwksMEWkLL1orw"></script>
-    <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
-    <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- custom infoboxes -->
     <%= stylesheet_link_tag('application', :media => 'all') %>
     <%= javascript_include_tag('application') %>
 
-    <script>
-      $(document).on("turbolinks:load", function() {
-         const player = new Plyr('#player');
-         $('.content').on('click', '.newsound', function(event) {
-           event.preventDefault();
-           var arglink = $(this).data('arglink');
-           var argtitle = $(this).data('argtitle');
-           player.source = {
-               type: 'audio',
-               title: argtitle,
-               sources: [
-                   {
-                       src: arglink,
-                       type: 'audio/mpeg',
-                   },
-               ],
-           };
-           document.getElementById("curraudiotitle").innerHTML = 'Now playing: Track # '+argtitle;
-           player.play();
-          })
-       });
 
-    </script>
+<script type="application/geo+json" id="geo-data">
+{
+  "type": "FeatureCollection",
+  "features": [
+  <% @tracks.each do |track| %>
+    <% if track.sound.exists? %>
+    {"type": "Feature",
+    "properties": {
+      "title": "<%= track.name %><%= track.track_number %>: <%= track.track_version %>",
+      "audio_url": "<%= track.sound %>",
+      "marker-symbol": "commercial",
+      "marker-size": "large",
+      "marker-color": "c4ba6a"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [<%= track.longitude %>, <%= track.latitude %>]
+    }},
+    <% end %>
+  <% end %>
+  {}
+  ]
+}
+</script>
+
+<script type="text/html" id="popup-template">
+<div class="audio-popup">
+    <h3>{{= title }}</h3>
+    &nbsp;
+    <audio src="{{= audio_url }}" controls ></audio>
+</div>
+</script>
+
   </head>
 
   <body>
@@ -40,6 +52,11 @@
         <div class="menu">
             <button class="button"><%= link_to("<<", public_index_path) %></button>
             <button id="button">i</button>
+        </div>
+
+        <div class="content">
+          <%= yield %>
+          </div>
 
           <div id="myModal" class="modal">
             <div class="modal-content">
@@ -50,10 +67,6 @@
                 <p>&nbsp;</p>
             </div>
           </div>
-        </div>
-        <div class="content">
-          <%= yield %>
-        </div>
 
         <div class="clear"></div>
       </div>
@@ -62,6 +75,70 @@
         <p id="copyright">&copy; Jiska Huizing <%= Date.today.year %></p>
       </div>
   </body>
+
+  <script src="https://cdn.jsdelivr.net/lodash/4.16.2/lodash.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin="">
+  </script>
+
+  <script>
+  _.templateSettings = {
+    interpolate: /\{\{\=(.+?)\}\}/g,
+    evaluate: /\{\{(.+?)\}\}/g
+  };
+
+  var mapOptions = {
+    zoomControl: false
+ }
+
+  var map = L.map('OSMmap', mapOptions).setView([53.073, 6.858], 9);
+  
+  L.control.scale().addTo(map);
+
+  var popup_template = _.template(window.document.querySelector('#popup-template').innerText);
+  var geo_data = JSON.parse(window.document.querySelector('#geo-data').innerText);
+ 
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'  
+  }).addTo(map);
+
+var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+map.addLayer(layer);
+
+var zoomOptions = {
+  position: 'topright',
+};
+var zoom = L.control.zoom(zoomOptions);
+zoom.addTo(map);
+
+  var Icon = L.icon({
+    iconUrl: '/assets/finger_locations.png',
+    iconSize:     [40, 40],
+    iconAnchor:   [20, 40], 
+    popupAnchor:  [0, -40] 
+  });
+
+  var addedGeoJSON = L.geoJson(geo_data, {
+    onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.audio_url) {
+            layer.bindPopup(popup_template(feature.properties));
+        }
+        else if (feature.properties && feature.properties.popupContent) {
+            layer.bindPopup(feature.properties.popupContent);
+        }
+    },
+    pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {icon: Icon}, {autoPanOnFocus: true});
+    }
+  }).addTo(map);
+
+  map.fitBounds(addedGeoJSON.getBounds(), {
+    padding: [20,20]
+  });
+
+  </script>
 
   <script>
     // Get the modal
