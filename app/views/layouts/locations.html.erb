@@ -114,7 +114,7 @@ var zoom = L.control.zoom(zoomOptions);
 zoom.addTo(map);
 
   var Icon = L.icon({
-    iconUrl: '/assets/finger_locations.png',
+    iconUrl: '<%= image_path('finger_locations.png') %>',
     iconSize:     [40, 40],
     iconAnchor:   [20, 40], 
     popupAnchor:  [0, -40] 
