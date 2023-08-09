@@ -14,7 +14,7 @@
       "date": "June - Nov 2021",
       "color": "##E29E56",
       "type": "track",
-      "file": "/system/tracks/sounds/000/000/028/original/Torn_Tracks__15_-_Haugesund_8-12_Oct_2018.mp3",
+      "file": "/system/tracks/sounds/000/000/028/original/Torn_Tracks__15_-_Haugesund_%288-12_Oct_2018%29.mp3",
       "sidetracks": [
         {"file":"/system/tracks/sounds/000/000/046/original/drillingbetweenbuildings.mp3","at":"9:10"}]
     },
@@ -83,14 +83,14 @@
       "type": "track",
       "file": "/system/tracks/sounds/000/000/034/original/Torn_Tracks__18_Førde_(8-12_July_2019).mp3",
       "sidetracks": [
-        {"file":"/system/tracks/sounds/000/000/035/original/Torn_Tracks__18_(Mountain_side_on_Hafstadfjell).mp3","at":"08:42"}]
+        {"file":"/system/tracks/sounds/000/000/035/original/Torn_Tracks__18_%28Mountain_side_on_Hafstadfjell%29.mp3","at":"08:42"}]
     }, 
     {
       "title": "#17: Stavanger",
       "date": "11-14 Sep 2018",
       "color": "#3AA035",
       "type": "track",
-      "file": "/system/tracks/sounds/000/000/032/original/Torn_Tracks__17_(Stavanger_11-14_Sep_2018).mp3",
+      "file": "/system/tracks/sounds/000/000/032/original/orn_Tracks__17_%28Stavanger_11-14_Sep_2018%29.mp3",
       "sidetracks": [
         {"file":"/system/tracks/sounds/000/000/033/original/Torn_Tracks__17_(Night_falls_at_the_field).mp3","at":"20:52"}]
     },  
@@ -108,7 +108,7 @@
       "date": "8-12 Oct 2018",
       "color": "#3AA035",
       "type": "track",
-      "file": "/system/tracks/sounds/000/000/028/original/Torn_Tracks__15_-_Haugesund_(8-12_Oct_2018).mp3",
+      "file": "/system/tracks/sounds/000/000/028/original/Torn_Tracks__15_-_Haugesund_%288-12_Oct_2018%29.mp3",
       "sidetracks": [
         {"file":"/system/tracks/sounds/000/000/029/original/Torn_Tracks__15_-_Haugesund_-_Surfaces_in_Djupadalen.mp3","at":"09:07"}]
     },
@@ -129,7 +129,7 @@
     },
     {
       "title": "Mountainside on Hafstadfjell",
-      "file": "/system/tracks/sounds/000/000/049/original/Torn_Tracks__18_(Mountain_side_on_Hafstadfjell).mp3",
+      "file": "/system/tracks/sounds/000/000/049/original/Torn_Tracks__18_%28Mountain_side_on_Hafstadfjell%29.mp3",
       "type": "sidetrack"
     },
     {
