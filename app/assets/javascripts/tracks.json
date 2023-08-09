@@ -5,18 +5,16 @@
       "date": "June - Nov 2021",
       "color": "##E29E56",
       "type": "track",
-      "file": "/system/tracks/sounds/000/000/041/original/21-walk.mp3",
+      "file": "/system/tracks/sounds/000/000/024/original/Torn_Tracks__17_%28Stavanger_11-14_Sep_2018%29.mp3?1569517979",
       "sidetracks": [
-        {"file":"/system/tracks/sounds/000/000/049/original/threebranchesfalling.mp3","at":"3:43"},
-        {"file":"/system/tracks/sounds/000/000/047/original/metropassing.mp3","at":"6:35"},
-        {"file":"/system/tracks/sounds/000/000/048/original/pathtypes.mp3","at":"11:10"}]
+        {"file":"/system/tracks/sounds/000/000/001/original/Torn_Tracks__1.mp3?1509703137","at":"3:10"}]
     },
     {
       "title": "#22: Enerhaugen - Constructions",
       "date": "June - Nov 2021",
       "color": "##E29E56",
       "type": "track",
-      "file": "/system/tracks/sounds/000/000/052/original/22-walk.mp3",
+      "file": "/system/tracks/sounds/000/000/020/original/Torn_Tracks__15_-_Haugesund_%288-12_Oct_2018%29.mp3?1553202185",
       "sidetracks": [
         {"file":"/system/tracks/sounds/000/000/046/original/drillingbetweenbuildings.mp3","at":"9:10"}]
     },
