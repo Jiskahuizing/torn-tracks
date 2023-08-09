@@ -5,7 +5,7 @@
       "date": "June - Nov 2021",
       "color": "##E29E56",
       "type": "track",
-      "file": "/system/tracks/sounds/000/000/024/original/Torn_Tracks__17_%28Stavanger_11-14_Sep_2018%29.mp3?1569517979",
+      "file": "/system/tracks/sounds/000/000/032/original/Torn_Tracks__17_Stavanger_11-14_Sep_2018.mp3",
       "sidetracks": [
         {"file":"/system/tracks/sounds/000/000/001/original/Torn_Tracks__1.mp3?1509703137","at":"3:10"}]
     },
@@ -14,7 +14,7 @@
       "date": "June - Nov 2021",
       "color": "##E29E56",
       "type": "track",
-      "file": "/system/tracks/sounds/000/000/020/original/Torn_Tracks__15_-_Haugesund_%288-12_Oct_2018%29.mp3?1553202185",
+      "file": "/system/tracks/sounds/000/000/028/original/Torn_Tracks__15_-_Haugesund_8-12_Oct_2018.mp3",
       "sidetracks": [
         {"file":"/system/tracks/sounds/000/000/046/original/drillingbetweenbuildings.mp3","at":"9:10"}]
     },
@@ -117,14 +117,14 @@
       "date": "3-7 Oct 2018",
       "color": "#3AA035",
       "type": "track",
-      "file": "/system/tracks/sounds/000/000/025/original/Torn_Tracks__14_-_Ålesund_3-7_Oct_2018.mp3.mp3",
+      "file": "/system/tracks/sounds/000/000/025/original/Torn_Tracks__14_-_Ålesund_3-7_Oct_2018.mp3",
       "sidetracks": [
-        {"file":"/system/tracks/sounds/000/000/026/original/Downward_surfaces.mp3","at":"14:55"},
+        {"file":"/system/tracks/sounds/000/000/026/original/Surfaces_down_Sukkertoppen.mp3","at":"14:55"},
         {"file":"/system/tracks/sounds/000/000/027/original/Boats_metal_roof_and_seagull.mp3","at":"18:13"}]
     },
     {
       "title": "Hiking and camping at Gullfjellet: River",
-      "file": "/system/tracks/sounds/000/000/048/original/Torn_Tracks__19_(Hiking_and_camping_at_Gullfjellet_River_01).mp3",
+      "file": "/system/tracks/sounds/000/000/037/original/Torn_Tracks__19_(Hiking_and_camping_at_Gullfjellet_River_01).mp3",
       "type": "sidetrack"
     },
     {
@@ -134,29 +134,29 @@
     },
     {
       "title": "Night falls at the field",
-      "file": "/system/tracks/sounds/000/000/045/original/Torn_Tracks__17_(Night_falls_at_the_field).mp3",
+      "file": "/system/tracks/sounds/000/000/033/original/Torn_Tracks__17_(Night_falls_at_the_field).mp3",
       "type": "sidetrack"
     },
     {
       "title": "Getting lost",
-      "file": "/system/tracks/sounds/000/000/047/original/Torn_Tracks__16_-_Getting_Lost.mp3",
+      "file": "/system/tracks/sounds/000/000/031/original/Torn_Tracks__16_-_Getting_Lost.mp3",
       "type": "sidetrack"
     },  
     {
       "title": "Surfaces in Djupadalen",
-      "file": "/system/tracks/sounds/000/000/045/original/Torn_Tracks__15_-_Haugesund_-_Surfaces_in_Djupadalen.mp3",
+      "file": "/system/tracks/sounds/000/000/029/original/Torn_Tracks__15_-_Haugesund_-_Surfaces_in_Djupadalen.mp3",
       "type": "sidetrack",
       "nexus": "Trails & surfaces"
     },
     {
       "title": "Surfaces down Sukkertoppen",
-      "file": "/system/tracks/sounds/000/000/045/original/Downward_surfaces.mp3",
+      "file": "/system/tracks/sounds/000/000/026/original/Surfaces_down_Sukkertoppen.mp3",
       "type": "sidetrack",
       "nexus": "Trails & surfaces"
     },
     {
       "title": "Boats, metal roof and seagull",
-      "file": "/system/tracks/sounds/000/000/045/original/Boats_metal_roof_and_seagull.mp3",
+      "file": "/system/tracks/sounds/000/000/027/original/Boats_metal_roof_and_seagull.mp3",
       "type": "sidetrack",
       "nexus": "Sound revealing space"
     }
