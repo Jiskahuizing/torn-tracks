@@ -132,17 +132,17 @@
     {
       "title": "Mountainside on Hafstadfjell",
       "file": "/system/tracks/sounds/000/000/049/original/Torn_Tracks__18_(Mountain_side_on_Hafstadfjell).mp3",
-      "type": "sidetrack",
+      "type": "sidetrack"
     },
     {
       "title": "Night falls at the field",
       "file": "/system/tracks/sounds/000/000/045/original/Torn_Tracks__17_(Night_falls_at_the_field).mp3",
-      "type": "sidetrack",
+      "type": "sidetrack"
     },
     {
       "title": "Getting lost",
       "file": "/system/tracks/sounds/000/000/047/original/Torn_Tracks__16_-_Getting_Lost.mp3",
-      "type": "sidetrack",
+      "type": "sidetrack"
     },  
     {
       "title": "Surfaces in Djupadalen",
@@ -161,6 +161,6 @@
       "file": "/system/tracks/sounds/000/000/045/original/Boats_metal_roof_and_seagull.mp3",
       "type": "sidetrack",
       "nexus": "Sound revealing space"
-    },
+    }
   ]
 }
