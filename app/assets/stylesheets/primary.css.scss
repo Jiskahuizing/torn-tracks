@@ -46,11 +46,36 @@ table {
   word-wrap: break-word;
 }
 
-table tr th, table tr td {
+table tr td {
   vertical-align: top;
   text-align: left;
   padding: 5px;
 }
+table th {
+  vertical-align: top;
+  text-align: left;
+  padding: 2px;
+}
+
+//Database table
+.fixTableHead {
+  overflow-y: auto;
+  height: 2000px;
+  font-size: 0.875em;
+}
+.fixTableHead thead th {
+  position: sticky;
+  top: 0;
+}
+
+.fixTableHead {
+  th {
+    padding: 2px 2px;
+    border: 2px solid #529432;
+    background: #ABDD93;
+  }
+}
+
 a, a:link { color: $green; text-decoration: none; }
 a:visited { color: $green; }
 a:hover { color: $black; }

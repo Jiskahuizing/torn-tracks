@@ -1,0 +1,18 @@
+<% @page_title = "New API-key" %>
+
+<%= link_to("<< Back to List", keys_path, :class => 'back-link') %>
+
+<div class="keys new">
+
+  <h2>Create API-key</h2>
+
+  <%= form_for(@key) do |f| %>
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form_buttons">
+      <%= f.submit("Create API-key") %>
+    </div>
+
+  <% end %>
+
+</div>

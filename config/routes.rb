@@ -73,4 +73,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :keys do
+    member do
+      get :delete
+    end
+  end
+
 end

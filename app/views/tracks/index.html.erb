@@ -9,61 +9,66 @@
 
   <p>&nbsp;</p>
 
-  <table class="listing" summary="Track list"
+  <div class="fixTableHead">
+    <table>
+      <thead>
+        <tr>
+        <th>ID (database)</th>
+        <th>Track</th>
+        <th>#</th>
+        <th>Version</th>
+        <th>Date</th>
+        <th>Location</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Pitch</th>
+        <th>Length</th>
+        <th>Length_Sec</th>
+        <th>Permalink</th>
+        <th>Visible</th>
+        <th>Sound Attachment</th>
+        <th>Image</th>
+        <th>Average Pitch</th>
+        <th>Average Length</th>
+        <th>Created</th>
+        <th>Updated</th>
+        <th>Stops</th>
+        </tr>
+      </thead>
 
-    <tr class="header">
-      <th>ID(in base)</th>
-      <th>Track</th>
-      <th>#</th>
-      <th>Version</th>
-      <th>Date</th>
-      <th>Location</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>Pitch</th>
-      <th>Length</th>
-      <th>Length_Sec</th>
-      <th>Permalink</th>
-      <th>Visible</th>
-      <th>Sound Attachment</th>
-      <th>Image</th>
-      <th>Average Pitch</th>
-      <th>Average Length</th>
-      <th>Created</th>
-      <th>Updated</th>
-      <th>Stops</th>
-    </tr>
-
-    <% @tracks.each do |track| %>
-    <tr>
-      <td><%= track.id %></td>
-      <td><%= track.name %></td>
-      <td><%= track.track_number %></td>
-      <td><%= track.track_version %></td>
-      <td><%= track.date_finished.strftime("%d %b %Y") %></td>
-      <td class="center"><%= track.location_finished %></td>
-      <td class="center"><%= track.latitude %></td>
-      <td class="center"><%= track.longitude %></td>
-      <td class="center"><%= track.pitch %></td>
-      <td class="center"><%= track.length.strftime("%H:%M:%S") %></td>
-      <td class="center"><%= track.length_sec %></td>
-      <td class="center"><%= track.permalink %></td>
-      <td class="center"><%= status_tag(track.visible) %></td>
-      <td><%= track.sound_file_name %></td>
-      <td><%= track.image_file_name %></td>
-      <td class="center"><%= track.average_pitch %></td>
-      <td class="center"><%= track.average_length %></td>
-      <td class="center"><%= track.created_at.strftime("%d %b %Y %H:%M") %></td>
-      <td class="center"><%= track.updated_at.strftime("%d %b %Y %H:%M") %></td>
-      <td class="center"><% track.stops.each do |stop| %>
-        <%= stop.stop_number %>,
-        <% end %></td>
-      <td class="actions">
-        <%= link_to("Show", track_path(track.id), :class => 'action show') %>
-        <%= link_to("Edit", edit_track_path(track), :class => 'action edit') %>
-        <%= link_to("Delete", delete_track_path(track), :class => 'action delete') %>
-      </td>
-    </tr>
-  <% end %>
-  </table>
+    <tbody>
+      <% @tracks.each do |track| %>
+      <tr>
+        <td><%= track.id %></td>
+        <td><%= track.name %></td>
+        <td><%= track.track_number %></td>
+        <td><%= track.track_version %></td>
+        <td><%= track.date_finished.strftime("%d %b %Y") %></td>
+        <td class="center"><%= track.location_finished %></td>
+        <td class="center"><%= track.latitude %></td>
+        <td class="center"><%= track.longitude %></td>
+        <td class="center"><%= track.pitch %></td>
+        <td class="center"><%= track.length.strftime("%H:%M:%S") %></td>
+        <td class="center"><%= track.length_sec %></td>
+        <td class="center"><%= track.permalink %></td>
+        <td class="center"><%= status_tag(track.visible) %></td>
+        <td><%= track.sound_file_name %></td>
+        <td><%= track.image_file_name %></td>
+        <td class="center"><%= track.average_pitch %></td>
+        <td class="center"><%= track.average_length %></td>
+        <td class="center"><%= track.created_at.strftime("%d %b %Y %H:%M") %></td>
+        <td class="center"><%= track.updated_at.strftime("%d %b %Y %H:%M") %></td>
+        <td class="center"><% track.stops.each do |stop| %>
+          <%= stop.stop_number %>,
+          <% end %></td>
+        <td class="actions">
+          <%= link_to("Show", track_path(track.id), :class => 'action show') %>
+          <%= link_to("Edit", edit_track_path(track), :class => 'action edit') %>
+          <%= link_to("Delete", delete_track_path(track), :class => 'action delete') %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+    
 </div>
+

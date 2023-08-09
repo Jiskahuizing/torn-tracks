@@ -1,0 +1,30 @@
+<% @page_title = "All API-keys" %>
+
+<%= link_to("<< Back to Overview", admin_path, :class => 'back-link') %>
+
+<div class="keys aindex">
+  <h1>API-keys</h1>
+
+  <%= link_to("Add New API-key", new_key_path, :class => 'action new') %>
+  <p>&nbsp;</p>
+  <div><%= pluralize(@key.size, 'key') %> found</div>
+  <p>&nbsp;</p>
+  <table class="listing" summary="API-key list">
+    <tr>
+      <th>Name</th>
+      <th>API-key</th>
+    </tr>
+
+    <% @key.each do |key| %>
+
+    <tr>
+      <td><%= key.name %></td>
+      <td><%= key.password %></td>
+      <td class="actions">
+        <%= link_to("Edit", edit_key_path(key), :class => 'action edit') %>
+        <%= link_to("Delete", delete_key_path(key), :class => 'action delete') %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+</div>
