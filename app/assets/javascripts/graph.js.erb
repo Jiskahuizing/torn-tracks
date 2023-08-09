@@ -826,7 +826,7 @@ var graph_fn = function(static_data) {
     // only run this on the map page.
     if(document.body.contains(map_application)) {
       // Load the graph data from tracks.json before we do anything:
-      d3.json("/assets/tracks.json").then(graph_fn);
+      d3.json("/assets/dev-tracks.json").then(graph_fn);
     }
 
   });
