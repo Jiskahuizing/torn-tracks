@@ -75,7 +75,7 @@ var graph_fn = function(static_data) {
   const map_application = document.getElementById("map_application");
 
   let zoom = d3.zoom()
-    .scaleExtent([0.25, 1])
+    .scaleExtent([0.1, 1])
     .on('zoom', handleZoom);
 
   function handleZoom(e) {
