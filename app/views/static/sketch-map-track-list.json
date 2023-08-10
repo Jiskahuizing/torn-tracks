@@ -83,7 +83,7 @@
       "date": "8-12 July 2019",
       "color": "#3AA035",
       "type": "track",
-      "file": "/system/tracks/sounds/000/000/034/original/orn_Tracks__18_F%C3%B8rde_%288-12_July_2019%29.mp3",
+      "file": "/system/tracks/sounds/000/000/034/original/Torn_Tracks__18_F%C3%B8rde_%288-12_July_2019%29.mp3",
       "sidetracks": [
         {"file":"/system/tracks/sounds/000/000/035/original/Torn_Tracks__18_%28Mountain_side_on_Hafstadfjell%29.mp3","at":"08:42"}]
     }, 
@@ -92,7 +92,7 @@
       "date": "11-14 Sep 2018",
       "color": "#3AA035",
       "type": "track",
-      "file": "/system/tracks/sounds/000/000/032/original/orn_Tracks__17_%28Stavanger_11-14_Sep_2018%29.mp3",
+      "file": "/system/tracks/sounds/000/000/032/original/Torn_Tracks__17_%28Stavanger_11-14_Sep_2018%29.mp3",
       "sidetracks": [
         {"file":"/system/tracks/sounds/000/000/033/original/Torn_Tracks__17_%28Night_falls_at_the_field%29.mp3","at":"20:52"}]
     },  
@@ -131,7 +131,7 @@
     },
     {
       "title": "Mountainside on Hafstadfjell",
-      "file": "/system/tracks/sounds/000/000/049/original/Torn_Tracks__18_%28Mountain_side_on_Hafstadfjell%29.mp3",
+      "file": "/system/tracks/sounds/000/000/035/original/Torn_Tracks__18_%28Mountain_side_on_Hafstadfjell%29.mp3",
       "type": "sidetrack"
     },
     {
