@@ -1,15 +1,63 @@
 <% @page_title = "Pitches" %>
 
-
   <h1>The Tracks Sorted on Pitch</h1>
   <br>
   <!--Input: only numbers-->
-  <%= scatter_chart Track.pluck(:track_number, :pitch), xtitle: "Track #",
-  ytitle: "Pitch", label: "Pitch", width: "100%"%>
+  <%= scatter_chart Track.pluck(:track_number, :pitch), xtitle: "Track #", ytitle: "Pitch", label: "Pitch", width: "100%"%>
 
   <br>
-  <div class="index">  <p id="curraudiotitle">Now playing: Track #<%= @tracks.first.track_number %></p> </div>
 
+  <script type="text/javascript">
+    // Playback Script for the tracks below
+
+    var pitch_play = function(button, element) {
+      var players = document.getElementsByClassName("pitch-audio-elements");
+      var buttons = document.getElementsByClassName("pitch-play-button");
+
+      if (!element.paused) {
+        // If /this/ player is not paused, pause it and don't do anything else.
+        element.pause();
+        button.classList.add("pitch-audio-paused");
+        button.classList.remove("pitch-audio-playing");
+      } else {
+        // Pause everything that is playing, and play this one.
+        for (let i = 0; i < players.length; i++) {
+          if (!players[i].paused) {
+            players[i].pause();
+            buttons[i].classList.add("pitch-audio-paused");
+            button.classList.remove("pitch-audio-playing");
+          }
+        }
+
+        button.classList.remove("pitch-audio-paused");
+        button.classList.add("pitch-audio-playing");
+        element.play();
+      }
+
+    };
+
+  </script>
+
+  <% @tracks.each do |track| %>
+    <div class="pitch-row">
+      <% if track.sound.exists? %>
+        <div class="pitch-play-col">
+          <audio preload="none" class="pitch-audio-elements" id="player<%= track.track_number %>" src="<%= track.sound %>"></audio>
+          <div>
+            <button class="pitch-play-button" onclick="pitch_play(this, document.getElementById('player<%= track.track_number %>'))">
+              <!--%= image_tag(asset_path('468294.svg'),  alt: "play sound", class: "playerimage", width: "15px", align:"left", class:"icon")%-->
+            </button>
+          </div>
+        </div>
+        <div>Track # <%= track.track_number %></div>
+        <div><%= track.track_version %></div>
+        <div>Pitch: <%= track.pitch %></div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <!-- This is the old Plyr code: -->
+  <!--
   <div class="acontainer">
      <audio id="player" controls>
         <source src="<%= @tracks.first.sound %>" type="audio/mpeg">
@@ -27,6 +75,7 @@
       <% end %>
     </div>
   <% end %>
+  -->
 
   <p>&nbsp;</p>
 
