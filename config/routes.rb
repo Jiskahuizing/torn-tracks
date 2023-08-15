@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   get 'track/:id/:stop_id', :to => 'tracks#stopdelete', :as => 'delete_stop_in_track'
 
-  get 'sketch-map-track-list.json' => 'static#sketch-map-track-list', :defaults => { :format => 'json' }
+  #get 'sketch-map-track-list.json' => 'static#sketch-map-track-list', :defaults => { :format => 'json' }
 
   resources :admin_users, :except => [:show] do
     member do
