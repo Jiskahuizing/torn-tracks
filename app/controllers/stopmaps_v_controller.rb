@@ -1,4 +1,4 @@
-class StopMapsController < ApplicationController
+class StopmapsVController < ApplicationController
 
 layout 'stopmap'
 

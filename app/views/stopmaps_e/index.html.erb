@@ -8,8 +8,8 @@
     <article class="map_intro">
       <section class="map_intro_text">
         <p><strong>Welcome to the Sketch maps-view!</strong></p>
-        <p>The map shows a network of audio works that function as sketch maps, like the site-specific audio works that were made for the <em>Disobedient Buildings</em>* project, at the
-        Enerhaugen condominium in Oslo, and for <em>Vestlandsutstillingen 2019</em>**, for the 6 places the exhibition was shown at in West Norway.</p>
+        <p>The map shows the site-specific audio works that were made for the <em>Disobedient Buildings</em>* project, at the
+        Enerhaugen condominium in Oslo.</p>
         <p><strong>Navigating the map:</strong></p>
         <ul>
           <li><strong>Play:</strong> press play on any track you'd like to hear. A marker will show your progress.</li>
@@ -18,7 +18,9 @@
             <br><em>If you don't make a choice, you'll automatically continue on your current track after 10
               seconds.</em></li>
         </ul>
-        <p class="smaller">*<em>More info about these two projects is available under the i-button.</em></p>
+        <p class="smaller">* An interdisciplinary, multi-sited research project about housing, welfare and wellbeing based at the
+        Institute of Social and Cultural Anthropology at the University of Oxford. The Disobedient Buildings project
+        explores how people today experience everyday life in aging blocks of flats.</p>
       </section>
       <button id="start">Open Map</button>
     </article>
@@ -45,8 +47,8 @@
               <span class="close">&times;</span>
               <p>&nbsp;</p>
 
-              <p>This map shows a network of audio works that function as sketch maps, like the site-specific audio works that were made for the <em>Disobedient Buildings</em>* project, at the
-              Enerhaugen condominium in Oslo, and for <em>Vestlandsutstillingen 2019</em>**, for the 6 places the exhibition was shown at in West Norway: Ålesund, Haugesund, Øystese, Stavanger, Førde and Bergen.</p>
+              <p>This map shows the site-specific audio works that were made for the <em>Disobedient Buildings</em>* project, at the
+              Enerhaugen condominium in Oslo.</p>
               <p><strong>Navigating the map:</strong></p>
               &nbsp;
               <ul>
@@ -58,8 +60,6 @@
               <p>* <em>An interdisciplinary, multi-sited research project about housing, welfare and wellbeing based at the
               Institute of Social and Cultural Anthropology at the University of Oxford. The Disobedient Buildings project
               explores how people today experience everyday life in aging blocks of flats.</em></p>
-              <p><em>** Vestlandsutstillingen is an annual, traveling exhibition showcasing artist with a connection to the Vestlandet 
-              region in Norway</em></p>
             </section>
 
                 <p>&nbsp;</p>
@@ -78,7 +78,7 @@
     // only run this on the map page.
     if(document.body.contains(map_application)) {
       // Load the graph data from tracks.json before we do anything:
-      d3.json("sketch-map-track-list.json").then(graph_fn);
+      d3.json("sketch-map-track-list_e.json").then(graph_fn);
     }
 
   });

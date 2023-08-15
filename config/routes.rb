@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   #Root route:
   root :to => 'frontpage#index'
 
@@ -16,7 +15,9 @@ Rails.application.routes.draw do
   get 'about/index'
   get 'contact/index'
   get 'frontpage/index'
-
+  get 'stopmaps_v/index'
+  get 'stopmaps_e/index'
+  
   get 'track/:id/:stop_id', :to => 'tracks#stopdelete', :as => 'delete_stop_in_track'
 
   #get 'sketch-map-track-list.json' => 'static#sketch-map-track-list', :defaults => { :format => 'json' }
