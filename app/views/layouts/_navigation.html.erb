@@ -7,7 +7,12 @@
 <p>&nbsp;</p>
 
 <ul>
-  <li><%= link_to_unless_current("Sketch Maps", stop_maps_path) %></li>
+  <li><%= link_to_unless_current("Sketch Maps", stop_maps_path) %>
+  <ul><ul>
+  <li><%= link_to_unless_current("Enerhaugen", stop_maps_path) %>
+  <li><%= link_to_unless_current("VU19", stop_maps_path) %>
+  </ul></ul>
+  </li>
   <li><%= link_to_unless_current("Chronology", finished_dates_path) %></li>
   <li><%= link_to_unless_current("Field Guide", names_path) %></li>
   <li><%= link_to_unless_current("Locations", locations_path) %></li>
