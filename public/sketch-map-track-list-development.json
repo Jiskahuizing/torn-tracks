@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    {
+      "title": "21: Enerhaugen - Surroundings",
+      "date": "June - Nov 2021",
+      "color": "#E29E56",
+      "type": "track",
+      "file": "/system/tracks/sounds/000/000/006/original/Torn_Tracks__4_%28Live_at_Studio17_day_1%29.mp3?1509703296",
+      "sidetracks": [
+        {"file":"/system/tracks/sounds/000/000/003/original/Torn_Tracks__3.mp3?1509703204","at":"3:43"}]
+    },
+    {
+      "title": "Boats, metal roof and seagull",
+      "file": "/system/tracks/sounds/000/000/003/original/Torn_Tracks__3.mp3?1509703204",
+      "type": "sidetrack"
+    }
+  ]
+}
