@@ -817,17 +817,3 @@ var graph_fn = function(static_data) {
   }, false);
 
 };
-
-;(function() {
-  document.addEventListener("DOMContentLoaded", function() {
-
-    const map_application = document.getElementById("map_application");
-
-    // only run this on the map page.
-    if(document.body.contains(map_application)) {
-      // Load the graph data from tracks.json before we do anything:
-      d3.json("sketch-map-track-list.json").then(graph_fn);
-    }
-
-  });
-})()
