@@ -92,7 +92,7 @@ a:active { color: $black; }
   left: 0px;
 }
 p {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 /* Structure */
@@ -676,6 +676,11 @@ color:rgba(0,0,0,.1);
     padding-right: 50px;
     border: 1px solid #888;
     width: 55%;
+}
+.modal a {
+  padding: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* The Close Button */
