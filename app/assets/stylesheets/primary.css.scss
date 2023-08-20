@@ -337,6 +337,14 @@ p {
 .bodychronology {
   background-color: $black;
 }
+.cardtext {
+  padding: 5px;
+  padding-left: 10px;
+}
+.cardplayer {
+  padding: 5px;
+  padding-left: 10px;
+}
 
 /* CSS SKETCH MAPS */
 .sketchmaps {
@@ -643,7 +651,7 @@ color:rgba(0,0,0,.1);
 
 .card:last-child { opacity: 0; }
 
-#cardtitle {
+.cardtitle {
   font-size: 16px;
   padding: 5px;
   padding-left: 10px;
