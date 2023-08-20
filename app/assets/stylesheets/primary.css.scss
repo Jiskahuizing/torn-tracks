@@ -480,7 +480,9 @@ p {
 
 .contentnames2 .map-element {
   break-inside: avoid;
+  break-before: always;
 }
+
 
 
 /* CSS PITCHES */
@@ -858,8 +860,8 @@ color:rgba(0,0,0,.1);
     background-image: image-url('Notepad_1200_bottom.png'), image-url('Notepad_1200_top.png'), image-url('Notepad_1200_repeater.png');
     background-repeat: no-repeat,  no-repeat, repeat-y;
     background-position-y: bottom,  top, 97px;
-    background-position-x: -105px;
-    background-size: 140%;
+    background-position-x: -145px;
+    //background-size: 140%;
     width: 100%;
     min-height: 964px;
     height: auto;
@@ -879,6 +881,10 @@ color:rgba(0,0,0,.1);
     padding-right: 20px;
     margin-top: 17px;
     width: auto;
+  }
+  .tracks.contentnames {
+    margin-left: 50px;
+
   }
   .contentnames-inner {
     columns: unset;
