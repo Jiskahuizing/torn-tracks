@@ -330,12 +330,20 @@ p {
     a:hover { color: $black;}
 }
 
-//Chronology
+// CHRONOLOGY
 .mainchronology {
     background-color: $black;
 }
 .bodychronology {
   background-color: $black;
+}
+.contentchronology {
+  width: 100%;
+  padding-top: 170px;
+  padding-right: 15px;
+  max-width: 900px;
+  position: relative;
+  z-index: 1;
 }
 .cardtext {
   padding: 5px;
@@ -344,6 +352,144 @@ p {
 .cardplayer {
   padding: 5px;
   padding-left: 10px;
+}
+
+// 3D Card carousel
+.container {
+  position: relative;
+  width: 500px;
+  height: 475px;
+  margin: 100px auto;
+  color: $black;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #e6e6e6;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform-origin: center;
+  transition: 0.4s cubic-bezier(0.28, 0.55, 0.385, 1.65);
+  cursor: pointer;
+}
+
+.card:nth-child(1) {
+  z-index: 10;
+  top: 0px;
+  left: 0px;
+  transform-origin: top right;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.card:nth-child(2) {
+  z-index: 9;
+  top: -28.25px;
+  left: 20px;
+  transform-origin: top right;
+  transform: scale(0.95);
+  opacity: 0.9;
+}
+
+.card:nth-child(3) {
+  z-index: 8;
+  top: -54px;
+  left: 40px;
+  transform-origin: top right;
+  transform: scale(0.90);
+  opacity: 0.8;
+}
+
+.card:nth-child(4) {
+  z-index: 7;
+  top: -79px;
+  left: 60px;
+  transform-origin: top right;
+  transform: scale(0.85);
+  opacity: 0.7;
+}
+
+.card:nth-child(5) {
+  z-index: 6;
+  top: -102px;
+  left: 80px;
+  transform-origin: top right;
+  transform: scale(0.80);
+  opacity: 0.6;
+}
+
+.card:nth-child(6) {
+  z-index: 5;
+  top: -124px;
+  left: 100px;
+  transform-origin: top right;
+  transform: scale(0.75);
+  opacity: 0.5;
+}
+
+.card:nth-child(7) {
+  z-index: 4;
+  top: -144px;
+  left: 120px;
+  transform-origin: top right;
+  transform: scale(0.70);
+  opacity: 0.4;
+}
+
+.card:nth-child(8) {
+  z-index: 3;
+  top: -160px;
+  left: 140px;
+  transform-origin: top right;
+  transform: scale(0.65);
+  opacity: 0.3;
+}
+
+.card:nth-child(9) {
+  z-index: 2;
+  top: -180px;
+  left: 160px;
+  transform-origin: top right;
+  transform: scale(0.60);
+  opacity: 0.2;
+}
+
+.card:nth-child(10) {
+  z-index: 1;
+  top: -200px;
+  left: 180px;
+  transform-origin: top right;
+  transform: scale(0.55);
+  opacity: 0.1;
+}
+
+.card:nth-child(11) {
+  z-index: 0;
+  top: -220px;
+  left: 200px;
+  transform-origin: top right;
+  transform: scale(0.50);
+  opacity: 0;
+}
+
+.card:first-child:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.02);
+}
+
+.card:last-child { opacity: 0; }
+
+.cardtitle {
+  font-size: 16px;
+  padding: 5px;
+  padding-left: 10px;
+  background-color: $black;
+  color: $white;
 }
 
 /* CSS SKETCH MAPS */
@@ -522,144 +668,6 @@ background:rgba(0,0,0,.1);
 color:rgba(0,0,0,.1);
 }
 
-/* 3D Card carousel */
-.container {
-  position: relative;
-  width: 500px;
-  height: 475px;
-  margin: 100px auto;
-  color: $black;
-}
-
-.card {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #e6e6e6;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transform-origin: center;
-  transition: 0.4s cubic-bezier(0.28, 0.55, 0.385, 1.65);
-  cursor: pointer;
-}
-
-.card:nth-child(1) {
-  z-index: 10;
-  top: 0px;
-  left: 0px;
-  transform-origin: top right;
-  transform: scale(1);
-  opacity: 1;
-}
-
-.card:nth-child(2) {
-  z-index: 9;
-  top: -20px;
-  left: 20px;
-  transform-origin: top right;
-  transform: scale(0.95);
-  opacity: 0.9;
-}
-
-.card:nth-child(3) {
-  z-index: 8;
-  top: -40px;
-  left: 40px;
-  transform-origin: top right;
-  transform: scale(0.90);
-  opacity: 0.8;
-}
-
-.card:nth-child(4) {
-  z-index: 7;
-  top: -60px;
-  left: 60px;
-  transform-origin: top right;
-  transform: scale(0.85);
-  opacity: 0.7;
-}
-
-.card:nth-child(5) {
-  z-index: 6;
-  top: -80px;
-  left: 80px;
-  transform-origin: top right;
-  transform: scale(0.80);
-  opacity: 0.6;
-}
-
-.card:nth-child(6) {
-  z-index: 5;
-  top: -100px;
-  left: 100px;
-  transform-origin: top right;
-  transform: scale(0.75);
-  opacity: 0.5;
-}
-
-.card:nth-child(7) {
-  z-index: 4;
-  top: -120px;
-  left: 120px;
-  transform-origin: top right;
-  transform: scale(0.70);
-  opacity: 0.4;
-}
-
-.card:nth-child(8) {
-  z-index: 3;
-  top: -140px;
-  left: 140px;
-  transform-origin: top right;
-  transform: scale(0.65);
-  opacity: 0.3;
-}
-
-.card:nth-child(9) {
-  z-index: 2;
-  top: -160px;
-  left: 160px;
-  transform-origin: top right;
-  transform: scale(0.60);
-  opacity: 0.2;
-}
-
-.card:nth-child(10) {
-  z-index: 1;
-  top: -180px;
-  left: 180px;
-  transform-origin: top right;
-  transform: scale(0.55);
-  opacity: 0.1;
-}
-
-.card:nth-child(11) {
-  z-index: 0;
-  top: -200px;
-  left: 200px;
-  transform-origin: top right;
-  transform: scale(0.50);
-  opacity: 0;
-}
-
-.card:first-child:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  transform: scale(1.02);
-}
-
-.card:last-child { opacity: 0; }
-
-.cardtitle {
-  font-size: 16px;
-  padding: 5px;
-  padding-left: 10px;
-  background-color: $black;
-  color: $white;
-}
-
-
 /* MODAL */
 /* The Modal (background) */
 .modal {
@@ -777,6 +785,10 @@ color:rgba(0,0,0,.1);
     width: 100%;
     justify-content: center;
   }
+  .card {
+    width: 30vmax;
+  }
+
   #custom_style { //Locations map
      width: 90%;
      height: 450px;
@@ -796,12 +808,13 @@ color:rgba(0,0,0,.1);
     width: 300px;
     height: 350px;
   }
-  .card:nth-child(-n+11) {left: 0px;}
+  .card:nth-child(-n+11) {
+    left: 0px;
+  }
   #clearnote {
     height: 0px;
   }
-
-  #notebook { //names fieldnotes
+  #notebook { //names fieldguide
     background: image-url('Notepad_370.png');
     background-size: 370px 866px;
     background-repeat: no-repeat;
@@ -832,13 +845,16 @@ color:rgba(0,0,0,.1);
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 1069px) {
   body {
-    //background-color: #F5CF8E; /* Yellow test */
+    background-color: #F5CF8E; /* Yellow test */
   }
   .content {
     width: 100%;
     padding-top: 5px;
     padding-left: 15px;
     overflow-x: hidden;
+  }
+  .card {
+    width: 40vmax;
   }
   .index {
     width: 100%;
