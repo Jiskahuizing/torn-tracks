@@ -42,40 +42,19 @@
     <div class="pitch-row">
       <% if track.sound.exists? %>
         <div class="pitch-play-col">
-          <audio preload="none" class="pitch-audio-elements" id="player<%= track.track_number %>" src="<%= track.sound %>"></audio>
+          <audio preload="none" class="pitch-audio-elements" id="player<%= track.id%>" src="<%= track.sound %>"></audio>
           <div>
-            <button class="pitch-play-button" onclick="pitch_play(this, document.getElementById('player<%= track.track_number %>'))">
+            <button class="pitch-play-button" onclick="pitch_play(this, document.getElementById('player<%= track.id%>'))">
               <!--%= image_tag(asset_path('468294.svg'),  alt: "play sound", class: "playerimage", width: "15px", align:"left", class:"icon")%-->
             </button>
           </div>
         </div>
-        <div>Track # <%= track.track_number %></div>
+        <div>Track # <%= track.track_number%></div>
         <div><%= track.track_version %></div>
         <div>Pitch: <%= track.pitch %></div>
       <% end %>
     </div>
   <% end %>
-
-  <!-- This is the old Plyr code: -->
-  <!--
-  <div class="acontainer">
-     <audio id="player" controls>
-        <source src="<%= @tracks.first.sound %>" type="audio/mpeg">
-          Your browser does not support the audio element.
-    </audio>
-  </div>
-    <% @tracks.each do |track| %>
-    <div class="index">
-      <% if track.sound.exists? %>
-        <div class="isection">
-          <a href="#" class="newsound" data-arglink="<%= track.sound %>" data-argtitle="<%= track.track_number %>" role="button">
-          <%= image_tag(asset_path('468294.svg'),  alt: "play sound", class: "playerimage", width: "15px", align:"left", class:"icon")%>&nbsp;&nbsp;Track # <%= track.track_number %> </a></div>
-        <div class="isection"><%= track.track_version %></div>
-        <div class="isection">Pitch: <%= track.pitch %></div>
-      <% end %>
-    </div>
-  <% end %>
-  -->
 
   <p>&nbsp;</p>
 
