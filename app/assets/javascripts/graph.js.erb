@@ -75,7 +75,7 @@ var graph_fn = function(static_data) {
   const map_application = document.getElementById("map_application");
 
   let zoom = d3.zoom()
-    .scaleExtent([0.1, 1])
+    .scaleExtent([0.1, 1]) // NOTE: Scale extent is how far you can zoom in and out
     .on('zoom', handleZoom);
 
   function handleZoom(e) {
@@ -83,10 +83,11 @@ var graph_fn = function(static_data) {
       .attr('transform', e.transform);
   }
 
+  // NOTE: The scale here controls the initial scale after load. How zoomed in it is.
   function initZoom() {
     d3.select('svg')
       .call(zoom)
-      .transition().duration(2000).call(zoom.transform, d3.zoomIdentity.translate(width/3.0, height/3.0).scale(0.33));
+      .transition().duration(2000).call(zoom.transform, d3.zoomIdentity.translate(width/3.0, height/3.0).scale(0.333));
   }
 
   var node_data = null;
@@ -297,6 +298,7 @@ var graph_fn = function(static_data) {
       const zoom_y = -d.y + (d.duration - y_abs_diff) / 4;
       console.log(y_dif + " " + y_abs_diff + " " + zoom_y);
 
+      // NOTE: This is where the zoom to currently playing is implemented
       d3.select('svg').transition().duration(750).call(
         zoom.transform,
         d3.zoomIdentity
@@ -380,7 +382,7 @@ var graph_fn = function(static_data) {
 
       d3.selectAll(".playhead_object")
         .attr("xlink:href", "<%= image_path('mark.png') %>")
-        .attr("transform", "translate(-32 -32)")
+        .attr("transform", "translate(-32 -32)") 
         .attr('width', 64)
         .attr('height', 64);
 
@@ -388,8 +390,9 @@ var graph_fn = function(static_data) {
 
       track_playhead.transition().duration(720).style("opacity", 1.0);
 
+      // NOTE: This is the "Finger" 
       track_playhead.attr("xlink:href", "<%= image_path('finger.png') %>")
-        .attr("transform", "translate(-64 -64)")
+        .attr("transform", "translate(-64 -64)")// NOTE: This is half width and height
         .attr('width', 128)
         .attr('height', 128);
 
@@ -488,13 +491,16 @@ var graph_fn = function(static_data) {
       }
     });
 
+    // NOTE: This controls how the map is auto-laid-out
+    // https://github.com/d3/d3-force
     const simulation = d3.forceSimulation(node_data)
       .alphaTarget(0.025)
       .alphaMin(0.1)
       .alphaDecay(0.05)
-      .force('center', d3.forceCenter(width / 2, height / 2).strength(0.25))
+      .force('center', d3.forceCenter(width / 2, height / 2).strength(0.25)) // NOTE: Where the center is. And how much things are pulled toward it.
       .force("link", d3.forceLink(link_data).id(d => d.id).distance(d => {
         switch(d.type) {
+          // NOTE: Link "tension" tweaking the numbers here will tweak the length of and how much the links pull.
           case "track":
             return (toMS(d.duration_a) / 1000.0 + toMS(d.duration_b) / 1000.0);
           case "sidetrack":
@@ -505,8 +511,9 @@ var graph_fn = function(static_data) {
       }))
       .force("collision", d3.forceCollide().radius(d => {
         switch(d.type) {
+          // NOTE: A "virtual circle" that prevents things from overlapping
           case "track":
-            return d.duration; 
+            return d.duration; // NOTE: can multiply by <1 to shrink this collision
           case "sidetrack":
             return d.duration;
           default:
@@ -520,6 +527,7 @@ var graph_fn = function(static_data) {
       .attr("height", "100%");
 
     var defs = svg_o.append("defs");
+    // NOTE: This is the gradient that highlights the currently playing track
     defs.append("radialGradient")
       .attr("id", "sun-gradient")
       .attr("cx", "50%")
@@ -552,6 +560,7 @@ var graph_fn = function(static_data) {
       .attr("id", d => d.id + "-highlight")
       .attr("class", "node-highlight");
 
+    // NOTE: Line style for all links.
     const visible_links = svg.append("g")
       .attr("stroke-opacity", 0.8)
       .attr("fill", "none")
@@ -561,7 +570,7 @@ var graph_fn = function(static_data) {
       .selectAll("path")
       .data(visible_link_data)
       .join("path")
-      .attr("stroke", d => d.color ? d.color : "#999" );
+      .attr("stroke", d => d.color ? d.color : "#999" ); // NOTE: if no color is specified in the JSON file the link will be this. (i.e. nexus links)
 
     const nodes = svg.append("g")
       .attr("stroke", "#fff")
@@ -583,6 +592,7 @@ var graph_fn = function(static_data) {
         d3.select(this).select(".playhead_choice").attr('y', -(d.duration / 2.0) + playhead_position );
       });
 
+    // NOTE: The look of each standard track, the line that shows the duration.
     tracks.append("line")
       .style("stroke", d => d.color)
       .style("stroke-width", 12)
@@ -592,6 +602,7 @@ var graph_fn = function(static_data) {
       .attr("x2", 0)
       .attr("y2", d => d.duration / 2.0);
 
+    // NOTE: This is the title of the track (text)
     var titles = tracks
       .append("text")
       .style("font-size", "36px")
@@ -601,6 +612,7 @@ var graph_fn = function(static_data) {
       .attr("y", d => -(d.duration / 2.0) + 16)
       .text(d => d.title);
 
+    // NOTE: This is the date of the track (text)
     var dates = tracks
       .append("text")
       .style("font-size", "24px")
@@ -610,6 +622,7 @@ var graph_fn = function(static_data) {
       .attr("y", d => -(d.duration / 2.0) + 52)
       .text(d => d.date);
 
+    // NOTE: > Play button image and position
     var players = tracks
       .append("svg:image")
       .classed("play_button", true)
@@ -619,10 +632,11 @@ var graph_fn = function(static_data) {
       .attr('y', d => -(d.duration / 2.0) + 60)
       .attr('width', 96)
       .attr('height', 96)
-      .attr("xlink:href", "<%= image_path('play.png') %>")
+      .attr("xlink:href", "<%= image_path('play.png') %>") // NOTE: Play button image
 
     players.on("click", manage_playback);
 
+    // NOTE: The mark on the regular track that leads to a sidetrack
     var track_node = tracks.selectAll(null)
       .data(d => d.sidetracks.map(v => ({...v, od: d.duration , oid: d.id})))
       .enter()
@@ -635,6 +649,7 @@ var graph_fn = function(static_data) {
       .attr('height', 64)
       .attr("xlink:href", "<%= image_path('sidemark.png') %>")
 
+    // NOTE: The location of where you left off
     var playhead_object = tracks
       .append("svg:image")
       .classed("playhead_object", true)
@@ -678,6 +693,7 @@ var graph_fn = function(static_data) {
         d3.select(this).select(".playhead_choice").attr('y', -(d.duration / 2.0) + playhead_position );
       });
 
+    // NOTE: The sidetrack line style
     sidetracks.append("line")
       .style("stroke", "white")
       .style("stroke-width", 8)
@@ -687,6 +703,7 @@ var graph_fn = function(static_data) {
       .attr("x2", 0)
       .attr("y2", d => d.duration / 2.0);
 
+    // NOTE: The next two circles are start + end circles for sidetrack
     sidetracks.append("circle")
       .style("fill", "#fff")
       .style("stroke", "white")
@@ -706,6 +723,7 @@ var graph_fn = function(static_data) {
       .attr("r", 8)
       .attr("id", d => d.id + "-exit");
 
+    // NOTE: Where you left off in the sidetrack
     var side_playhead_object = sidetracks
       .append("svg:image")
       .classed("playhead_object", true)
@@ -719,6 +737,7 @@ var graph_fn = function(static_data) {
 
     dragHandler(side_playhead_object);
 
+    // NOTE: Sidetrack title (text)
     var side_titles = sidetracks
       .append("text")
       .style("font-size", "18px")
@@ -744,16 +763,18 @@ var graph_fn = function(static_data) {
     var nexus =
       nodes.filter(d => d.type == "nexus");
 
+    // NOTE: This is the style of the nexus circle
     nexus.append("circle")
       .attr("r",20)
       .attr("fill", "#fff")
       .attr("stroke","#000")
       .attr("stroke-width", 6)
-      .style("stroke-dasharray", ("6, 12"))
+      .style("stroke-dasharray", ("6, 12")) // NOTE: how dashed the stroke is
       .attr("id", d => d.id);
 
+    // NOTE: This is the style of the nexus title (text)
     var nexus_titles = nexus
-      .append("text")
+      .append("text") // NOTE: This is the type of element that we are styling
       .style("font-size", "42px")
       .style("fill", "#333")
       .style("stroke", "none")

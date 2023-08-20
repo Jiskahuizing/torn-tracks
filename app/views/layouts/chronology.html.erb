@@ -69,18 +69,24 @@
 
   <script>
     (function() {
-      var rotate, timeline;
-      rotate = function() {
+      var rotate_forward, rotate_back, timeline;
+      rotate_forward = function() {
         return $('.card:first-child').fadeOut(400, 'swing', function() {
           return $('.card:first-child').appendTo('.container').hide();
         }).fadeIn(400, 'swing');
+      };
+      rotate_back = function() {
+        return $('.card:last-child').prependTo('.container').fadeIn(400, 'swing');      
       };
       timeline = setInterval(false);
       $('body').hover(function() {
         return clearInterval(timeline);
       });
-      $('.clickarea').click(function() {
-        return rotate();
+      $('.clickarea-forward').click(function() {
+        return rotate_forward();
+      });
+      $('.clickarea-back').click(function() {
+        return rotate_back();
       });
     }).call(this);
   </script>
