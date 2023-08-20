@@ -5,40 +5,41 @@
 <%= link_to("<< Back to Index", names_path) %><br>
 </div>
 <div class="contentnames2">
+    <div class="contentnames-inner">
+      <h3 class="names-heading"> Versions available:</h3>
+      
+      <% avlen=0 %>
+      <% avpit=0 %>
 
-    <h3> Versions available: </h3>
-    <p>&nbsp;</p>
-
-    <% avlen=0 %>
-    <% avpit=0 %>
-
-  <ul id="playlist" style="list-style-type:none">
-
-    <% @tracks.each do |track| %>
-          <li><button class="playbutton"><%= link_to(">", track.sound.to_s) %></button>
-          <%= track.name %><%= track.track_number %> <i><%= track.track_version %></i></li><br>
-
+      <ul id="playlist" style="list-style-type:none">
+        <% @tracks.each do |track| %>
+          <li>
+            <button class="playbutton"><%= link_to("▶", track.sound.to_s) %></button>
+            <%= track.name %><%= track.track_number %> <i><%= track.track_version %></i>
+          </li>
           <% avlen+=track.length.to_i %>
           <% avpit+=track.pitch %>
-    <% end %>
-  </ul>
+        <% end %>
+      </ul>
 
-  <audio id="audio" controls controlsList="nodownload" preload="none">
-      <source src="<%= @tracks[0].sound %>" type="audio/mpeg">
-      Your browser does not support the audio element.
-  </audio>
-  <p>
-    <li>Average Length: <%= Time.at(avlen/@tracks.size).utc.strftime("%M:%S")%> min.</li>
-    <li>Average Pitch: <%= (avpit/@tracks.size).round(2) %> Hz</li></p>
+      <audio class="name-audio" id="audio" controls controlsList="nodownload" preload="none">
+        <source src="<%= @tracks[0].sound %>" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
 
-    <p>Where the tracks were made:<br>
-	&nbsp;
-    <div style='width: 100%'>
-        <div id="custom_style_names" style='width: 300px; height: 200px;'>
-			<div id="OSMmap"></div>
-		</div>
-	   
-	</div>
+      <ul>
+        <li>Average Length: <%= Time.at(avlen/@tracks.size).utc.strftime("%M:%S")%> min.</li>
+        <li>Average Pitch: <%= (avpit/@tracks.size).round(2) %> Hz</li>
+      </ul>
+
+      <div class="map-element">
+        <p>Where the tracks were made:</p>
+        <br>
+        <div id="custom_style_names" style='width: 100%; height: 300px;'>
+			    <div id="OSMmap"></div>
+		    </div>
+		  </div>
+	  </div>
 </div>
    
   </p>
