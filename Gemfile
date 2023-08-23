@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.0.4'
+gem 'rails', '~> 7.0.7'
 
 # Use Puma as the app server
 gem 'puma', '~> 5.6.7'
@@ -46,10 +46,10 @@ gem 'd3-rails', '~> 7.0.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem "activestorage", '~> 7.0.5.1'
-gem "activesupport", '~> 7.0.5.1'
-gem "actionpack", '~> 7.0.5.1'
-gem "actionview", '~> 7.0.5.1'
+gem "activestorage", '~> 7.0.7.2'
+gem "activesupport", '~> 7.0.7.2'
+gem "actionpack", '~> 7.0.7.2'
+gem "actionview", '~> 7.0.7.2'
 
 gem "nokogiri", '~> 1.14.3'
 
