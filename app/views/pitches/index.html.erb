@@ -43,11 +43,9 @@
       <% if track.sound.exists? %>
         <div class="pitch-play-col">
           <audio preload="none" class="pitch-audio-elements" id="player<%= track.id%>" src="<%= track.sound %>"></audio>
-          <div>
-            <button class="pitch-play-button" onclick="pitch_play(this, document.getElementById('player<%= track.id%>'))">
-              <!--%= image_tag(asset_path('468294.svg'),  alt: "play sound", class: "playerimage", width: "15px", align:"left", class:"icon")%-->
-            </button>
-          </div>
+          <button class="pitch-play-button" onclick="pitch_play(this, document.getElementById('player<%= track.id%>'))">
+            <!--%= image_tag(asset_path('468294.svg'),  alt: "play sound", class: "playerimage", width: "15px", align:"left", class:"icon")%-->
+          </button>
         </div>
         <div>Track # <%= track.track_number%></div>
         <div><%= track.track_version %></div>

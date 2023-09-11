@@ -15,6 +15,42 @@ $notebook_blue: #7c8595;
 
 $sans_serif: Verdana,Lucida,Arial,Helvetica,sans-serif;
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?hswule');
+  src:  url('fonts/icomoon.eot?hswule#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?hswule') format('truetype'),
+    url('fonts/icomoon.woff?hswule') format('woff'),
+    url('fonts/icomoon.svg?hswule#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-play4:before {
+  content: "\ed85";
+}
+.icon-pause2:before {
+  content: "\ed86";
+}
+.icon-stop2:before {
+  content: "\ed87";
+}
 
 * {
   margin: 0;
@@ -764,6 +800,7 @@ color:rgba(0,0,0,.1);
   margin: unset;
   background: unset;
   color: #222;
+  display: flex;
 }
 
 .pitch-play-button::before {
@@ -772,20 +809,17 @@ color:rgba(0,0,0,.1);
   margin: unset;
   background: unset;
   cursor: pointer;
-  cursor: pointer;
-  content: "⏵";
+  content: "\ed85";
   color: inherit;
-  font-size: 24px;
-  width: 24px;
-  height: 24px;
-  display: block;
+  font-size: 16px;
+  font-family: "icomoon";
 }
 .pitch-play-button:hover, .pitch-audio-playing {
   color: rgba(76, 175, 80, 0.75);
 }
 
 .pitch-audio-paused::before{
-  content: "⏸";
+  content: "\ed86";
   color: #aaa;
 }
 
@@ -794,7 +828,14 @@ color:rgba(0,0,0,.1);
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  padding: 3px 0 2px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
 }
+
+.pitch-row:hover {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
 .pitch-row div {
   text-align: left;
   flex: 5;
