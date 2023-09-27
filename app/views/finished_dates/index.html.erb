@@ -1,40 +1,40 @@
 <% @page_title = "Chronology" %>
 
+<div class="container">
+  <% @tracks.each_with_index do |track, i| %>
 
-  <p>&nbsp;</p>
+    <div data-card="<%= i %>" class="card">
 
-  <div class="container">
-    <% @tracks.each_with_index do |track, i| %>
-
-      <div data-card="<%= i %>" class="card">
-
-        <div class="clickarea">
+      <div class="clickarea">
+        <div class="clickarea-forward"></div>
+        <div class="clickarea-back"></div>
 
         <div class="cardtitle">
-          <%= track.date_finished.strftime("%B %d, %Y") %>
+        <span class="cardtitle--emph"><%= track.date_finished.strftime("%B %d")%></span>,
+        <%= track.date_finished.strftime("%Y") %>
         </div>
 
         <% if track.image.exists? %>
-        <img src="<%= track.image %>" style="width:100%;height:100%;">
+          <img src="<%= track.image %>" style="width:100%;height:100%;">
         <% end %>
 
         <div class="cardtext">
-        <span>
-          <%= track.name %><%= track.track_number %> <%= track.track_version %>
-        </span>
+          <span>
+            <%= track.name %><%= track.track_number %> <%= track.track_version %>
+          </span>
         </div>
         <div class="cardplayer">
-        <% if track.sound.exists? %>
-          <div id="audiochronolgy"><audio controls controlsList="nodownload" preload="metadata">
-            <source src="<%= track.sound %>" type="audio/mpeg">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-        <% end %>
-        </div>
+          <% if track.sound.exists? %>
+            <div id="audiochronolgy"><audio controls controlsList="nodownload" preload="metadata">
+                <source src="<%= track.sound %>" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          <% end %>
         </div>
       </div>
-    <% end %>
+    </div>
+  <% end %>
 
 
 </div>

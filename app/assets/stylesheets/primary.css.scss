@@ -371,6 +371,12 @@ p {
 .mainchronology {
     background-color: $black;
 }
+.mainchronology .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
 .bodychronology {
   background-color: $black;
 }
@@ -413,6 +419,7 @@ p {
   transform-origin: center;
   transition: 0.4s cubic-bezier(0.28, 0.55, 0.385, 1.65);
   cursor: pointer;
+  opacity:0;
 }
 
 .card:nth-child(1) {
@@ -528,6 +535,42 @@ p {
   background-color: $black;
   color: $white;
 }
+
+.clickarea-forward, .clickarea-back {
+  display: block;
+  position: absolute;
+  width: 115%;
+  height: 115%;
+  z-index: 1;
+}
+
+.clickarea-back {
+  bottom: -25%;
+  left: -25%;
+  cursor: w-resize;
+}
+
+.clickarea-forward {
+  top: -25%;
+  right: -25%;
+  cursor: e-resize;
+  z-index: 2;
+}
+
+.cardplayer {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+.cardtitle--emph {
+  font-weight: 700;
+  color: #eee;
+}
+
+
 
 /* CSS SKETCH MAPS */
 .sketchmaps {
@@ -959,6 +1002,32 @@ color:rgba(0,0,0,.1);
   }
   .pitch-row > div:last-child {
     text-align: left;
+  }
+
+  .contentchronology {
+    margin: 10vw 0 0 0 ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  .contentchronology .container {
+    width: auto;
+    height: auto;
+    min-height: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  .contentchronology .card {
+    width: 100vw;
+    height: auto;
   }
 }
 
