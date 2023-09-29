@@ -502,9 +502,9 @@ var graph_fn = function(static_data) {
         switch(d.type) {
           // NOTE: Link "tension" tweaking the numbers here will tweak the length of and how much the links pull.
           case "track":
-            return (toMS(d.duration_a) / 500.0 + toMS(d.duration_b) / 500.0);
+            return (toMS(d.duration_a) / 600.0 + toMS(d.duration_b) / 600.0);
           case "sidetrack":
-            return (toMS(d.duration_a) / 500.0 + toMS(d.duration_b) / 500.0);
+            return (toMS(d.duration_a) / 600.0 + toMS(d.duration_b) / 600.0);
           default:
             return 128;
         }
@@ -595,7 +595,7 @@ var graph_fn = function(static_data) {
     // NOTE: The look of each standard track, the line that shows the duration.
     tracks.append("line")
       .style("stroke", d => d.color)
-      .style("stroke-width", 12)
+      .style("stroke-width", 16)
       .attr("x1", 0)
       .attr("stroke-linecap","round")
       .attr("y1", d => -(d.duration / 2.0))
@@ -740,7 +740,7 @@ var graph_fn = function(static_data) {
     // NOTE: Sidetrack title (text)
     var side_titles = sidetracks
       .append("text")
-      .style("font-size", "18px")
+      .style("font-size", "22px")
       .style("fill", "#333")
       .style("stroke", "none")
       .attr("x", 20)
