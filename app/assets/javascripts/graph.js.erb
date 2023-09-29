@@ -616,7 +616,7 @@ var graph_fn = function(static_data) {
     var dates = tracks
       .append("text")
       .style("font-size", "24px")
-      .style("fill", "#999")
+      .style("fill", "#E1E1E1")
       .style("stroke", "none")
       .attr("x", 50)
       .attr("y", d => -(d.duration / 2.0) + 52)
@@ -695,7 +695,7 @@ var graph_fn = function(static_data) {
 
     // NOTE: The sidetrack line style
     sidetracks.append("line")
-      .style("stroke", "white")
+      .style("stroke", "#E1E1E1")
       .style("stroke-width", 5)
       .attr("stroke-linecap","round")
       .attr("x1", 0)
