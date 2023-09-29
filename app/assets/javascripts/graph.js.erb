@@ -502,9 +502,9 @@ var graph_fn = function(static_data) {
         switch(d.type) {
           // NOTE: Link "tension" tweaking the numbers here will tweak the length of and how much the links pull.
           case "track":
-            return (toMS(d.duration_a) / 1000.0 + toMS(d.duration_b) / 1000.0);
+            return (toMS(d.duration_a) / 900.0 + toMS(d.duration_b) / 900.0);
           case "sidetrack":
-            return (toMS(d.duration_a) / 1000.0 + toMS(d.duration_b) / 1000.0);
+            return (toMS(d.duration_a) / 900.0 + toMS(d.duration_b) / 900.0);
           default:
             return 128;
         }
