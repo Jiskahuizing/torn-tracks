@@ -606,7 +606,7 @@ var graph_fn = function(static_data) {
     var titles = tracks
       .append("text")
       .style("font-size", "36px")
-      .style("fill", "#000")
+      .style("fill", "#ffffff")
       .style("stroke", "none")
       .attr("x", 50)
       .attr("y", d => -(d.duration / 2.0) + 16)
@@ -616,7 +616,7 @@ var graph_fn = function(static_data) {
     var dates = tracks
       .append("text")
       .style("font-size", "24px")
-      .style("fill", "#000")
+      .style("fill", "#ffffff")
       .style("stroke", "none")
       .attr("x", 50)
       .attr("y", d => -(d.duration / 2.0) + 52)
@@ -696,7 +696,7 @@ var graph_fn = function(static_data) {
     // NOTE: The sidetrack line style
     sidetracks.append("line")
       .style("stroke", "white")
-      .style("stroke-width", 7)
+      .style("stroke-width", 5)
       .attr("stroke-linecap","round")
       .attr("x1", 0)
       .attr("y1", d => -(d.duration / 2.0))
@@ -741,7 +741,7 @@ var graph_fn = function(static_data) {
     var side_titles = sidetracks
       .append("text")
       .style("font-size", "24px")
-      .style("fill", "#000")
+      .style("fill", "#ffffff")
       .style("stroke", "none")
       .attr("x", 20)
       .attr("y", d => -(d.duration / 2.0))
