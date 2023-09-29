@@ -605,7 +605,7 @@ var graph_fn = function(static_data) {
     // NOTE: This is the title of the track (text)
     var titles = tracks
       .append("text")
-      .style("font-size", "36px")
+      .style("font-size", "40px")
       .style("fill", "#ffffff")
       .style("stroke", "none")
       .attr("x", 50)
@@ -615,7 +615,7 @@ var graph_fn = function(static_data) {
     // NOTE: This is the date of the track (text)
     var dates = tracks
       .append("text")
-      .style("font-size", "24px")
+      .style("font-size", "30px")
       .style("fill", "#ffffff")
       .style("stroke", "none")
       .attr("x", 50)
@@ -630,8 +630,8 @@ var graph_fn = function(static_data) {
       .style("cursor", "pointer")
       .attr('x', 32)
       .attr('y', d => -(d.duration / 2.0) + 60)
-      .attr('width', 96)
-      .attr('height', 96)
+      .attr('width', 94)
+      .attr('height', 94)
       .attr("xlink:href", "<%= image_path('play.png') %>") // NOTE: Play button image
 
     players.on("click", manage_playback);
@@ -740,7 +740,7 @@ var graph_fn = function(static_data) {
     // NOTE: Sidetrack title (text)
     var side_titles = sidetracks
       .append("text")
-      .style("font-size", "24px")
+      .style("font-size", "30px")
       .style("fill", "#E1E1E1")
       .style("stroke", "none")
       .attr("x", 20)
@@ -775,8 +775,8 @@ var graph_fn = function(static_data) {
     // NOTE: This is the style of the nexus title (text)
     var nexus_titles = nexus
       .append("text") // NOTE: This is the type of element that we are styling
-      .style("font-size", "42px")
-      .style("fill", "#E1E1E1")
+      .style("font-size", "36px")
+      .style("fill", "#999")
       .style("stroke", "none")
       .attr("x", 0)
       .attr("y", 64)
