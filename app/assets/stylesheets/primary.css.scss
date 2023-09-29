@@ -132,7 +132,7 @@ p {
   margin-top: 15px;
 }
 
-/* Structure */
+/* STRUCTURE */
 
 .page {
   display: flex;
@@ -159,7 +159,7 @@ p {
 
 .content {
   width: 82%;
-  padding-top: 105px;  //fjern på mobile.
+  padding-top: 105px;
   padding-right: 15px;
   max-width: 900px;
   position: relative;
@@ -242,19 +242,19 @@ p {
   }
 }
 
-/*individual views*/
-//admin
-#header { //admin
+/* INDIVIDUAL VIEWS */
+
+// ADMIN
+#header {
   height: 0.5cm;
   padding-top: 0.5cm;
   text-align: center;
   background: image-url('Header.jpg');
   color: $white;
-
   h1 { margin: 0; padding: 0; }
 }
 
-#main { //admin
+#main {
     content : "";
     display: block;
     overflow: auto;
@@ -270,7 +270,6 @@ p {
   a, a:link { color: $white; text-decoration: none; }
   a:visited { color: $white; }
   display: inline-block;
-  //margin-right: 70px;
   width: 170px;
 
   padding: 21px;
@@ -304,7 +303,9 @@ p {
   color: $black;
   padding-bottom: 15px;
 }
-//Menupage
+
+// MENU
+
 .public {
     background: image-url('Public_2_1920.jpg');
     background-repeat:repeat-y;
@@ -327,7 +328,8 @@ p {
   a:visited { color: $white; }
 }
 
-//Frontpage
+// FRONTPAGE
+
 .frontpagemain {
   content : "";
   display: block;
@@ -368,6 +370,7 @@ p {
 }
 
 // CHRONOLOGY
+
 .mainchronology {
     background-color: $black;
 }
@@ -397,7 +400,8 @@ p {
   padding-left: 10px;
 }
 
-// 3D Card carousel
+// 3D CARD CAROUSEL
+
 .container {
   position: relative;
   width: 500px;
@@ -422,111 +426,111 @@ p {
   opacity:0;
 }
 
-.card:nth-child(1) {
-  z-index: 10;
-  top: 0px;
-  left: 0px;
-  transform-origin: top right;
-  transform: scale(1);
-  opacity: 1;
-}
+  .card:nth-child(1) {
+    z-index: 10;
+    top: 0px;
+    left: 0px;
+    transform-origin: top right;
+    transform: scale(1);
+    opacity: 1;
+  }
 
-.card:nth-child(2) {
-  z-index: 9;
-  top: -28.25px;
-  left: 20px;
-  transform-origin: top right;
-  transform: scale(0.95);
-  opacity: 0.9;
-}
+  .card:nth-child(2) {
+    z-index: 9;
+    top: -28.25px;
+    left: 20px;
+    transform-origin: top right;
+    transform: scale(0.95);
+    opacity: 0.9;
+  }
 
-.card:nth-child(3) {
-  z-index: 8;
-  top: -54px;
-  left: 40px;
-  transform-origin: top right;
-  transform: scale(0.90);
-  opacity: 0.8;
-}
+  .card:nth-child(3) {
+    z-index: 8;
+    top: -54px;
+    left: 40px;
+    transform-origin: top right;
+    transform: scale(0.90);
+    opacity: 0.8;
+  }
 
-.card:nth-child(4) {
-  z-index: 7;
-  top: -79px;
-  left: 60px;
-  transform-origin: top right;
-  transform: scale(0.85);
-  opacity: 0.7;
-}
+  .card:nth-child(4) {
+    z-index: 7;
+    top: -79px;
+    left: 60px;
+    transform-origin: top right;
+    transform: scale(0.85);
+    opacity: 0.7;
+  }
 
-.card:nth-child(5) {
-  z-index: 6;
-  top: -102px;
-  left: 80px;
-  transform-origin: top right;
-  transform: scale(0.80);
-  opacity: 0.6;
-}
+  .card:nth-child(5) {
+    z-index: 6;
+    top: -102px;
+    left: 80px;
+    transform-origin: top right;
+    transform: scale(0.80);
+    opacity: 0.6;
+  }
 
-.card:nth-child(6) {
-  z-index: 5;
-  top: -124px;
-  left: 100px;
-  transform-origin: top right;
-  transform: scale(0.75);
-  opacity: 0.5;
-}
+  .card:nth-child(6) {
+    z-index: 5;
+    top: -124px;
+    left: 100px;
+    transform-origin: top right;
+    transform: scale(0.75);
+    opacity: 0.5;
+  }
 
-.card:nth-child(7) {
-  z-index: 4;
-  top: -144px;
-  left: 120px;
-  transform-origin: top right;
-  transform: scale(0.70);
-  opacity: 0.4;
-}
+  .card:nth-child(7) {
+    z-index: 4;
+    top: -144px;
+    left: 120px;
+    transform-origin: top right;
+    transform: scale(0.70);
+    opacity: 0.4;
+  }
 
-.card:nth-child(8) {
-  z-index: 3;
-  top: -160px;
-  left: 140px;
-  transform-origin: top right;
-  transform: scale(0.65);
-  opacity: 0.3;
-}
+  .card:nth-child(8) {
+    z-index: 3;
+    top: -160px;
+    left: 140px;
+    transform-origin: top right;
+    transform: scale(0.65);
+    opacity: 0.3;
+  }
 
-.card:nth-child(9) {
-  z-index: 2;
-  top: -180px;
-  left: 160px;
-  transform-origin: top right;
-  transform: scale(0.60);
-  opacity: 0.2;
-}
+  .card:nth-child(9) {
+    z-index: 2;
+    top: -180px;
+    left: 160px;
+    transform-origin: top right;
+    transform: scale(0.60);
+    opacity: 0.2;
+  }
 
-.card:nth-child(10) {
-  z-index: 1;
-  top: -200px;
-  left: 180px;
-  transform-origin: top right;
-  transform: scale(0.55);
-  opacity: 0.1;
-}
+  .card:nth-child(10) {
+    z-index: 1;
+    top: -200px;
+    left: 180px;
+    transform-origin: top right;
+    transform: scale(0.55);
+    opacity: 0.1;
+  }
 
-.card:nth-child(11) {
-  z-index: 0;
-  top: -220px;
-  left: 200px;
-  transform-origin: top right;
-  transform: scale(0.50);
-  opacity: 0;
-}
+  .card:nth-child(11) {
+    z-index: 0;
+    top: -220px;
+    left: 200px;
+    transform-origin: top right;
+    transform: scale(0.50);
+    opacity: 0;
+  }
 
-.card:first-child:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  transform: scale(1.02);
-}
+  .card:first-child:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.02);
+  }
 
-.card:last-child { opacity: 0; }
+  .card:last-child { opacity: 0; }
 
 .cardtitle {
   font-size: 16px;
@@ -570,9 +574,8 @@ p {
   color: #eee;
 }
 
-
-
 /* CSS SKETCH MAPS */
+
 .sketchmaps {
     background: image-url('Sketchmaps_1920.jpg');
     background-repeat:repeat-y;
@@ -582,8 +585,8 @@ p {
 }
 
 #sketchmapstext {
-  margin-left: 70px; //fjerne i mobile
-  padding: 50px; //fjerne i mobile
+  margin-left: 70px;
+  padding: 50px;
   background: rgba(204, 255, 255, 0);
   width: 90%;
 
@@ -595,14 +598,14 @@ p {
   a:visited { color: $white; }
 }
 
-/* NAMES FIELDGUIDE CSS */
+/* NAMES / FIELDGUIDE */
 
 .mainnames {
     background: image-url('FieldGuide_1920.jpg');
     overflow: auto;
-    position: absolute; //temporary fix 6/2/19
-    width: 100%; //temporary fix 6/2/19
-    height: 100%; //temporary fix 6/2/19
+    position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
 }
@@ -614,8 +617,6 @@ p {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  //margin-left: auto;
-  //margin-right: auto;
 }
 
 #clearnote {
@@ -623,28 +624,18 @@ p {
 }
 
 #notebook {
-  //display:inline-block;
   background: image-url('Notebook_1000.png');
   background-repeat: no-repeat;
   width: 1000px;
   height: 839px;
-  //position: absolute;
-  //top: 70px;
-//  left: 15%;
-//  bottom:0;
   z-index: 1;
 }
 
 .contentnames {
-//  display: inline-block;
-//  position: absolute;
-//  left: 15%;
   margin-top: 40px;
-//  bottom:0;
   text-align: left;
   margin-left: 130px;
   width: 400px;
-//  height:825px;
   color: $black;
   z-index: 2;
   a, a:link { color: $very_light_blue; text-decoration: none; }
@@ -653,19 +644,13 @@ p {
 }
 
 .contentnames2 {
-//  display: inline-block;
-//  position: absolute;
-//  left: 15%;
   margin-top: 10px;
-//  bottom:0;
   text-align: left;
-//  height:780px;
   color: $black;
   z-index: 2;
   a { color: $black;}
   a:hover { color: $white;}
 }
-
 
 .contentnames-inner {
   columns: 2;
@@ -673,7 +658,6 @@ p {
   column-gap: 10%;
   max-height: 55vh;
   column-fill: auto;
-
 }
 
 .name-audio {
@@ -688,7 +672,6 @@ p {
   height: 24px;
   border: none;
   background: transparent;
-
 }
 
 .contentnames-inner ul {
@@ -708,15 +691,15 @@ p {
   break-before: always;
 }
 
-
-
 /* CSS PITCHES */
+
 .pitch {
     background: rgba(0, 102, 0, 0.07);
     /*a, a:link { color: $black; text-decoration: none; }*/
 }
 
 /* CSS LOCATIONS */
+
 .locations {
     background: image-url('Public_1920.jpg');
     background-repeat:repeat-y;
@@ -742,7 +725,8 @@ p {
   width: 100%;
 }
 
-/*audio styler*/
+/* AUDIO STYLER */
+
 .acontainer {
   display: inline-block;
 	margin: 2px auto;
@@ -758,8 +742,7 @@ p {
   margin-left:90px;
 }
 
-/* Plyr Overrides
-================================================== */
+/* PLYR OVERRIDES */
 
 .plyr--audio .plyr__controls {
 background-color:transparent;
@@ -790,6 +773,7 @@ color:rgba(0,0,0,.1);
 }
 
 /* MODAL */
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -895,8 +879,9 @@ color:rgba(0,0,0,.1);
   text-align: right;
 }
 
-/* media centric styles
-/* Mobile Styles */
+// MEDIA CENTRIC STYLES
+
+// Mobile Styles
 @media only screen and (max-width: 480px) {
   body {
 //    background-color: #F09A9D; /* Red test*/
@@ -905,7 +890,7 @@ color:rgba(0,0,0,.1);
     width: 100%;
     padding-top: 5px;
     padding-left: 15px;
-    overflow-x:hidden; //stoppe vertical scroll
+    overflow-x:hidden; //Stop vertical scroll
   }
   .index {
     width: 100%;
@@ -941,25 +926,16 @@ color:rgba(0,0,0,.1);
     height: 0px;
   }
 
-  /*#notebook { //names fieldnotes
-    background: image-url('Notepad_370.png');
-    background-size: 370px 866px;
-    background-repeat: no-repeat;
-    width: 370px;
-    height: 866px;
-    overflow-x:hidden;
-  }*/
 .wrappernames {
   display: block;
   width: 100%;
 }
 
-  #notebook { //names fieldnotes
+  #notebook { //Names, Field Guide
     background-image: image-url('Notepad_1200_bottom.png'), image-url('Notepad_1200_top.png'), image-url('Notepad_1200_repeater.png');
     background-repeat: no-repeat,  no-repeat, repeat-y;
     background-position-y: bottom,  top, 97px;
     background-position-x: -145px;
-    //background-size: 140%;
     width: 100%;
     min-height: 964px;
     height: auto;
@@ -990,7 +966,6 @@ color:rgba(0,0,0,.1);
     max-height: unset;
   }
   .map-element {
-
     width: 340px;
   }
 
@@ -1031,7 +1006,8 @@ color:rgba(0,0,0,.1);
   }
 }
 
-/* Tablet Styles */
+/* TABLET STYLES */
+
 @media only screen and (min-width: 480px) and (max-width: 1069px) {
   body {
 //    background-color: #F5CF8E; /* Yellow test */
@@ -1067,7 +1043,6 @@ color:rgba(0,0,0,.1);
   }
   .wrappernames {
     display: block;
-
   }
 
   #notebook { //names fieldnotes
@@ -1105,13 +1080,13 @@ color:rgba(0,0,0,.1);
   }
 }
 
-/* Desktop Styles */
+/* DESKTOP STYLES */
+
 @media only screen and (min-width: 1070px) {
   body {
     //background-color: #B2D6FF; /* Blue test*/
   }
   .menu{
-
   }
   .mainnames {
       width: 100%;
