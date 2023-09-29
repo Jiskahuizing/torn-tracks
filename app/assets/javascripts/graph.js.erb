@@ -695,7 +695,7 @@ var graph_fn = function(static_data) {
 
     // NOTE: The sidetrack line style
     sidetracks.append("line")
-      .style("stroke", "#b6bbc8")
+      .style("stroke", "#BBBEC6")
       .style("stroke-width", 5)
       .attr("stroke-linecap","round")
       .attr("x1", 0)
@@ -705,8 +705,8 @@ var graph_fn = function(static_data) {
 
     // NOTE: The next two circles are start + end circles for sidetrack
     sidetracks.append("circle")
-      .style("fill", "#b6bbc8")
-      .style("stroke", "#b6bbc8")
+      .style("fill", "#BBBEC6")
+      .style("stroke", "#BBBEC6")
       .style("stroke-width", 2)
       .attr("cx", 0)
       .attr("cy", d => -(d.duration / 2.0))
@@ -715,8 +715,8 @@ var graph_fn = function(static_data) {
       .attr("id", d => d.id + "-enter");
 
     sidetracks.append("circle")
-      .style("fill", "#b6bbc8")
-      .style("stroke", "#b6bbc8")
+      .style("fill", "#BBBEC6")
+      .style("stroke", "#BBBEC6")
       .style("stroke-width", 2)
       .attr("cx", 0)
       .attr("cy", d => d.duration / 2.0)
@@ -741,7 +741,7 @@ var graph_fn = function(static_data) {
     var side_titles = sidetracks
       .append("text")
       .style("font-size", "30px")
-      .style("fill", "#b6bbc8")
+      .style("fill", "#BBBEC6")
       .style("stroke", "none")
       .attr("x", 20)
       .attr("y", d => -(d.duration / 2.0))
