@@ -502,9 +502,9 @@ var graph_fn = function(static_data) {
         switch(d.type) {
           // NOTE: Link "tension" tweaking the numbers here will tweak the length of and how much the links pull.
           case "track":
-            return (toMS(d.duration_a) / 600.0 + toMS(d.duration_b) / 600.0);
+            return (toMS(d.duration_a) / 800.0 + toMS(d.duration_b) / 800.0);
           case "sidetrack":
-            return (toMS(d.duration_a) / 600.0 + toMS(d.duration_b) / 600.0);
+            return (toMS(d.duration_a) / 800.0 + toMS(d.duration_b) / 800.0);
           default:
             return 128;
         }
@@ -616,7 +616,7 @@ var graph_fn = function(static_data) {
     var dates = tracks
       .append("text")
       .style("font-size", "24px")
-      .style("fill", "#E1E1E1")
+      .style("fill", "#ffffff")
       .style("stroke", "none")
       .attr("x", 50)
       .attr("y", d => -(d.duration / 2.0) + 52)
@@ -776,7 +776,7 @@ var graph_fn = function(static_data) {
     var nexus_titles = nexus
       .append("text") // NOTE: This is the type of element that we are styling
       .style("font-size", "42px")
-      .style("fill", "#4B4B4B")
+      .style("fill", "#E1E1E1")
       .style("stroke", "none")
       .attr("x", 0)
       .attr("y", 64)
