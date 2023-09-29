@@ -622,6 +622,16 @@ var graph_fn = function(static_data) {
       .attr("y", d => -(d.duration / 2.0) + 52)
       .text(d => d.date);
 
+    // NOTE: This is the length of the track (text)
+    var lengths = tracks
+      .append("text")
+      .style("font-size", "30px")
+      .style("fill", "#ffffff")
+      .style("stroke", "none")
+      .attr("x", 50)
+      .attr("y", d => -(d.duration / 2.0) + 80)
+      .text(d => d.length);
+  
     // NOTE: > Play button image and position
     var players = tracks
       .append("svg:image")
