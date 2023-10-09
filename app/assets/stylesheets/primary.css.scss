@@ -373,6 +373,14 @@ p {
 
 .mainchronology {
     background-color: $black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+    min-width: 95vw;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 .mainchronology .menu {
   position: fixed;
@@ -385,7 +393,6 @@ p {
 }
 .contentchronology {
   width: 100%;
-  padding-top: 170px;
   padding-right: 15px;
   max-width: 900px;
   position: relative;
@@ -1006,6 +1013,31 @@ color:rgba(0,0,0,.1);
   }
 }
 
+@media only screen and (max-width: 1069px) {
+  .mainnames .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .wrappernames {
+    padding-top: 214px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .wrappernames #notebook {
+    flex-grow: 1;
+  }
+
+}
+
 /* TABLET STYLES */
 
 @media only screen and (min-width: 480px) and (max-width: 1069px) {
@@ -1040,9 +1072,6 @@ color:rgba(0,0,0,.1);
   }
   #clearnote {
     height: 0px;
-  }
-  .wrappernames {
-    display: block;
   }
 
   #notebook { //names fieldnotes

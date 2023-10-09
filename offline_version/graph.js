@@ -163,6 +163,21 @@
         .transition().duration(2000).call(zoom.transform, d3.zoomIdentity.translate(width/3.0, height/3.0).scale(0.33));
     }
 
+    var num_loaded = 0;
+    var total_audio_files = 0;
+    var counted = false;
+    var all_done = false;
+
+    function metadataListner (event) {
+      num_loaded += 1;
+      console.log(num_loaded);
+      console.log(" -- ");
+      if (num_loaded >= total_audio_files) {
+        all_done = true;
+        console.log("all done");
+      }
+    }
+
     var node_data = null;
     var link_data = [];
     var visible_link_data = [];
@@ -182,10 +197,13 @@
           const audio_element = document.createElement("audio");
           const audio_element_selection = d3.select(audio_element)
             .attr("id", local_id)
-            .attr("preload", "metadata")
+            .attr("preload", "auto")
             .attr("src", d.file)
             .classed("audio_element", true);
-          map_application.appendChild(audio_element_selection.node());
+          console.log("arghhhh");
+
+          const audio_node = map_application.appendChild(audio_element_selection.node());
+          audio_element.onloadedmetadata= metadataListner;
 
           d.audio_element = audio_element;
           d.id = local_id;
@@ -265,6 +283,8 @@
         }
 
       }); //EO Node Data Map
+      
+
 
       node_data = node_data.concat(nexus_data);
 

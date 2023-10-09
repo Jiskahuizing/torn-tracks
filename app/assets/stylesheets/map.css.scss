@@ -37,8 +37,12 @@ body {
             user-select: none;
 }
 
-#start.hide {
+#start {
   display: none;
+}
+
+#start.show {
+  display: block;
 }
 
 .map_intro_wrapper {

@@ -95,7 +95,23 @@ var graph_fn = function(static_data) {
   var visible_link_data = [];
 
   const start_button = d3.select("#start");
-  start_button.classed("hide", true);
+
+  var audio_loaded = 0;
+  var audio_total = 0;
+
+  var main_caller = null;
+
+  // WARN: Mega hack for loading:
+  function start_when_loaded(e) {
+    audio_loaded += 1;
+    console.log(audio_total);
+    console.log(audio_loaded);
+    console.log(" --- ");
+    if (audio_loaded >= audio_total) {
+      console.log(" done_loading ");
+      start_button.classed("show", true);
+    }
+  }
 
   (function(data) {
 
@@ -113,6 +129,10 @@ var graph_fn = function(static_data) {
           .attr("src", d.file)
           .classed("audio_element", true);
         map_application.appendChild(audio_element_selection.node());
+
+        // WARN: Mega hack for loading:
+        audio_total += 1;
+        audio_element.onloadedmetadata = start_when_loaded;
 
         d.audio_element = audio_element;
         d.id = local_id;
@@ -195,7 +215,8 @@ var graph_fn = function(static_data) {
 
     node_data = node_data.concat(nexus_data);
 
-    start_button.classed("hide", false);
+    // WARN: Mega hack for loading continues
+    //start_button.classed("show", true);
 
   })(static_data);
 
