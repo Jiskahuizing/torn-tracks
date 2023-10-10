@@ -69,6 +69,8 @@
     (function() {
       var rotate_forward, rotate_back;
 
+      var audios = document.getElementsByTagName('audio');
+
       rotate_forward = function() {
         return $('.card:first-child').fadeOut(400, 'swing', function() {
           return $('.card:first-child').appendTo('.container').hide();
@@ -82,11 +84,19 @@
         });
       };
 
-      $('.clickarea-forward').click(function() {
+      $('.clickarea-forward').click(function(e) {
+        e.preventDefault();
+        for(var i = 0, len = audios.length; i < len;i++){
+          audios[i].pause();
+        }
         return rotate_forward();
       });
 
-      $('.clickarea-back').click(function() {
+      $('.clickarea-back').click(function(e) {
+        e.preventDefault();
+        for(var i = 0, len = audios.length; i < len;i++){
+          audios[i].pause();
+        }
         return rotate_back();
       });
 

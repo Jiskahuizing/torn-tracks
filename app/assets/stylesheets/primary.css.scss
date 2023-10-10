@@ -431,6 +431,7 @@ p {
   transition: 0.4s cubic-bezier(0.28, 0.55, 0.385, 1.65);
   cursor: pointer;
   opacity:0;
+  pointer-events: none;
 }
 
   .card:nth-child(1) {
@@ -555,6 +556,10 @@ p {
   z-index: 1;
 }
 
+.card:first-child .clickarea-forward, .card:first-child .clickarea-back {
+  pointer-events: all;
+}
+
 .clickarea-back {
   bottom: -25%;
   left: -25%;
@@ -574,6 +579,7 @@ p {
   max-width: 100%;
   overflow: hidden;
   display: block;
+  pointer-events: all;
 }
 
 .cardtitle--emph {
