@@ -126,7 +126,7 @@ GEM
       nokogiri (~> 1)
       rake
     mini_mime (1.1.5)
-    mini_portile2 (2.8.5)
+    mini_portile2 (2.8.6)
     minitest (5.19.0)
     net-imap (0.3.7)
       date
@@ -138,7 +138,7 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.7.0)
-    nokogiri (1.16.2)
+    nokogiri (1.16.5)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     plyr-rails (3.5.6)
@@ -243,7 +243,7 @@ DEPENDENCIES
   kt-paperclip (~> 6.4.1)
   listen (~> 3.0.5)
   mimemagic (~> 0.3.10)
-  nokogiri (~> 1.16.2)
+  nokogiri (~> 1.16.5)
   plyr-rails
   puma (~> 5.6.8)
   rails (~> 7.0.4)
